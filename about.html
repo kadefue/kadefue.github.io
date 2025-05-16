@@ -6,18 +6,21 @@
     <title>About - Kadeghe G. Fue</title>
     <style>
         body { font-family: sans-serif; margin: 20px; line-height: 1.6; }
-        header, nav, section, footer { margin-bottom: 20px; }
+        header { display: flex; align-items: center; margin-bottom: 20px; }
+        header img { max-height: 100px; margin-right: 20px; border-radius: 5px; }
+        nav, section, footer { margin-bottom: 20px; }
         nav a { margin-right: 15px; text-decoration: none; }
-        h1, h2 { color: #333; }
+        h1, h2, h3 { color: #333; }
         .container { max-width: 960px; margin: auto; }
+        .employment-record { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+        .employment-record:last-child { border-bottom: none; }
+        .job-title { font-weight: bold; }
+        .institution { font-style: italic; }
+        .dates { font-size: 0.9em; color: #555; }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>About Dr. Kadeghe G. Fue</h1>
-        </header>
-
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -49,39 +52,100 @@
             </p>
         </section>
 
+        <section id="employment-history">
+            <h2>Employment Record</h2>
+
+            <h3>Current Appointments</h3>
+            <div class="employment-record">
+                <p class="job-title">Senior Lecturer of Electronics and Digital Agriculture</p>
+                <p class="institution">Sokoine University of Agriculture</p>
+                <p class="dates">Sep 2023 to Current [cite: 6]</p>
+            </div>
+            <div class="employment-record">
+                <p class="job-title">Educational Technology and Digital Infrastructure Specialist [HEET Project Component Leader]</p>
+                <p class="institution">Sokoine University of Agriculture</p>
+                <p class="dates">2021 to Current [cite: 6]</p>
+            </div>
+            <div class="employment-record">
+                <p class="job-title">Acting Coordinator, Academic Information Management and Support Unit</p>
+                <p class="institution">Sokoine University of Agriculture</p>
+                <p class="dates">Aug 2021 to Current [cite: 6]</p>
+            </div>
+
+            <h3>Previous Appointments</h3>
+            <div class="employment-record">
+                <p class="job-title">Lecturer of Electronics and Digital Agriculture</p>
+                <p class="institution">Sokoine University of Agriculture</p>
+                <p class="dates">Sep 2018 to Sep 2023 [cite: 6]</p>
+            </div>
+            <div class="employment-record">
+                <p class="job-title">Geospatial Artificial Intelligence Research Scholar</p> <p class="institution">North Carolina State University</p>
+                <p class="dates">Aug 2020 to Feb 2021 [cite: 6]</p>
+            </div>
+            <div class="employment-record">
+                <p class="job-title">Electronics Lab Research Assistant</p>
+                <p class="institution">University of Georgia</p>
+                <p class="dates">May 2018 to Aug 2018 [cite: 8]</p>
+            </div>
+            <div class="employment-record">
+                <p class="job-title">Graduate Research Assistant</p>
+                <p class="institution">University of Georgia</p>
+                <p class="dates">Aug 2016 to Jul 2020 [cite: 8]</p>
+            </div>
+            <div class="employment-record">
+                <p class="job-title">Head of Section and Lead Software Developer (Educational Technology Section)</p>
+                <p class="institution">Sokoine University of Agriculture</p>
+                <p class="dates">Nov 2014 to Jan 2016 [cite: 8]</p>
+            </div>
+            <div class="employment-record">
+                <p class="job-title">Assistant Lecturer</p>
+                <p class="institution">Sokoine University of Agriculture</p>
+                <p class="dates">Jul 2014 to Aug 2018 [cite: 8]</p>
+            </div>
+            <div class="employment-record">
+                <p class="job-title">Tutorial Assistant</p>
+                <p class="institution">Sokoine University of Agriculture</p>
+                <p class="dates">Oct 2011 to Jun 2014 [cite: 8]</p>
+            </div>
+        </section>
+
         <section id="education">
             <h2>Education</h2>
             <ul>
-                <li><strong>PhD in Engineering (Agricultural Robotics and Machine Vision)</strong>, College of Engineering, University of Georgia, USA, 2020.</li>
-                <li><strong>M.Sc in Agricultural and Biological Engineering (Precision Agriculture and Information Systems)</strong>, Herbert Wertheim College of Engineering, University of Florida, USA, 2014.</li>
-                <li><strong>B.Sc. Computer Engineering and Information Technology</strong>, College of Information and Communication Technologies, University of Dar es Salaam, Tanzania 2011.</li>
-                <li><strong>Advanced Certificate of Secondary Education (ACSEE)</strong>, Mzumbe Secondary School, Tanzania, 2007.</li>
-                <li><strong>Certificate of Secondary Education (CSEE)</strong>, Msolwa Secondary School, Tanzania, 2004.</li>
+                <li><strong>Ph.D. in Engineering (Artificial Intelligence and Robotics)</strong>, School of Electrical and Computer Engineering, University of Georgia, USA, 2020 [cite: 4]</li>
+                <li><strong>M.Sc. in Ag and Biological Engineering (Precision Agriculture and Information Systems)</strong>, College of Engineering, University of Florida, USA, 2014 [cite: 4]</li>
+                <li><strong>B.Sc. in Computer Engineering and Information Technology</strong>, College of ICT, University of Dar es Salaam, Tanzania, 2011 [cite: 4]</li>
             </ul>
         </section>
 
         <section id="skills">
             <h2>Skills Overview</h2>
             <p>
-                <strong>Programming/Scripting/DB Languages:</strong> Python, PHP, JavaScript, C/C++, R, VB, C#, MySQL, MSSQL (Proficient); Z basic, PIC PRO basic, Java, MatLab, PLC, and LabView (Familiar).
+                <strong>Programming/Scripting/DB Languages:</strong> Python, C/C++, R, Java, VB.NET, C#.NET, MySQL, PostgreSQL, MSSQL, Z basic, PIC PRO basic, MatLab, PHP, JavaScript, and N.I. LabView (Proficient). [cite: 115, 116]
             </p>
             <p>
-                <strong>Frameworks and Tools:</strong> TensorFlow, CodeIgniter, Laravel, CMake, Django, MapServer, GeoServer, GeoODK, OpenLayers, QGIS, Arc GIS, PLC, OpenCV, CUDA, Git, Agile Software Development (XP and Scrum).
+                <strong>Frameworks and Tools:</strong> Linux Systems, ROS, Gazebo, RViz, OpenCV, TensorFlow, Keras, CodeIgniter, Laravel, MEAN, MERN, Django, MapServer, GeoODK, ODK, GDAL, OpenLayers, eMotion, GPS, ArduPilot, RTOS, Pix4D, QGIS, ArcGIS, PLC, CUDA, Git, Agile Software Development (XP and Scrum), SolidWorks, Ultimaker, Microsoft Visual Studio, and Android Studio IDE. [cite: 3, 116]
             </p>
-            <p>
-                <strong>Expertise:</strong> Computer programming, machine vision, geoinformatics, sensors & controls, precision agriculture, instrumentation engineering, Arduino microcontrollers, Intel 8085 chip, PIC microcontrollers, ATMEL microcontrollers, Robot Operating System (ROS), Map-based (GIS) systems, industrial automation systems (PLCs and SCADA), GPU programming (NVIDIA CUDA).
+             <p>
+                <strong>Advanced Skills:</strong> Geographic Information Systems, Global Navigation Systems (GNSS/GPS), Web Mapping, Satellite Image Analysis, Machine Vision, Deep Learning, SLAM, PCB design, Object Detection, Object Tracking, Image Classification, Precision Irrigation, Precision Agriculture, Autonomous Systems, Unmanned Ground/Aerial Vehicles, Sensor Fusion (Extended Kalman Filter), Embedded Systems, Path and Motion Planning, Robotic Manipulators, Robot State Estimation, Robotic Control Systems, Sensor (Multispectral, Hyperspectral, Camera, Lidar, IMU and Encoders) Data Analysis, Cloud Computing, Microcontroller Programming, Planter Downforce Technology, Wireless Sensor Networks, Internet of Things (IoT), Computer-Aided 3D Design, 3D Printing, and Hydrostatic Vehicles. [cite: 117]
             </p>
         </section>
 
         <section id="memberships">
             <h2>Professional Memberships</h2>
-            <p>
-                SUASA, ERB, IET, IEEE, ASABE, AAAS, and AUVSI.
-            </p>
+            <ul>
+                <li>Member -- Sokoine University Academic Staff Association (M-SUASA) [cite: 1, 8]</li>
+                <li>Member -- Institution of Engineers Tanzania (M-IET) [cite: 1, 8]</li>
+                <li>Professional Member -- Engineers Registration Board of Tanzania (M-ERB) [cite: 1, 8]</li>
+                <li>Member -- Institute of Electrical and Electronics Engineers (M-IEEE) [#95107203] [cite: 1, 8]</li>
+                <li>Member -- American Society of Agricultural and Biological Engineers (M-ASABE) [#1047427] [cite: 1, 8]</li>
+                <li>Member -- The American Association for the Advancement of Science (M-AAAS) [#20348035] [cite: 1, 9]</li>
+                <li>Member -- The Association for Unmanned Vehicle Systems International (M-AUVSI) [#90572] [cite: 1, 9]</li>
+            </ul>
         </section>
 
         <footer>
-            <p>&copy; <span id="year"></span> Kadeghe G. Fue. Hosted on GitHub.</p>
+            <p>&copy; <span id="year"></span> Kadeghe G. Fue. Hosted on GitHub Pages.</p>
         </footer>
     </div>
     <script>
