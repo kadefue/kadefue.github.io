@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Kadeghe Fue - EB-1A Robotics Engineer Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom Styles & Utilities */
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        
+        /* Smooth transitions */
+        .transition-all-300 { transition: all 0.3s ease-in-out; }
+        
+        /* Chart Container Utilities */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container { height: 350px; }
+        }
+
+        /* ATS Highlight Effect for Recruiter Mode */
+        .ats-highlight {
+            background-color: #fef08a; /* Yellow-200 */
+            color: #854d0e; /* Yellow-800 */
+            padding: 0 2px;
+            border-radius: 2px;
+            font-weight: 700;
+        }
+    </style>
+    
+    <!-- Chosen Palette: Slate (Neutral Base) + Indigo (Primary Tech) + Emerald (AgTech Accent) -->
+    <!-- Application Structure Plan: 
+         Designed as a "Candidate Intelligence Dashboard" for recruiters/hiring managers.
+         1. Sidebar Navigation: persistent access to key profile sections.
+         2. Hero/Header: Instant value prop (EB-1A status, Title).
+         3. Dynamic Content Area: Swaps views based on navigation.
+            - Overview: High-level metrics & Radar Chart (Skills).
+            - Experience Timeline: Chronological growth with "Impact" focus.
+            - Tech Stack: Detailed breakdown of the "Bit-to-Atom" expertise.
+            - Innovation Lab: Project portfolio with interactive filters.
+            - EB-1A Evidence: Dedicated proof of "Extraordinary Ability".
+         4. Interaction: "Recruiter Mode" toggle simulates ATS scanning by highlighting keywords.
+    -->
+    <!-- Visualization & Content Choices:
+         - Radar Chart (Chart.js): To visually balance the "Full-Stack" nature (Robotics vs AI vs Hardware).
+         - Interactive Cards: For Projects, allowing filtering by tech stack (Goal: Organize).
+         - Timeline (HTML/CSS): To show career progression (Goal: Change/Growth).
+         - Metric Counters: For Portfolio value and Years of Exp (Goal: Inform).
+         - NO SVG/Mermaid: All icons are Unicode or CSS shapes. Charts are Canvas.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="text-slate-800 h-screen flex overflow-hidden">
+
+    <!-- Mobile Header -->
+    <div class="md:hidden fixed w-full bg-white z-50 border-b border-slate-200 px-4 py-3 flex justify-between items-center">
+        <span class="font-bold text-lg text-slate-800">Dr. Kadeghe Fue</span>
+        <button id="mobile-menu-btn" class="text-slate-600 focus:outline-none">
+            <span class="text-2xl">☰</span>
+        </button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar" class="bg-slate-900 text-white w-64 flex-shrink-0 hidden md:flex flex-col h-full transition-all-300 fixed md:relative z-40 transform -translate-x-full md:translate-x-0 pt-16 md:pt-0">
+        <div class="p-6 border-b border-slate-700">
+            <h1 class="text-xl font-bold tracking-tight">Dr. Kadeghe Fue</h1>
+            <p class="text-xs text-indigo-400 mt-1 uppercase tracking-wider font-semibold">EB-1A Candidate</p>
+        </div>
+        
+        <nav class="flex-1 overflow-y-auto py-4">
+            <ul class="space-y-1">
+                <li><button onclick="router.navigate('overview')" class="nav-btn w-full text-left px-6 py-3 hover:bg-slate-800 transition-colors border-l-4 border-transparent active-nav" data-target="overview">Dashboard Overview</button></li>
+                <li><button onclick="router.navigate('experience')" class="nav-btn w-full text-left px-6 py-3 hover:bg-slate-800 transition-colors border-l-4 border-transparent" data-target="experience">Experience Timeline</button></li>
+                <li><button onclick="router.navigate('projects')" class="nav-btn w-full text-left px-6 py-3 hover:bg-slate-800 transition-colors border-l-4 border-transparent" data-target="projects">Innovation Lab</button></li>
+                <li><button onclick="router.navigate('skills')" class="nav-btn w-full text-left px-6 py-3 hover:bg-slate-800 transition-colors border-l-4 border-transparent" data-target="skills">Tech Stack Analysis</button></li>
+                <li><button onclick="router.navigate('eb1a')" class="nav-btn w-full text-left px-6 py-3 hover:bg-slate-800 transition-colors border-l-4 border-transparent" data-target="eb1a">EB-1A Evidence</button></li>
+            </ul>
+        </nav>
+
+        <div class="p-6 border-t border-slate-700 bg-slate-800">
+            <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-semibold text-slate-400">ATS SCAN MODE</span>
+                <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="ats-toggle" class="sr-only peer">
+                    <div class="w-9 h-5 bg-slate-600 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-indigo-500 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-indigo-500"></div>
+                </label>
+            </div>
+            <p class="text-[10px] text-slate-500 leading-tight">Highlights critical keywords (Docker, ROS, C++) for technical screening.</p>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col h-full overflow-hidden bg-slate-50 pt-16 md:pt-0 relative w-full">
+        
+        <!-- View Container -->
+        <div id="view-container" class="flex-1 overflow-y-auto p-4 md:p-8">
+            <!-- Dynamic Content Injected Here -->
+        </div>
+
+    </main>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // --- DATA STORE ---
+        const candidateData = {
+            profile: {
+                name: "Kadeghe Goodluck Fue, Ph.D.",
+                role: "Senior Robotics & Machine Learning Engineer",
+                visa: "EB-1A Eligible (Extraordinary Ability)",
+                email: "kadefue@gmail.com",
+                summary: "Accomplished Engineering Lead with 13+ years bridging the 'bit-to-atom' gap. Expert in designing custom mechatronics and optimizing real-time perception stacks (YOLO, Optical Flow) on Edge AI. Proven leadership managing $32M+ portfolios.",
+                stats: [
+                    { label: "Years Experience", value: "13+" },
+                    { label: "Portfolio Value", value: "$32M+" },
+                    { label: "Peer Reviews", value: "50+" },
+                    { label: "Intl. Awards", value: "1st Place" }
+                ]
+            },
+            skills: {
+                robotics: ["ROS 1/2", "Gazebo", "Isaac Sim", "SLAM", "MPC", "Path Planning", "MoveIt!", "URDF"],
+                vision: ["PyTorch", "TensorFlow", "YOLO v5/v8", "OpenCV", "TensorRT", "CUDA", "ZED SDK", "Point Clouds"],
+                embedded: ["NVIDIA Jetson", "Arduino", "ESP32", "CAN Bus (J1939)", "Sensors (LiDAR/RTK)", "SolidWorks"],
+                software: ["Python", "C++", "Docker", "Kubernetes", "CI/CD", "AWS", "Linux", "Git"]
+            },
+            projects: [
+                {
+                    id: 1,
+                    title: "Cotton Harvesting Rover",
+                    role: "Lead Robotics Engineer",
+                    tech: ["ROS", "C++", "Arduino", "NVIDIA Jetson", "SolidWorks"],
+                    category: "robotics",
+                    desc: "Architected a full-stack autonomous rover. Designed custom hydrostatic drive controls and implemented J1939 CAN bus communication. Invented 'Modified Pure Pursuit' algorithm for sub-inch accuracy in unstructured fields."
+                },
+                {
+                    id: 2,
+                    title: "TanPredikt Yield Engine",
+                    role: "Principal Engineer",
+                    tech: ["Google Earth Engine", "LightGBM", "Python", "Geospatial"],
+                    category: "data",
+                    desc: "Geospatial forecasting engine fusing terabytes of Sentinel-2 imagery. Deployed models achieving 15% higher accuracy than industry standards for national food security planning."
+                },
+                {
+                    id: 3,
+                    title: "MkulimaGPT AI Platform",
+                    role: "Architect",
+                    tech: ["Docker", "Kubernetes", "AWS", "LLM", "RAG"],
+                    category: "cloud",
+                    desc: "Scalable AI advisory platform. Containerized inference engine using Docker for consistent AWS deployment. Utilized RAG to reduce hallucination rates by 40%."
+                },
+                {
+                    id: 4,
+                    title: "PhenoCV-WeedCam",
+                    role: "Computer Vision Engineer",
+                    tech: ["PyTorch", "OpenCV", "Real-time Segmentation"],
+                    category: "vision",
+                    desc: "Developed semantic segmentation pipeline for real-time weed discrimination on robotic sprayers. Optimized for tight latency constraints on edge hardware."
+                }
+            ],
+            experience: [
+                {
+                    year: "2021 - Present",
+                    role: "Principal Technical Program Manager",
+                    org: "Sokoine University (HEET Project)",
+                    highlight: "Directing $32M World Bank digital transformation. Managing 8 senior engineers. Reduced deployment latency by 40% via CI/CD.",
+                    type: "leadership"
+                },
+                {
+                    year: "2021 - Present",
+                    role: "Lead Robotics Research Engineer",
+                    org: "YEESI & EPA Labs",
+                    highlight: "Founded robotics lab. Secured $157k USDA funding. Developed offline Edge AI models for 500+ users.",
+                    type: "rd"
+                },
+                {
+                    year: "2016 - 2020",
+                    role: "Robotics Systems Engineer",
+                    org: "University of Georgia",
+                    highlight: "Designed Center-Articulated Rover. Invented Modified Pure Pursuit algorithm. Achieved 94.4% detection on Jetson TX2.",
+                    type: "engineering"
+                }
+            ],
+            eb1a: [
+                { title: "Original Contribution", detail: "Invented 'Modified Pure Pursuit' algorithm, adopted as benchmark." },
+                { title: "Awards", detail: "Winner, Zindi Data Science Challenge (1st/500+ global)." },
+                { title: "Judging Others", detail: "Peer Reviewer for IEEE RA-L & Computers in Ag (50+ manuscripts)." },
+                { title: "Critical Role", detail: "Technical Lead for $32M National Digital Infrastructure project." }
+            ]
+        };
+
+        // --- CHART CONFIG ---
+        let skillsChart = null;
+
+        const renderSkillsChart = () => {
+            const ctx = document.getElementById('skillsChartCanvas');
+            if (!ctx) return;
+
+            if (skillsChart) skillsChart.destroy();
+
+            skillsChart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['Robotics & Control', 'Computer Vision/AI', 'Embedded & HW', 'Cloud & DevOps', 'Software Eng'],
+                    datasets: [{
+                        label: 'Proficiency Level',
+                        data: [95, 90, 85, 75, 88],
+                        backgroundColor: 'rgba(99, 102, 241, 0.2)', // Indigo
+                        borderColor: 'rgba(99, 102, 241, 1)',
+                        pointBackgroundColor: 'rgba(99, 102, 241, 1)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgba(99, 102, 241, 1)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(0,0,0,0.1)' },
+                            grid: { color: 'rgba(0,0,0,0.1)' },
+                            pointLabels: {
+                                font: { size: 12, family: 'Inter' },
+                                color: '#475569'
+                            },
+                            suggestedMin: 0,
+                            suggestedMax: 100
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+        };
+
+        // --- ROUTER & VIEW RENDERER ---
+        const router = {
+            current: 'overview',
+            navigate: (view) => {
+                router.current = view;
+                renderView(view);
+                updateNavState(view);
+                if (window.innerWidth < 768) {
+                    document.getElementById('sidebar').classList.add('-translate-x-full');
+                }
+            }
+        };
+
+        function updateNavState(view) {
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                if(btn.dataset.target === view) {
+                    btn.classList.add('bg-slate-800', 'border-indigo-500');
+                    btn.classList.remove('border-transparent');
+                } else {
+                    btn.classList.remove('bg-slate-800', 'border-indigo-500');
+                    btn.classList.add('border-transparent');
+                }
+            });
+        }
+
+        function highlightKeywords(text) {
+            const isAtsMode = document.getElementById('ats-toggle').checked;
+            if (!isAtsMode) return text;
+
+            const keywords = [
+                "Docker", "Kubernetes", "ROS", "ROS 2", "C++", "Python", "NVIDIA Jetson", 
+                "TensorRT", "AWS", "CI/CD", "SLAM", "YOLO", "PyTorch", "OpenCV", "Gazebo",
+                "SolidWorks", "CAN bus", "EB-1A", "Pure Pursuit", "Isaac Sim"
+            ];
+            
+            let highlighted = text;
+            keywords.forEach(kw => {
+                const regex = new RegExp(`\\b${kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi');
+                highlighted = highlighted.replace(regex, `<span class="ats-highlight">$&</span>`);
+            });
+            return highlighted;
+        }
+
+        const renderView = (view) => {
+            const container = document.getElementById('view-container');
+            container.innerHTML = ''; // Clear
+
+            switch(view) {
+                case 'overview':
+                    container.innerHTML = `
+                        <div class="mb-8 animate-fade-in">
+                            <h2 class="text-3xl font-bold text-slate-900 mb-2">${candidateData.profile.name}</h2>
+                            <p class="text-xl text-indigo-600 font-medium">${candidateData.profile.role}</p>
+                            <div class="mt-4 p-4 bg-indigo-50 border-l-4 border-indigo-500 rounded-r text-sm text-indigo-900">
+                                <span class="font-bold">Summary:</span> ${highlightKeywords(candidateData.profile.summary)}
+                            </div>
+                        </div>
+
+                        <!-- Key Metrics Grid -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                            ${candidateData.profile.stats.map(stat => `
+                                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200 text-center">
+                                    <div class="text-2xl font-bold text-slate-900">${stat.value}</div>
+                                    <div class="text-xs text-slate-500 uppercase tracking-wide mt-1">${stat.label}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+
+                        <!-- Dashboard Split: Radar Chart & Focus Areas -->
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                            <!-- Skill Radar -->
+                            <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                                <h3 class="text-lg font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2">Technical Competency Profile</h3>
+                                <p class="text-sm text-slate-500 mb-4">A balanced profile bridging hardware ("Atoms") and software ("Bits").</p>
+                                <div class="chart-container">
+                                    <canvas id="skillsChartCanvas"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Core Competencies List -->
+                            <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                                <h3 class="text-lg font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2">Target Role Fit</h3>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 text-xl mr-3">✓</span>
+                                        <div>
+                                            <h4 class="font-bold text-slate-900">Senior Robotics Engineer</h4>
+                                            <p class="text-sm text-slate-600 mt-1">Full lifecycle experience from ${highlightKeywords("SolidWorks")} design to ${highlightKeywords("ROS")} navigation stacks.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 text-xl mr-3">✓</span>
+                                        <div>
+                                            <h4 class="font-bold text-slate-900">Machine Learning Engineer</h4>
+                                            <p class="text-sm text-slate-600 mt-1">Production deployment of ${highlightKeywords("YOLO")} and ${highlightKeywords("PyTorch")} models on edge devices (${highlightKeywords("NVIDIA Jetson")}).</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 text-xl mr-3">✓</span>
+                                        <div>
+                                            <h4 class="font-bold text-slate-900">Technical Program Manager</h4>
+                                            <p class="text-sm text-slate-600 mt-1">Managed $32M budget and cross-functional teams of 8+ engineers.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    `;
+                    setTimeout(renderSkillsChart, 100);
+                    break;
+
+                case 'experience':
+                    container.innerHTML = `
+                        <div class="mb-6">
+                            <h2 class="text-2xl font-bold text-slate-900">Career Timeline</h2>
+                            <p class="text-slate-600">Evolution from Research Engineer to Principal Technical Lead.</p>
+                        </div>
+                        <div class="relative border-l-2 border-slate-200 ml-4 space-y-12">
+                            ${candidateData.experience.map(exp => `
+                                <div class="relative pl-8">
+                                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-white border-2 border-indigo-500"></div>
+                                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-all-300">
+                                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
+                                            <h3 class="text-lg font-bold text-slate-900">${exp.role}</h3>
+                                            <span class="text-sm font-mono text-indigo-600 bg-indigo-50 px-2 py-1 rounded">${exp.year}</span>
+                                        </div>
+                                        <div class="text-sm text-slate-500 font-semibold mb-3">${exp.org}</div>
+                                        <div class="text-slate-700 bg-slate-50 p-3 rounded border border-slate-100">
+                                            <span class="font-bold text-xs text-slate-400 uppercase block mb-1">Impact Highlight</span>
+                                            ${highlightKeywords(exp.highlight)}
+                                        </div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    `;
+                    break;
+
+                case 'projects':
+                    container.innerHTML = `
+                        <div class="mb-6 flex flex-col md:flex-row justify-between items-start md:items-center">
+                            <div>
+                                <h2 class="text-2xl font-bold text-slate-900">Innovation Lab</h2>
+                                <p class="text-slate-600">Deep dive into key engineering contributions.</p>
+                            </div>
+                            <div class="mt-4 md:mt-0 flex gap-2">
+                                <button onclick="filterProjects('all')" class="px-3 py-1 text-sm bg-slate-200 rounded hover:bg-slate-300">All</button>
+                                <button onclick="filterProjects('robotics')" class="px-3 py-1 text-sm bg-indigo-100 text-indigo-700 rounded hover:bg-indigo-200">Robotics</button>
+                                <button onclick="filterProjects('cloud')" class="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded hover:bg-blue-200">Cloud/AI</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="projects-grid">
+                            ${candidateData.projects.map(proj => `
+                                <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col h-full project-card" data-cat="${proj.category}">
+                                    <div class="p-6 flex-1">
+                                        <div class="flex justify-between items-start mb-4">
+                                            <h3 class="text-xl font-bold text-slate-900">${proj.title}</h3>
+                                            <span class="text-xs bg-slate-100 text-slate-500 px-2 py-1 rounded-full border border-slate-200">${proj.role}</span>
+                                        </div>
+                                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">${highlightKeywords(proj.desc)}</p>
+                                        
+                                        <div>
+                                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-2">Tech Stack</h4>
+                                            <div class="flex flex-wrap gap-2">
+                                                ${proj.tech.map(t => `<span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border border-slate-200 font-mono">${highlightKeywords(t)}</span>`).join('')}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-slate-50 p-4 border-t border-slate-100 text-center">
+                                        <button class="text-indigo-600 text-sm font-semibold hover:text-indigo-800">View Technical Details &rarr;</button>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    `;
+                    break;
+
+                case 'skills':
+                    container.innerHTML = `
+                         <div class="mb-6">
+                            <h2 class="text-2xl font-bold text-slate-900">Technical Stack Analysis</h2>
+                            <p class="text-slate-600">Comprehensive breakdown of toolchain proficiency.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            ${Object.entries(candidateData.skills).map(([category, items]) => `
+                                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                                    <h3 class="text-lg font-bold text-slate-800 mb-4 border-b border-slate-100 pb-2 capitalize">${category.replace('_', ' ')}</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        ${items.map(skill => `
+                                            <span class="px-3 py-1.5 bg-white text-slate-700 text-sm rounded border border-slate-300 shadow-sm hover:border-indigo-400 hover:text-indigo-600 transition-colors cursor-default font-mono">
+                                                ${highlightKeywords(skill)}
+                                            </span>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    `;
+                    break;
+
+                case 'eb1a':
+                    container.innerHTML = `
+                        <div class="bg-gradient-to-r from-slate-900 to-indigo-900 text-white p-8 rounded-lg shadow-lg mb-8">
+                            <h2 class="text-2xl font-bold mb-2">EB-1A Eligibility Evidence</h2>
+                            <p class="text-indigo-200">Documented proof of "Extraordinary Ability" for self-petitioning visa.</p>
+                        </div>
+                        <div class="grid grid-cols-1 gap-4">
+                            ${candidateData.eb1a.map((item, index) => `
+                                <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-indigo-500 flex items-start">
+                                    <div class="bg-indigo-50 text-indigo-700 font-bold w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0">${index + 1}</div>
+                                    <div>
+                                        <h3 class="font-bold text-slate-900 text-lg">${item.title}</h3>
+                                        <p class="text-slate-600 mt-1">${highlightKeywords(item.detail)}</p>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    `;
+                    break;
+            }
+        };
+
+        // --- FILTER FUNCTIONALITY ---
+        window.filterProjects = (category) => {
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.cat === category || (category === 'cloud' && (card.dataset.cat === 'cloud' || card.dataset.cat === 'data'))) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        };
+
+        // --- INIT ---
+        document.addEventListener('DOMContentLoaded', () => {
+            router.navigate('overview');
+
+            // Mobile menu toggle
+            document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+                const sidebar = document.getElementById('sidebar');
+                sidebar.classList.toggle('-translate-x-full');
+            });
+
+            // ATS Toggle Listener
+            document.getElementById('ats-toggle').addEventListener('change', () => {
+                renderView(router.current); // Re-render current view to apply highlights
+            });
+        });
+
+    </script>
+</body>
+</html>
