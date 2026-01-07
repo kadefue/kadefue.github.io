@@ -1,156 +1,349 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Kadeghe G. Fue</title>
+    <title>About - Dr. Kadeghe Goodluck Fue</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <style>
-        body { font-family: sans-serif; margin: 20px; line-height: 1.6; }
-        header { display: flex; align-items: center; margin-bottom: 20px; }
-        header img { max-height: 100px; margin-right: 20px; border-radius: 5px; }
-        nav, section, footer { margin-bottom: 20px; }
-        nav a { margin-right: 15px; text-decoration: none; }
-        h1, h2, h3 { color: #333; }
-        .container { max-width: 960px; margin: auto; }
-        .employment-record { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
-        .employment-record:last-child { border-bottom: none; }
-        .job-title { font-weight: bold; }
-        .institution { font-style: italic; }
-        .dates { font-size: 0.9em; color: #555; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .nav-link.active {
+            color: #4f46e5;
+            border-bottom: 2px solid #4f46e5;
+        }
     </style>
 </head>
-<body>
-    <div class="container">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="cv.html">Curriculum Vitae as Engineer (CV)</a>
-            <a href="about.html">About</a>
-            <a href="research.html">Research</a>
-            <a href="publications.html">Publications</a>
-            <a href="contact.html">Contact</a>
-        </nav>
 
-        <section id="bio">
-            <h2>Biography</h2>
-            <p>
-                Dr. Kadeghe "Kade" Goodluck Fue is a distinguished professional in the field of Digital
-                and Data-Driven Agriculture and Natural Resource Management. His expertise spans vital
-                areas such as Precision Agriculture, Artificial Intelligence, Machine Vision, Agricultural
-                Robotics, Agricultural Data Science, and Earth Data Science.
-            </p>
-            <p>
-                With more than 14 years of professional experience, Dr. Fue specializes in full-stack
-                development, integrating hardware and software systems. He is known for creating
-                innovative algorithms that enhance autonomy and apply AI in the agricultural and
-                natural resource domains.
-            </p>
-            <p>
-                He serves as a senior lecturer, consulting engineer, and researcher at the Department
-                of Agricultural Engineering at the School of Engineering and Technology at Sokoine
-                University of Agriculture (SUA). He is also the Principal Investigator at the
-                Electronics and Precision Agriculture Lab (EPAL) and coordinator for the AIMS unit in
-                the office of the deputy vice-chancellor for academic, research, and consultancy.
-            </p>
-        </section>
+<body class="text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900">
 
-        <section id="employment-history">
-            <h2>Employment Record</h2>
+    <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md border-b border-slate-200 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-bold text-xl text-slate-900 tracking-tight">Dr. Kadeghe Goodluck
+                        Fue</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Home</a>
+                    <a href="about.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">About</a>
+                    <a href="research.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Research</a>
+                    <a href="publications.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Publications</a>
+                    <a href="cv.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">CV</a>
+                    <a href="contact.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Contact</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-500 hover:text-indigo-600 focus:outline-none">
+                        <span class="text-2xl">&#9776;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Home</a>
+                <a href="about.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">About</a>
+                <a href="research.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Research</a>
+                <a href="publications.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Publications</a>
+                <a href="cv.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">CV</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-            <h3>Current Appointments</h3>
-            <div class="employment-record">
-                <p class="job-title">Senior Lecturer of Mechatronics, Cybernetics and Precision Agriculture</p>
-                <p class="institution">Sokoine University of Agriculture</p>
-                <p class="dates">July 2023 to Current [cite: 6]</p>
-            </div>
-            <div class="employment-record">
-                <p class="job-title">Educational Technology and Digital Infrastructure Specialist [HEET Project Component Leader]</p>
-                <p class="institution">Sokoine University of Agriculture</p>
-                <p class="dates">2021 to Current [cite: 6]</p>
-            </div>
-            <div class="employment-record">
-                <p class="job-title">Acting Coordinator, Academic Information Management and Support Unit</p>
-                <p class="institution">Sokoine University of Agriculture</p>
-                <p class="dates">Aug 2021 to Current [cite: 6]</p>
-            </div>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 space-y-16">
 
-            <h3>Previous Appointments</h3>
-            <div class="employment-record">
-                <p class="job-title">Lecturer of Electronics and Digital Agriculture</p>
-                <p class="institution">Sokoine University of Agriculture</p>
-                <p class="dates">Sep 2018 to Sep 2023 [cite: 6]</p>
-            </div>
-            <div class="employment-record">
-                <p class="job-title">Geospatial Artificial Intelligence Research Scholar</p> <p class="institution">North Carolina State University</p>
-                <p class="dates">Aug 2020 to Feb 2021 [cite: 6]</p>
-            </div>
-            <div class="employment-record">
-                <p class="job-title">Electronics Lab Research Assistant</p>
-                <p class="institution">University of Georgia</p>
-                <p class="dates">May 2018 to Aug 2018 [cite: 8]</p>
-            </div>
-            <div class="employment-record">
-                <p class="job-title">Graduate Research Assistant</p>
-                <p class="institution">University of Georgia</p>
-                <p class="dates">Aug 2016 to Jul 2020 [cite: 8]</p>
-            </div>
-            <div class="employment-record">
-                <p class="job-title">Head of Section and Lead Software Developer (Educational Technology Section)</p>
-                <p class="institution">Sokoine University of Agriculture</p>
-                <p class="dates">Nov 2014 to Jan 2016 [cite: 8]</p>
-            </div>
-            <div class="employment-record">
-                <p class="job-title">Assistant Lecturer</p>
-                <p class="institution">Sokoine University of Agriculture</p>
-                <p class="dates">Jul 2014 to Aug 2018 [cite: 8]</p>
-            </div>
-            <div class="employment-record">
-                <p class="job-title">Tutorial Assistant</p>
-                <p class="institution">Sokoine University of Agriculture</p>
-                <p class="dates">Oct 2011 to Jun 2014 [cite: 8]</p>
+        <!-- Biography Section -->
+        <section>
+            <h1 class="text-3xl font-bold text-slate-900 mb-6 border-l-4 border-indigo-500 pl-4">Biography</h1>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+                <p class="text-slate-600 mb-4 leading-relaxed">
+                    Dr. Kadeghe "Kade" Goodluck Fue is a distinguished professional in the field of Digital and
+                    Data-Driven Agriculture and Natural Resource Management. His expertise spans vital areas such as
+                    Precision Agriculture, Artificial Intelligence, Machine Vision, Agricultural Robotics, Agricultural
+                    Data Science, and Earth Data Science.
+                </p>
+                <p class="text-slate-600 mb-4 leading-relaxed">
+                    With more than 14 years of professional experience, Dr. Fue specializes in full-stack development,
+                    integrating hardware and software systems. He is known for creating innovative algorithms that
+                    enhance autonomy and apply AI in the agricultural and natural resource domains.
+                </p>
+                <p class="text-slate-600 leading-relaxed">
+                    He serves as a senior lecturer, consulting engineer, and researcher at the Department of
+                    Agricultural Engineering at the School of Engineering and Technology at Sokoine University of
+                    Agriculture (SUA). He is also the Principal Investigator at the Electronics and Precision
+                    Agriculture Lab (EPAL) and coordinator for the AIMS unit in the office of the deputy vice-chancellor
+                    for academic, research, and consultancy.
+                </p>
             </div>
         </section>
 
-        <section id="education">
-            <h2>Education</h2>
-            <ul>
-                <li><strong>Ph.D. in Engineering (Artificial Intelligence and Robotics)</strong>, School of Electrical and Computer Engineering, University of Georgia, USA, 2020 [cite: 4]</li>
-                <li><strong>M.Sc. in Ag and Biological Engineering (Precision Agriculture and Information Systems)</strong>, College of Engineering, University of Florida, USA, 2014 [cite: 4]</li>
-                <li><strong>B.Sc. in Computer Engineering and Information Technology</strong>, College of ICT, University of Dar es Salaam, Tanzania, 2011 [cite: 4]</li>
-            </ul>
+        <!-- Employment Record -->
+        <section>
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Employment Record</h2>
+
+            <div class="mb-8">
+                <h3 class="text-lg font-bold text-indigo-700 mb-4 uppercase tracking-wide">Current Appointments</h3>
+                <div class="space-y-4">
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 border-l-4 border-l-indigo-500">
+                        <h4 class="text-lg font-bold text-slate-900">Senior Lecturer of Mechatronics, Cybernetics and
+                            Precision Agriculture</h4>
+                        <div class="text-slate-700 font-medium">Sokoine University of Agriculture</div>
+                        <div class="text-sm text-slate-500 mt-1">July 2023 to Current</div>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 border-l-4 border-l-indigo-500">
+                        <h4 class="text-lg font-bold text-slate-900">Educational Technology and Digital Infrastructure
+                            Specialist [HEET Project Component Leader]</h4>
+                        <div class="text-slate-700 font-medium">Sokoine University of Agriculture</div>
+                        <div class="text-sm text-slate-500 mt-1">2021 to Current</div>
+                    </div>
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 border-l-4 border-l-indigo-500">
+                        <h4 class="text-lg font-bold text-slate-900">Acting Coordinator, Academic Information Management
+                            and Support Unit</h4>
+                        <div class="text-slate-700 font-medium">Sokoine University of Agriculture</div>
+                        <div class="text-sm text-slate-500 mt-1">Aug 2021 to Current</div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-bold text-slate-500 mb-4 uppercase tracking-wide">Previous Appointments</h3>
+                <div class="space-y-4">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <h4 class="text-lg font-bold text-slate-900">Lecturer of Electronics and Digital Agriculture
+                        </h4>
+                        <div class="text-slate-700 font-medium">Sokoine University of Agriculture</div>
+                        <div class="text-sm text-slate-500 mt-1">Sep 2018 to Sep 2023</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <h4 class="text-lg font-bold text-slate-900">Geospatial Artificial Intelligence Research Scholar
+                        </h4>
+                        <div class="text-slate-700 font-medium">North Carolina State University</div>
+                        <div class="text-sm text-slate-500 mt-1">Aug 2020 to Feb 2021</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <h4 class="text-lg font-bold text-slate-900">Electronics Lab Research Assistant</h4>
+                        <div class="text-slate-700 font-medium">University of Georgia</div>
+                        <div class="text-sm text-slate-500 mt-1">May 2018 to Aug 2018</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <h4 class="text-lg font-bold text-slate-900">Graduate Research Assistant</h4>
+                        <div class="text-slate-700 font-medium">University of Georgia</div>
+                        <div class="text-sm text-slate-500 mt-1">Aug 2016 to Jul 2020</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <h4 class="text-lg font-bold text-slate-900">Head of Section and Lead Software Developer
+                            (Educational Technology Section)</h4>
+                        <div class="text-slate-700 font-medium">Sokoine University of Agriculture</div>
+                        <div class="text-sm text-slate-500 mt-1">Nov 2014 to Jan 2016</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <h4 class="text-lg font-bold text-slate-900">Assistant Lecturer</h4>
+                        <div class="text-slate-700 font-medium">Sokoine University of Agriculture</div>
+                        <div class="text-sm text-slate-500 mt-1">Jul 2014 to Aug 2018</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <h4 class="text-lg font-bold text-slate-900">Tutorial Assistant</h4>
+                        <div class="text-slate-700 font-medium">Sokoine University of Agriculture</div>
+                        <div class="text-sm text-slate-500 mt-1">Oct 2011 to Jun 2014</div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="skills">
-            <h2>Skills Overview</h2>
-            <p>
-                <strong>Programming/Scripting/DB Languages:</strong> Python, C/C++, R, Java, VB.NET, C#.NET, MySQL, PostgreSQL, MSSQL, Z basic, PIC PRO basic, MatLab, PHP, JavaScript, and N.I. LabView (Proficient). [cite: 115, 116]
-            </p>
-            <p>
-                <strong>Frameworks and Tools:</strong> Linux Systems, ROS, Gazebo, RViz, OpenCV, TensorFlow, Keras, CodeIgniter, Laravel, MEAN, MERN, Django, MapServer, GeoODK, ODK, GDAL, OpenLayers, eMotion, GPS, ArduPilot, RTOS, Pix4D, QGIS, ArcGIS, PLC, CUDA, Git, Agile Software Development (XP and Scrum), SolidWorks, Ultimaker, Microsoft Visual Studio, and Android Studio IDE. [cite: 3, 116]
-            </p>
-             <p>
-                <strong>Advanced Skills:</strong> Geographic Information Systems, Global Navigation Systems (GNSS/GPS), Web Mapping, Satellite Image Analysis, Machine Vision, Deep Learning, SLAM, PCB design, Object Detection, Object Tracking, Image Classification, Precision Irrigation, Precision Agriculture, Autonomous Systems, Unmanned Ground/Aerial Vehicles, Sensor Fusion (Extended Kalman Filter), Embedded Systems, Path and Motion Planning, Robotic Manipulators, Robot State Estimation, Robotic Control Systems, Sensor (Multispectral, Hyperspectral, Camera, Lidar, IMU and Encoders) Data Analysis, Cloud Computing, Microcontroller Programming, Planter Downforce Technology, Wireless Sensor Networks, Internet of Things (IoT), Computer-Aided 3D Design, 3D Printing, and Hydrostatic Vehicles. [cite: 117]
-            </p>
+        <!-- Education -->
+        <section>
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Education</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- PhD -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors">
+                    <div class="text-indigo-600 font-bold text-lg mb-1">Ph.D. in Engineering</div>
+                    <div class="text-slate-900 font-semibold">University of Georgia, USA</div>
+                    <div class="text-slate-500 text-sm mb-4">2020</div>
+                    <div class="text-xs text-slate-400">Artificial Intelligence and Robotics</div>
+                </div>
+
+                <!-- MSc -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors">
+                    <div class="text-indigo-600 font-bold text-lg mb-1">M.Sc. in Ag and Biological Eng.</div>
+                    <div class="text-slate-900 font-semibold">University of Florida, USA</div>
+                    <div class="text-slate-500 text-sm mb-4">2014</div>
+                    <div class="text-xs text-slate-400">Precision Agriculture</div>
+                </div>
+
+                <!-- BSc -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors">
+                    <div class="text-indigo-600 font-bold text-lg mb-1">B.Sc. in Computer Engineering & IT</div>
+                    <div class="text-slate-900 font-semibold">University of Dar es Salaam, Tanzania</div>
+                    <div class="text-slate-500 text-sm mb-4">2011</div>
+                </div>
+            </div>
         </section>
 
-        <section id="memberships">
-            <h2>Professional Memberships</h2>
-            <ul>
-                <li>Member -- Sokoine University Academic Staff Association (M-SUASA) </li>
-                <li>Member -- Institution of Engineers Tanzania (M-IET) </li>
-                <li>Professional Member -- Engineers Registration Board of Tanzania (M-ERB) </li>
-                <li>Member -- Institute of Electrical and Electronics Engineers (M-IEEE) [#95107203] </li>
-                <li>Member -- American Society of Agricultural and Biological Engineers (M-ASABE) [#1047427] </li>
-                <li>Member -- The American Association for the Advancement of Science (M-AAAS) [#20348035] </li>
-                <li>Member -- The Association for Unmanned Vehicle Systems International (M-AUVSI) [#90572] </li>
-            </ul>
+        <!-- Skills Overview -->
+        <section>
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Skills Overview</h2>
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-bold text-slate-900 mb-2">Programming & Database Languages</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-slate-100 text-slate-700 text-sm rounded font-mono">Python</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-700 text-sm rounded font-mono">C/C++</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-700 text-sm rounded font-mono">R</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-700 text-sm rounded font-mono">Java</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-700 text-sm rounded font-mono">MySQL</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-700 text-sm rounded font-mono">PostgreSQL</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-700 text-sm rounded font-mono">PHP</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-700 text-sm rounded font-mono">JavaScript</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-700 text-sm rounded font-mono">LabVIEW</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 mb-2">Frameworks & Tools</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-700 text-sm rounded font-mono">ROS/Gazebo</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-700 text-sm rounded font-mono">OpenCV</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-700 text-sm rounded font-mono">TensorFlow/Keras</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-700 text-sm rounded font-mono">CodeIgniter/Laravel</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-700 text-sm rounded font-mono">Django</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-700 text-sm rounded font-mono">QGIS/ArcGIS</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-700 text-sm rounded font-mono">CUDA</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-700 text-sm rounded font-mono">Docker</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 mb-2">Advanced Domains</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Geographic Information Systems, Global Navigation Systems (GNSS/GPS), Web Mapping, Satellite
+                            Image Analysis, Machine Vision, Deep Learning, SLAM, PCB design, Object Detection, Object
+                            Tracking, Image Classification, Precision Irrigation, Precision Agriculture, Autonomous
+                            Systems, Unmanned Ground/Aerial Vehicles, Sensor Fusion, Embedded Systems, IoT.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <footer>
-            <p>&copy; <span id="year"></span> Kadeghe G. Fue. Hosted on GitHub.</p>
-        </footer>
-    </div>
+        <!-- Professional Memberships -->
+        <section>
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Professional Memberships</h2>
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="flex-shrink-0 h-2 w-2 mt-2 bg-indigo-500 rounded-full mr-3"></span>
+                        <span class="text-slate-700">Member -- Sokoine University Academic Staff Association
+                            (M-SUASA)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="flex-shrink-0 h-2 w-2 mt-2 bg-indigo-500 rounded-full mr-3"></span>
+                        <span class="text-slate-700">Member -- Institution of Engineers Tanzania (M-IET)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="flex-shrink-0 h-2 w-2 mt-2 bg-indigo-500 rounded-full mr-3"></span>
+                        <span class="text-slate-700">Professional Member -- Engineers Registration Board of Tanzania
+                            (M-ERB)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="flex-shrink-0 h-2 w-2 mt-2 bg-indigo-500 rounded-full mr-3"></span>
+                        <span class="text-slate-700">Member -- Institute of Electrical and Electronics Engineers
+                            (M-IEEE) [#95107203]</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="flex-shrink-0 h-2 w-2 mt-2 bg-indigo-500 rounded-full mr-3"></span>
+                        <span class="text-slate-700">Member -- American Society of Agricultural and Biological Engineers
+                            (M-ASABE) [#1047427]</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="flex-shrink-0 h-2 w-2 mt-2 bg-indigo-500 rounded-full mr-3"></span>
+                        <span class="text-slate-700">Member -- The American Association for the Advancement of Science
+                            (M-AAAS) [#20348035]</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="flex-shrink-0 h-2 w-2 mt-2 bg-indigo-500 rounded-full mr-3"></span>
+                        <span class="text-slate-700">Member -- The Association for Unmanned Vehicle Systems
+                            International (M-AUVSI) [#90572]</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-4 text-white font-bold text-lg">Dr. Kadeghe Goodluck Fue</p>
+            <div class="flex justify-center space-x-6 mb-8 flex-wrap">
+                <a href="https://kadefue.github.io/" class="hover:text-white transition-colors">GitHub</a>
+                <a href="https://linkedin.com/in/kadefue/" class="hover:text-white transition-colors">LinkedIn</a>
+                <a href="https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en"
+                    class="hover:text-white transition-colors">Google Scholar</a>
+                <a href="https://orcid.org/0000-0001-6362-3174" class="hover:text-white transition-colors">ORCID</a>
+                <a href="mailto:kadefue@gmail.com" class="hover:text-white transition-colors">Email</a>
+            </div>
+            <p class="text-sm">&copy; <span id="year"></span> Kadeghe Goodluck Fue. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+
+        // Active State Highlight
+        const currentPath = window.location.pathname.split("/").pop();
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('active');
+            }
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('text-indigo-600');
+                link.classList.add('bg-slate-50');
+            }
+        })
     </script>
 </body>
+
 </html>

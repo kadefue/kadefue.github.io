@@ -1,95 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research - Kadeghe G. Fue</title>
+    <title>Research - Dr. Kadeghe Goodluck Fue</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <style>
-        body { font-family: sans-serif; margin: 20px; line-height: 1.6; }
-        header, nav, section, footer { margin-bottom: 20px; }
-        nav a { margin-right: 15px; text-decoration: none; }
-        h1, h2, h3 { color: #333; }
-        .container { max-width: 960px; margin: auto; }
-        .project { margin-bottom: 15px; padding: 10px; border: 1px solid #eee; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .nav-link.active {
+            color: #4f46e5;
+            border-bottom: 2px solid #4f46e5;
+        }
     </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Research</h1>
-        </header>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="cv.html">Curriculum Vitae as Engineer  (CV)</a>
-            <a href="about.html">About</a>
-            <a href="research.html">Research</a>
-            <a href="publications.html">Publications</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+<body class="text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900">
 
-        <section id="current-research">
-            <h2>Current Research Projects</h2>
-            <div class="project">
-                <h3>TanPredikt using Time-Series Learning Models</h3>
-                <p><strong>Role:</strong> Principal Investigator</p>
-                <p><strong>Focus:</strong> Prediction of the Rain-fed Maize Yield in Tanzania using Time-series Machine Learning Models.</p>
-                <p><strong>Funding:</strong> AI4D Research Grant (IDRC), DSA, Deep Learning Indaba.</p>
-                <p><strong>Dates:</strong> December 2022 - November 2023</p>
+    <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md border-b border-slate-200 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-bold text-xl text-slate-900 tracking-tight">Dr. Kadeghe Goodluck
+                        Fue</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Home</a>
+                    <a href="about.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">About</a>
+                    <a href="research.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Research</a>
+                    <a href="publications.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Publications</a>
+                    <a href="cv.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">CV</a>
+                    <a href="contact.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Contact</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-500 hover:text-indigo-600 focus:outline-none">
+                        <span class="text-2xl">&#9776;</span>
+                    </button>
+                </div>
             </div>
-            <div class="project">
-                <h3>Towards a Nationwide Automatic Irrigation Scheduling System using Geospatial Artificial Intelligence (NAISS-GAI)</h3>
-                <p><strong>Role:</strong> Principal Investigator</p>
-                <p><strong>Funding:</strong> SUARIS Grant.</p>
-                <p><strong>Dates:</strong> Feb 2022 - Jan 2024</p>
-                <p><strong>Collaborators:</strong> Prof. B. Mbilinyi, Prof. C. Sanga, and Dr. W. Mbungu.</p>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Home</a>
+                <a href="about.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">About</a>
+                <a href="research.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Research</a>
+                <a href="publications.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Publications</a>
+                <a href="cv.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">CV</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Contact</a>
             </div>
-            <div class="project">
-                <h3>YEESI (Youth Empowerment in Agri-food Systems through Skilling for job creation in an innovation ecosystem)</h3>
-                <p><strong>Role:</strong> Principal Investigator</p>
-                <p><strong>U.S. Partner:</strong> Prof. Glen Rains, University of Georgia.</p>
-                <p><strong>Dates:</strong> May 2021 - October 2023</p>
-            </div>
-            <div class="project">
-                <h3>TWAS-BMBF Seed Grant for New African Principal Investigators (SG-NAPI)</h3>
-                <p><strong>Role:</strong> Principal Investigator</p>
-                <p><strong>Focus:</strong> High-level research projects in various scientific fields carried out in African countries.</p>
-                <p><strong>Dates:</strong> Jan 2022 - Dec 2023</p>
-            </div>
-            <div class="project">
-                <h3>FSNet-Africa Fellowship</h3>
-                <p><strong>Role:</strong> Principal Investigator</p>
-                <p><strong>Focus:</strong> Designing and implementing food systems research to identify solutions for sustainable change in African food systems.</p>
-                <p><strong>Dates:</strong> July 2021 - Dec 2023</p>
-            </div>
-            </section>
+        </div>
+    </nav>
 
-        <section id="past-work">
-            <h2>Previous Work Highlights</h2>
-            <div class="project">
-                <h3>Web Service API for Central Payment System (2018-2019)</h3>
-                <p>College of Business Education (CBE), Dar es Salaam, Tanzania. Development of CBE API connection to Tanzania Government Central Payment System and other educational bodies.</p>
-            </div>
-            <div class="project">
-                <h3>Mobile integrated Market Access System (m-IMAS) (2015-2016)</h3>
-                <p>Trans-Sec, SUA, Morogoro, Tanzania. Development using KANNEL mobile SMS systems.</p>
-            </div>
-            <div class="project">
-                <h3>Farmers Agro-advisory Information System (UshauriKilimo) (2015-2016)</h3>
-                <p>EPINAV, SUA, Morogoro, Tanzania. Integrating m-FAIS to SMS based systems.</p>
-            </div>
-            <div class="project">
-                <h3>TRANS-SEC WebGIS System (2014-2016)</h3>
-                <p>Trans-Sec, SUA, Morogoro, Tanzania. Development using MapServer and OpenLayers.</p>
-            </div>
-             </section>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 space-y-16">
 
-        <footer>
-            <p>&copy; <span id="year"></span> Kadeghe G. Fue. Hosted on GitHub.</p>
-        </footer>
-    </div>
+        <section>
+            <h1 class="text-3xl font-bold text-slate-900 mb-6 border-l-4 border-indigo-500 pl-4">Research & Projects
+            </h1>
+            <p class="text-lg text-slate-600 max-w-3xl leading-relaxed">
+                Exploring the intersection of Artificial Intelligence, Robotics, and Agriculture. My work focuses on
+                creating sustainable, technology-driven solutions for food systems and environmental management.
+            </p>
+        </section>
+
+        <!-- Current Research -->
+        <section>
+            <h2 class="text-2xl font-bold text-slate-900 mb-8 flex items-center">
+                <span class="bg-indigo-100 p-2 rounded-lg mr-3 text-indigo-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </span>
+                Current Research Projects
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- TanPredikt -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+                    <div class="p-6 flex-1">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">TanPredikt using Time-Series Learning Models
+                        </h3>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span
+                                class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold uppercase rounded">Principal
+                                Investigator</span>
+                            <span class="text-slate-500 text-xs">Dec 2022 - Nov 2023</span>
+                        </div>
+                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                            <strong>Focus:</strong> Prediction of the Rain-fed Maize Yield in Tanzania using Time-series
+                            Machine Learning Models.
+                        </p>
+                        <p class="text-slate-500 text-xs border-t border-slate-100 pt-3">
+                            <strong>Funding:</strong> AI4D Research Grant (IDRC), DSA, Deep Learning Indaba.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- NAISS-GAI -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+                    <div class="p-6 flex-1">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Towards a Nationwide Automatic Irrigation
+                            Scheduling System (NAISS-GAI)</h3>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span
+                                class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold uppercase rounded">Principal
+                                Investigator</span>
+                            <span class="text-slate-500 text-xs">Feb 2022 - Jan 2024</span>
+                        </div>
+                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                            <strong>Collaborators:</strong> Prof. B. Mbilinyi, Prof. C. Sanga, and Dr. W. Mbungu.
+                        </p>
+                        <p class="text-slate-500 text-xs border-t border-slate-100 pt-3">
+                            <strong>Funding:</strong> SUARIS Grant.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- YEESI -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+                    <div class="p-6 flex-1">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">YEESI (Youth Empowerment in Agri-food Systems)
+                        </h3>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span
+                                class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold uppercase rounded">Principal
+                                Investigator</span>
+                            <span class="text-slate-500 text-xs">May 2021 - Oct 2023</span>
+                        </div>
+                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                            <strong>Focus:</strong> Skilling for job creation in an innovation ecosystem.
+                        </p>
+                        <p class="text-slate-500 text-xs border-t border-slate-100 pt-3">
+                            <strong>Partner:</strong> Prof. Glen Rains, University of Georgia.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- TWAS-BMBF -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+                    <div class="p-6 flex-1">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">TWAS-BMBF Seed Grant (SG-NAPI)</h3>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span
+                                class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold uppercase rounded">Principal
+                                Investigator</span>
+                            <span class="text-slate-500 text-xs">Jan 2022 - Dec 2023</span>
+                        </div>
+                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                            <strong>Focus:</strong> High-level research projects in various scientific fields carried
+                            out in African countries.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FSNet-Africa -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+                    <div class="p-6 flex-1">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">FSNet-Africa Fellowship</h3>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span
+                                class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold uppercase rounded">Principal
+                                Investigator</span>
+                            <span class="text-slate-500 text-xs">July 2021 - Dec 2023</span>
+                        </div>
+                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                            <strong>Focus:</strong> Designing and implementing food systems research to identify
+                            solutions for sustainable change in African food systems.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Past Work Highlights -->
+        <section>
+            <h2 class="text-2xl font-bold text-slate-900 mb-8 flex items-center">
+                <span class="bg-slate-100 p-2 rounded-lg mr-3 text-slate-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </span>
+                Previous Work Highlights
+            </h2>
+
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                    <div class="flex flex-col md:flex-row justify-between md:items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Web Service API for Central Payment System</h3>
+                            <p class="text-slate-600 text-sm mt-1">College of Business Education (CBE), Dar es Salaam,
+                                Tanzania.</p>
+                            <p class="text-slate-500 text-sm mt-2">Development of CBE API connection to Tanzania
+                                Government Central Payment System and other educational bodies.</p>
+                        </div>
+                        <span
+                            class="mt-2 md:mt-0 px-2 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded">2018-2019</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                    <div class="flex flex-col md:flex-row justify-between md:items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Mobile integrated Market Access System (m-IMAS)
+                            </h3>
+                            <p class="text-slate-600 text-sm mt-1">Trans-Sec, SUA, Morogoro, Tanzania.</p>
+                            <p class="text-slate-500 text-sm mt-2">Development using KANNEL mobile SMS systems.</p>
+                        </div>
+                        <span
+                            class="mt-2 md:mt-0 px-2 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded">2015-2016</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                    <div class="flex flex-col md:flex-row justify-between md:items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Farmers Agro-advisory Information System
+                                (UshauriKilimo)</h3>
+                            <p class="text-slate-600 text-sm mt-1">EPINAV, SUA, Morogoro, Tanzania.</p>
+                            <p class="text-slate-500 text-sm mt-2">Integrating m-FAIS to SMS based systems.</p>
+                        </div>
+                        <span
+                            class="mt-2 md:mt-0 px-2 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded">2015-2016</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                    <div class="flex flex-col md:flex-row justify-between md:items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">TRANS-SEC WebGIS System</h3>
+                            <p class="text-slate-600 text-sm mt-1">Trans-Sec, SUA, Morogoro, Tanzania.</p>
+                            <p class="text-slate-500 text-sm mt-2">Development using MapServer and OpenLayers.</p>
+                        </div>
+                        <span
+                            class="mt-2 md:mt-0 px-2 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded">2014-2016</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-4 text-white font-bold text-lg">Dr. Kadeghe Goodluck Fue</p>
+            <div class="flex justify-center space-x-6 mb-8 flex-wrap">
+                <a href="https://kadefue.github.io/" class="hover:text-white transition-colors">GitHub</a>
+                <a href="https://linkedin.com/in/kadefue/" class="hover:text-white transition-colors">LinkedIn</a>
+                <a href="https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en"
+                    class="hover:text-white transition-colors">Google Scholar</a>
+                <a href="https://orcid.org/0000-0001-6362-3174" class="hover:text-white transition-colors">ORCID</a>
+                <a href="mailto:kadefue@gmail.com" class="hover:text-white transition-colors">Email</a>
+            </div>
+            <p class="text-sm">&copy; <span id="year"></span> Kadeghe Goodluck Fue. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+
+        const currentPath = window.location.pathname.split("/").pop();
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('active');
+            }
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('text-indigo-600');
+                link.classList.add('bg-slate-50');
+            }
+        })
     </script>
 </body>
+
 </html>

@@ -1,72 +1,261 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kadeghe G. Fue - GitHub Home</title>
+    <title>Dr. Kadeghe Goodluck Fue - Home</title>
+    <meta name="description"
+        content="Official website of Dr. Kadeghe Goodluck Fue, Senior Robotics & Machine Learning Engineer and Researcher.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <style>
-        body { font-family: sans-serif; margin: 20px; line-height: 1.6; }
-        header, nav, section, footer { margin-bottom: 20px; }
-        nav a { margin-right: 15px; text-decoration: none; }
-        h1, h2 { color: #333; }
-        .container { max-width: 960px; margin: auto; }
+        /* Custom Styles & Utilities */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .nav-link.active {
+            color: #4f46e5;
+            /* Indigo-600 */
+            border-bottom: 2px solid #4f46e5;
+        }
     </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <img src="profile.png" width="139" height="112" alt="Profile Picture of Kadeghe G. Fue">
-            <h1>Dr. Kadeghe G. Fue</h1>
-            <p>Mechatronics | Cybernetics | Precision Agriculture | Digital & Data-Driven Agriculture | Artificial Intelligence | Robotics</p>
-        </header>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="cv.html">Curriculum Vitae as Engineer  (CV)</a>
-            <a href="about.html">About</a>
-            <a href="research.html">Research</a>
-            <a href="publications.html">Publications</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+<body class="text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900">
 
-        <section id="welcome">
-            <h2>Welcome</h2>
-            <p>
-                Welcome to the GitHub site for <a href="http://www.kadefue.com" target="_blank" rel="noopener noreferrer">Dr Kadeghe "Kade" Goodluck Fue</a>.
-                This site provides an overview of my work in Digital and Data-Driven Agriculture, Precision Agriculture, Artificial Intelligence, Machine Vision, Agricultural Robotics, Agricultural Data Science and Earth Data Science.
-            </p>
-            <p>
-                I am a senior lecturer, consulting engineer, and researcher at the Department of Agricultural Engineering, Sokoine University of Agriculture (SUA), and Principal Investigator at the Electronics and Precision Agriculture Lab (EPAL).
-            </p>
+    <!-- Sticky Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md border-b border-slate-200 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo/Name -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-bold text-xl text-slate-900 tracking-tight">Dr. Kadeghe Goodluck
+                        Fue</a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Home</a>
+                    <a href="about.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">About</a>
+                    <a href="research.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Research</a>
+                    <a href="publications.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Publications</a>
+                    <a href="cv.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">CV</a>
+                    <a href="contact.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Contact</a>
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-500 hover:text-indigo-600 focus:outline-none">
+                        <span class="text-2xl">&#9776;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Home</a>
+                <a href="about.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">About</a>
+                <a href="research.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Research</a>
+                <a href="publications.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Publications</a>
+                <a href="cv.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">CV</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 space-y-12">
+
+        <!-- Hero / Welcome Section -->
+        <section id="welcome" class="text-center md:text-left">
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <!-- Profile Image -->
+                <div class="flex-shrink-0">
+                    <img src="profile.png" alt="Dr. Kadeghe Goodluck Fue"
+                        class="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-white shadow-lg ring-2 ring-indigo-100">
+                </div>
+
+                <!-- Content -->
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">
+                        Dr. Kadeghe Goodluck Fue
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-600 font-medium mb-6 leading-relaxed max-w-2xl">
+                        Senior Lecturer, Principal Investigator, and Consulting Engineer specializing in <span
+                            class="text-indigo-600 font-bold">Mechatronics, Artificial Intelligence, and Precision
+                            Agriculture</span>.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed mb-6 max-w-3xl">
+                        I bridge the gap between advanced technology and practical agricultural solutions. Currently
+                        serving at the Department of Agricultural Engineering, Sokoine University of Agriculture (SUA),
+                        and leading the Electronics and Precision Agriculture Lab (EPAL).
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                        <a href="about.html"
+                            class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors font-semibold shadow-sm shadow-indigo-200">More
+                            About Me</a>
+                        <a href="research.html"
+                            class="bg-white text-slate-700 border border-slate-300 px-6 py-3 rounded-lg hover:border-indigo-500 hover:text-indigo-600 transition-colors font-medium">Research
+                            Projects</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="quick-links">
-            <h2>News</h2>
-            <ul>
-                <li>Dr Fue participated on combined 10th IRSPBL, 7th SASEE, and 5th SoTL University of Pretoria, South Africa held at Future Africa, Pretoria, South Africa from 17-21 November 2025 </li>
-                <li>Dr Fue participated and presented 2 papers on Multimodal and Weather World Models on 2nd Five University Consortium Scientific Conference at Cate Convention Centre - Morogoro from 30th Sept - 2nd October 2025</li>
-                <li>Dr Fue participated on 3rd AccelNet PEER2PEER Workshop at UDSM - Dar es Salaam from 25th - 26th June 2025</li>
-                <li>Dr Fue participated in e-Learning Africa Conference at Dar es Salaam from 7th - 9th May 2025</li>
-                <li>Dr Fue participated in UNESCO AI Readiness Assessment Consultation at New Africa Hotel on 18th Feb 2025</a></li>
-                <li>Our manuscript was accepted by Frontiers In Sustainable Food Systems titled Digitalization of Precision Fertilization in East Africa: Adoption, Benefits and Losses Journal: Frontiers in Sustainable Food Systems, section Climate-Smart Food Systems Article type: Systematic Review Authors: Kadeghe Fue, Geofrey Prudence Baitu, Osden Jokonya, Steven Banwart and Lise Korsten on 18th Feb 2025</a></li>
+        <!-- News Section -->
+        <section id="news" class="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-slate-100">
+            <div class="flex items-center gap-3 mb-8">
+                <span class="bg-indigo-100 text-indigo-700 p-2 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                    </svg>
+                </span>
+                <h2 class="text-2xl font-bold text-slate-900">Latest Updates & News</h2>
+            </div>
+
+            <ul class="space-y-6">
+                <li class="flex gap-4 items-start">
+                    <span class="flex-shrink-0 w-2 h-2 mt-2.5 bg-indigo-500 rounded-full"></span>
+                    <p class="text-slate-600 leading-relaxed">
+                        <strong class="text-slate-900 block mb-1">Nov 2025</strong>
+                        Participated on combined 10th IRSPBL, 7th SASEE, and 5th SoTL University of Pretoria, South
+                        Africa held at Future Africa, Pretoria.
+                    </p>
+                </li>
+                <li class="flex gap-4 items-start">
+                    <span class="flex-shrink-0 w-2 h-2 mt-2.5 bg-indigo-500 rounded-full"></span>
+                    <p class="text-slate-600 leading-relaxed">
+                        <strong class="text-slate-900 block mb-1">Oct 2025</strong>
+                        Presented 2 papers on Multimodal and Weather World Models at the 2nd Five University Consortium
+                        Scientific Conference, Morogoro.
+                    </p>
+                </li>
+                <li class="flex gap-4 items-start">
+                    <span class="flex-shrink-0 w-2 h-2 mt-2.5 bg-indigo-500 rounded-full"></span>
+                    <p class="text-slate-600 leading-relaxed">
+                        <strong class="text-slate-900 block mb-1">Jun 2025</strong>
+                        Participated on 3rd AccelNet PEER2PEER Workshop at UDSM, Dar es Salaam.
+                    </p>
+                </li>
+                <li class="flex gap-4 items-start">
+                    <span class="flex-shrink-0 w-2 h-2 mt-2.5 bg-indigo-500 rounded-full"></span>
+                    <p class="text-slate-600 leading-relaxed">
+                        <strong class="text-slate-900 block mb-1">May 2025</strong>
+                        Participated in e-Learning Africa Conference at Dar es Salaam.
+                    </p>
+                </li>
+                <li class="flex gap-4 items-start">
+                    <span class="flex-shrink-0 w-2 h-2 mt-2.5 bg-indigo-500 rounded-full"></span>
+                    <p class="text-slate-600 leading-relaxed">
+                        <strong class="text-slate-900 block mb-1">Feb 2025</strong>
+                        New Paper Accepted: "Digitalization of Precision Fertilization in East Africa: Adoption,
+                        Benefits and Losses" in <em class="text-indigo-600">Frontiers in Sustainable Food Systems</em>.
+                    </p>
+                </li>
+                <li class="flex gap-4 items-start">
+                    <span class="flex-shrink-0 w-2 h-2 mt-2.5 bg-indigo-500 rounded-full"></span>
+                    <p class="text-slate-600 leading-relaxed">
+                        <strong class="text-slate-900 block mb-1">Feb 2025</strong>
+                        Participated in UNESCO AI Readiness Assessment Consultation.
+                    </p>
+                </li>
             </ul>
         </section>
-        
-        <section id="quick-links">
-            <h2>Quick Links</h2>
-            <ul>
-                <li><a href="about.html">Learn more about my background and expertise.</a></li>
-                <li><a href="research.html">Explore my current and past research projects.</a></li>
-                <li><a href="publications.html">View my list of publications.</a></li>
-            </ul>
+
+        <!-- Quick Links Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="about.html"
+                class="group block p-6 bg-white rounded-xl shadow-sm border border-slate-200 hover:border-indigo-400 hover:shadow-md transition-all">
+                <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 mb-2">My Background</h3>
+                <p class="text-slate-600 text-sm">Learn more about my professional journey, biography, and expertise.
+                </p>
+            </a>
+            <a href="research.html"
+                class="group block p-6 bg-white rounded-xl shadow-sm border border-slate-200 hover:border-indigo-400 hover:shadow-md transition-all">
+                <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 mb-2">Research</h3>
+                <p class="text-slate-600 text-sm">Explore my current and past research projects in AI and Agriculture.
+                </p>
+            </a>
+            <a href="publications.html"
+                class="group block p-6 bg-white rounded-xl shadow-sm border border-slate-200 hover:border-indigo-400 hover:shadow-md transition-all">
+                <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 mb-2">Publications</h3>
+                <p class="text-slate-600 text-sm">View my complete list of peer-reviewed journal articles and papers.
+                </p>
+            </a>
         </section>
 
-        <footer>
-            <p>&copy; <span id="year"></span> Kadeghe G. Fue. Hosted on GitHub.</p>
-        </footer>
-    </div>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-4 text-white font-bold text-lg">Dr. Kadeghe Goodluck Fue</p>
+            <div class="flex justify-center space-x-6 mb-8 flex-wrap">
+                <a href="https://kadefue.github.io/" class="hover:text-white transition-colors">GitHub</a>
+                <a href="https://linkedin.com/in/kadefue/" class="hover:text-white transition-colors">LinkedIn</a>
+                <a href="https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en"
+                    class="hover:text-white transition-colors">Google Scholar</a>
+                <a href="https://orcid.org/0000-0001-6362-3174" class="hover:text-white transition-colors">ORCID</a>
+                <a href="mailto:kadefue@gmail.com" class="hover:text-white transition-colors">Email</a>
+            </div>
+            <p class="text-sm">&copy; <span id="year"></span> Kadeghe Goodluck Fue. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script>
+        // Set Current Year
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Active State Highlight
+        const currentPath = window.location.pathname.split("/").pop() || "index.html";
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('active');
+            }
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('text-indigo-600');
+                link.classList.add('bg-slate-50');
+            }
+        })
     </script>
 </body>
+
 </html>

@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Kadeghe Goodluck Fue - EB-1A Robotics and AI Engineer Portfolio</title>
-    <meta name="description" content="Portfolio of Dr. Kadeghe Goodluck Fue, Senior Robotics & Machine Learning Engineer. Specializing in autonomous systems, Edge AI, and agricultural robotics.">
-    
+    <meta name="description"
+        content="Portfolio of Dr. Kadeghe Goodluck Fue, Senior Robotics & Machine Learning Engineer. Specializing in autonomous systems, Edge AI, and agricultural robotics.">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
 
     <style>
         /* Custom Styles & Utilities */
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
-        .font-mono { font-family: 'JetBrains Mono', monospace; }
-        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
         /* Chart Container Utilities */
         .chart-container {
             position: relative;
@@ -27,8 +37,11 @@
             height: 300px;
             max-height: 400px;
         }
+
         @media (min-width: 768px) {
-            .chart-container { height: 350px; }
+            .chart-container {
+                height: 350px;
+            }
         }
 
         /* ATS Highlight Effect */
@@ -37,21 +50,25 @@
             border-radius: 2px;
             padding: 0 2px;
         }
-        
+
         body.ats-mode .ats-keyword {
-            background-color: #fef08a; /* Yellow-200 */
-            color: #854d0e; /* Yellow-800 */
+            background-color: #fef08a;
+            /* Yellow-200 */
+            color: #854d0e;
+            /* Yellow-800 */
             font-weight: 700;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
         }
 
         /* Navigation Active State */
         .nav-link.active {
-            color: #4f46e5; /* Indigo-600 */
+            color: #4f46e5;
+            /* Indigo-600 */
             border-bottom: 2px solid #4f46e5;
         }
     </style>
 </head>
+
 <body class="text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900">
 
     <!-- Sticky Navigation Bar -->
@@ -60,33 +77,47 @@
             <div class="flex justify-between h-16 items-center">
                 <!-- Logo/Name -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="#" class="font-bold text-xl text-slate-900 tracking-tight">Dr. Kadeghe Goodluck Fue</a>
-                    <span class="ml-2 hidden sm:block text-xs font-semibold bg-indigo-50 text-indigo-700 px-2 py-1 rounded border border-indigo-100">EB-1A Eligible</span>
+                    <a href="index.html" class="font-bold text-xl text-slate-900 tracking-tight">Dr. Kadeghe Goodluck
+                        Fue</a>
+                    <span
+                        class="ml-2 hidden sm:block text-xs font-semibold bg-indigo-50 text-indigo-700 px-2 py-1 rounded border border-indigo-100">EB-1A
+                        Eligible</span>
                 </div>
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="#overview" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors">Overview</a>
-                    <a href="#skills" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors">Skills</a>
-                    <a href="#experience" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors">Experience</a>
-                    <a href="#projects" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors">Innovation Lab</a>
-                    <a href="#education" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors">Education</a>
-                    <a href="#eb1a" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors">EB-1A Evidence</a>
+                    <a href="index.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Home</a>
+                    <a href="about.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">About</a>
+                    <a href="cv.html"
+                        class="nav-link active text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">CV</a>
+                    <a href="research.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Research</a>
+                    <a href="publications.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Publications</a>
+                    <a href="contact.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Contact</a>
                 </div>
 
                 <!-- ATS Toggle & Mobile Menu Button -->
                 <div class="flex items-center space-x-4">
                     <!-- ATS Switch -->
                     <div class="flex items-center" title="Toggle Recruiter Keyword Mode">
-                        <span class="text-[10px] font-bold text-slate-400 mr-2 uppercase tracking-wide hidden sm:block">Recruiter Mode</span>
+                        <span
+                            class="text-[10px] font-bold text-slate-400 mr-2 uppercase tracking-wide hidden sm:block">Recruiter
+                            Mode</span>
                         <label class="relative inline-flex items-center cursor-pointer">
                             <input type="checkbox" id="ats-toggle" class="sr-only peer">
-                            <div class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-indigo-600"></div>
+                            <div
+                                class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-indigo-600">
+                            </div>
                         </label>
                     </div>
-                    
+
                     <!-- Mobile Hamburger -->
-                    <button id="mobile-menu-btn" class="md:hidden text-slate-500 hover:text-indigo-600 focus:outline-none">
+                    <button id="mobile-menu-btn"
+                        class="md:hidden text-slate-500 hover:text-indigo-600 focus:outline-none">
                         <span class="text-2xl">&#9776;</span>
                     </button>
                 </div>
@@ -96,12 +127,18 @@
         <!-- Mobile Menu (Hidden by default) -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#overview" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Overview</a>
-                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Skills</a>
-                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Experience</a>
-                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Innovation Lab</a>
-                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Education</a>
-                <a href="#eb1a" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">EB-1A</a>
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Home</a>
+                <a href="about.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">About</a>
+                <a href="cv.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">CV</a>
+                <a href="research.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Research</a>
+                <a href="publications.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Publications</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Contact</a>
             </div>
         </div>
     </nav>
@@ -115,39 +152,59 @@
                 <h1 class="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">
                     Dr. Kadeghe Goodluck Fue
                 </h1>
-                <p class="text-xl md:text-2xl text-slate-800 font-bold mb-2">Senior Robotics & Machine Learning Engineer</p>
-                <p class="text-lg text-indigo-600 font-medium mb-6">Full-Stack Autonomous Systems | Technical Lead | EB-1A Eligible</p>
-                
+                <p class="text-xl md:text-2xl text-slate-800 font-bold mb-2">Senior Robotics & Machine Learning Engineer
+                </p>
+                <p class="text-lg text-indigo-600 font-medium mb-6">Full-Stack Autonomous Systems | Technical Lead |
+                    EB-1A Eligible</p>
+
                 <div class="max-w-4xl mx-auto md:mx-0 p-6 bg-white border-l-4 border-indigo-500 rounded-r-lg shadow-sm">
                     <p class="text-slate-600 leading-relaxed">
-                        Visionary Full-Stack Physical AI Leader with <span class="ats-keyword">13+ years</span> of architecting and deploying pioneering autonomous systems. I bridge the critical "bit-to-atom" gap, leading the design of custom mechatronic hardware (<span class="ats-keyword">SolidWorks</span>, <span class="ats-keyword">Arduino</span>) and optimizing real-time perception stacks (<span class="ats-keyword">YOLO</span>, <span class="ats-keyword">Optical Flow</span>) on edge devices (<span class="ats-keyword">NVIDIA Jetson</span>). Proven leadership managing <span class="ats-keyword">$32M+</span> portfolios and winning international data science challenges.
+                        Visionary Full-Stack Physical AI Leader with <span class="ats-keyword">13+ years</span> of
+                        architecting and deploying pioneering autonomous systems. I bridge the critical "bit-to-atom"
+                        gap, leading the design of custom mechatronic hardware (<span
+                            class="ats-keyword">SolidWorks</span>, <span class="ats-keyword">Arduino</span>) and
+                        optimizing real-time perception stacks (<span class="ats-keyword">YOLO</span>, <span
+                            class="ats-keyword">Optical Flow</span>) on edge devices (<span class="ats-keyword">NVIDIA
+                            Jetson</span>). Proven leadership managing <span class="ats-keyword">$32M+</span> portfolios
+                        and winning international data science challenges.
                     </p>
                 </div>
-                
+
                 <div class="mt-8 flex flex-wrap gap-4 justify-center md:justify-start text-sm font-semibold">
-                    <a href="mailto:kadefue@gmail.com" class="bg-slate-900 text-white px-6 py-3 rounded-lg hover:bg-slate-800 transition-colors">Contact Me</a>
-                    <a href="https://kadefue.github.io" class="bg-white text-slate-700 border border-slate-300 px-6 py-3 rounded-lg hover:border-indigo-500 hover:text-indigo-600 transition-colors">GitHub Portfolio</a>
-                    <a href="https://www.epalab.org" class="bg-white text-slate-700 border border-slate-300 px-6 py-3 rounded-lg hover:border-indigo-500 hover:text-indigo-600 transition-colors">EPALab</a>
+                    <a href="mailto:kadefue@gmail.com"
+                        class="bg-slate-900 text-white px-6 py-3 rounded-lg hover:bg-slate-800 transition-colors">Contact
+                        Me</a>
+                    <a href="https://kadefue.github.io"
+                        class="bg-white text-slate-700 border border-slate-300 px-6 py-3 rounded-lg hover:border-indigo-500 hover:text-indigo-600 transition-colors">GitHub
+                        Portfolio</a>
+                    <a href="https://www.epalab.org"
+                        class="bg-white text-slate-700 border border-slate-300 px-6 py-3 rounded-lg hover:border-indigo-500 hover:text-indigo-600 transition-colors">EPALab</a>
                 </div>
             </div>
 
             <!-- Key Metrics Grid -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-indigo-200 transition-colors">
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-indigo-200 transition-colors">
                     <div class="text-3xl font-bold text-slate-900">13+</div>
                     <div class="text-xs text-slate-500 uppercase tracking-wide mt-1 font-bold">Years Experience</div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-indigo-200 transition-colors">
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-indigo-200 transition-colors">
                     <div class="text-3xl font-bold text-slate-900">$32M+</div>
-                    <div class="text-xs text-slate-500 uppercase tracking-wide mt-1 font-bold">Portfolio Managed (Component Leader)</div>
+                    <div class="text-xs text-slate-500 uppercase tracking-wide mt-1 font-bold">Portfolio Managed
+                        (Component Leader)</div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-indigo-200 transition-colors">
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-indigo-200 transition-colors">
                     <div class="text-3xl font-bold text-slate-900">25+</div>
                     <div class="text-xs text-slate-500 uppercase tracking-wide mt-1 font-bold">Peer Publications</div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-indigo-200 transition-colors">
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-indigo-200 transition-colors">
                     <div class="text-3xl font-bold text-slate-900">1st</div>
-                    <div class="text-xs text-slate-500 uppercase tracking-wide mt-1 font-bold">Global Data Challenge</div>
+                    <div class="text-xs text-slate-500 uppercase tracking-wide mt-1 font-bold">Global Data Challenge
+                    </div>
                 </div>
             </div>
         </section>
@@ -156,13 +213,15 @@
         <section id="skills" class="scroll-mt-28">
             <div class="mb-8">
                 <h2 class="text-3xl font-bold text-slate-900">Technical Stack Analysis</h2>
-                <p class="text-slate-600 mt-2">A "Full-Stack Physical AI" profile spanning hardware, software, and cloud.</p>
+                <p class="text-slate-600 mt-2">A "Full-Stack Physical AI" profile spanning hardware, software, and
+                    cloud.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 <!-- Left: Radar Chart -->
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                    <h3 class="text-lg font-bold text-slate-800 mb-6 border-b border-slate-100 pb-2">Competency Radar</h3>
+                    <h3 class="text-lg font-bold text-slate-800 mb-6 border-b border-slate-100 pb-2">Competency Radar
+                    </h3>
                     <div class="chart-container">
                         <canvas id="skillsChartCanvas"></canvas>
                     </div>
@@ -175,58 +234,99 @@
                 <div class="space-y-6">
                     <!-- Category 1 -->
                     <div>
-                        <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-3">Robotics & Control</h4>
+                        <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-3">Robotics & Control
+                        </h4>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">ROS 1/2</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Gazebo</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Isaac Sim</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">PX4/Ardupilot</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">SLAM</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">MPC</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Pure Pursuit</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">ROS
+                                1/2</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Gazebo</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Isaac
+                                Sim</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">PX4/Ardupilot</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">SLAM</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">MPC</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Pure
+                                Pursuit</span>
                         </div>
                     </div>
 
                     <!-- Category 2 -->
                     <div>
-                        <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-3">Computer Vision & AI</h4>
+                        <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-3">Computer Vision & AI
+                        </h4>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">PyTorch</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">TensorFlow</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">YOLO v5/v8</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">OpenCV</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">TensorRT</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">CUDA</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Generative AI (GANs)</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">PyTorch</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">TensorFlow</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">YOLO
+                                v5/v8</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">OpenCV</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">TensorRT</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">CUDA</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Generative
+                                AI (GANs)</span>
                         </div>
                     </div>
 
                     <!-- Category 3 -->
                     <div>
-                        <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-3">Embedded & Hardware</h4>
+                        <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-3">Embedded & Hardware
+                        </h4>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">NVIDIA Jetson</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Arduino</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">ESP32</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">CAN Bus (J1939)</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">SolidWorks</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">LoRaWAN</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">LiDAR</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">NVIDIA
+                                Jetson</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Arduino</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">ESP32</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">CAN
+                                Bus (J1939)</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">SolidWorks</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">LoRaWAN</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">LiDAR</span>
                         </div>
                     </div>
 
                     <!-- Category 4 -->
                     <div>
-                        <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-3">Software & DevOps</h4>
+                        <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-3">Software & DevOps
+                        </h4>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Python</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">C++ (14/17)</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Docker</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Kubernetes</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Next.js</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">GraphQL</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Go</span>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Rust</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Python</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">C++
+                                (14/17)</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Docker</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Kubernetes</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Next.js</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">GraphQL</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Go</span>
+                            <span
+                                class="px-3 py-1 bg-white border border-slate-200 rounded text-sm text-slate-700 font-mono ats-keyword">Rust</span>
                         </div>
                     </div>
                 </div>
@@ -237,120 +337,169 @@
         <section id="experience" class="scroll-mt-28">
             <div class="mb-10">
                 <h2 class="text-3xl font-bold text-slate-900">Professional Experience</h2>
-                <p class="text-slate-600 mt-2">Evolution from hands-on engineering to strategic technical leadership.</p>
+                <p class="text-slate-600 mt-2">Evolution from hands-on engineering to strategic technical leadership.
+                </p>
             </div>
 
             <div class="relative border-l-2 border-slate-200 ml-4 space-y-12">
-                
+
                 <!-- Role 1 -->
                 <div class="relative pl-8">
-                    <div class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-white border-2 border-indigo-500"></div>
-                    <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all hover:shadow-md">
+                    <div class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-white border-2 border-indigo-500">
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all hover:shadow-md">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
                             <div>
-                                <h3 class="text-xl font-bold text-slate-900">Principal Technical Program Manager (AIMS Coordinator and HEET Digitalization)</h3>
-                                <div class="text-indigo-600 font-medium">Sokoine University of Agriculture (HEET Project)</div>
+                                <h3 class="text-xl font-bold text-slate-900">Principal Technical Program Manager (AIMS
+                                    Coordinator and HEET Digitalization)</h3>
+                                <div class="text-indigo-600 font-medium">Sokoine University of Agriculture (HEET
+                                    Project)</div>
                             </div>
-                            <span class="mt-2 sm:mt-0 px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold uppercase rounded-full">2021 - Present</span>
+                            <span
+                                class="mt-2 sm:mt-0 px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold uppercase rounded-full">2021
+                                - Present</span>
                         </div>
                         <ul class="space-y-3 text-slate-600 list-disc list-inside marker:text-indigo-300">
-                            <li>Directing technical strategy for <span class="ats-keyword">$32M World Bank-funded</span> digital transformation initiative at Sokoine University of Agriculture.</li>
+                            <li>Directing technical strategy for <span class="ats-keyword">$32M World Bank-funded</span>
+                                digital transformation initiative at Sokoine University of Agriculture.</li>
                             <li>Managing a cross-functional team of 8 principal Data and systems engineers.</li>
-                            <li>Architecting <span class="ats-keyword">HPC infrastructure</span> and implementing <span class="ats-keyword">DevOps/CI/CD pipelines</span> that reduced deployment latency by 40%.</li>
+                            <li>Architecting <span class="ats-keyword">HPC infrastructure</span> and implementing <span
+                                    class="ats-keyword">DevOps/CI/CD pipelines</span> that reduced deployment latency by
+                                40%.</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Role 2 -->
                 <div class="relative pl-8">
-                    <div class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-white border-2 border-indigo-500"></div>
-                    <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all hover:shadow-md">
+                    <div class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-white border-2 border-indigo-500">
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all hover:shadow-md">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
                             <div>
                                 <h3 class="text-xl font-bold text-slate-900">Lead Robotics Research Engineer</h3>
                                 <div class="text-indigo-600 font-medium">YEESI & EPA Labs</div>
                             </div>
-                            <span class="mt-2 sm:mt-0 px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold uppercase rounded-full">2021 - Present</span>
+                            <span
+                                class="mt-2 sm:mt-0 px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold uppercase rounded-full">2021
+                                - Present</span>
                         </div>
                         <ul class="space-y-3 text-slate-600 list-disc list-inside marker:text-indigo-300">
-                            <li>Founded electronics and precision agriculture lab (YEESI) and secured <span class="ats-keyword">$157k USDA/NIFA funding for Machine Vision Project</span>.</li>
-                            <li>Developed offline <span class="ats-keyword">Edge AI</span> models (TensorFlow Lite) enabling real-time disease diagnosis.</li>
-                            <li>Engineered "TanPredikt" yield forecasting engine using <span class="ats-keyword">Google Earth Engine</span> and <span class="ats-keyword">LightGBM</span>.</li>
-                            <li>Spearheaded the formation of the spin off from my lab called AgriMfumo Limited <span class="ats-keyword">www.agrimfumo.co.tz</span> that solves problems on soil testing using Electronics. They have agriSense Device to digital sense soil nutriets.</li>
+                            <li>Founded electronics and precision agriculture lab (YEESI) and secured <span
+                                    class="ats-keyword">$157k USDA/NIFA funding for Machine Vision Project</span>.</li>
+                            <li>Developed offline <span class="ats-keyword">Edge AI</span> models (TensorFlow Lite)
+                                enabling real-time disease diagnosis.</li>
+                            <li>Engineered "TanPredikt" yield forecasting engine using <span class="ats-keyword">Google
+                                    Earth Engine</span> and <span class="ats-keyword">LightGBM</span>.</li>
+                            <li>Spearheaded the formation of the spin off from my lab called AgriMfumo Limited <span
+                                    class="ats-keyword">www.agrimfumo.co.tz</span> that solves problems on soil testing
+                                using Electronics. They have agriSense Device to digital sense soil nutriets.</li>
                         </ul>
                     </div>
                 </div>
 
-                 <!-- Role 2a -->
+                <!-- Role 2a -->
                 <div class="relative pl-8">
-                    <div class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-white border-2 border-indigo-500"></div>
-                    <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all hover:shadow-md">
+                    <div class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-white border-2 border-indigo-500">
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all hover:shadow-md">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
                             <div>
-                                <h3 class="text-xl font-bold text-slate-900">Lead Software and Database Engineering Consultant</h3>
+                                <h3 class="text-xl font-bold text-slate-900">Lead Software and Database Engineering
+                                    Consultant</h3>
                                 <div class="text-indigo-600 font-medium">HYDROC GmbH</div>
                             </div>
-                            <span class="mt-2 sm:mt-0 px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold uppercase rounded-full">2022 - 2024</span>
+                            <span
+                                class="mt-2 sm:mt-0 px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold uppercase rounded-full">2022
+                                - 2024</span>
                         </div>
                         <ul class="space-y-3 text-slate-600 list-disc list-inside marker:text-indigo-300">
-                            <li>Developed a geospatial database engine for <span class="ats-keyword">The Joint Songwe River Basin Commission and European Union</span>.</li>
-                            <li>Developed Interactive <span class="ats-keyword">Web Maps</span> models for Flood Early Warning System.</li>
+                            <li>Developed a geospatial database engine for <span class="ats-keyword">The Joint Songwe
+                                    River Basin Commission and European Union</span>.</li>
+                            <li>Developed Interactive <span class="ats-keyword">Web Maps</span> models for Flood Early
+                                Warning System.</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Role 3 (Added Missing Computer Vision Engineer Role) -->
                 <div class="relative pl-8">
-                    <div class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-white border-2 border-indigo-500"></div>
-                    <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all hover:shadow-md">
+                    <div class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-white border-2 border-indigo-500">
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all hover:shadow-md">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
                             <div>
-                                <h3 class="text-xl font-bold text-slate-900">Computer Vision Engineer (Geospatial AI Research Scholar)</h3>
+                                <h3 class="text-xl font-bold text-slate-900">Computer Vision Engineer (Geospatial AI
+                                    Research Scholar)</h3>
                                 <div class="text-indigo-600 font-medium">North Carolina State University</div>
                             </div>
-                            <span class="mt-2 sm:mt-0 px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold uppercase rounded-full">Aug 2020 - Feb 2021</span>
+                            <span
+                                class="mt-2 sm:mt-0 px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold uppercase rounded-full">Aug
+                                2020 - Feb 2021</span>
                         </div>
                         <ul class="space-y-3 text-slate-600 list-disc list-inside marker:text-indigo-300">
-                            <li>Developed "PhenoCV-WeedCam," a <span class="ats-keyword">semantic segmentation</span> pipeline using OpenCV and PyTorch.</li>
-                            <li>Optimized algorithms for ground-based robotic sprayers to discriminate between crops and weeds under tight latency constraints.</li>
+                            <li>Developed "PhenoCV-WeedCam," a <span class="ats-keyword">semantic segmentation</span>
+                                pipeline using OpenCV and PyTorch.</li>
+                            <li>Optimized algorithms for ground-based robotic sprayers to discriminate between crops and
+                                weeds under tight latency constraints.</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Role 4 -->
                 <div class="relative pl-8">
-                    <div class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-white border-2 border-indigo-500"></div>
-                    <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all hover:shadow-md">
+                    <div class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-white border-2 border-indigo-500">
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all hover:shadow-md">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
                             <div>
-                                <h3 class="text-xl font-bold text-slate-900">Robotics R&D Engineer (Doctoral Fellow)</h3>
+                                <h3 class="text-xl font-bold text-slate-900">Robotics R&D Engineer (Doctoral Fellow)
+                                </h3>
                                 <div class="text-indigo-600 font-medium">University of Georgia</div>
                             </div>
-                            <span class="mt-2 sm:mt-0 px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold uppercase rounded-full">2016 - 2020</span>
+                            <span
+                                class="mt-2 sm:mt-0 px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold uppercase rounded-full">2016
+                                - 2020</span>
                         </div>
                         <ul class="space-y-3 text-slate-600 list-disc list-inside marker:text-indigo-300">
-                            <li>Designed and fabricated a Center-Articulated Hydrostatic Rover with custom <span class="ats-keyword">CAN bus (J1939)</span> integration.</li>
-                            <li>Invented <span class="ats-keyword">Modified Pure Pursuit</span> algorithm, achieving sub-inch accuracy in unstructured fields.</li>
-                            <li>Achieved 94.4% detection accuracy on <span class="ats-keyword">NVIDIA Jetson TX2</span> using <span class="ats-keyword">YOLOv2</span> and Optical Flow fusion.</li>
+                            <li>Designed and fabricated a Center-Articulated Hydrostatic Rover with custom <span
+                                    class="ats-keyword">CAN bus (J1939)</span> integration.</li>
+                            <li>Invented <span class="ats-keyword">Modified Pure Pursuit</span> algorithm, achieving
+                                sub-inch accuracy in unstructured fields.</li>
+                            <li>Achieved 94.4% detection accuracy on <span class="ats-keyword">NVIDIA Jetson TX2</span>
+                                using <span class="ats-keyword">YOLOv2</span> and Optical Flow fusion.</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Role 5 -->
                 <div class="relative pl-8">
-                    <div class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-white border-2 border-indigo-500"></div>
-                    <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all hover:shadow-md">
+                    <div class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-white border-2 border-indigo-500">
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all hover:shadow-md">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
                             <div>
                                 <h3 class="text-xl font-bold text-slate-900">Software Development Engineer</h3>
                                 <div class="text-indigo-600 font-medium">Sokoine University of Agriculture</div>
                             </div>
-                            <span class="mt-2 sm:mt-0 px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold uppercase rounded-full">2011 - 2021</span>
+                            <span
+                                class="mt-2 sm:mt-0 px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold uppercase rounded-full">2011
+                                - 2021</span>
                         </div>
                         <ul class="space-y-3 text-slate-600 list-disc list-inside marker:text-indigo-300">
-                            <li>Implemented Student Information System, Enterprise Service Bus, and Finance Modules.</li>
-                            <li>Full-stack development using <span class="ats-keyword">CodeIgniter</span>, <span class="ats-keyword">FastAPI</span>, <span class="ats-keyword">GraphQL</span>, and <span class="ats-keyword">ReactJS</span>.</li>
-                            <li>Architected internal ESB for seamless asynchronous data exchange between disparate institutional systems.</li>
+                            <li>Implemented Student Information System, Enterprise Service Bus, and Finance Modules.
+                            </li>
+                            <li>Full-stack development using <span class="ats-keyword">CodeIgniter</span>, <span
+                                    class="ats-keyword">FastAPI</span>, <span class="ats-keyword">GraphQL</span>, and
+                                <span class="ats-keyword">ReactJS</span>.</li>
+                            <li>Architected internal ESB for seamless asynchronous data exchange between disparate
+                                institutional systems.</li>
                         </ul>
                     </div>
                 </div>
@@ -367,172 +516,241 @@
                 </div>
                 <!-- Filter Buttons -->
                 <div class="mt-4 md:mt-0 flex gap-2 flex-wrap" id="project-filters">
-                    <button data-filter="all" class="filter-btn active px-3 py-1 text-sm font-medium bg-slate-800 text-white rounded shadow-sm">All</button>
-                    <button data-filter="robotics" class="filter-btn px-3 py-1 text-sm font-medium bg-white text-slate-600 border border-slate-200 rounded hover:bg-slate-50">Robotics</button>
-                    <button data-filter="cloud" class="filter-btn px-3 py-1 text-sm font-medium bg-white text-slate-600 border border-slate-200 rounded hover:bg-slate-50">Cloud/AI</button>
-                    <button data-filter="embedded" class="filter-btn px-3 py-1 text-sm font-medium bg-white text-slate-600 border border-slate-200 rounded hover:bg-slate-50">IoT/Embedded</button>
+                    <button data-filter="all"
+                        class="filter-btn active px-3 py-1 text-sm font-medium bg-slate-800 text-white rounded shadow-sm">All</button>
+                    <button data-filter="robotics"
+                        class="filter-btn px-3 py-1 text-sm font-medium bg-white text-slate-600 border border-slate-200 rounded hover:bg-slate-50">Robotics</button>
+                    <button data-filter="cloud"
+                        class="filter-btn px-3 py-1 text-sm font-medium bg-white text-slate-600 border border-slate-200 rounded hover:bg-slate-50">Cloud/AI</button>
+                    <button data-filter="embedded"
+                        class="filter-btn px-3 py-1 text-sm font-medium bg-white text-slate-600 border border-slate-200 rounded hover:bg-slate-50">IoT/Embedded</button>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="projects-grid">
-                
+
                 <!-- TanPredikt (NEW) -->
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full" data-cat="cloud">
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full"
+                    data-cat="cloud">
                     <div class="p-8 flex-1">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="text-xl font-bold text-slate-900">TanPredikt</h3>
-                            <span class="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100 font-bold">Cloud AI</span>
+                            <span
+                                class="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100 font-bold">Cloud
+                                AI</span>
                         </div>
                         <p class="text-slate-600 mb-6 leading-relaxed">
-                            Architected a geospatial time-series forecasting engine. Integrates <span class="ats-keyword">Sentinel-2 satellite imagery</span> via Google Earth Engine with soil sensors to predict maize yields using <span class="ats-keyword">LightGBM</span>.
+                            Architected a geospatial time-series forecasting engine. Integrates <span
+                                class="ats-keyword">Sentinel-2 satellite imagery</span> via Google Earth Engine with
+                            soil sensors to predict maize yields using <span class="ats-keyword">LightGBM</span>.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Google Earth Engine</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">LightGBM</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Python</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Google
+                                Earth Engine</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">LightGBM</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Python</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Cotton Rover -->
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full" data-cat="robotics">
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full"
+                    data-cat="robotics">
                     <div class="p-8 flex-1">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="text-xl font-bold text-slate-900">Cotton Harvesting Rover</h3>
-                            <span class="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded border border-indigo-100 font-bold">Robotics</span>
+                            <span
+                                class="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded border border-indigo-100 font-bold">Robotics</span>
                         </div>
                         <p class="text-slate-600 mb-6 leading-relaxed">
-                            Architected a full-stack autonomous rover. Designed custom hydrostatic drive controls and implemented <span class="ats-keyword">J1939 CAN bus</span> communication. Invented 'Modified Pure Pursuit' algorithm for sub-inch accuracy.
+                            Architected a full-stack autonomous rover. Designed custom hydrostatic drive controls and
+                            implemented <span class="ats-keyword">J1939 CAN bus</span> communication. Invented 'Modified
+                            Pure Pursuit' algorithm for sub-inch accuracy.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">ROS</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">C++</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Arduino</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">ROS</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">C++</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Arduino</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Agri-UGV Fleet -->
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full" data-cat="robotics">
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full"
+                    data-cat="robotics">
                     <div class="p-8 flex-1">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="text-xl font-bold text-slate-900">Agri-UGV Fleet Automation</h3>
-                            <span class="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded border border-indigo-100 font-bold">Robotics</span>
+                            <span
+                                class="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded border border-indigo-100 font-bold">Robotics</span>
                         </div>
                         <p class="text-slate-600 mb-6 leading-relaxed">
-                            Implemented autonomous mission planning and execution for a multi-UGV fleet used in agricultural mapping and spraying. utilized <span class="ats-keyword">PX4/ArduPilot</span> for flight/rover control.
+                            Implemented autonomous mission planning and execution for a multi-UGV fleet used in
+                            agricultural mapping and spraying. utilized <span class="ats-keyword">PX4/ArduPilot</span>
+                            for flight/rover control.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">PX4</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">ArduPilot</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Python</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">PX4</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">ArduPilot</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Python</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Enterprise Service Bus (NEW) -->
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full" data-cat="cloud">
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full"
+                    data-cat="cloud">
                     <div class="p-8 flex-1">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="text-xl font-bold text-slate-900">Enterprise Service Bus (ESB)</h3>
-                            <span class="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100 font-bold">DevOps</span>
+                            <span
+                                class="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100 font-bold">DevOps</span>
                         </div>
                         <p class="text-slate-600 mb-6 leading-relaxed">
-                            Architected and deployed an internal ESB for seamless, asynchronous data exchange between disparate institutional systems (ERP, SIS, Finance), significantly improving data integrity.
+                            Architected and deployed an internal ESB for seamless, asynchronous data exchange between
+                            disparate institutional systems (ERP, SIS, Finance), significantly improving data integrity.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Middleware</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Integration</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">SOA</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Middleware</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Integration</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">SOA</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- AkilimaTik -->
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full" data-cat="cloud">
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full"
+                    data-cat="cloud">
                     <div class="p-8 flex-1">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="text-xl font-bold text-slate-900">AkilimaTik Chat Engine</h3>
-                            <span class="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100 font-bold">GenAI</span>
+                            <span
+                                class="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100 font-bold">GenAI</span>
                         </div>
                         <p class="text-slate-600 mb-6 leading-relaxed">
-                            Integrated Fine-Tuned LLMs and <span class="ats-keyword">RAG</span> (Retrieval-Augmented Generation) into the University Student Information System to act as a digital representative for students and applicants.
+                            Integrated Fine-Tuned LLMs and <span class="ats-keyword">RAG</span> (Retrieval-Augmented
+                            Generation) into the University Student Information System to act as a digital
+                            representative for students and applicants.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">LLM</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Docker</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">RAG</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">LLM</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Docker</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">RAG</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Precision Planting -->
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full" data-cat="embedded">
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full"
+                    data-cat="embedded">
                     <div class="p-8 flex-1">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="text-xl font-bold text-slate-900">Precision Planting System</h3>
-                            <span class="text-xs bg-emerald-50 text-emerald-700 px-2 py-1 rounded border border-emerald-100 font-bold">Embedded</span>
+                            <span
+                                class="text-xs bg-emerald-50 text-emerald-700 px-2 py-1 rounded border border-emerald-100 font-bold">Embedded</span>
                         </div>
                         <p class="text-slate-600 mb-6 leading-relaxed">
-                            Developed a low-cost, open-source precision planting mechanism for smallholder farmers, utilizing GPS and custom stepper motor control for accurate seed placement.
+                            Developed a low-cost, open-source precision planting mechanism for smallholder farmers,
+                            utilizing GPS and custom stepper motor control for accurate seed placement.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">GPS</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Stepper Motors</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">PCB Design</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">GPS</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Stepper
+                                Motors</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">PCB
+                                Design</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- AquaSense IoT -->
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full" data-cat="embedded">
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full"
+                    data-cat="embedded">
                     <div class="p-8 flex-1">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="text-xl font-bold text-slate-900">AquaSense IoT Monitoring</h3>
-                            <span class="text-xs bg-emerald-50 text-emerald-700 px-2 py-1 rounded border border-emerald-100 font-bold">IoT</span>
+                            <span
+                                class="text-xs bg-emerald-50 text-emerald-700 px-2 py-1 rounded border border-emerald-100 font-bold">IoT</span>
                         </div>
                         <p class="text-slate-600 mb-6 leading-relaxed">
-                            IoT-based system for real-time water quality monitoring in aquaculture. Uses low-power sensors and a cloud-based dashboard for analytics.
+                            IoT-based system for real-time water quality monitoring in aquaculture. Uses low-power
+                            sensors and a cloud-based dashboard for analytics.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">IoT</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Sensors</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Cloud</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">IoT</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Sensors</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Cloud</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Mwagilia App -->
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full" data-cat="cloud">
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full"
+                    data-cat="cloud">
                     <div class="p-8 flex-1">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="text-xl font-bold text-slate-900">Mwagilia App & Advisory</h3>
-                            <span class="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100 font-bold">App Dev</span>
+                            <span
+                                class="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100 font-bold">App
+                                Dev</span>
                         </div>
                         <p class="text-slate-600 mb-6 leading-relaxed">
-                            App to schedule irrigation using satellite imagery and advise on fertilization using drone imagery. Includes a disease advisory system using LLM and CNNs.
+                            App to schedule irrigation using satellite imagery and advise on fertilization using drone
+                            imagery. Includes a disease advisory system using LLM and CNNs.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Satellite Imagery</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">CNN</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Drone Imagery</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Satellite
+                                Imagery</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">CNN</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">Drone
+                                Imagery</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- PhenoCV -->
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full" data-cat="robotics">
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full"
+                    data-cat="robotics">
                     <div class="p-8 flex-1">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="text-xl font-bold text-slate-900">PhenoCV-WeedCam</h3>
-                            <span class="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded border border-indigo-100 font-bold">Computer Vision</span>
+                            <span
+                                class="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded border border-indigo-100 font-bold">Computer
+                                Vision</span>
                         </div>
                         <p class="text-slate-600 mb-6 leading-relaxed">
-                            Developed semantic segmentation pipeline for real-time weed discrimination. Optimized algorithms for ground-based robotic sprayers to discriminate between crops and weeds.
+                            Developed semantic segmentation pipeline for real-time weed discrimination. Optimized
+                            algorithms for ground-based robotic sprayers to discriminate between crops and weeds.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">PyTorch</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">OpenCV</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">PyTorch</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200 font-mono ats-keyword">OpenCV</span>
                         </div>
                     </div>
                 </div>
@@ -549,15 +767,18 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- PhD -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors">
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors">
                     <div class="text-indigo-600 font-bold text-lg mb-1">Ph.D. in Engineering</div>
                     <div class="text-slate-900 font-semibold">University of Georgia, USA</div>
                     <div class="text-slate-500 text-sm mb-4">2020</div>
-                    <p class="text-slate-600 text-sm">Focus: AI, Autonomous Navigation, Visual Servoing, and Mechatronics for Ag-Robots.</p>
+                    <p class="text-slate-600 text-sm">Focus: AI, Autonomous Navigation, Visual Servoing, and
+                        Mechatronics for Ag-Robots.</p>
                 </div>
 
                 <!-- MSc -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors">
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors">
                     <div class="text-indigo-600 font-bold text-lg mb-1">M.Sc. in Ag & Bio Engineering</div>
                     <div class="text-slate-900 font-semibold">University of Florida, USA</div>
                     <div class="text-slate-500 text-sm mb-4">2014</div>
@@ -565,7 +786,8 @@
                 </div>
 
                 <!-- BSc -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors">
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors">
                     <div class="text-indigo-600 font-bold text-lg mb-1">B.Sc. in Computer Engineering & IT</div>
                     <div class="text-slate-900 font-semibold">University of Dar es Salaam, Tanzania</div>
                     <div class="text-slate-500 text-sm mb-4">2011</div>
@@ -578,7 +800,9 @@
         <section id="eb1a" class="scroll-mt-28">
             <div class="bg-slate-900 text-white rounded-2xl p-8 md:p-12 shadow-xl">
                 <div class="mb-8">
-                    <span class="bg-indigo-500 text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">Visa Eligibility</span>
+                    <span
+                        class="bg-indigo-500 text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">Visa
+                        Eligibility</span>
                     <h2 class="text-3xl font-bold mt-2">EB-1A Evidence (Extraordinary Ability)</h2>
                     <p class="text-indigo-200 mt-2">Documented proof for self-petitioning Green Card eligibility.</p>
                 </div>
@@ -587,44 +811,58 @@
                     <!-- Evidence Item 1 -->
                     <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10">
                         <div class="flex items-center mb-3">
-                            <div class="bg-indigo-500 w-8 h-8 rounded-full flex items-center justify-center font-bold text-white mr-3">1</div>
+                            <div
+                                class="bg-indigo-500 w-8 h-8 rounded-full flex items-center justify-center font-bold text-white mr-3">
+                                1</div>
                             <h3 class="font-bold text-lg">Original Contribution</h3>
                         </div>
                         <p class="text-slate-300 text-sm leading-relaxed">
-                            Invented a novel "Modified Pure Pursuit" control algorithm for center-articulated rovers, cited by peer-reviewed papers and adopted as a benchmark.
+                            Invented a novel "Modified Pure Pursuit" control algorithm for center-articulated rovers,
+                            cited by peer-reviewed papers and adopted as a benchmark.
                         </p>
                     </div>
 
                     <!-- Evidence Item 2 -->
                     <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10">
                         <div class="flex items-center mb-3">
-                            <div class="bg-indigo-500 w-8 h-8 rounded-full flex items-center justify-center font-bold text-white mr-3">2</div>
+                            <div
+                                class="bg-indigo-500 w-8 h-8 rounded-full flex items-center justify-center font-bold text-white mr-3">
+                                2</div>
                             <h3 class="font-bold text-lg">Internationally Recognized Awards</h3>
                         </div>
                         <p class="text-slate-300 text-sm leading-relaxed">
-                            Winner, Zindi "Outsmarting Outbreaks" Challenge, ranking <span class="text-white font-bold">1st among 500+ global data scientists</span>. Recipient of "Editor's Choice Article" in Electronics Journal.
+                            Winner, Zindi "Outsmarting Outbreaks" Challenge, ranking <span
+                                class="text-white font-bold">1st among 500+ global data scientists</span>. Recipient of
+                            "Editor's Choice Article" in Electronics Journal.
                         </p>
                     </div>
 
                     <!-- Evidence Item 3 -->
                     <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10">
                         <div class="flex items-center mb-3">
-                            <div class="bg-indigo-500 w-8 h-8 rounded-full flex items-center justify-center font-bold text-white mr-3">3</div>
+                            <div
+                                class="bg-indigo-500 w-8 h-8 rounded-full flex items-center justify-center font-bold text-white mr-3">
+                                3</div>
                             <h3 class="font-bold text-lg">Judging the Work of Others</h3>
                         </div>
                         <p class="text-slate-300 text-sm leading-relaxed">
-                            Served as a Peer Reviewer for top-tier journals including <em>IEEE Robotics and Automation Letters (RA-L)</em> and <em>Computers in Agriculture</em>.
+                            Served as a Peer Reviewer for top-tier journals including <em>IEEE Robotics and Automation
+                                Letters (RA-L)</em> and <em>Computers in Agriculture</em>.
                         </p>
                     </div>
 
                     <!-- Evidence Item 4 -->
                     <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10">
                         <div class="flex items-center mb-3">
-                            <div class="bg-indigo-500 w-8 h-8 rounded-full flex items-center justify-center font-bold text-white mr-3">4</div>
+                            <div
+                                class="bg-indigo-500 w-8 h-8 rounded-full flex items-center justify-center font-bold text-white mr-3">
+                                4</div>
                             <h3 class="font-bold text-lg">Critical Role</h3>
                         </div>
                         <p class="text-slate-300 text-sm leading-relaxed">
-                            Served as Technical Lead for the <span class="text-white font-bold">$32M World Bank HEET Project</span>, overseeing Sokoine University of Agriculture digital infrastructure modernization.
+                            Served as Technical Lead for the <span class="text-white font-bold">$32M World Bank HEET
+                                Project</span>, overseeing Sokoine University of Agriculture digital infrastructure
+                            modernization.
                         </p>
                     </div>
                 </div>
@@ -639,7 +877,8 @@
             <div class="flex justify-center space-x-6 mb-8 flex-wrap">
                 <a href="https://kadefue.github.io/" class="hover:text-white transition-colors">GitHub</a>
                 <a href="https://linkedin.com/in/kadefue/" class="hover:text-white transition-colors">LinkedIn</a>
-                <a href="https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en" class="hover:text-white transition-colors">Google Scholar</a>
+                <a href="https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en"
+                    class="hover:text-white transition-colors">Google Scholar</a>
                 <a href="https://orcid.org/0000-0001-6362-3174" class="hover:text-white transition-colors">ORCID</a>
                 <a href="https://www.youtube.com/user/kadefue" class="hover:text-white transition-colors">YouTube</a>
                 <a href="mailto:kadefue@gmail.com" class="hover:text-white transition-colors">Email</a>
@@ -651,7 +890,7 @@
     <!-- JAVASCRIPT LOGIC -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            
+
             // --- 1. RENDER RADAR CHART ---
             const ctx = document.getElementById('skillsChartCanvas');
             if (ctx) {
@@ -713,8 +952,8 @@
                     // Filter Logic
                     projectCards.forEach(card => {
                         const cardCat = card.dataset.cat;
-                        if (category === 'all' || 
-                            cardCat === category || 
+                        if (category === 'all' ||
+                            cardCat === category ||
                             (category === 'cloud' && (cardCat === 'cloud' || cardCat === 'data')) ||
                             (category === 'embedded' && (cardCat === 'embedded' || cardCat === 'iot'))
                         ) {
@@ -729,7 +968,7 @@
             // --- 3. ATS MODE TOGGLE ---
             const atsToggle = document.getElementById('ats-toggle');
             atsToggle.addEventListener('change', (e) => {
-                if(e.target.checked) {
+                if (e.target.checked) {
                     document.body.classList.add('ats-mode');
                 } else {
                     document.body.classList.remove('ats-mode');
@@ -743,7 +982,7 @@
             mobileMenuBtn.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
-            
+
             // Close mobile menu on link click
             document.querySelectorAll('#mobile-menu a').forEach(link => {
                 link.addEventListener('click', () => {
@@ -776,4 +1015,5 @@
         });
     </script>
 </body>
+
 </html>
