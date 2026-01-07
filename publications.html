@@ -130,17 +130,25 @@
                     </div>
 
                     <div class="mt-4">
-                        <h3 class="text-sm font-semibold text-slate-500 mb-2">Source Screenshot</h3>
-                        <img src="images/citation_statistics.png" alt="Google Scholar Citation Statistics"
-                            class="w-full rounded-lg border border-slate-200 shadow-sm cursor-pointer hover:opacity-90 transition-opacity"
-                            onclick="window.open(this.src, '_blank')">
+                        <h3 class="text-xs uppercase tracking-wider font-semibold text-slate-500 mb-2">Verified Source
+                        </h3>
+                        <div class="group relative overflow-hidden rounded-lg border border-slate-200 shadow-sm">
+                            <img src="images/citation_statistics.png" alt="Google Scholar Citation Statistics"
+                                class="w-full h-auto transition-transform duration-300 group-hover:scale-105 cursor-pointer"
+                                onclick="window.open(this.src, '_blank')">
+                            <div
+                                class="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/5 transition-colors pointer-events-none">
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Chart Card -->
                 <div class="col-span-1 md:col-span-2 bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
                     <h2 class="text-lg font-bold text-slate-900 mb-4">Citation Growth</h2>
-                    <canvas id="citationChart" width="400" height="200"></canvas>
+                    <div class="h-64">
+                        <canvas id="citationChart"></canvas>
+                    </div>
                 </div>
             </div>
 
@@ -170,90 +178,121 @@
         </section>
 
         <section id="publications-list" class="space-y-8">
-            <h2 class="text-2xl font-bold text-slate-900">Selected Publications</h2>
+            <div class="flex justify-between items-baseline">
+                <h2 class="text-2xl font-bold text-slate-900">Selected Publications</h2>
+                <span class="text-sm text-slate-500">89+ Publications Total</span>
+            </div>
 
-            <!-- 2024 -->
+            <!-- Recent -->
             <div class="relative pl-8 border-l-2 border-indigo-100">
                 <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-indigo-500 ring-4 ring-white"></div>
-                <h3 class="text-xl font-bold text-slate-800 mb-4">2024 & Recent</h3>
+                <h3 class="text-xl font-bold text-slate-800 mb-4">Recent Highlights</h3>
                 <div class="space-y-6">
-                    <!-- Added from Google Scholar Fetch -->
                     <div
                         class="bg-white p-5 rounded-lg shadow-sm border border-slate-100 hover:border-indigo-200 transition-colors">
-                        <h4 class="text-lg font-semibold text-slate-900">Meta-Analysis Assessing Potential of Drone
-                            Remote Sensing in Estimating Plant Traits Related to Nitrogen Use Efficiency</h4>
-                        <p class="text-slate-600 text-sm mt-1">J Zhang, Y Hu, F Li, K Yu, KG Fue</p>
-                        <p class="text-slate-500 text-xs mt-2 italic">Remote Sensing 16 (5), 838, 2024</p>
+                        <a href="https://www.mdpi.com/2072-4292/16/5/838" target="_blank" class="block group">
+                            <h4
+                                class="text-lg font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                Meta-Analysis Assessing Potential of Drone Remote Sensing in Estimating Plant Traits
+                                Related to Nitrogen Use Efficiency</h4>
+                            <p class="text-slate-600 text-sm mt-1">J Zhang, Y Hu, F Li, K Yu, KG Fue</p>
+                            <div class="flex items-center mt-2 space-x-4">
+                                <span class="text-slate-500 text-xs italic">Remote Sensing 16 (5), 838</span>
+                                <span class="bg-slate-100 text-slate-600 text-xs px-2 py-0.5 rounded-full">2024</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
 
-
-            <!-- 2020 -->
+            <!-- Highly Cited -->
             <div class="relative pl-8 border-l-2 border-indigo-100">
                 <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-indigo-500 ring-4 ring-white"></div>
-                <h3 class="text-xl font-bold text-slate-800 mb-4">2020</h3>
+                <h3 class="text-xl font-bold text-slate-800 mb-4">Highly Cited</h3>
                 <div class="space-y-6">
+                    <!-- 2020: 143 citations -->
                     <div
                         class="bg-white p-5 rounded-lg shadow-sm border border-slate-100 hover:border-indigo-200 transition-colors">
                         <h4 class="text-lg font-semibold text-slate-900">An extensive review of mobile agricultural
                             robotics for field operations: focus on cotton harvesting</h4>
                         <p class="text-slate-600 text-sm mt-1">KG Fue, WM Porter, EM Barnes, GC Rains</p>
-                        <p class="text-slate-500 text-xs mt-2 italic">AgriEngineering 2 (1), 150-174, 2020 (143
-                            citations)</p>
+                        <div class="flex items-center mt-2 space-x-4">
+                            <span class="text-slate-500 text-xs italic">AgriEngineering 2 (1), 150-174</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs px-2 py-0.5 rounded-full">2020</span>
+                            <span class="text-indigo-600 font-semibold text-xs">143 Citations</span>
+                        </div>
                     </div>
+
+                    <!-- 2020: 109 citations -->
                     <div
                         class="bg-white p-5 rounded-lg shadow-sm border border-slate-100 hover:border-indigo-200 transition-colors">
                         <h4 class="text-lg font-semibold text-slate-900">Agricultural internet of things and decision
                             support for precision smart farming</h4>
                         <p class="text-slate-600 text-sm mt-1">G Fastelini, C Schillaci, T Crestey, B Tisseyre, S
                             Fountas, E Anastasiou, ...</p>
-                        <p class="text-slate-500 text-xs mt-2 italic">Academic Press, 2020 (109 citations)</p>
+                        <div class="flex items-center mt-2 space-x-4">
+                            <span class="text-slate-500 text-xs italic">Academic Press</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs px-2 py-0.5 rounded-full">2020</span>
+                            <span class="text-indigo-600 font-semibold text-xs">109 Citations</span>
+                        </div>
                     </div>
+
+                    <!-- 2017: 99 citations -->
+                    <div
+                        class="bg-white p-5 rounded-lg shadow-sm border border-slate-100 hover:border-indigo-200 transition-colors">
+                        <h4 class="text-lg font-semibold text-slate-900">The use of participatory approaches in
+                            developing ICT‐based systems for disseminating agricultural knowledge and information for
+                            farmers in developing countries</h4>
+                        <p class="text-slate-600 text-sm mt-1">AA Barakabitze, KG Fue, CA Sanga</p>
+                        <div class="flex items-center mt-2 space-x-4">
+                            <span class="text-slate-500 text-xs italic">The Electronic Journal of Information Systems in
+                                Developing Countries...</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs px-2 py-0.5 rounded-full">2017</span>
+                            <span class="text-indigo-600 font-semibold text-xs">99 Citations</span>
+                        </div>
+                    </div>
+
+                    <!-- 2020: 62 citations -->
                     <div
                         class="bg-white p-5 rounded-lg shadow-sm border border-slate-100 hover:border-indigo-200 transition-colors">
                         <h4 class="text-lg font-semibold text-slate-900">Precision farming and IoT case studies across
                             the world</h4>
                         <p class="text-slate-600 text-sm mt-1">G Fastelini, C Schillaci, T Crestey, B Tisseyre, S
                             Fountas, E Anastasiou, ...</p>
-                        <p class="text-slate-500 text-xs mt-2 italic">Agricultural Internet of Things and Decision
-                            Support for Precision Smart ..., 2020 (62 citations)</p>
+                        <div class="flex items-center mt-2 space-x-4">
+                            <span class="text-slate-500 text-xs italic">Agricultural Internet of Things and Decision
+                                Support...</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs px-2 py-0.5 rounded-full">2020</span>
+                            <span class="text-indigo-600 font-semibold text-xs">62 Citations</span>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- 2018 -->
-            <div class="relative pl-8 border-l-2 border-indigo-100">
-                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-indigo-500 ring-4 ring-white"></div>
-                <h3 class="text-xl font-bold text-slate-800 mb-4">2018</h3>
-                <div class="space-y-6">
+                    <!-- 2018: 57 citations -->
                     <div
                         class="bg-white p-5 rounded-lg shadow-sm border border-slate-100 hover:border-indigo-200 transition-colors">
                         <h4 class="text-lg font-semibold text-slate-900">Exploring information seeking behavior of
                             farmers’ in information related to Climate cHange Adaptation through ICT (CHAI)</h4>
                         <p class="text-slate-600 text-sm mt-1">SD Tumbo, N Mwalukasa, KG Fue, MRS Mlozi, R Haug, CA
                             Sanga</p>
-                        <p class="text-slate-500 text-xs mt-2 italic">International Review of Research in Open and
-                            Distributed Learning (IRRODL ..., 2018 (57 citations)</p>
+                        <div class="flex items-center mt-2 space-x-4">
+                            <span class="text-slate-500 text-xs italic">International Review of Research in Open and
+                                Distributed Learning</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs px-2 py-0.5 rounded-full">2018</span>
+                            <span class="text-indigo-600 font-semibold text-xs">57 Citations</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 2017 -->
-            <div class="relative pl-8 border-l-2 border-indigo-100">
-                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-indigo-500 ring-4 ring-white"></div>
-                <h3 class="text-xl font-bold text-slate-800 mb-4">2017</h3>
-                <div class="space-y-6">
-                    <div
-                        class="bg-white p-5 rounded-lg shadow-sm border border-slate-100 hover:border-indigo-200 transition-colors">
-                        <h4 class="text-lg font-semibold text-slate-900">The use of participatory approaches in
-                            developing ICT‐based systems for disseminating agricultural knowledge and information for
-                            farmers in developing countries: The case of ...</h4>
-                        <p class="text-slate-600 text-sm mt-1">AA Barakabitze, KG Fue, CA Sanga</p>
-                        <p class="text-slate-500 text-xs mt-2 italic">The Electronic Journal of Information Systems in
-                            Developing Countries 78 (1 ..., 2017 (99 citations)</p>
-                    </div>
-                </div>
+            <div class="flex justify-center pt-8">
+                <a href="https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en" target="_blank"
+                    class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-sm">
+                    View All 89+ Publications on Google Scholar
+                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
             </div>
 
         </section>
@@ -301,32 +340,58 @@
             data: {
                 labels: ['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
                 datasets: [{
-                    label: 'Citations per Year',
-                    data: [6, 12, 12, 30, 68, 88, 143, 182, 222, 213, 10], // Data extracted from Google Scholar
+                    label: 'Citations',
+                    data: [6, 12, 12, 30, 68, 88, 143, 182, 222, 213, 10],
                     backgroundColor: 'rgba(79, 70, 229, 0.7)', // Indigo-600
                     borderColor: 'rgba(79, 70, 229, 1)',
                     borderWidth: 1,
-                    borderRadius: 4
+                    borderRadius: 4,
+                    hoverBackgroundColor: 'rgba(79, 70, 229, 0.9)'
                 }]
             },
             options: {
                 responsive: true,
+                maintainAspectRatio: false,
                 scales: {
                     y: {
                         beginAtZero: true,
                         grid: {
-                            color: '#f1f5f9'
+                            color: '#e2e8f0',
+                            drawBorder: false
+                        },
+                        ticks: {
+                            font: {
+                                family: "'Inter', sans-serif"
+                            }
                         }
                     },
                     x: {
                         grid: {
                             display: false
+                        },
+                        ticks: {
+                            font: {
+                                family: "'Inter', sans-serif"
+                            }
                         }
                     }
                 },
                 plugins: {
                     legend: {
                         display: false
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(30, 41, 59, 0.9)',
+                        padding: 12,
+                        titleFont: {
+                            family: "'Inter', sans-serif",
+                            size: 13
+                        },
+                        bodyFont: {
+                            family: "'Inter', sans-serif",
+                            size: 13
+                        },
+                        cornerRadius: 8
                     }
                 }
             }
