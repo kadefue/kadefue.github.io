@@ -87,9 +87,10 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 space-y-12">
 
         <section>
-            <h1 class="text-3xl font-bold text-slate-900 mb-6 border-l-4 border-indigo-500 pl-4">Publications</h1>
+            <h1 class="text-3xl font-bold text-slate-900 mb-6 border-l-4 border-indigo-500 pl-4">Publications & Impact
+            </h1>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <!-- Citation Stats Card -->
                 <div class="col-span-1 md:col-span-1 bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
                     <h2 class="text-lg font-bold text-slate-900 mb-4">Citation Statistics</h2>
@@ -149,6 +150,30 @@
                     <div class="h-64">
                         <canvas id="citationChart"></canvas>
                     </div>
+                </div>
+            </div>
+
+            <!-- Reviewer Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="col-span-1 md:col-span-3 bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900">Peer Review Activity</h2>
+                            <p class="text-slate-500 text-sm">Service to the academic community</p>
+                        </div>
+                        <div
+                            class="mt-4 md:mt-0 bg-indigo-50 px-4 py-2 rounded-lg border border-indigo-100 flex items-center shadow-sm">
+                            <span class="text-3xl font-bold text-indigo-600 mr-2">30</span>
+                            <div class="leading-tight text-xs text-indigo-900 font-medium">
+                                Verified<br>Reviews
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h-64">
+                        <canvas id="reviewerChart"></canvas>
+                    </div>
+                    <p class="text-xs text-right text-slate-400 mt-2">Source: ORCID</p>
                 </div>
             </div>
 
@@ -334,8 +359,10 @@
         })
 
         // Chart.js Configuration
-        const ctx = document.getElementById('citationChart').getContext('2d');
-        const citationChart = new Chart(ctx, {
+
+        // 1. Citation Chart
+        const ctxCitation = document.getElementById('citationChart').getContext('2d');
+        const citationChart = new Chart(ctxCitation, {
             type: 'bar',
             data: {
                 labels: ['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
@@ -373,6 +400,100 @@
                             font: {
                                 family: "'Inter', sans-serif"
                             }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(30, 41, 59, 0.9)',
+                        padding: 12,
+                        titleFont: {
+                            family: "'Inter', sans-serif",
+                            size: 13
+                        },
+                        bodyFont: {
+                            family: "'Inter', sans-serif",
+                            size: 13
+                        },
+                        cornerRadius: 8
+                    }
+                }
+            }
+        });
+
+        // 2. Reviewer Chart
+        const ctxReviewer = document.getElementById('reviewerChart').getContext('2d');
+        const reviewerChart = new Chart(ctxReviewer, {
+            type: 'bar', // Horizontal bar chart
+            indexAxis: 'y',
+            data: {
+                labels: [
+                    'Electronics',
+                    'Applied Sciences',
+                    'Robotics',
+                    'Intl J of Ag & Env Info Sys',
+                    'Bioengineering',
+                    'Sensors',
+                    'Computers & Electronics in Ag',
+                    'IGI Global Book Chapters'
+                ],
+                datasets: [{
+                    label: 'Reviews',
+                    data: [6, 5, 5, 4, 3, 3, 2, 2],
+                    backgroundColor: [
+                        'rgba(59, 130, 246, 0.7)', // blue-500
+                        'rgba(16, 185, 129, 0.7)', // emerald-500
+                        'rgba(245, 158, 11, 0.7)', // amber-500
+                        'rgba(139, 92, 246, 0.7)', // violet-500
+                        'rgba(236, 72, 153, 0.7)', // pink-500
+                        'rgba(14, 165, 233, 0.7)', // sky-500
+                        'rgba(249, 115, 22, 0.7)', // orange-500
+                        'rgba(99, 102, 241, 0.7)'  // indigo-500
+                    ],
+                    borderColor: [
+                        'rgba(59, 130, 246, 1)',
+                        'rgba(16, 185, 129, 1)',
+                        'rgba(245, 158, 11, 1)',
+                        'rgba(139, 92, 246, 1)',
+                        'rgba(236, 72, 153, 1)',
+                        'rgba(14, 165, 233, 1)',
+                        'rgba(249, 115, 22, 1)',
+                        'rgba(99, 102, 241, 1)'
+                    ],
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        grid: {
+                            color: '#e2e8f0',
+                            drawBorder: false
+                        },
+                        ticks: {
+                            stepSize: 1,
+                            font: {
+                                family: "'Inter', sans-serif"
+                            }
+                        }
+                    },
+                    y: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            font: {
+                                family: "'Inter', sans-serif",
+                                size: 12
+                            },
+                            autoSkip: false
                         }
                     }
                 },
