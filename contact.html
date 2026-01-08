@@ -14,20 +14,18 @@
         rel="stylesheet">
 
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-        }
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8fafc;
+        background-image: radial-gradient(#e0e7ff 1px, transparent 1px);
+        background-size: 24px 24px;
+    }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .nav-link.active { color: #4f46e5; border-bottom: 2px solid #4f46e5; }
 
-        .font-mono {
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .nav-link.active {
-            color: #4f46e5;
-            border-bottom: 2px solid #4f46e5;
-        }
-    </style>
+    .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 30px -5px rgba(79, 70, 229, 0.2); border-color: #818cf8; }
+</style>
 </head>
 
 <body class="text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900">
