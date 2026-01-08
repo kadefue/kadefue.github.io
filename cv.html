@@ -4,38 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Kadeghe Goodluck Fue - CV</title>
+    <title>Dr. Kadeghe Goodluck Fue - EB-1A Robotics and AI Engineer Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Dr. Kadeghe Goodluck Fue, Senior Robotics & Machine Learning Engineer. Specializing in autonomous systems, Edge AI, and agricultural robotics.">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
 
     <style>
+        /* Custom Styles & Utilities */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8fafc;
+            /* Visual: Tech Grid Background */
             background-image: radial-gradient(#e0e7ff 1px, transparent 1px);
             background-size: 24px 24px;
         }
 
-        .font-mono { font-family: 'JetBrains Mono', monospace; }
-        
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Chart Container Utilities */
         .chart-container {
             position: relative;
             width: 100%;
-            max-width: 600px;
+            max-width: 500px;
             margin: 0 auto;
             height: 300px;
-            max-height: 400px;
         }
-        
-        .ats-keyword { transition: background-color 0.3s ease; border-radius: 2px; padding: 0 2px; }
-        body.ats-mode .ats-keyword { background-color: #fef08a; color: #854d0e; font-weight: 700; }
-        .nav-link.active { color: #4f46e5; border-bottom: 2px solid #4f46e5; }
-        
+
+        /* ATS Highlight Effect */
+        .ats-keyword {
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-radius: 2px;
+            padding: 0 2px;
+        }
+
+        body.ats-mode .ats-keyword {
+            background-color: #fef08a;
+            /* Yellow-200 */
+            color: #854d0e;
+            /* Yellow-800 */
+            font-weight: 700;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navigation Active State */
+        .nav-link.active {
+            color: #4f46e5;
+            border-bottom: 2px solid #4f46e5;
+        }
+
+        /* Animation: Hover Lift & Glow */
         .card-hover {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .card-hover:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px -5px rgba(79, 70, 229, 0.2);
@@ -46,40 +74,75 @@
 
 <body class="text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900">
 
-    <nav class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 z-50 shadow-sm transition-all">
+    <nav
+        class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 z-50 shadow-sm transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex-shrink-0 flex items-center gap-3">
-                    <img src="profile.png" alt="Dr. Fue" class="w-10 h-10 rounded-full border border-indigo-100 shadow-sm object-cover">
-                    <a href="index.html" class="font-bold text-lg md:text-xl text-slate-900 tracking-tight hover:text-indigo-600 transition-colors">Dr. Kadeghe Goodluck Fue</a>
-                     <span class="ml-2 hidden sm:block text-xs font-semibold bg-indigo-50 text-indigo-700 px-2 py-1 rounded border border-indigo-100">EB-1A Eligible</span>
+                    <img src="profile.png" alt="Dr. Fue"
+                        class="w-10 h-10 rounded-full border border-indigo-100 shadow-sm object-cover">
+                    <a href="index.html"
+                        class="font-bold text-lg md:text-xl text-slate-900 tracking-tight hover:text-indigo-600 transition-colors">Dr.
+                        Kadeghe Goodluck Fue</a>
+                    <span
+                        class="ml-2 hidden sm:block text-xs font-semibold bg-indigo-50 text-indigo-700 px-2 py-1 rounded border border-indigo-100">EB-1A
+                        Eligible</span>
                 </div>
+
                 <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Home</a>
-                    <a href="about.html" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">About</a>
-                    <a href="cv.html" class="nav-link active text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">CV</a>
-                    <a href="news.html" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">News</a>
-                    <a href="research.html" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Research</a>
-                    <a href="publications.html" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Publications</a>
-                    <a href="contact.html" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Contact</a>
+                    <a href="index.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Home</a>
+                    <a href="about.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">About</a>
+                    <a href="cv.html"
+                        class="nav-link active text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">CV</a>
+                    <a href="news.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">News</a>
+                    <a href="research.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Research</a>
+                    <a href="publications.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Publications</a>
+                    <a href="contact.html"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Contact</a>
                 </div>
-                 <div class="flex items-center space-x-4">
-                    <div class="flex items-center">
-                        <span class="text-[10px] font-bold text-slate-400 mr-2 uppercase tracking-wide hidden sm:block">Recruiter Mode</span>
+
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center" title="Toggle Recruiter Keyword Mode">
+                        <span
+                            class="text-[10px] font-bold text-slate-400 mr-2 uppercase tracking-wide hidden sm:block">Recruiter
+                            Mode</span>
                         <label class="relative inline-flex items-center cursor-pointer">
                             <input type="checkbox" id="ats-toggle" class="sr-only peer">
-                            <div class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-indigo-600"></div>
+                            <div
+                                class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-indigo-600">
+                            </div>
                         </label>
                     </div>
-                     <button id="mobile-menu-btn" class="md:hidden text-slate-500 hover:text-indigo-600 focus:outline-none"><span class="text-2xl">&#9776;</span></button>
+
+                    <button id="mobile-menu-btn"
+                        class="md:hidden text-slate-500 hover:text-indigo-600 focus:outline-none">
+                        <span class="text-2xl">&#9776;</span>
+                    </button>
                 </div>
             </div>
         </div>
+
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
-             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Home</a>
-                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">About</a>
-                <a href="cv.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">CV</a>
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Home</a>
+                <a href="about.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">About</a>
+                <a href="cv.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">CV</a>
+                <a href="news.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">News</a>
+                <a href="research.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Research</a>
+                <a href="publications.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Publications</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Contact</a>
             </div>
         </div>
     </nav>
@@ -88,98 +151,474 @@
 
         <section id="overview" class="scroll-mt-28">
             <div class="text-center md:text-left mb-12">
-                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">Dr. Kadeghe Goodluck Fue</h1>
-                <p class="text-xl md:text-2xl text-slate-800 font-bold mb-2">Senior Robotics & Machine Learning Engineer</p>
-                <div class="max-w-4xl mx-auto md:mx-0 p-6 bg-white border-l-8 border-indigo-500 rounded-r-lg shadow-sm card-hover">
+                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">
+                    Dr. Kadeghe Goodluck Fue
+                </h1>
+                <p class="text-xl md:text-2xl text-slate-800 font-bold mb-2">Senior Robotics & Machine Learning Engineer
+                </p>
+                <p class="text-lg text-indigo-600 font-medium mb-6">Full-Stack Autonomous Systems | Technical Lead |
+                    EB-1A Eligible</p>
+
+                <div
+                    class="max-w-4xl mx-auto md:mx-0 p-6 bg-white border-l-4 border-indigo-500 rounded-r-lg shadow-sm card-hover">
                     <p class="text-slate-600 leading-relaxed">
                         Visionary Full-Stack Physical AI Leader with <span class="ats-keyword">13+ years</span> of
                         architecting and deploying pioneering autonomous systems. I bridge the critical "bit-to-atom"
-                        gap, leading the design of custom mechatronic hardware (<span class="ats-keyword">SolidWorks</span>, <span class="ats-keyword">Arduino</span>) and optimizing real-time perception stacks.
+                        gap, leading the design of custom mechatronic hardware (<span
+                            class="ats-keyword">SolidWorks</span>, <span class="ats-keyword">Arduino</span>) and
+                        optimizing real-time perception stacks (<span class="ats-keyword">YOLO</span>, <span
+                            class="ats-keyword">Optical Flow</span>) on edge devices (<span class="ats-keyword">NVIDIA
+                            Jetson</span>). Proven leadership managing <span class="ats-keyword">$32M+</span> portfolios
+                        and winning international data science challenges.
                     </p>
+                </div>
+
+                <div class="mt-8 flex flex-wrap gap-4 justify-center md:justify-start text-sm font-semibold">
+                    <a href="mailto:kadefue@gmail.com"
+                        class="bg-slate-900 text-white px-6 py-3 rounded-lg hover:bg-slate-800 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-200">Contact
+                        Me</a>
+                    <a href="https://kadefue.github.io"
+                        class="bg-white text-slate-700 border border-slate-300 px-6 py-3 rounded-lg hover:border-indigo-500 hover:text-indigo-600 transition-colors shadow-sm hover:shadow-md transform hover:-translate-y-1 duration-200">GitHub
+                        Portfolio</a>
                 </div>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-indigo-200 transition-colors card-hover">
-                    <div class="text-3xl font-bold text-indigo-600">15+</div>
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-indigo-200 transition-colors card-hover">
+                    <div class="text-3xl font-bold text-slate-900">15+</div>
                     <div class="text-xs text-slate-500 uppercase tracking-wide mt-1 font-bold">Years Experience</div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-indigo-200 transition-colors card-hover">
-                    <div class="text-3xl font-bold text-indigo-600">$32M+</div>
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-indigo-200 transition-colors card-hover">
+                    <div class="text-3xl font-bold text-slate-900">$32M+</div>
                     <div class="text-xs text-slate-500 uppercase tracking-wide mt-1 font-bold">Portfolio Managed</div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-indigo-200 transition-colors card-hover">
-                    <div class="text-3xl font-bold text-indigo-600">30+</div>
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-indigo-200 transition-colors card-hover">
+                    <div class="text-3xl font-bold text-slate-900">30+</div>
                     <div class="text-xs text-slate-500 uppercase tracking-wide mt-1 font-bold">Publications</div>
                 </div>
-                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-indigo-200 transition-colors card-hover">
-                    <div class="text-3xl font-bold text-indigo-600">1st</div>
-                    <div class="text-xs text-slate-500 uppercase tracking-wide mt-1 font-bold">Global Data Challenge</div>
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-indigo-200 transition-colors card-hover">
+                    <div class="text-3xl font-bold text-slate-900">1st</div>
+                    <div class="text-xs text-slate-500 uppercase tracking-wide mt-1 font-bold">Global Data Challenge
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="skills" class="scroll-mt-28">
-             <div class="mb-8">
-                <h2 class="text-3xl font-bold text-slate-900 border-l-8 border-indigo-500 pl-6 py-1">Technical Stack</h2>
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-slate-900 border-l-8 border-indigo-600 pl-6 py-1">Technical Stack
+                    Analysis</h2>
+                <p class="text-slate-600 mt-2">Comprehensive "Bit-to-Atom" Full Stack Competency.</p>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+            <div class="grid grid-cols-1 gap-12">
+
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 card-hover">
-                    <h3 class="text-lg font-bold text-slate-800 mb-6 border-b border-slate-100 pb-2">Competency Radar</h3>
                     <div class="chart-container">
                         <canvas id="skillsChartCanvas"></canvas>
                     </div>
                 </div>
-                <div class="space-y-6">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+
                     <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 card-hover">
-                        <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-3">Robotics & Control</h4>
-                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded text-sm text-slate-700 font-mono">ROS 1/2</span>
-                            <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded text-sm text-slate-700 font-mono">SLAM</span>
-                             <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded text-sm text-slate-700 font-mono">MPC</span>
+                        <h4
+                            class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 border-b border-indigo-100 pb-2 text-indigo-700">
+                            Robotics & Control</h4>
+                        <div class="flex flex-wrap gap-2 leading-relaxed">
+                            <span class="ats-keyword">ROS 1/2</span>, <span class="ats-keyword">SMACH</span>, <span
+                                class="ats-keyword">Gazebo Simulation</span>, <span class="ats-keyword">Visual
+                                Servoing</span>, <span class="ats-keyword">Non-Holonomic Control</span>, <span
+                                class="ats-keyword">Motion Planning</span>, <span class="ats-keyword">Modified Pure
+                                Pursuit</span>, <span class="ats-keyword">PID Autotuning</span>, <span
+                                class="ats-keyword">Inverse Kinematics</span>, <span class="ats-keyword">MPC</span>,
+                            <span class="ats-keyword">SLAM-based Navigation</span>, <span
+                                class="ats-keyword">RViz</span>, <span class="ats-keyword">MoveIt!</span>, <span
+                                class="ats-keyword">Fuzzy Logic Control</span>, <span class="ats-keyword">Differential
+                                Kinematics</span>, <span class="ats-keyword">Trajectory Optimization</span>, <span
+                                class="ats-keyword">Whole-Body Control</span>, <span
+                                class="ats-keyword">Teleoperation</span>, <span
+                                class="ats-keyword font-bold bg-yellow-50">PyBullet</span>, <span
+                                class="ats-keyword font-bold bg-yellow-50">MuJoCo</span>.
                         </div>
                     </div>
-                     <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 card-hover">
-                        <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-3">Computer Vision</h4>
-                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded text-sm text-slate-700 font-mono">PyTorch</span>
-                            <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded text-sm text-slate-700 font-mono">YOLO v8</span>
-                            <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded text-sm text-slate-700 font-mono">CUDA</span>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 card-hover">
+                        <h4
+                            class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 border-b border-indigo-100 pb-2 text-indigo-700">
+                            Machine Learning & Data</h4>
+                        <div class="flex flex-wrap gap-2 leading-relaxed">
+                            <span class="ats-keyword">PyTorch</span>, <span class="ats-keyword">TensorFlow Lite</span>,
+                            <span class="ats-keyword">LightGBM</span>, <span class="ats-keyword">LinearSVR</span>, <span
+                                class="ats-keyword">Object Detection</span>, <span class="ats-keyword">Time-Series
+                                Forecasting</span>, <span class="ats-keyword">Reinforcement Learning</span>, <span
+                                class="ats-keyword">Ensemble Models</span>, <span class="ats-keyword">Google Earth
+                                Engine</span>, <span class="ats-keyword">Keras</span>, <span
+                                class="ats-keyword">Scikit-learn</span>, <span class="ats-keyword">XGBoost</span>, <span
+                                class="ats-keyword">Generative AI (GANs/VAEs)</span>, <span
+                                class="ats-keyword">MLOps</span>, <span class="ats-keyword">Apache Spark</span>, <span
+                                class="ats-keyword">Data Augmentation</span>, <span class="ats-keyword">Bayesian
+                                Optimization</span>, <span class="ats-keyword">Transformers (BERT/GPT)</span>, <span
+                                class="ats-keyword">Autoencoders</span>, <span class="ats-keyword">Ollama</span>.
                         </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 card-hover">
+                        <h4
+                            class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 border-b border-indigo-100 pb-2 text-indigo-700">
+                            Computer Vision</h4>
+                        <div class="flex flex-wrap gap-2 leading-relaxed">
+                            <span class="ats-keyword">OpenCV</span>, <span class="ats-keyword">YOLO (v2-v8)</span>,
+                            <span class="ats-keyword">SLAM</span>, <span class="ats-keyword">CUDA</span>, <span
+                                class="ats-keyword">TensorRT</span>, <span class="ats-keyword">Lucas-Kanade Optical
+                                Flow</span>, <span class="ats-keyword">Stereoscopic Depth (ZED)</span>, <span
+                                class="ats-keyword">Semantic Segmentation</span>, <span class="ats-keyword">3D Point
+                                Cloud</span>, <span class="ats-keyword">PointNet</span>, <span
+                                class="ats-keyword">Open3D</span>, <span class="ats-keyword">MVS</span>, <span
+                                class="ats-keyword">Visual Odometry</span>, <span class="ats-keyword">Homography
+                                Estimation</span>, <span class="ats-keyword">DeepSORT</span>, <span
+                                class="ats-keyword">PCL</span>, <span class="ats-keyword">Image Inpainting</span>, <span
+                                class="ats-keyword">Super-Resolution</span>, <span class="ats-keyword">OCR</span>, <span
+                                class="ats-keyword">Instance Segmentation</span>, <span class="ats-keyword">Epipolar
+                                Geometry</span>.
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 card-hover">
+                        <h4
+                            class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 border-b border-indigo-100 pb-2 text-indigo-700">
+                            Embedded & Hardware</h4>
+                        <div class="flex flex-wrap gap-2 leading-relaxed">
+                            <span class="ats-keyword">NVIDIA Jetson</span>, <span class="ats-keyword">Arduino
+                                (C++)</span>, <span class="ats-keyword">Hydrostatic Drive</span>, <span
+                                class="ats-keyword">PX4 Autopilot</span>, <span class="ats-keyword">Ardupilot</span>,
+                            <span class="ats-keyword">RTK-GNSS</span>, <span class="ats-keyword">LiDAR</span>, <span
+                                class="ats-keyword">Multi-sensor Fusion</span>, <span class="ats-keyword">Raspberry
+                                Pi</span>, <span class="ats-keyword">ESP32/8266</span>, <span class="ats-keyword">CAN
+                                Bus</span>, <span class="ats-keyword">RTOS</span>, <span class="ats-keyword">BLDC
+                                Control</span>, <span class="ats-keyword">LoRaWAN</span>, <span
+                                class="ats-keyword">PLC</span>, <span class="ats-keyword">Zigbee</span>, <span
+                                class="ats-keyword">Modbus</span>, <span class="ats-keyword">HIL Testing</span>, <span
+                                class="ats-keyword">DSP</span>.
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 card-hover">
+                        <h4
+                            class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 border-b border-indigo-100 pb-2 text-indigo-700">
+                            Languages</h4>
+                        <div class="flex flex-wrap gap-2 leading-relaxed">
+                            <span class="ats-keyword">Python (Adv)</span>, <span class="ats-keyword">C++ (Adv)</span>,
+                            <span class="ats-keyword">JavaScript</span>, <span class="ats-keyword">Java</span>, <span
+                                class="ats-keyword">MATLAB</span>, <span class="ats-keyword">TypeScript</span>, <span
+                                class="ats-keyword">Go</span>, <span class="ats-keyword">Rust</span>, <span
+                                class="ats-keyword">Bash</span>, <span class="ats-keyword">SQL</span>, <span
+                                class="ats-keyword">R</span>, <span class="ats-keyword">Swift</span>, <span
+                                class="ats-keyword">Kotlin</span>, <span class="ats-keyword">Prolog</span>.
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 card-hover">
+                        <h4
+                            class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 border-b border-indigo-100 pb-2 text-indigo-700">
+                            Frameworks</h4>
+                        <div class="flex flex-wrap gap-2 leading-relaxed">
+                            <span class="ats-keyword">CodeIgniter</span>, <span class="ats-keyword">React JS</span>,
+                            <span class="ats-keyword">Angular JS</span>, <span class="ats-keyword">Next JS</span>, <span
+                                class="ats-keyword">Laravel</span>, <span class="ats-keyword">FastAPI</span>, <span
+                                class="ats-keyword">Spring</span>, <span class="ats-keyword">Flask</span>, <span
+                                class="ats-keyword">Django</span>, <span class="ats-keyword">NestJS</span>, <span
+                                class="ats-keyword">Express.js</span>, <span class="ats-keyword">Tailwind CSS</span>,
+                            <span class="ats-keyword">Bootstrap</span>, <span class="ats-keyword">Vue.js</span>.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="scroll-mt-28">
+            <div class="mb-10">
+                <h2 class="text-3xl font-bold text-slate-900 border-l-8 border-indigo-600 pl-6 py-1">Professional
+                    Experience</h2>
+                <p class="text-slate-600 mt-2">Evolution from hands-on engineering to strategic technical leadership.
+                </p>
+            </div>
+
+            <div class="relative border-l-2 border-slate-200 ml-4 space-y-12">
+
+                <div class="relative pl-8">
+                    <div
+                        class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-white border-2 border-indigo-500 shadow-sm">
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all hover:shadow-md card-hover">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Principal Technical Program Manager</h3>
+                                <div class="text-indigo-600 font-medium">Sokoine University of Agriculture (HEET
+                                    Project)</div>
+                            </div>
+                            <span
+                                class="mt-2 sm:mt-0 px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold uppercase rounded-full">2021
+                                - Present</span>
+                        </div>
+                        <ul class="space-y-3 text-slate-600 list-disc list-inside marker:text-indigo-300">
+                            <li>Directing technical strategy for <span class="ats-keyword">$32M World Bank-funded</span>
+                                digital transformation initiative at Sokoine University of Agriculture.</li>
+                            <li>Managing a cross-functional team of 8 principal Data and systems engineers.</li>
+                            <li>Architecting <span class="ats-keyword">HPC infrastructure</span> and implementing <span
+                                    class="ats-keyword">DevOps/CI/CD pipelines</span> that reduced deployment latency by
+                                40%.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative pl-8">
+                    <div
+                        class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-white border-2 border-indigo-500 shadow-sm">
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all hover:shadow-md card-hover">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Lead Robotics Research Engineer</h3>
+                                <div class="text-indigo-600 font-medium">YEESI & EPA Labs</div>
+                            </div>
+                            <span
+                                class="mt-2 sm:mt-0 px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold uppercase rounded-full">2021
+                                - Present</span>
+                        </div>
+                        <ul class="space-y-3 text-slate-600 list-disc list-inside marker:text-indigo-300">
+                            <li>Founded electronics and precision agriculture lab (YEESI) and secured <span
+                                    class="ats-keyword">$157k USDA/NIFA funding for Machine Vision Project</span>.</li>
+                            <li>Developed offline <span class="ats-keyword">Edge AI</span> models (TensorFlow Lite)
+                                enabling real-time disease diagnosis.</li>
+                            <li>Engineered "TanPredikt" yield forecasting engine using <span class="ats-keyword">Google
+                                    Earth Engine</span> and <span class="ats-keyword">LightGBM</span>.</li>
+                            <li>Spearheaded the spin-off AgriMfumo Limited (<span
+                                    class="ats-keyword">www.agrimfumo.co.tz</span>) for soil testing electronics.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative pl-8">
+                    <div
+                        class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-white border-2 border-indigo-500 shadow-sm">
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all hover:shadow-md card-hover">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Lead Software Engineering Consultant</h3>
+                                <div class="text-indigo-600 font-medium">HYDROC GmbH</div>
+                            </div>
+                            <span
+                                class="mt-2 sm:mt-0 px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold uppercase rounded-full">2022
+                                - 2024</span>
+                        </div>
+                        <ul class="space-y-3 text-slate-600 list-disc list-inside marker:text-indigo-300">
+                            <li>Developed a geospatial database engine for <span class="ats-keyword">Songwe River Basin
+                                    Commission</span>.</li>
+                            <li>Created Interactive <span class="ats-keyword">Web Maps</span> models for Flood Early
+                                Warning Systems.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative pl-8">
+                    <div
+                        class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-white border-2 border-indigo-500 shadow-sm">
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all hover:shadow-md card-hover">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Computer Vision Engineer (Research Scholar)
+                                </h3>
+                                <div class="text-indigo-600 font-medium">North Carolina State University</div>
+                            </div>
+                            <span
+                                class="mt-2 sm:mt-0 px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold uppercase rounded-full">2020
+                                - 2021</span>
+                        </div>
+                        <ul class="space-y-3 text-slate-600 list-disc list-inside marker:text-indigo-300">
+                            <li>Developed "PhenoCV-WeedCam," a <span class="ats-keyword">semantic segmentation</span>
+                                pipeline using OpenCV and PyTorch.</li>
+                            <li>Optimized algorithms for ground-based robotic sprayers to discriminate between crops and
+                                weeds under tight latency constraints.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="projects" class="scroll-mt-28">
-             <div class="flex flex-col md:flex-row justify-between items-end mb-10">
-                <h2 class="text-3xl font-bold text-slate-900 border-l-8 border-indigo-500 pl-6 py-1">Innovation Lab</h2>
+            <div class="flex flex-col md:flex-row justify-between items-end mb-10">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 border-l-8 border-indigo-600 pl-6 py-1">Innovation Lab
+                    </h2>
+                    <p class="text-slate-600 mt-2">Deep dive into key engineering contributions.</p>
+                </div>
                 <div class="mt-4 md:mt-0 flex gap-2 flex-wrap" id="project-filters">
-                    <button data-filter="all" class="filter-btn active px-3 py-1 text-sm font-medium bg-slate-800 text-white rounded shadow-sm">All</button>
-                    <button data-filter="robotics" class="filter-btn px-3 py-1 text-sm font-medium bg-white text-slate-600 border border-slate-200 rounded hover:bg-slate-50">Robotics</button>
-                    <button data-filter="cloud" class="filter-btn px-3 py-1 text-sm font-medium bg-white text-slate-600 border border-slate-200 rounded hover:bg-slate-50">Cloud/AI</button>
+                    <button data-filter="all"
+                        class="filter-btn active px-3 py-1 text-sm font-medium bg-slate-800 text-white rounded shadow-sm">All</button>
+                    <button data-filter="robotics"
+                        class="filter-btn px-3 py-1 text-sm font-medium bg-white text-slate-600 border border-slate-200 rounded hover:bg-slate-50">Robotics</button>
+                    <button data-filter="cloud"
+                        class="filter-btn px-3 py-1 text-sm font-medium bg-white text-slate-600 border border-slate-200 rounded hover:bg-slate-50">Cloud/AI</button>
+                    <button data-filter="embedded"
+                        class="filter-btn px-3 py-1 text-sm font-medium bg-white text-slate-600 border border-slate-200 rounded hover:bg-slate-50">IoT/Embedded</button>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="projects-grid">
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full card-hover" data-cat="cloud">
-                     <div class="bg-blue-500 h-1 w-full"></div>
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full card-hover"
+                    data-cat="cloud">
+                    <div class="bg-blue-500 h-1 w-full"></div>
                     <div class="p-8 flex-1">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="text-xl font-bold text-slate-900">TanPredikt</h3>
-                            <span class="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100 font-bold">Cloud AI</span>
+                            <span
+                                class="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100 font-bold">Cloud
+                                AI</span>
                         </div>
-                        <p class="text-slate-600 mb-6 leading-relaxed">Geospatial time-series forecasting engine integrating Sentinel-2 imagery.</p>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Architected a geospatial time-series forecasting engine. Integrates <span
+                                class="ats-keyword">Sentinel-2 satellite imagery</span> via Google Earth Engine with
+                            soil sensors to predict maize yields using <span class="ats-keyword">LightGBM</span>.
+                        </p>
                     </div>
                 </div>
-                 <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full card-hover" data-cat="robotics">
-                     <div class="bg-indigo-500 h-1 w-full"></div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full card-hover"
+                    data-cat="robotics">
+                    <div class="bg-indigo-500 h-1 w-full"></div>
                     <div class="p-8 flex-1">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="text-xl font-bold text-slate-900">Cotton Harvesting Rover</h3>
-                            <span class="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded border border-indigo-100 font-bold">Robotics</span>
+                            <span
+                                class="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded border border-indigo-100 font-bold">Robotics</span>
                         </div>
-                        <p class="text-slate-600 mb-6 leading-relaxed">Full-stack autonomous rover with custom hydrostatic drive and ROS integration.</p>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Architected a full-stack autonomous rover. Designed custom hydrostatic drive controls and
+                            implemented <span class="ats-keyword">J1939 CAN bus</span> communication. Invented 'Modified
+                            Pure Pursuit' algorithm for sub-inch accuracy.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full card-hover"
+                    data-cat="robotics">
+                    <div class="bg-indigo-500 h-1 w-full"></div>
+                    <div class="p-8 flex-1">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-slate-900">Agri-UGV Fleet Automation</h3>
+                            <span
+                                class="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded border border-indigo-100 font-bold">Robotics</span>
+                        </div>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Implemented autonomous mission planning for a multi-UGV fleet using <span
+                                class="ats-keyword">PX4/ArduPilot</span> for flight/rover control.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full card-hover"
+                    data-cat="embedded">
+                    <div class="bg-emerald-500 h-1 w-full"></div>
+                    <div class="p-8 flex-1">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-slate-900">Precision Planting System</h3>
+                            <span
+                                class="text-xs bg-emerald-50 text-emerald-700 px-2 py-1 rounded border border-emerald-100 font-bold">Embedded</span>
+                        </div>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Developed a low-cost, open-source precision planting mechanism for smallholder farmers,
+                            utilizing GPS and custom stepper motor control.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full card-hover"
+                    data-cat="cloud">
+                    <div class="bg-blue-500 h-1 w-full"></div>
+                    <div class="p-8 flex-1">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-slate-900">AkilimaTik Chat Engine</h3>
+                            <span
+                                class="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100 font-bold">GenAI</span>
+                        </div>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Integrated Fine-Tuned LLMs and <span class="ats-keyword">RAG</span> (Retrieval-Augmented
+                            Generation) into the University Student Information System.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="scroll-mt-28">
+            <div class="mb-10">
+                <h2 class="text-3xl font-bold text-slate-900 border-l-8 border-indigo-600 pl-6 py-1">Education</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    <div class="text-indigo-600 font-bold text-lg mb-1">Ph.D. in Engineering</div>
+                    <div class="text-slate-900 font-semibold">University of Georgia, USA</div>
+                    <div class="text-slate-500 text-sm mb-4">2020</div>
+                    <p class="text-slate-600 text-sm">Focus: AI, Robotics, Autonomous Vehicles.</p>
+                </div>
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    <div class="text-indigo-600 font-bold text-lg mb-1">M.Sc. in Ag & Bio Engineering</div>
+                    <div class="text-slate-900 font-semibold">University of Florida, USA</div>
+                    <div class="text-slate-500 text-sm mb-4">2014</div>
+                    <p class="text-slate-600 text-sm">Focus: Automation & Information Systems.</p>
+                </div>
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    <div class="text-indigo-600 font-bold text-lg mb-1">B.Sc. in Computer Engineering & IT</div>
+                    <div class="text-slate-900 font-semibold">University of Dar es Salaam, Tanzania</div>
+                    <div class="text-slate-500 text-sm mb-4">2011</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="eb1a" class="scroll-mt-28">
+            <div class="bg-slate-900 text-white rounded-2xl p-8 md:p-12 shadow-xl card-hover">
+                <div class="mb-8">
+                    <span
+                        class="bg-indigo-500 text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">Visa
+                        Eligibility</span>
+                    <h2 class="text-3xl font-bold mt-2">EB-1A Evidence (Extraordinary Ability)</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 card-hover">
+                        <h3 class="font-bold text-lg mb-2 text-indigo-300">Original Contribution</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">Invented a novel "Modified Pure Pursuit"
+                            control algorithm, cited by peer-reviewed papers and adopted as a benchmark.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 card-hover">
+                        <h3 class="font-bold text-lg mb-2 text-indigo-300">Awards</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">Winner, Zindi "Outsmarting Outbreaks"
+                            Challenge, ranking <span class="font-bold text-white">1st among 500+</span> global data
+                            scientists.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 card-hover">
+                        <h3 class="font-bold text-lg mb-2 text-indigo-300">Judging Work</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">Reviewer for <em>IEEE Robotics and Automation
+                                Letters (RA-L)</em> and <em>Computers in Agriculture</em>.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 card-hover">
+                        <h3 class="font-bold text-lg mb-2 text-indigo-300">Critical Role</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">Technical Lead for the <span
+                                class="font-bold text-white">$32M World Bank HEET Project</span> at SUA.</p>
                     </div>
                 </div>
             </div>
@@ -189,30 +628,53 @@
 
     <footer class="bg-slate-900 text-slate-400 py-12 mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-             <div class="mb-6 flex justify-center">
-                 <img src="profile.png" alt="Dr. Fue" class="w-16 h-16 rounded-full border-2 border-slate-700 grayscale hover:grayscale-0 transition-all duration-500">
+            <div class="mb-6 flex justify-center">
+                <img src="profile.png" alt="Dr. Fue"
+                    class="w-16 h-16 rounded-full border-2 border-slate-700 grayscale hover:grayscale-0 transition-all duration-500">
             </div>
             <p class="mb-4 text-white font-bold text-lg">Dr. Kadeghe Goodluck Fue</p>
             <p class="text-sm">&copy; 2025 Kadeghe Goodluck Fue. All rights reserved.</p>
         </div>
     </footer>
-    
+
     <script>
-        // Copy original Chart.js and Filter logic here from original file
         document.addEventListener('DOMContentLoaded', () => {
-             const ctx = document.getElementById('skillsChartCanvas');
+
+            // --- 1. RENDER RADAR CHART ---
+            const ctx = document.getElementById('skillsChartCanvas');
             if (ctx) {
                 new Chart(ctx, {
                     type: 'radar',
                     data: {
-                        labels: ['Robotics', 'CV/AI', 'Embedded', 'Cloud', 'Soft Eng'],
-                        datasets: [{ label: 'Level', data: [95, 90, 85, 75, 88], backgroundColor: 'rgba(99, 102, 241, 0.2)', borderColor: 'rgba(99, 102, 241, 1)', borderWidth: 2 }]
+                        labels: ['Robotics', 'ML & Data', 'Computer Vision', 'Embedded', 'Languages', 'Frameworks'],
+                        datasets: [{
+                            label: 'Proficiency Level',
+                            data: [98, 92, 95, 88, 90, 85],
+                            backgroundColor: 'rgba(99, 102, 241, 0.2)',
+                            borderColor: 'rgba(99, 102, 241, 1)',
+                            pointBackgroundColor: 'rgba(99, 102, 241, 1)',
+                            pointBorderColor: '#fff',
+                            borderWidth: 2
+                        }]
                     },
-                    options: { responsive: true, maintainAspectRatio: false, scales: { r: { suggestedMin: 0, suggestedMax: 100, ticks: { display: false } } }, plugins: { legend: { display: false } } }
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            r: {
+                                angleLines: { color: 'rgba(0,0,0,0.05)' },
+                                grid: { color: 'rgba(0,0,0,0.05)' },
+                                pointLabels: { font: { size: 11, family: 'Inter', weight: '600' }, color: '#475569' },
+                                suggestedMin: 0, suggestedMax: 100, ticks: { display: false }
+                            }
+                        },
+                        plugins: { legend: { display: false } }
+                    }
                 });
             }
-             // ... Filter logic ...
-              const filterButtons = document.querySelectorAll('.filter-btn');
+
+            // --- 2. PROJECT FILTERING ---
+            const filterButtons = document.querySelectorAll('.filter-btn');
             const projectCards = document.querySelectorAll('.project-card');
 
             filterButtons.forEach(btn => {
@@ -223,10 +685,11 @@
                     });
                     btn.classList.remove('bg-white', 'text-slate-600', 'border', 'border-slate-200');
                     btn.classList.add('bg-slate-800', 'text-white');
+
                     const category = btn.dataset.filter;
                     projectCards.forEach(card => {
                         const cardCat = card.dataset.cat;
-                        if (category === 'all' || cardCat === category || (category === 'cloud' && (cardCat === 'cloud' || cardCat === 'data'))) {
+                        if (category === 'all' || cardCat === category || (category === 'cloud' && cardCat === 'cloud') || (category === 'embedded' && cardCat === 'embedded')) {
                             card.style.display = 'flex';
                         } else {
                             card.style.display = 'none';
@@ -234,11 +697,23 @@
                     });
                 });
             });
-            // ... Mobile Menu ...
-             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+
+            // --- 3. ATS MODE TOGGLE ---
+            const atsToggle = document.getElementById('ats-toggle');
+            atsToggle.addEventListener('change', (e) => {
+                if (e.target.checked) { document.body.classList.add('ats-mode'); }
+                else { document.body.classList.remove('ats-mode'); }
+            });
+
+            // --- 4. MOBILE MENU ---
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); });
+            });
         });
     </script>
 </body>
+
 </html>
