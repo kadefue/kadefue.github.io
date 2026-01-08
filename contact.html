@@ -6,132 +6,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Dr. Kadeghe Goodluck Fue</title>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-    body {
-        font-family: 'Inter', sans-serif;
-        background-color: #f8fafc;
-        background-image: radial-gradient(#e0e7ff 1px, transparent 1px);
-        background-size: 24px 24px;
-    }
-    .font-mono { font-family: 'JetBrains Mono', monospace; }
-    .nav-link.active { color: #4f46e5; border-bottom: 2px solid #4f46e5; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+             /* Visual: Tech Grid Background */
+            background-image: radial-gradient(#e0e7ff 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
 
-    .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-    .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 30px -5px rgba(79, 70, 229, 0.2); border-color: #818cf8; }
-</style>
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .nav-link.active { color: #4f46e5; border-bottom: 2px solid #4f46e5; }
+
+        /* Animation: Hover Lift & Glow */
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -5px rgba(79, 70, 229, 0.2);
+            border-color: #818cf8;
+        }
+    </style>
 </head>
 
 <body class="text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900">
 
-    <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md border-b border-slate-200 z-50 shadow-sm transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16 items-center">
-            <div class="flex-shrink-0 flex items-center gap-3">
-                <img src="profile.png" alt="Dr. Fue" class="w-10 h-10 rounded-full border border-indigo-100 shadow-sm object-cover">
-                <a href="index.html" class="font-bold text-lg md:text-xl text-slate-900 tracking-tight hover:text-indigo-600 transition-colors">Dr. Kadeghe Goodluck Fue</a>
-            </div>
-            <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Home</a>
-                <a href="about.html" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">About</a>
-                <a href="news.html" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">News</a>
-                <a href="research.html" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Research</a>
-                <a href="publications.html" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Publications</a>
-                <a href="cv.html" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">CV</a>
-                <a href="contact.html" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Contact</a>
-            </div>
-            <div class="flex items-center md:hidden">
-                <button id="mobile-menu-btn" class="text-slate-500 hover:text-indigo-600 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                </button>
+    <nav class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 z-50 shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="profile.png" alt="Dr. Fue" class="w-10 h-10 rounded-full border border-indigo-100 shadow-sm object-cover">
+                    <a href="index.html" class="font-bold text-lg md:text-xl text-slate-900 tracking-tight hover:text-indigo-600 transition-colors">Dr. Kadeghe Goodluck Fue</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Home</a>
+                    <a href="about.html" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">About</a>
+                    <a href="news.html" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">News</a>
+                    <a href="research.html" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Research</a>
+                    <a href="publications.html" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Publications</a>
+                    <a href="cv.html" class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">CV</a>
+                    <a href="contact.html" class="nav-link active text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Contact</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-500 hover:text-indigo-600 focus:outline-none">
+                        <span class="text-2xl">&#9776;</span>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">About</a>
+                <a href="news.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">News</a>
+                <a href="research.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Research</a>
+                <a href="publications.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Publications</a>
+                <a href="cv.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">CV</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Contact</a>
+            </div>
+        </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12">
 
         <section class="max-w-4xl mx-auto">
             <div class="text-center mb-12">
                 <h1 class="text-3xl font-bold text-slate-900 mb-4">Get in Touch</h1>
-                <p class="text-lg text-slate-600">Feel free to reach out for collaborations, research inquiries, or
-                    consulting opportunities.</p>
+                <p class="text-lg text-slate-600">Feel free to reach out for collaborations, research inquiries, or consulting opportunities.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                <!-- Contact Info Card -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-                    <h2 class="text-xl font-bold text-slate-900 mb-6 border-b border-slate-100 pb-2">Contact Channels
-                    </h2>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 card-hover">
+                    <h2 class="text-xl font-bold text-slate-900 mb-6 border-b border-slate-100 pb-2">Contact Channels</h2>
                     <div class="space-y-6">
                         <div class="flex items-start">
-                            <div class="bg-indigo-100 p-2 rounded-lg mr-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            <div class="bg-indigo-100 p-2 rounded-lg mr-4 text-indigo-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
                             </div>
                             <div>
                                 <p class="text-sm font-semibold text-slate-500 uppercase tracking-wide">Email</p>
-                                <a href="mailto:kadefue@gmail.com"
-                                    class="text-slate-900 font-medium hover:text-indigo-600 transition-colors">kadefue
-                                    [at] gmail.com
-                                    (Personal)</a>
+                                <a href="mailto:kadefue@gmail.com" class="text-slate-900 font-medium hover:text-indigo-600 transition-colors">kadefue [at] gmail.com (Personal)</a>
                                 <br>
-                                <a href="mailto:kadefue@sua.ac.tz"
-                                    class="text-slate-900 font-medium hover:text-indigo-600 transition-colors">kadefue
-                                    [at] sua.ac.tz
-                                    (Work)</a>
+                                <a href="mailto:kadefue@sua.ac.tz" class="text-slate-900 font-medium hover:text-indigo-600 transition-colors">kadefue [at] sua.ac.tz (Work)</a>
                             </div>
                         </div>
 
                         <div class="flex items-start">
-                            <div class="bg-indigo-100 p-2 rounded-lg mr-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                             <div class="bg-indigo-100 p-2 rounded-lg mr-4 text-indigo-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
                             </div>
                             <div>
-                                <p class="text-sm font-semibold text-slate-500 uppercase tracking-wide">Professional
-                                    Profiles</p>
-                                <a href="https://linkedin.com/in/kadefue/" target="_blank"
-                                    class="text-indigo-600 hover:underline">LinkedIn</a>
+                                <p class="text-sm font-semibold text-slate-500 uppercase tracking-wide">Professional Profiles</p>
+                                <a href="https://linkedin.com/in/kadefue/" target="_blank" class="text-indigo-600 hover:underline">LinkedIn</a>
                                 <span class="mx-2 text-slate-300">|</span>
-                                <a href="https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en" target="_blank"
-                                    class="text-indigo-600 hover:underline">Google Scholar</a>
+                                <a href="https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en" target="_blank" class="text-indigo-600 hover:underline">Google Scholar</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Address Card -->
-                <div class="bg-slate-900 text-white p-8 rounded-2xl shadow-xl">
+                <div class="bg-slate-900 text-white p-8 rounded-2xl shadow-xl card-hover">
                     <h2 class="text-xl font-bold mb-6 border-b border-white/20 pb-2">Mailing Address</h2>
                     <address class="not-italic text-indigo-100 leading-relaxed font-light">
                         <strong class="text-white font-bold block mb-2">Dr. Kadeghe Goodluck Fue</strong>
                         Electronics and Precision Agriculture Lab (EPAL)<br>
+                        Department of Agricultural Engineering (DAGE)<br>
                         School of Engineering and Technology<br>
                         Sokoine University of Agriculture<br>
                         P.O. Box 3003, Chuo Kikuu<br>
                         Morogoro, Tanzania
                     </address>
-
-                    <div class="mt-8 pt-6 border-t border-white/20">
-                        <p class="text-sm text-indigo-200">
-                            <strong>Note:</strong> Used for academic or engineering correspondence and formal
-                            invitations.
-                        </p>
-                    </div>
                 </div>
 
             </div>
@@ -141,12 +134,14 @@
 
     <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+             <div class="mb-6 flex justify-center">
+                 <img src="profile.png" alt="Dr. Fue" class="w-16 h-16 rounded-full border-2 border-slate-700 grayscale hover:grayscale-0 transition-all duration-500">
+            </div>
             <p class="mb-4 text-white font-bold text-lg">Dr. Kadeghe Goodluck Fue</p>
             <div class="flex justify-center space-x-6 mb-8 flex-wrap">
                 <a href="https://kadefue.github.io/" class="hover:text-white transition-colors">GitHub</a>
                 <a href="https://linkedin.com/in/kadefue/" class="hover:text-white transition-colors">LinkedIn</a>
-                <a href="https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en"
-                    class="hover:text-white transition-colors">Google Scholar</a>
+                <a href="https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en" class="hover:text-white transition-colors">Google Scholar</a>
                 <a href="https://orcid.org/0000-0001-6362-3174" class="hover:text-white transition-colors">ORCID</a>
                 <a href="mailto:kadefue@gmail.com" class="hover:text-white transition-colors">Email</a>
             </div>
@@ -159,20 +154,6 @@
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-
-        const currentPath = window.location.pathname.split("/").pop();
-        document.querySelectorAll('.nav-link').forEach(link => {
-            if (link.getAttribute('href') === currentPath) {
-                link.classList.add('active');
-            }
-        });
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            if (link.getAttribute('href') === currentPath) {
-                link.classList.add('text-indigo-600');
-                link.classList.add('bg-slate-50');
-            }
-        })
     </script>
 </body>
-
 </html>
