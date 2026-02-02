@@ -16,7 +16,6 @@
         rel="stylesheet">
 
     <style>
-        /* Custom Styles & Utilities */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8fafc;
@@ -29,32 +28,6 @@
             font-family: 'JetBrains Mono', monospace;
         }
 
-        /* Chart Container Utilities */
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 500px;
-            margin: 0 auto;
-            height: 300px;
-        }
-
-        /* ATS Highlight Effect */
-        .ats-keyword {
-            transition: background-color 0.3s ease, color 0.3s ease;
-            border-radius: 2px;
-            padding: 0 2px;
-        }
-
-        body.ats-mode .ats-keyword {
-            background-color: #fef08a;
-            /* Yellow-200 */
-            color: #854d0e;
-            /* Yellow-800 */
-            font-weight: 700;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Navigation Active State */
         .nav-link.active {
             color: #4f46e5;
             border-bottom: 2px solid #4f46e5;
@@ -69,6 +42,26 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 30px -5px rgba(79, 70, 229, 0.2);
             border-color: #818cf8;
+        }
+
+        /* ATS Keyword Highlighting */
+        .ats-keyword {
+            /* Initially hidden highlight, revealed by toggle */
+            background-color: transparent;
+            font-weight: inherit;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .ats-mode .ats-keyword {
+            background-color: #fef3c7;
+            /* Amber-100 */
+            color: #92400e;
+            /* Amber-800 */
+            font-weight: 700;
+            padding: 0 4px;
+            border-radius: 4px;
+            border: 1px solid #d97706;
         }
     </style>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -86,900 +79,745 @@
                     <a href="index.html"
                         class="font-bold text-lg md:text-xl text-slate-900 tracking-tight hover:text-indigo-600 transition-colors">Dr.
                         Kadeghe Goodluck Fue</a>
-                    <span
-                        class="ml-2 hidden sm:block text-xs font-semibold bg-indigo-50 text-indigo-700 px-2 py-1 rounded border border-indigo-100">EB-1A
-                        Eligible</span>
                 </div>
+                <div class="hidden md:flex space-x-6 lg:space-x-8 items-center">
+                    <a href="index.html" data-i18n="nav.home"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Home</a>
+                    <a href="about.html" data-i18n="nav.about"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">About</a>
+                    <a href="news.html" data-i18n="nav.news"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">News</a>
+                    <a href="research.html" data-i18n="nav.research"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Research</a>
+                    <a href="publications.html" data-i18n="nav.publications"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Publications</a>
+                    <a href="cv.html" data-i18n="nav.cv"
+                        class="nav-link active text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">CV</a>
+                    <a href="contact.html" data-i18n="nav.contact"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Contact</a>
 
+                    <!-- Language Switcher Desktop -->
+                    <div class="flex items-center space-x-2 border-l pl-4 border-slate-200">
+                        <button onclick="changeLanguage('en')"
+                            class="lang-btn-en text-sm font-medium hover:text-indigo-600 transition-colors">EN</button>
+                        <span class="text-slate-300">|</span>
+                        <button onclick="changeLanguage('sw')"
+                            class="lang-btn-sw text-sm font-medium text-slate-500 hover:text-indigo-600 transition-colors">SW</button>
+                    </div>
+                </div>
+                <!-- ATS Toggle & Mobile Menu Button -->
+                <div class="flex items-center space-x-4 md:hidden">
+                    <!-- Language Switcher Mobile -->
+                    <div class="flex items-center space-x-2 mr-2">
+                        <button onclick="changeLanguage('en')" class="lang-btn-en text-xs font-bold">EN</button>
+                        <span class="text-slate-300">|</span>
+                        <button onclick="changeLanguage('sw')" class="lang-btn-sw text-xs text-slate-500">SW</button>
+                    </div>
+                </div>
                 <div class="flex items-center space-x-4">
-                    <div class="flex items-center" title="Toggle Recruiter Keyword Mode">
-                        <span
-                            class="text-[10px] font-bold text-slate-400 mr-2 uppercase tracking-wide hidden sm:block">Recruiter
-                            Mode</span>
-                        <label class="relative inline-flex items-center cursor-pointer">
+                    <div class="hidden md:block">
+                        <label class="inline-flex items-center cursor-pointer">
                             <input type="checkbox" id="ats-toggle" class="sr-only peer">
                             <div
-                                class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-indigo-600">
+                                class="w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600 relative">
                             </div>
+                            <span class="ml-3 text-sm font-medium text-slate-600">Recruiter Mode</span>
                         </label>
                     </div>
 
-                    <button id="mobile-menu-btn"
-                        class="md:hidden text-slate-500 hover:text-indigo-600 focus:outline-none">
-                        <span class="text-2xl">&#9776;</span>
-                    </button>
+                    <div class="flex items-center md:hidden">
+                        <button id="mobile-menu-btn" class="text-slate-500 hover:text-indigo-600 focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
-
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html"
-                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Home</a>
-                    <a href="about.html"
-                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">About</a>
-                    <a href="news.html"
-                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">News</a>
-                    <a href="research.html"
-                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Research</a>
-                    <a href="publications.html"
-                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Publications</a>
-                    <a href="cv.html"
-                        class="nav-link active text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">CV</a>
-                    <a href="contact.html"
-                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Contact</a>
-                </div>
-
-
             </div>
         </div>
-
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html"
+                <a href="index.html" data-i18n="nav.home"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Home</a>
-                <a href="about.html"
+                <a href="about.html" data-i18n="nav.about"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">About</a>
-                <a href="news.html"
+                <a href="news.html" data-i18n="nav.news"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">News</a>
-                <a href="research.html"
+                <a href="research.html" data-i18n="nav.research"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Research</a>
-                <a href="publications.html"
+                <a href="publications.html" data-i18n="nav.publications"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Publications</a>
-                <a href="cv.html"
+                <a href="cv.html" data-i18n="nav.cv"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">CV</a>
-                <a href="contact.html"
+                <a href="contact.html" data-i18n="nav.contact"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Contact</a>
+
+                <!-- Mobile ATS Toggle -->
+                <div class="px-3 py-2 border-t border-slate-100 mt-2">
+                    <label class="inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="ats-toggle-mobile" class="sr-only peer">
+                        <div
+                            class="w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-indigo-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600 relative">
+                        </div>
+                        <span class="ml-3 text-sm font-medium text-slate-600">Recruiter Mode</span>
+                    </label>
+                </div>
             </div>
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12 space-y-24">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12">
 
-        <section id="overview" class="scroll-mt-28">
-            <div class="text-center md:text-left mb-12">
-                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">
-                    Dr. Kadeghe Goodluck Fue
-                </h1>
-                <p class="text-xl md:text-2xl text-slate-800 font-bold mb-2">Senior Robotics & Machine Learning Engineer
-                </p>
-                <p class="text-lg text-indigo-600 font-medium mb-6">Full-Stack Autonomous Systems | Technical Lead |
-                    EB-1A Eligible</p>
-
-                <div
-                    class="max-w-4xl mx-auto md:mx-0 p-6 bg-white border-l-4 border-indigo-500 rounded-r-lg shadow-sm card-hover">
-                    <p class="text-slate-600 leading-relaxed">
-                        Visionary Full-Stack Physical AI Leader with <span class="ats-keyword">14+ years</span> of
-                        architecting and deploying pioneering autonomous systems. I bridge the critical "bit-to-atom"
-                        gap, leading the design of custom mechatronic hardware (<span
-                            class="ats-keyword">SolidWorks</span>, <span class="ats-keyword">Arduino</span>) and
-                        optimizing real-time perception stacks (<span class="ats-keyword">YOLO</span>, <span
-                            class="ats-keyword">Optical Flow</span>) on edge devices (<span class="ats-keyword">NVIDIA
-                            Jetson</span>). Proven leadership managing <span class="ats-keyword">$2M+</span> portfolios
-                        and winning international data science challenges.
-                    </p>
+        <!-- 1. OVERVIEW / HERO -->
+        <header class="mb-12 border-b border-slate-200 pb-12">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-2">
+                        Dr. Kadeghe <br class="md:hidden"> <span class="text-indigo-600">Goodluck Fue</span>
+                    </h1>
+                    <h2 class="text-xl text-slate-600 font-medium" data-i18n="cv.role_subtitle">Senior Robotics &
+                        Machine Learning Engineer</h2>
                 </div>
-
-                <div class="mt-8 flex flex-wrap gap-4 justify-center md:justify-start text-sm font-semibold">
-                    <a href="mailto:kadefue@gmail.com"
-                        class="bg-slate-900 text-white px-6 py-3 rounded-lg hover:bg-slate-800 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-200">Contact
+                <div class="mt-4 md:mt-0 flex gap-3">
+                    <a href="contact.html" data-i18n="cv.contact_me"
+                        class="bg-indigo-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition shadow-sm">Contact
                         Me</a>
-                    <a href="https://kadefue.github.io"
-                        class="bg-white text-slate-700 border border-slate-300 px-6 py-3 rounded-lg hover:border-indigo-500 hover:text-indigo-600 transition-colors shadow-sm hover:shadow-md transform hover:-translate-y-1 duration-200">GitHub
+                    <a href="https://github.com/kadefue" target="_blank" data-i18n="cv.github_portfolio"
+                        class="bg-white text-slate-700 border border-slate-300 px-5 py-2 rounded-lg font-semibold hover:bg-slate-50 transition">GitHub
                         Portfolio</a>
                 </div>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-indigo-200 transition-colors card-hover">
-                    <div class="text-3xl font-bold text-slate-900">14+</div>
-                    <div class="text-xs text-slate-500 uppercase tracking-wide mt-1 font-bold">Years Experience</div>
-                </div>
-                <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-indigo-200 transition-colors card-hover">
-                    <div class="text-3xl font-bold text-slate-900">$2.0M+</div>
-                    <div class="text-xs text-slate-500 uppercase tracking-wide mt-1 font-bold">Portfolio Managed</div>
-                </div>
-                <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-indigo-200 transition-colors card-hover">
-                    <div class="text-3xl font-bold text-slate-900">35+</div>
-                    <div class="text-xs text-slate-500 uppercase tracking-wide mt-1 font-bold">Publications</div>
-                </div>
-                <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center hover:border-indigo-200 transition-colors card-hover">
-                    <div class="text-3xl font-bold text-slate-900">1st</div>
-                    <div class="text-xs text-slate-500 uppercase tracking-wide mt-1 font-bold">Global Data Challenge
-                        funded by Amazon
-                    </div>
-                </div>
+            <p class="text-lg text-slate-600 leading-relaxed max-w-4xl" data-i18n="cv.tagline">
+                Full-Stack Autonomous Systems | Technical Lead | EB-1A Eligible
+            </p>
+            <p class="mt-4 text-slate-600 max-w-3xl leading-relaxed" data-i18n="cv.intro_text">
+                Visionary Full-Stack Physical AI Leader with <span class="ats-keyword">14+ years</span> of architecting
+                and deploying pioneering autonomous systems. I bridge the critical "bit-to-atom" gap, leading the design
+                of custom mechatronic hardware (<span class="ats-keyword">SolidWorks</span>, <span
+                    class="ats-keyword">Arduino</span>) and optimizing real-time perception stacks (<span
+                    class="ats-keyword">YOLO</span>, <span class="ats-keyword">Optical Flow</span>) on edge devices
+                (<span class="ats-keyword">NVIDIA Jetson</span>). Proven leadership managing <span
+                    class="ats-keyword">$2M+</span> portfolios and winning international data science challenges.
+            </p>
+        </header>
+
+        <!-- 2. KEY STATS GRID -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 text-center card-hover">
+                <span class="block text-4xl font-bold text-indigo-600 mb-1">14+</span>
+                <span class="text-sm font-semibold text-slate-500 uppercase tracking-wide"
+                    data-i18n="cv.years_experience">Years Experience</span>
             </div>
-        </section>
-
-        <section id="skills" class="scroll-mt-28">
-            <div class="mb-8">
-                <h2 class="text-3xl font-bold text-slate-900 border-l-8 border-indigo-600 pl-6 py-1">Technical Stack
-                    Analysis</h2>
-                <p class="text-slate-600 mt-2">Comprehensive "Bit-to-Atom" Full Stack Competency.</p>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 text-center card-hover">
+                <span class="block text-4xl font-bold text-indigo-600 mb-1">$32M+</span>
+                <span class="text-sm font-semibold text-slate-500 uppercase tracking-wide"
+                    data-i18n="cv.portfolio_managed">Portfolio Managed</span>
             </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 text-center card-hover">
+                <span class="block text-4xl font-bold text-indigo-600 mb-1">52+</span>
+                <span class="text-sm font-semibold text-slate-500 uppercase tracking-wide"
+                    data-i18n="cv.publications_count">Publications</span>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 text-center card-hover">
+                <span class="block text-4xl font-bold text-indigo-600 mb-1">1st</span>
+                <span class="text-sm font-semibold text-slate-500 uppercase tracking-wide"
+                    data-i18n="cv.global_challenge">Global Data Challenge</span>
+                <span class="text-xs text-slate-400 block mt-1">(Amazon Funded)</span>
+            </div>
+        </div>
 
-            <div class="grid grid-cols-1 gap-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 card-hover">
-                    <div class="chart-container">
+            <!-- LEFT COLUMN (Skills & Education) -->
+            <div class="lg:col-span-1 space-y-12">
+
+                <!-- SKILLS CHART SECTION -->
+                <section class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2"
+                        data-i18n="section_titles.technical_stack">
+                        <svg class="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                        Technical Stack Analysis
+                    </h3>
+                    <p class="text-xs text-slate-500 mb-6" data-i18n="cv.tech_stack_desc">Comprehensive "Bit-to-Atom"
+                        Full Stack Competency.</p>
+
+                    <div class="relative h-64 w-full">
                         <canvas id="skillsChartCanvas"></canvas>
                     </div>
-                </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 card-hover">
-                        <h4
-                            class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 border-b border-indigo-100 pb-2 text-indigo-700">
-                            Robotics & Control
-                        </h4>
-                        <div class="flex flex-wrap gap-2 leading-relaxed">
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🤖</span><span>ROS
-                                    1/2</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🧩</span><span>SMACH</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🏢</span><span>Gazebo
-                                    Simulation</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>👁️</span><span>Visual
-                                    Servoing</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🔄</span><span>Non-Holonomic
-                                    Control</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🗺️</span><span>Motion
-                                    Planning</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🎯</span><span>Modified
-                                    Pure Pursuit</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🎛️</span><span>PID
-                                    Autotuning</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🦾</span><span>Inverse
-                                    Kinematics</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>📉</span><span>MPC</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>📍</span><span>SLAM-based
-                                    Navigation</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>👓</span><span>RViz</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>📦</span><span>MoveIt!</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>☁️</span><span>Fuzzy
-                                    Logic Control</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>📐</span><span>Differential
-                                    Kinematics</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>📈</span><span>Trajectory
-                                    Optimization</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🏃</span><span>Whole-Body
-                                    Control</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🎮</span><span>Teleoperation</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🔫</span><span>PyBullet</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🧱</span><span>MuJoCo</span></span>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 card-hover">
-                        <h4
-                            class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 border-b border-indigo-100 pb-2 text-indigo-700">
-                            Machine Learning & Data
-                        </h4>
-                        <div class="flex flex-wrap gap-2 leading-relaxed">
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🔥</span><span>PyTorch</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>📱</span><span>TensorFlow
-                                    Lite</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🎋</span><span>LightGBM</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>📏</span><span>LinearSVR</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🔍</span><span>Object
-                                    Detection</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>⏳</span><span>Time-Series
-                                    Forecasting</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🎮</span><span>Reinforcement
-                                    Learning</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🤝</span><span>Ensemble
-                                    Models</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🌍</span><span>Google
-                                    Earth Engine</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🧠</span><span>Keras</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🧪</span><span>Scikit-learn</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🚀</span><span>XGBoost</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🎨</span><span>Generative
-                                    AI (GANs/VAEs)</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>⚙️</span><span>MLOps</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>⚡</span><span>Apache
-                                    Spark</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>➕</span><span>Data
-                                    Augmentation</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🎲</span><span>Bayesian
-                                    Optimization</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🤖</span><span>Transformers
-                                    (BERT/GPT)</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🔄</span><span>Autoencoders</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🦙</span><span>Ollama</span></span>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 card-hover">
-                        <h4
-                            class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 border-b border-indigo-100 pb-2 text-indigo-700">
-                            Computer Vision
-                        </h4>
-                        <div class="flex flex-wrap gap-2 leading-relaxed">
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🧿</span><span>OpenCV</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>⚡</span><span>YOLO
-                                    (v2-v8)</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🗺️</span><span>SLAM</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🟩</span><span>CUDA</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🚀</span><span>TensorRT</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🌊</span><span>Lucas-Kanade
-                                    Optical Flow</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🕶️</span><span>Stereoscopic
-                                    Depth (ZED)</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>✂️</span><span>Semantic
-                                    Segmentation</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>☁️</span><span>3D
-                                    Point Cloud</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🔢</span><span>PointNet</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🧊</span><span>Open3D</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🏗️</span><span>MVS</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>📷</span><span>Visual
-                                    Odometry</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>📐</span><span>Homography
-                                    Estimation</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🎯</span><span>DeepSORT</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>☁️</span><span>PCL</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🎨</span><span>Image
-                                    Inpainting</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🔍</span><span>Super-Resolution</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>📝</span><span>OCR</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>✂️</span><span>Instance
-                                    Segmentation</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>📐</span><span>Epipolar
-                                    Geometry</span></span>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 card-hover">
-                        <h4
-                            class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 border-b border-indigo-100 pb-2 text-indigo-700">
-                            Embedded & Hardware
-                        </h4>
-                        <div class="flex flex-wrap gap-2 leading-relaxed">
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🟢</span><span>NVIDIA
-                                    Jetson</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>♾️</span><span>Arduino
-                                    (C++)</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🚜</span><span>Hydrostatic
-                                    Drive</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>✈️</span><span>PX4
-                                    Autopilot</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🚁</span><span>Ardupilot</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🛰️</span><span>RTK-GNSS</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>📡</span><span>LiDAR</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🔗</span><span>Multi-sensor
-                                    Fusion</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🥧</span><span>Raspberry
-                                    Pi</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>📶</span><span>ESP32/8266</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🚌</span><span>CAN
-                                    Bus</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>⏱️</span><span>RTOS</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🔋</span><span>BLDC
-                                    Control</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>📻</span><span>LoRaWAN</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🏭</span><span>PLC</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🐝</span><span>Zigbee</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🔌</span><span>Modbus</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🧪</span><span>HIL
-                                    Testing</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🔉</span><span>DSP</span></span>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 card-hover">
-                        <h4
-                            class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 border-b border-indigo-100 pb-2 text-indigo-700">
-                            Languages
-                        </h4>
-                        <div class="flex flex-wrap gap-2 leading-relaxed">
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🐍</span><span>Python
-                                    (Adv)</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🇨</span><span>C++
-                                    (Adv)</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>📜</span><span>JavaScript</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>☕</span><span>Java</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🔢</span><span>MATLAB</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>📘</span><span>TypeScript</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🐹</span><span>Go</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🦀</span><span>Rust</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🐚</span><span>Bash</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🗄️</span><span>SQL</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>📊</span><span>R</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🐦</span><span>Swift</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🤖</span><span>Kotlin</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🧠</span><span>Prolog</span></span>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 card-hover">
-                        <h4
-                            class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 border-b border-indigo-100 pb-2 text-indigo-700">
-                            Frameworks
-                        </h4>
-                        <div class="flex flex-wrap gap-2 leading-relaxed">
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🔥</span><span>CodeIgniter</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>⚛️</span><span>React
-                                    JS</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🅰️</span><span>Angular
-                                    JS</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>▲</span><span>Next
-                                    JS</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🏛️</span><span>Laravel</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>⚡</span><span>FastAPI</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🍃</span><span>Spring</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🌶️</span><span>Flask</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🎸</span><span>Django</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🦁</span><span>NestJS</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🚂</span><span>Express.js</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🌬️</span><span>Tailwind
-                                    CSS</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>🅱️</span><span>Bootstrap</span></span>
-                            <span
-                                class="ats-keyword bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200 flex items-center gap-2 hover:bg-indigo-50 hover:border-indigo-200 transition-colors cursor-default"><span>💚</span><span>Vue.js</span></span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="scroll-mt-28">
-            <div class="mb-10">
-                <h2 class="text-3xl font-bold text-slate-900 border-l-8 border-indigo-600 pl-6 py-1">Professional
-                    Experience</h2>
-                <p class="text-slate-600 mt-2">Evolution from hands-on engineering to strategic technical leadership.
-                </p>
-            </div>
-
-            <div class="relative border-l-2 border-slate-200 ml-4 space-y-12">
-
-                <div class="relative pl-8">
-                    <div
-                        class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-white border-2 border-indigo-500 shadow-sm">
-                    </div>
-                    <div
-                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all hover:shadow-md card-hover">
-                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold text-slate-900">Principal Technical Program Manager</h3>
-                                <div class="text-indigo-600 font-medium">Sokoine University of Agriculture (HEET
-                                    Project)</div>
+                    <!-- Additional Skills Badges -->
+                    <div class="mt-8 space-y-4">
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Robotics &
+                                Mechatronics</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded border border-slate-200">ROS/ROS2</span>
+                                <span
+                                    class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded border border-slate-200">SolidWorks</span>
+                                <span
+                                    class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded border border-slate-200">Arduino/
+                                    IoT</span>
+                                <span
+                                    class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded border border-slate-200">UGV/UAV
+                                    Fleets</span>
                             </div>
-                            <span
-                                class="mt-2 sm:mt-0 px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold uppercase rounded-full">2021
-                                - Present</span>
                         </div>
-                        <ul class="space-y-3 text-slate-600 list-disc list-inside marker:text-indigo-300">
-                            <li>Directing technical strategy for <span class="ats-keyword">$2M+ World Bank-funded</span>
-                                digital transformation initiative at Sokoine University of Agriculture.</li>
-                            <li>Managing a cross-functional team of 8 principal Data and systems engineers.</li>
-                            <li>Architecting <span class="ats-keyword">HPC infrastructure</span> and implementing <span
-                                    class="ats-keyword">DevOps/CI/CD pipelines</span> that reduced deployment latency by
-                                40%.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="relative pl-8">
-                    <div
-                        class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-white border-2 border-indigo-500 shadow-sm">
-                    </div>
-                    <div
-                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all hover:shadow-md card-hover">
-                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold text-slate-900">Lead Robotics Research Engineer</h3>
-                                <div class="text-indigo-600 font-medium">YEESI & EPA Labs</div>
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">AI & Computer
+                                Vision</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded border border-slate-200">YOLOv8</span>
+                                <span
+                                    class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded border border-slate-200">PyTorch</span>
+                                <span
+                                    class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded border border-slate-200">TensorFlow</span>
+                                <span
+                                    class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded border border-slate-200">OpenCV</span>
                             </div>
-                            <span
-                                class="mt-2 sm:mt-0 px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold uppercase rounded-full">2021
-                                - Present</span>
                         </div>
-                        <ul class="space-y-3 text-slate-600 list-disc list-inside marker:text-indigo-300">
-                            <li>Founded electronics and precision agriculture lab (YEESI) and secured <span
-                                    class="ats-keyword">$157k USDA/NIFA funding for Machine Vision Project</span>.</li>
-                            <li>Developed offline <span class="ats-keyword">Edge AI</span> models (TensorFlow Lite)
-                                enabling real-time disease diagnosis.</li>
-                            <li>Engineered "TanPredikt" yield forecasting engine using <span class="ats-keyword">Google
-                                    Earth Engine</span> and <span class="ats-keyword">LightGBM</span>.</li>
-                            <li>Spearheaded the spin-off AgriMfumo Limited (<span
-                                    class="ats-keyword">www.agrimfumo.co.tz</span>) for soil testing electronics.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="relative pl-8">
-                    <div
-                        class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-white border-2 border-indigo-500 shadow-sm">
-                    </div>
-                    <div
-                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all hover:shadow-md card-hover">
-                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold text-slate-900">Lead Software Engineering Consultant</h3>
-                                <div class="text-indigo-600 font-medium">HYDROC GmbH</div>
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Programming &
+                                Tools</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded border border-slate-200">Python
+                                    (Expert)</span>
+                                <span
+                                    class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded border border-slate-200">C/C++</span>
+                                <span
+                                    class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded border border-slate-200">Docker</span>
+                                <span
+                                    class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded border border-slate-200">Linux</span>
                             </div>
-                            <span
-                                class="mt-2 sm:mt-0 px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold uppercase rounded-full">2022
-                                - 2024</span>
                         </div>
-                        <ul class="space-y-3 text-slate-600 list-disc list-inside marker:text-indigo-300">
-                            <li>Developed a geospatial database engine for <span class="ats-keyword">Songwe River Basin
-                                    Commission</span>.</li>
-                            <li>Created Interactive <span class="ats-keyword">Web Maps</span> models for Flood Early
-                                Warning Systems.</li>
-                        </ul>
                     </div>
-                </div>
+                </section>
 
-                <div class="relative pl-8">
-                    <div
-                        class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-white border-2 border-indigo-500 shadow-sm">
+                <!-- EDUCATION -->
+                <section>
+                    <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2"
+                        data-i18n="section_titles.education">
+                        <svg class="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                            <path
+                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
+                            </path>
+                        </svg>
+                        Education
+                    </h3>
+                    <div class="relative border-l-2 border-slate-200 ml-3 space-y-8 pl-6">
+                        <div class="relative">
+                            <span
+                                class="absolute -left-[31px] top-1.5 h-4 w-4 rounded-full bg-white border-2 border-indigo-500"></span>
+                            <h4 class="font-bold text-slate-900">PhD in Engineering</h4>
+                            <p class="text-sm text-slate-600">University of Georgia, USA</p>
+                            <span
+                                class="text-xs bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded mt-1 inline-block">GPA:
+                                3.86/4.0</span>
+                        </div>
+                        <div class="relative">
+                            <span
+                                class="absolute -left-[31px] top-1.5 h-4 w-4 rounded-full bg-slate-300 border-2 border-white"></span>
+                            <h4 class="font-bold text-slate-900">MSc in Ag Engineering</h4>
+                            <p class="text-sm text-slate-600">University of Florida, USA</p>
+                            <span
+                                class="text-xs bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded mt-1 inline-block">GPA:
+                                3.73/4.0</span>
+                        </div>
+                        <div class="relative">
+                            <span
+                                class="absolute -left-[31px] top-1.5 h-4 w-4 rounded-full bg-slate-300 border-2 border-white"></span>
+                            <h4 class="font-bold text-slate-900">BSc in Engineering</h4>
+                            <p class="text-sm text-slate-600">Sokoine University (SUA)</p>
+                            <span
+                                class="text-xs bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded mt-1 inline-block">GPA:
+                                3.8/5.0</span>
+                        </div>
                     </div>
-                    <div
-                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all hover:shadow-md card-hover">
-                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold text-slate-900">Computer Vision Engineer (Research Scholar)
-                                </h3>
-                                <div class="text-indigo-600 font-medium">North Carolina State University</div>
+                </section>
+            </div>
+
+            <!-- RIGHT COLUMN (Experience & Projects) -->
+            <div class="lg:col-span-2 space-y-12">
+
+                <!-- EXPERIENCE -->
+                <section>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2"
+                        data-i18n="section_titles.professional_experience">Professional Experience</h3>
+                    <p class="text-slate-500 mb-8" data-i18n="cv.prof_exp_desc">Evolution from hands-on engineering to
+                        strategic technical leadership.</p>
+
+                    <div class="space-y-8">
+                        <!-- Job 1 -->
+                        <div class="group relative border-l-2 border-indigo-200 pl-6 pb-2">
+                            <div
+                                class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-indigo-200 group-hover:bg-indigo-600 transition-colors">
                             </div>
-                            <span
-                                class="mt-2 sm:mt-0 px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold uppercase rounded-full">2020
-                                - 2021</span>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                                <h4 class="text-xl font-bold text-slate-900" data-i18n="jobs.sua_lead_title">Lead
+                                    Engineer / Project Manager</h4>
+                                <span
+                                    class="text-xs font-mono font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Oct
+                                    2023 - Present</span>
+                            </div>
+                            <h5 class="text-md font-semibold text-slate-700 mb-3" data-i18n="jobs.sua_lead_desc">Sokoine
+                                University of Agriculture (SUA) -
+                                Artificial Intelligence & Robotics Lab</h5>
+                            <p class="text-slate-600 mb-4 leading-relaxed">
+                                Leading the design and deployment of the <span class="ats-keyword">$32M World Bank HEET
+                                    Project</span>. Establishing new engineering curricula and state-of-the-art
+                                infrastructure.
+                            </p>
+                            <ul
+                                class="list-disc list-outside ml-4 space-y-2 text-slate-600 text-sm marker:text-indigo-400">
+                                <li><strong>Strategic Leadership:</strong> Architected the technical roadmap for the new
+                                    AI & Robotics Lab.</li>
+                                <li><strong>Impact:</strong> Managed a cross-functional team of 15+ engineers and
+                                    researchers.</li>
+                            </ul>
                         </div>
-                        <ul class="space-y-3 text-slate-600 list-disc list-inside marker:text-indigo-300">
-                            <li>Developed "PhenoCV-WeedCam," a <span class="ats-keyword">semantic segmentation</span>
-                                pipeline using OpenCV and PyTorch.</li>
-                            <li>Optimized algorithms for ground-based robotic sprayers to discriminate between crops and
-                                weeds under tight latency constraints.</li>
-                        </ul>
+
+                        <!-- Job 2 -->
+                        <div class="group relative border-l-2 border-slate-200 pl-6 pb-2">
+                            <div
+                                class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-200 group-hover:bg-indigo-400 transition-colors">
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                                <h4 class="text-xl font-bold text-slate-900" data-i18n="jobs.uga_postdoc_title">
+                                    Postdoctoral Research Associate</h4>
+                                <span
+                                    class="text-xs font-mono font-bold text-slate-500 bg-slate-50 px-2 py-1 rounded">Nov
+                                    2020 - Oct 2023</span>
+                            </div>
+                            <h5 class="text-md font-semibold text-slate-700 mb-3" data-i18n="jobs.uga_postdoc_desc">
+                                University of Georgia (UGA) - AI & Robotics
+                            </h5>
+                            <p class="text-slate-600 mb-4 leading-relaxed">
+                                Spearheaded the development of AI-driven robotics for precision agriculture, focusing on
+                                <span class="ats-keyword">multi-UGV coordination</span> and real-time weed detection.
+                            </p>
+                            <ul
+                                class="list-disc list-outside ml-4 space-y-2 text-slate-600 text-sm marker:text-indigo-400">
+                                <li><strong>Innovation:</strong> Developed a <span class="ats-keyword">Modified Pure
+                                        Pursuit</span> algorithm improving path tracking by 30%.</li>
+                                <li><strong>Tech Stack:</strong> ROS, Python, OpenCV, NVIDIA Jetson, SolidWorks.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Job 3 -->
+                        <div class="group relative border-l-2 border-slate-200 pl-6 pb-2">
+                            <div
+                                class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-200 group-hover:bg-indigo-400 transition-colors">
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                                <h4 class="text-xl font-bold text-slate-900" data-i18n="jobs.uga_gra_title">Graduate
+                                    Research Assistant</h4>
+                                <span
+                                    class="text-xs font-mono font-bold text-slate-500 bg-slate-50 px-2 py-1 rounded">Aug
+                                    2016 - Nov 2020</span>
+                            </div>
+                            <h5 class="text-md font-semibold text-slate-700 mb-3" data-i18n="jobs.uga_gra_desc">
+                                University of Georgia (UGA)</h5>
+                            <p class="text-slate-600 mb-4 leading-relaxed">
+                                Developed autonomous cotton harvesting robots and yield estimation systems using deep
+                                learning (<span class="ats-keyword">YOLO</span>).
+                            </p>
+                        </div>
+
+                        <!-- Job 4 -->
+                        <div class="group relative border-l-2 border-slate-200 pl-6 pb-2">
+                            <div
+                                class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-200 group-hover:bg-indigo-400 transition-colors">
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                                <h4 class="text-xl font-bold text-slate-900" data-i18n="jobs.sua_asst_lecturer_title">
+                                    Assistant Lecturer</h4>
+                                <span
+                                    class="text-xs font-mono font-bold text-slate-500 bg-slate-50 px-2 py-1 rounded">Nov
+                                    2013 - Aug 2016</span>
+                            </div>
+                            <h5 class="text-md font-semibold text-slate-700 mb-3"
+                                data-i18n="jobs.sua_asst_lecturer_desc">Sokoine University of Agriculture (SUA)</h5>
+                        </div>
+
+                        <!-- Job 5 -->
+                        <div class="group relative border-l-2 border-slate-200 pl-6 pb-2">
+                            <div
+                                class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-200 group-hover:bg-indigo-400 transition-colors">
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                                <h4 class="text-xl font-bold text-slate-900" data-i18n="jobs.sua_tutorial_asst_title">
+                                    Tutorial Assistant</h4>
+                                <span
+                                    class="text-xs font-mono font-bold text-slate-500 bg-slate-50 px-2 py-1 rounded">Nov
+                                    2010 - Nov 2013</span>
+                            </div>
+                            <h5 class="text-md font-semibold text-slate-700 mb-3"
+                                data-i18n="jobs.sua_tutorial_asst_desc">Sokoine University of Agriculture (SUA)</h5>
+                        </div>
                     </div>
+                </section>
+
+                <!-- PROJECTS / INNOVATION LAB -->
+                <section>
+                    <div class="flex justify-between items-center mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-1"
+                                data-i18n="section_titles.innovation_lab">Innovation Lab</h3>
+                            <p class="text-slate-500 text-sm" data-i18n="cv.innovation_lab_desc">Deep dive into key
+                                engineering contributions.</p>
+                        </div>
+                        <!-- Filter Buttons -->
+                        <div class="flex space-x-2">
+                            <button
+                                class="filter-btn active text-xs font-bold px-3 py-1 rounded-full bg-indigo-600 text-white transition-all shadow-sm"
+                                data-filter="all" data-i18n="cv.filter_all">All</button>
+                            <button
+                                class="filter-btn text-xs font-medium px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all"
+                                data-filter="robotics" data-i18n="cv.filter_robotics">Robotics</button>
+                            <button
+                                class="filter-btn text-xs font-medium px-3 py-1 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all"
+                                data-filter="ai" data-i18n="cv.filter_cloud">Cloud/AI</button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="projects-grid">
+
+                        <!-- Project 1: Autonomous Spraying Robot -->
+                        <div
+                            class="project-card robotics p-5 rounded-xl border border-slate-200 bg-white hover:border-indigo-300 transition-all cursor-default group">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-800 group-hover:text-indigo-700 transition-colors">
+                                    Autonomous Spraying Robot</h4>
+                                <span
+                                    class="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded border border-indigo-100 font-bold">Robotics</span>
+                            </div>
+                            <p class="text-slate-600 mb-6 leading-relaxed">
+                                Implemented autonomous mission planning and execution for a multi-UGV fleet used in
+                                agricultural mapping and spraying operations (<span
+                                    class="ats-keyword">PX4/ArduPilot</span>, <span class="ats-keyword">ROS</span>).
+                            </p>
+                        </div>
+
+                        <!-- Project 2: Yield Estimation (YOLO) -->
+                        <div
+                            class="project-card ai p-5 rounded-xl border border-slate-200 bg-white hover:border-indigo-300 transition-all cursor-default group">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-800 group-hover:text-indigo-700 transition-colors">
+                                    Real-Time Yield Estimation</h4>
+                                <span
+                                    class="text-xs bg-purple-50 text-purple-700 px-2 py-1 rounded border border-purple-100 font-bold">AI
+                                    / Vision</span>
+                            </div>
+                            <p class="text-slate-600 mb-6 leading-relaxed">
+                                Developed a deep learning pipeline using <span class="ats-keyword">YOLO</span> and SORT
+                                tracking to count cotton bolls in real-time video feeds with 95% accuracy.
+                            </p>
+                        </div>
+
+                        <!-- Project 3: Cotton Harvesting Robot -->
+                        <div
+                            class="project-card robotics p-5 rounded-xl border border-slate-200 bg-white hover:border-indigo-300 transition-all cursor-default group">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-800 group-hover:text-indigo-700 transition-colors">
+                                    Cotton Harvesting Robot</h4>
+                                <span
+                                    class="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded border border-indigo-100 font-bold">Robotics</span>
+                            </div>
+                            <p class="text-slate-600 mb-6 leading-relaxed">
+                                Designed the end-effector and manipulator control system for a redbot ground vehicle to
+                                autonomously harvest cotton bolls (<span class="ats-keyword">MoveIt!</span>, <span
+                                    class="ats-keyword">Kinematics</span>).
+                            </p>
+                        </div>
+
+                        <!-- Project 4: Variable Rate Sprayer -->
+                        <div
+                            class="project-card robotics p-5 rounded-xl border border-slate-200 bg-white hover:border-indigo-300 transition-all cursor-default group">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-800 group-hover:text-indigo-700 transition-colors">
+                                    Variable Rate Sprayer</h4>
+                                <span
+                                    class="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded border border-indigo-100 font-bold">IoT
+                                    / Embedded</span>
+                            </div>
+                            <p class="text-slate-600 mb-6 leading-relaxed">
+                                Created an IoT-enabled smart sprayer that adjusts chemical application based on
+                                real-time sensor data, reducing waste by 40% (<span class="ats-keyword">ESP32</span>,
+                                <span class="ats-keyword">MQTT</span>).
+                            </p>
+                        </div>
+
+                        <!-- Project 5: TanPredikt -->
+                        <div
+                            class="project-card ai p-5 rounded-xl border border-slate-200 bg-white hover:border-indigo-300 transition-all cursor-default group">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-800 group-hover:text-indigo-700 transition-colors">
+                                    TanPredikt</h4>
+                                <span
+                                    class="text-xs bg-purple-50 text-purple-700 px-2 py-1 rounded border border-purple-100 font-bold">AI
+                                    / Forecasting</span>
+                            </div>
+                            <p class="text-slate-600 mb-6 leading-relaxed" data-i18n="projects.tanpredikt_desc">
+                                Prediction of Rain-fed Maize Yield in Tanzania using Time-series Machine Learning Models
+                                and Satellite Data.
+                            </p>
+                        </div>
+
+                        <!-- Project 6: NAISS-GAI -->
+                        <div
+                            class="project-card ai p-5 rounded-xl border border-slate-200 bg-white hover:border-indigo-300 transition-all cursor-default group">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-800 group-hover:text-indigo-700 transition-colors">
+                                    NAISS-GAI</h4>
+                                <span
+                                    class="text-xs bg-green-50 text-green-700 px-2 py-1 rounded border border-green-100 font-bold">Auto-Irrigation</span>
+                            </div>
+                            <p class="text-slate-600 mb-6 leading-relaxed" data-i18n="projects.naiss_desc">
+                                Towards a Nationwide Automatic Irrigation Scheduling System.
+                            </p>
+                        </div>
+
+                        <!-- Project 7: YEESI Lab -->
+                        <div
+                            class="project-card ai p-5 rounded-xl border border-slate-200 bg-white hover:border-indigo-300 transition-all cursor-default group">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-800 group-hover:text-indigo-700 transition-colors">YEESI
+                                    Lab Ecosystem</h4>
+                                <span
+                                    class="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100 font-bold">Innovation</span>
+                            </div>
+                            <p class="text-slate-600 mb-6 leading-relaxed" data-i18n="projects.yeesi_desc">
+                                Youth Empowerment through Establishment of Social Innovation. Skilling for job creation.
+                            </p>
+                        </div>
+
+                        <!-- Project 8: SG-NAPI -->
+                        <div
+                            class="project-card ai p-5 rounded-xl border border-slate-200 bg-white hover:border-indigo-300 transition-all cursor-default group">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-bold text-slate-800 group-hover:text-indigo-700 transition-colors">
+                                    SG-NAPI Seed Grant</h4>
+                                <span
+                                    class="text-xs bg-yellow-50 text-yellow-700 px-2 py-1 rounded border border-yellow-100 font-bold">Grant
+                                    / Research</span>
+                            </div>
+                            <p class="text-slate-600 mb-6 leading-relaxed" data-i18n="projects.sg_napi_desc">
+                                TWAS-BMBF Seed Grant for high-level research projects in African countries.
+                            </p>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- EB-1A EVIDENCE SUMMARY -->
+                <section class="bg-indigo-900 rounded-2xl p-8 text-white relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-indigo-500 rounded-full mix-blend-overlay filter blur-3xl opacity-20 -mr-16 -mt-16">
+                    </div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-bold mb-6 border-b border-indigo-700 pb-2"
+                            data-i18n="section_titles.eb1a_evidence">EB-1A Evidence (Extraordinary
+                            Ability)</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="font-semibold text-indigo-300 mb-1" data-i18n="cv.eb1a_contribution">Original
+                                    Contribution</h4>
+                                <p class="text-indigo-100 text-sm leading-relaxed"
+                                    data-i18n="cv.eb1a_contribution_desc">
+                                    Invented a novel "Modified Pure Pursuit" control algorithm, cited by peer-reviewed
+                                    papers and adopted as a benchmark.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-indigo-300 mb-1" data-i18n="cv.eb1a_awards">Awards</h4>
+                                <p class="text-indigo-100 text-sm leading-relaxed" data-i18n="cv.eb1a_awards_desc">
+                                    Winner, Zindi "Outsmarting Outbreaks" Challenge, ranking <span
+                                        class="font-bold text-white">1st among 500+</span> global data scientists.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-indigo-300 mb-1" data-i18n="cv.eb1a_judging">Judging Work
+                                </h4>
+                                <p class="text-indigo-100 text-sm leading-relaxed" data-i18n="cv.eb1a_judging_desc">
+                                    Reviewer for <em>IEEE Robotics and Automation Letters (RA-L)</em> and <em>Computers
+                                        in Agriculture</em>.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-indigo-300 mb-1" data-i18n="cv.eb1a_role">Critical Role
+                                </h4>
+                                <p class="text-indigo-100 text-sm leading-relaxed" data-i18n="cv.eb1a_role_desc">
+                                    Technical Lead for the <span class="font-bold text-white">$32M World Bank HEET
+                                        Project</span> at SUA.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- DOWNLOAD CV Button -->
+                <div class="text-center pt-8">
+                    <a href="#"
+                        class="inline-flex items-center text-slate-600 hover:text-indigo-600 font-semibold transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                            </path>
+                        </svg>
+                        Download Full CV (PDF)
+                    </a>
                 </div>
+
             </div>
-        </section>
-
-        <section id="projects" class="scroll-mt-28">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-10">
-                <div>
-                    <h2 class="text-3xl font-bold text-slate-900 border-l-8 border-indigo-600 pl-6 py-1">Innovation Lab
-                    </h2>
-                    <p class="text-slate-600 mt-2">Deep dive into key engineering contributions.</p>
-                </div>
-                <div class="mt-4 md:mt-0 flex gap-2 flex-wrap" id="project-filters">
-                    <button data-filter="all"
-                        class="filter-btn active px-3 py-1 text-sm font-medium bg-slate-800 text-white rounded shadow-sm">All</button>
-                    <button data-filter="robotics"
-                        class="filter-btn px-3 py-1 text-sm font-medium bg-white text-slate-600 border border-slate-200 rounded hover:bg-slate-50">Robotics</button>
-                    <button data-filter="cloud"
-                        class="filter-btn px-3 py-1 text-sm font-medium bg-white text-slate-600 border border-slate-200 rounded hover:bg-slate-50">Cloud/AI</button>
-                    <button data-filter="embedded"
-                        class="filter-btn px-3 py-1 text-sm font-medium bg-white text-slate-600 border border-slate-200 rounded hover:bg-slate-50">IoT/Embedded</button>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="projects-grid">
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full card-hover"
-                    data-cat="cloud">
-                    <div class="bg-blue-500 h-1 w-full"></div>
-                    <div class="p-8 flex-1">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-slate-900">TanPredikt</h3>
-                            <span
-                                class="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100 font-bold">Cloud
-                                AI</span>
-                        </div>
-                        <p class="text-slate-600 mb-6 leading-relaxed">
-                            Time-series yield forecasting using <span class="ats-keyword">Google Earth Engine</span> and
-                            <span class="ats-keyword">LightGBM</span>.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full card-hover"
-                    data-cat="robotics">
-                    <div class="bg-indigo-500 h-1 w-full"></div>
-                    <div class="p-8 flex-1">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-slate-900">Cotton Rover</h3>
-                            <span
-                                class="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded border border-indigo-100 font-bold">Robotics</span>
-                        </div>
-                        <p class="text-slate-600 mb-6 leading-relaxed">
-                            Full-stack robotic platform (<span class="ats-keyword">ROS</span>, <span
-                                class="ats-keyword">C++</span>, <span class="ats-keyword">Python</span>) with custom
-                            hydrostatic drive control.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full card-hover"
-                    data-cat="cloud">
-                    <div class="bg-blue-500 h-1 w-full"></div>
-                    <div class="p-8 flex-1">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-slate-900">Mwagilia App</h3>
-                            <span
-                                class="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100 font-bold">Cloud
-                                AI</span>
-                        </div>
-                        <p class="text-slate-600 mb-6 leading-relaxed">
-                            An app to schedule Irrigation using <span class="ats-keyword">Satellite Imagery</span>,
-                            advise on Fertilization using <span class="ats-keyword">Drone Imagery</span>, and a disease
-                            advisory system using <span class="ats-keyword">LLM</span> and <span
-                                class="ats-keyword">CNN</span>.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full card-hover"
-                    data-cat="cloud">
-                    <div class="bg-blue-500 h-1 w-full"></div>
-                    <div class="p-8 flex-1">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-slate-900">AkilimaTik Chat Engine</h3>
-                            <span
-                                class="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100 font-bold">GenAI</span>
-                        </div>
-                        <p class="text-slate-600 mb-6 leading-relaxed">
-                            Integrated into the Student Information System using <span class="ats-keyword">FineTuned
-                                LLMs</span> and <span class="ats-keyword">RAGs</span> to advise students and applicants
-                            on our university. Acts like a University Digital Representative.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full card-hover"
-                    data-cat="embedded">
-                    <div class="bg-emerald-500 h-1 w-full"></div>
-                    <div class="p-8 flex-1">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-slate-900">Precision Planting System</h3>
-                            <span
-                                class="text-xs bg-emerald-50 text-emerald-700 px-2 py-1 rounded border border-emerald-100 font-bold">Embedded</span>
-                        </div>
-                        <p class="text-slate-600 mb-6 leading-relaxed">
-                            Developed a low-cost, open-source precision planting mechanism for smallholder farmers,
-                            utilizing <span class="ats-keyword">GPS</span> and custom stepper motor control.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full card-hover"
-                    data-cat="embedded">
-                    <div class="bg-emerald-500 h-1 w-full"></div>
-                    <div class="p-8 flex-1">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-slate-900">AquaSense IoT Monitoring</h3>
-                            <span
-                                class="text-xs bg-emerald-50 text-emerald-700 px-2 py-1 rounded border border-emerald-100 font-bold">IoT</span>
-                        </div>
-                        <p class="text-slate-600 mb-6 leading-relaxed">
-                            An <span class="ats-keyword">IoT-based system</span> for real-time water quality monitoring
-                            in aquaculture and small-scale irrigation, using low-power sensors and a cloud-based
-                            dashboard.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full card-hover"
-                    data-cat="robotics">
-                    <div class="bg-indigo-500 h-1 w-full"></div>
-                    <div class="p-8 flex-1">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-slate-900">Agri-UGV Fleet Automation</h3>
-                            <span
-                                class="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded border border-indigo-100 font-bold">Robotics</span>
-                        </div>
-                        <p class="text-slate-600 mb-6 leading-relaxed">
-                            Implemented autonomous mission planning and execution for a multi-UGV fleet used in
-                            agricultural mapping and spraying operations (<span
-                                class="ats-keyword">PX4/ArduPilot</span>,
-                            <span class="ats-keyword">Python</span>).
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden project-card flex flex-col h-full card-hover"
-                    data-cat="cloud">
-                    <div class="bg-blue-500 h-1 w-full"></div>
-                    <div class="p-8 flex-1">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-slate-900">Enterprise Service Bus (ESB)</h3>
-                            <span
-                                class="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100 font-bold">Cloud
-                                / Arch</span>
-                        </div>
-                        <p class="text-slate-600 mb-6 leading-relaxed">
-                            Architected and deployed an internal <span class="ats-keyword">ESB</span> for seamless,
-                            asynchronous data exchange between disparate institutional systems (ERP, SIS, Finance),
-                            significantly improving data integrity and reducing system integration overhead.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="education" class="scroll-mt-28">
-            <div class="mb-10">
-                <h2 class="text-3xl font-bold text-slate-900 border-l-8 border-indigo-600 pl-6 py-1">Education</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
-                    <div class="text-indigo-600 font-bold text-lg mb-1">Ph.D. in Engineering</div>
-                    <div class="text-slate-900 font-semibold">University of Georgia, USA</div>
-                    <div class="text-slate-500 text-sm mb-4">2020</div>
-                    <p class="text-slate-600 text-sm">Focus: AI, Robotics, Autonomous Vehicles.</p>
-                </div>
-                <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
-                    <div class="text-indigo-600 font-bold text-lg mb-1">M.Sc. in Ag & Bio Engineering</div>
-                    <div class="text-slate-900 font-semibold">University of Florida, USA</div>
-                    <div class="text-slate-500 text-sm mb-4">2014</div>
-                    <p class="text-slate-600 text-sm">Focus: Automation & Information Systems.</p>
-                </div>
-                <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
-                    <div class="text-indigo-600 font-bold text-lg mb-1">B.Sc. in Computer Engineering & IT</div>
-                    <div class="text-slate-900 font-semibold">University of Dar es Salaam, Tanzania</div>
-                    <div class="text-slate-500 text-sm mb-4">2011</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="eb1a" class="scroll-mt-28">
-            <div class="bg-slate-900 text-white rounded-2xl p-8 md:p-12 shadow-xl card-hover">
-                <div class="mb-8">
-                    <span
-                        class="bg-indigo-500 text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">Visa
-                        Eligibility</span>
-                    <h2 class="text-3xl font-bold mt-2">EB-1A Evidence (Extraordinary Ability)</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 card-hover">
-                        <h3 class="font-bold text-lg mb-2 text-indigo-300">Original Contribution</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed">Invented a novel "Modified Pure Pursuit"
-                            control algorithm, cited by peer-reviewed papers and adopted as a benchmark.</p>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 card-hover">
-                        <h3 class="font-bold text-lg mb-2 text-indigo-300">Awards</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed">Winner, Zindi "Outsmarting Outbreaks"
-                            Challenge, ranking <span class="font-bold text-white">1st among 500+</span> global data
-                            scientists.</p>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 card-hover">
-                        <h3 class="font-bold text-lg mb-2 text-indigo-300">Judging Work</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed">Reviewer for <em>IEEE Robotics and Automation
-                                Letters (RA-L)</em> and <em>Computers in Agriculture</em>.</p>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 card-hover">
-                        <h3 class="font-bold text-lg mb-2 text-indigo-300">Critical Role</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed">Technical Lead for the <span
-                                class="font-bold text-white">$32M World Bank HEET Project</span> at SUA.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
 
     </main>
 
-    <footer class="bg-slate-900 text-slate-400 py-12 mt-24">
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="mb-6 flex justify-center">
                 <img src="profile.png" alt="Dr. Fue"
                     class="w-16 h-16 rounded-full border-2 border-slate-700 grayscale hover:grayscale-0 transition-all duration-500">
             </div>
             <p class="mb-4 text-white font-bold text-lg">Dr. Kadeghe Goodluck Fue</p>
-            <p class="text-sm">&copy; 2025 Kadeghe Goodluck Fue. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mb-8 flex-wrap">
+                <a href="https://kadefue.github.io/" class="hover:text-white transition-colors"
+                    data-i18n="common.github">GitHub</a>
+                <a href="https://linkedin.com/in/kadefue/" class="hover:text-white transition-colors"
+                    data-i18n="common.linkedin">LinkedIn</a>
+                <a href="https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en"
+                    class="hover:text-white transition-colors" data-i18n="common.google_scholar">Google Scholar</a>
+                <a href="https://orcid.org/0000-0001-6362-3174" class="hover:text-white transition-colors"
+                    data-i18n="common.orcid">ORCID</a>
+                <a href="mailto:kadefue@gmail.com" class="hover:text-white transition-colors"
+                    data-i18n="common.email">Email</a>
+            </div>
+            <p class="text-sm">&copy; <span id="year"></span> Kadeghe Goodluck Fue. <span data-i18n="footer.rights">All
+                    rights reserved.</span></p>
         </div>
     </footer>
 
+    <!-- Translation Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-
-            // --- 1. RENDER RADAR CHART ---
-            const ctx = document.getElementById('skillsChartCanvas');
-            if (ctx) {
-                new Chart(ctx, {
-                    type: 'radar',
-                    data: {
-                        labels: ['Robotics', 'ML & Data', 'Computer Vision', 'Embedded', 'Languages', 'Frameworks'],
-                        datasets: [{
-                            label: 'Proficiency Level',
-                            data: [98, 92, 95, 88, 90, 85],
-                            backgroundColor: 'rgba(99, 102, 241, 0.2)',
-                            borderColor: 'rgba(99, 102, 241, 1)',
-                            pointBackgroundColor: 'rgba(99, 102, 241, 1)',
-                            pointBorderColor: '#fff',
-                            borderWidth: 2
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        scales: {
-                            r: {
-                                angleLines: { color: 'rgba(0,0,0,0.05)' },
-                                grid: { color: 'rgba(0,0,0,0.05)' },
-                                pointLabels: { font: { size: 11, family: 'Inter', weight: '600' }, color: '#475569' },
-                                suggestedMin: 0, suggestedMax: 100, ticks: { display: false }
-                            }
+        // --- 1. SKILLS CHART CONFIGURATION ---
+        const ctx = document.getElementById('skillsChartCanvas').getContext('2d');
+        const skillsChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['Robotics', 'ML & Data', 'Computer Vision', 'Embedded', 'Languages', 'Frameworks'],
+                datasets: [{
+                    label: 'Proficiency Level',
+                    data: [95, 90, 85, 80, 95, 85], // Estimated values
+                    fill: true,
+                    backgroundColor: 'rgba(79, 70, 229, 0.2)', // Indigo-600 with opacity
+                    borderColor: 'rgba(79, 70, 229, 1)', // Indigo-600
+                    pointBackgroundColor: 'rgba(79, 70, 229, 1)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgba(79, 70, 229, 1)'
+                }]
+            },
+            options: {
+                elements: {
+                    line: { borderWidth: 2 }
+                },
+                scales: {
+                    r: {
+                        angleLines: { display: true, color: '#e2e8f0' },
+                        suggestedMin: 0,
+                        suggestedMax: 100,
+                        grid: { color: '#e2e8f0' },
+                        pointLabels: {
+                            font: { size: 11, family: "'Inter', sans-serif", weight: '600' },
+                            color: '#475569' // Slate-600
                         },
-                        plugins: { legend: { display: false } }
+                        ticks: { display: false } // Hide numbers on axis
                     }
-                });
+                },
+                plugins: {
+                    legend: { display: false }
+                }
             }
+        });
 
-            // --- 2. PROJECT FILTERING ---
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const projectCards = document.querySelectorAll('.project-card');
+        // --- 2. PROJECT FILTERING LOGIC ---
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projects = document.querySelectorAll('.project-card');
 
-            filterButtons.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    filterButtons.forEach(b => {
-                        b.classList.remove('bg-slate-800', 'text-white');
-                        b.classList.add('bg-white', 'text-slate-600', 'border', 'border-slate-200');
-                    });
-                    btn.classList.remove('bg-white', 'text-slate-600', 'border', 'border-slate-200');
-                    btn.classList.add('bg-slate-800', 'text-white');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update Active Button Visuals
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-indigo-600', 'text-white', 'shadow-sm');
+                    b.classList.add('bg-slate-100', 'text-slate-600');
+                });
+                btn.classList.add('active', 'bg-indigo-600', 'text-white', 'shadow-sm');
+                btn.classList.remove('bg-slate-100', 'text-slate-600');
 
-                    const category = btn.dataset.filter;
-                    projectCards.forEach(card => {
-                        const cardCat = card.dataset.cat;
-                        if (category === 'all' || cardCat === category || (category === 'cloud' && cardCat === 'cloud') || (category === 'embedded' && cardCat === 'embedded')) {
-                            card.style.display = 'flex';
+                // Filter Projects
+                const filterValue = btn.getAttribute('data-filter');
+                projects.forEach(card => {
+                    if (filterValue === 'all') {
+                        card.style.display = 'block';
+                        // Add fade-in animation
+                        card.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 300 });
+                    } else {
+                        if (card.classList.contains(filterValue)) {
+                            card.style.display = 'block';
+                            card.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 300 });
                         } else {
                             card.style.display = 'none';
                         }
-                    });
+                    }
                 });
             });
+        });
 
-            // --- 3. ATS MODE TOGGLE ---
-            const atsToggle = document.getElementById('ats-toggle');
-            atsToggle.addEventListener('change', (e) => {
-                if (e.target.checked) { document.body.classList.add('ats-mode'); }
-                else { document.body.classList.remove('ats-mode'); }
-            });
+        // --- 3. ATS / RECRUITER MODE TOGGLE ---
+        const atsToggle = document.getElementById('ats-toggle');
+        const atsToggleMobile = document.getElementById('ats-toggle-mobile'); // Mobile toggle
+        const body = document.body;
 
-            // --- 4. MOBILE MENU ---
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-            document.querySelectorAll('#mobile-menu a').forEach(link => {
-                link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); });
+        // Sync desktop and mobile toggles
+        function syncToggles(source, target) {
+            source.addEventListener('change', () => {
+                target.checked = source.checked;
+                toggleATSMode(source.checked);
             });
+        }
+
+        if (atsToggle && atsToggleMobile) {
+            syncToggles(atsToggle, atsToggleMobile);
+            syncToggles(atsToggleMobile, atsToggle);
+        } else if (atsToggle) {
+             atsToggle.addEventListener('change', () => { toggleATSMode(atsToggle.checked); });
+        }
+
+
+        function toggleATSMode(isEnabled) {
+            if (isEnabled) {
+                body.classList.add('ats-mode');
+            } else {
+                body.classList.remove('ats-mode');
+            }
+        }
+        
+        // --- 4. MOBILE MENU LINK CLOSE ---
+        // (Button toggle handled by main.js)
+        const mobileMenu = document.getElementById('mobile-menu');
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); });
         });
     </script>
 </body>

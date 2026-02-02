@@ -56,23 +56,38 @@
                         class="font-bold text-lg md:text-xl text-slate-900 tracking-tight hover:text-indigo-600 transition-colors">Dr.
                         Kadeghe Goodluck Fue</a>
                 </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html"
+                <div class="hidden md:flex space-x-6 lg:space-x-8 items-center">
+                    <a href="index.html" data-i18n="nav.home"
                         class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Home</a>
-                    <a href="about.html"
+                    <a href="about.html" data-i18n="nav.about"
                         class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">About</a>
-                    <a href="news.html"
+                    <a href="news.html" data-i18n="nav.news"
                         class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">News</a>
-                    <a href="research.html"
+                    <a href="research.html" data-i18n="nav.research"
                         class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Research</a>
-                    <a href="publications.html"
+                    <a href="publications.html" data-i18n="nav.publications"
                         class="nav-link active text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Publications</a>
-                    <a href="cv.html"
+                    <a href="cv.html" data-i18n="nav.cv"
                         class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">CV</a>
-                    <a href="contact.html"
+                    <a href="contact.html" data-i18n="nav.contact"
                         class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Contact</a>
+
+                    <!-- Language Switcher Desktop -->
+                    <div class="flex items-center space-x-2 border-l pl-4 border-slate-200">
+                        <button onclick="changeLanguage('en')"
+                            class="lang-btn-en text-sm font-medium hover:text-indigo-600 transition-colors">EN</button>
+                        <span class="text-slate-300">|</span>
+                        <button onclick="changeLanguage('sw')"
+                            class="lang-btn-sw text-sm font-medium text-slate-500 hover:text-indigo-600 transition-colors">SW</button>
+                    </div>
                 </div>
                 <div class="flex items-center md:hidden">
+                    <!-- Language Switcher Mobile -->
+                    <div class="flex items-center space-x-2 mr-4">
+                        <button onclick="changeLanguage('en')" class="lang-btn-en text-xs font-bold">EN</button>
+                        <span class="text-slate-300">|</span>
+                        <button onclick="changeLanguage('sw')" class="lang-btn-sw text-xs text-slate-500">SW</button>
+                    </div>
                     <button id="mobile-menu-btn" class="text-slate-500 hover:text-indigo-600 focus:outline-none">
                         <span class="text-2xl">&#9776;</span>
                     </button>
@@ -81,19 +96,19 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html"
+                <a href="index.html" data-i18n="nav.home"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Home</a>
-                <a href="about.html"
+                <a href="about.html" data-i18n="nav.about"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">About</a>
-                <a href="news.html"
+                <a href="news.html" data-i18n="nav.news"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">News</a>
-                <a href="research.html"
+                <a href="research.html" data-i18n="nav.research"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Research</a>
-                <a href="publications.html"
+                <a href="publications.html" data-i18n="nav.publications"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Publications</a>
-                <a href="cv.html"
+                <a href="cv.html" data-i18n="nav.cv"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">CV</a>
-                <a href="contact.html"
+                <a href="contact.html" data-i18n="nav.contact"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Contact</a>
             </div>
         </div>
@@ -102,7 +117,8 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12 space-y-12">
 
         <section>
-            <h1 class="text-3xl font-bold text-slate-900 mb-6 border-l-8 border-indigo-500 pl-6 py-1">Publications &
+            <h1 class="text-3xl font-bold text-slate-900 mb-6 border-l-8 border-indigo-500 pl-6 py-1"
+                data-i18n="section_titles.publications_impact">Publications &
                 Impact</h1>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -114,7 +130,7 @@
                                 d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
                             </path>
                         </svg>
-                        Citation Statistics
+                        <span data-i18n="section_titles.citation_statistics">Citation Statistics</span>
                     </h2>
 
                     <div class="overflow-x-auto mb-6">
@@ -128,7 +144,8 @@
                             </thead>
                             <tbody>
                                 <tr class="bg-white border-b hover:bg-slate-50 transition-colors">
-                                    <th scope="row" class="px-3 py-4 font-medium text-slate-900 whitespace-nowrap">
+                                    <th scope="row" class="px-3 py-4 font-medium text-slate-900 whitespace-nowrap"
+                                        data-i18n="stats.citations">
                                         Citations</th>
                                     <td class="px-3 py-4 text-indigo-600 font-bold">1020</td>
                                     <td class="px-3 py-4 text-indigo-600 font-bold">882</td>
@@ -170,7 +187,8 @@
                     class="col-span-1 md:col-span-3 bg-white p-6 rounded-2xl shadow-sm border border-slate-200 card-hover">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
                         <div>
-                            <h2 class="text-lg font-bold text-slate-900">Peer Review Activity</h2>
+                            <h2 class="text-lg font-bold text-slate-900" data-i18n="section_titles.peer_review">Peer
+                                Review Activity</h2>
                             <p class="text-slate-500 text-sm">Service to the academic community</p>
                         </div>
                         <div
@@ -187,15 +205,16 @@
             </div>
 
             <div class="bg-indigo-50 border border-indigo-100 p-6 rounded-xl mb-12 card-hover">
-                <h2 class="text-lg font-bold text-indigo-900 mb-4">Academic Profiles</h2>
+                <h2 class="text-lg font-bold text-indigo-900 mb-4" data-i18n="section_titles.academic_profiles">Academic
+                    Profiles</h2>
                 <div class="flex flex-wrap gap-4">
                     <a href="https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en" target="_blank"
                         class="flex items-center space-x-2 bg-white px-4 py-2 rounded-lg shadow-sm text-sm font-medium text-slate-700 hover:text-indigo-600 transition-colors hover:shadow-md">
-                        <span>Google Scholar</span>
+                        <span data-i18n="common.google_scholar">Google Scholar</span>
                     </a>
                     <a href="https://orcid.org/0000-0001-6362-3174" target="_blank"
                         class="flex items-center space-x-2 bg-white px-4 py-2 rounded-lg shadow-sm text-sm font-medium text-slate-700 hover:text-indigo-600 transition-colors hover:shadow-md">
-                        <span>ORCID</span>
+                        <span data-i18n="common.orcid">ORCID</span>
                     </a>
                     <a href="https://www.scopus.com/authid/detail.uri?authorId=56711330500" target="_blank"
                         class="flex items-center space-x-2 bg-white px-4 py-2 rounded-lg shadow-sm text-sm font-medium text-slate-700 hover:text-indigo-600 transition-colors hover:shadow-md">
@@ -207,14 +226,16 @@
 
         <section id="publications-list" class="space-y-8">
             <div class="flex justify-between items-baseline">
-                <h2 class="text-2xl font-bold text-slate-900">Selected Publications</h2>
+                <h2 class="text-2xl font-bold text-slate-900" data-i18n="section_titles.selected_publications">Selected
+                    Publications</h2>
                 <span class="text-sm text-slate-500">52+ Publications Total</span>
             </div>
 
             <div class="relative pl-8 border-l-2 border-indigo-100">
                 <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-indigo-500 ring-4 ring-white shadow-sm">
                 </div>
-                <h3 class="text-xl font-bold text-slate-800 mb-4">Recent Highlights (2024-2025)</h3>
+                <h3 class="text-xl font-bold text-slate-800 mb-4" data-i18n="section_titles.recent_highlights">Recent
+                    Highlights (2024-2025)</h3>
                 <div class="space-y-6">
 
                     <div
@@ -271,6 +292,7 @@
                         </a>
                     </div>
 
+                    <!-- Additional papers omitted for brevity in template, but in real page keep all -->
                     <div
                         class="bg-white p-5 rounded-lg shadow-sm border border-slate-100 hover:border-indigo-200 transition-colors card-hover">
                         <a href="#" target="_blank" class="block group">
@@ -288,7 +310,6 @@
                             </div>
                         </a>
                     </div>
-
                     <div
                         class="bg-white p-5 rounded-lg shadow-sm border border-slate-100 hover:border-indigo-200 transition-colors card-hover">
                         <a href="https://doi.org/10.3389/fsufs.2025.1497577" target="_blank" class="block group">
@@ -305,7 +326,6 @@
                             </div>
                         </a>
                     </div>
-
                     <div
                         class="bg-white p-5 rounded-lg shadow-sm border border-slate-100 hover:border-indigo-200 transition-colors card-hover">
                         <a href="https://doi.org/10.3389/frai.2025.1597727" target="_blank" class="block group">
@@ -324,7 +344,6 @@
                             </div>
                         </a>
                     </div>
-
                     <div
                         class="bg-white p-5 rounded-lg shadow-sm border border-slate-100 hover:border-indigo-200 transition-colors card-hover">
                         <a href="https://www.mdpi.com/2072-4292/16/5/838" target="_blank" class="block group">
@@ -341,7 +360,6 @@
                             </div>
                         </a>
                     </div>
-
                     <div
                         class="bg-white p-5 rounded-lg shadow-sm border border-slate-100 hover:border-indigo-200 transition-colors card-hover">
                         <a href="https://doi.org/10.3389/fsoil.2024.1372838" target="_blank" class="block group">
@@ -359,7 +377,6 @@
                             </div>
                         </a>
                     </div>
-
                     <div
                         class="bg-white p-5 rounded-lg shadow-sm border border-slate-100 hover:border-indigo-200 transition-colors card-hover">
                         <a href="https://doi.org/10.3389/fsoil.2024.1421661" target="_blank" class="block group">
@@ -377,7 +394,6 @@
                             </div>
                         </a>
                     </div>
-
                     <div
                         class="bg-white p-5 rounded-lg shadow-sm border border-slate-100 hover:border-indigo-200 transition-colors card-hover">
                         <a href="https://doi.org/10.4018/979-8-3693-1467-8.ch009" target="_blank" class="block group">
@@ -402,7 +418,8 @@
             <div class="relative pl-8 border-l-2 border-indigo-100">
                 <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-indigo-500 ring-4 ring-white shadow-sm">
                 </div>
-                <h3 class="text-xl font-bold text-slate-800 mb-4">Highly Cited</h3>
+                <h3 class="text-xl font-bold text-slate-800 mb-4" data-i18n="section_titles.highly_cited">Highly Cited
+                </h3>
                 <div class="space-y-6">
                     <div
                         class="bg-white p-5 rounded-lg shadow-sm border border-slate-100 hover:border-indigo-200 transition-colors card-hover">
@@ -440,23 +457,27 @@
             </div>
             <p class="mb-4 text-white font-bold text-lg">Dr. Kadeghe Goodluck Fue</p>
             <div class="flex justify-center space-x-6 mb-8 flex-wrap">
-                <a href="https://kadefue.github.io/" class="hover:text-white transition-colors">GitHub</a>
-                <a href="https://linkedin.com/in/kadefue/" class="hover:text-white transition-colors">LinkedIn</a>
+                <a href="https://kadefue.github.io/" class="hover:text-white transition-colors"
+                    data-i18n="common.github">GitHub</a>
+                <a href="https://linkedin.com/in/kadefue/" class="hover:text-white transition-colors"
+                    data-i18n="common.linkedin">LinkedIn</a>
                 <a href="https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en"
-                    class="hover:text-white transition-colors">Google Scholar</a>
-                <a href="https://orcid.org/0000-0001-6362-3174" class="hover:text-white transition-colors">ORCID</a>
-                <a href="mailto:kadefue@gmail.com" class="hover:text-white transition-colors">Email</a>
+                    class="hover:text-white transition-colors" data-i18n="common.google_scholar">Google Scholar</a>
+                <a href="https://orcid.org/0000-0001-6362-3174" class="hover:text-white transition-colors"
+                    data-i18n="common.orcid">ORCID</a>
+                <a href="mailto:kadefue@gmail.com" class="hover:text-white transition-colors"
+                    data-i18n="common.email">Email</a>
             </div>
-            <p class="text-sm">&copy; <span id="year"></span> Kadeghe Goodluck Fue. All rights reserved.</p>
+            <p class="text-sm">&copy; <span id="year"></span> Kadeghe Goodluck Fue. <span data-i18n="footer.rights">All
+                    rights reserved.</span></p>
         </div>
     </footer>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    <!-- Translation Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
 
+    <script>
         // Chart.js Configuration
         const ctxCitation = document.getElementById('citationChart').getContext('2d');
         const citationChart = new Chart(ctxCitation, {

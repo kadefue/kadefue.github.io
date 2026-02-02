@@ -122,24 +122,41 @@
                         Kadeghe Goodluck Fue</a>
                 </div>
 
-                <div class="hidden md:flex space-x-6 lg:space-x-8">
-                    <a href="index.html"
+                <div class="hidden md:flex space-x-6 lg:space-x-8 items-center">
+                    <a href="index.html" data-i18n="nav.home"
                         class="nav-link active text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Home</a>
-                    <a href="about.html"
+                    <a href="about.html" data-i18n="nav.about"
                         class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">About</a>
-                    <a href="news.html"
+                    <a href="news.html" data-i18n="nav.news"
                         class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">News</a>
-                    <a href="research.html"
+                    <a href="research.html" data-i18n="nav.research"
                         class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Research</a>
-                    <a href="publications.html"
+                    <a href="publications.html" data-i18n="nav.publications"
                         class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Publications</a>
-                    <a href="cv.html"
+                    <a href="cv.html" data-i18n="nav.cv"
                         class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">CV</a>
-                    <a href="contact.html"
+                    <a href="contact.html" data-i18n="nav.contact"
                         class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Contact</a>
+
+                    <!-- Language Switcher Desktop -->
+                    <div class="flex items-center space-x-2 border-l pl-4 border-slate-200">
+                        <button onclick="changeLanguage('en')"
+                            class="lang-btn-en text-sm font-medium hover:text-indigo-600 transition-colors">EN</button>
+                        <span class="text-slate-300">|</span>
+                        <button onclick="changeLanguage('sw')"
+                            class="lang-btn-sw text-sm font-medium text-slate-500 hover:text-indigo-600 transition-colors">SW</button>
+                    </div>
                 </div>
 
-                <div class="flex items-center md:hidden">
+                <div class="flex items-center md:hidden gap-4">
+                    <!-- Language Switcher Mobile -->
+                    <div class="flex items-center space-x-2">
+                        <button onclick="changeLanguage('en')"
+                            class="lang-btn-en text-xs font-medium hover:text-indigo-600 transition-colors">EN</button>
+                        <span class="text-slate-300">|</span>
+                        <button onclick="changeLanguage('sw')"
+                            class="lang-btn-sw text-xs font-medium text-slate-500 hover:text-indigo-600 transition-colors">SW</button>
+                    </div>
                     <button id="mobile-menu-btn" class="text-slate-500 hover:text-indigo-600 focus:outline-none">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -152,19 +169,19 @@
 
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-lg absolute w-full">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html"
+                <a href="index.html" data-i18n="nav.home"
                     class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 bg-indigo-50">Home</a>
-                <a href="about.html"
+                <a href="about.html" data-i18n="nav.about"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">About</a>
-                <a href="news.html"
+                <a href="news.html" data-i18n="nav.news"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">News</a>
-                <a href="research.html"
+                <a href="research.html" data-i18n="nav.research"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Research</a>
-                <a href="publications.html"
+                <a href="publications.html" data-i18n="nav.publications"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Publications</a>
-                <a href="cv.html"
+                <a href="cv.html" data-i18n="nav.cv"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">CV</a>
-                <a href="contact.html"
+                <a href="contact.html" data-i18n="nav.contact"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Contact</a>
             </div>
         </div>
@@ -203,7 +220,7 @@
                 </div>
 
                 <div class="text-center md:text-left">
-                    <div
+                    <div data-i18n="hero.welcome"
                         class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-indigo-600 uppercase bg-indigo-50 rounded-full">
                         Welcome to my portfolio
                     </div>
@@ -211,17 +228,20 @@
                         Dr. Kadeghe <br class="hidden md:block"> <span class="text-indigo-600">Goodluck Fue</span>
                     </h1>
                     <p class="text-lg md:text-xl text-slate-600 font-medium mb-8 leading-relaxed max-w-2xl">
-                        Senior Lecturer & Consulting Engineer. <br>
-                        Innovating at the intersection of <span
+                        <span data-i18n="hero.role">Senior Lecturer & Consulting Engineer.</span> <br>
+                        <span data-i18n="hero.description">Innovating at the intersection of</span> <span
+                            data-i18n="hero.mechatronics"
                             class="text-indigo-600 font-bold bg-indigo-50 px-1 rounded">Mechatronics</span>,
-                        <span class="text-indigo-600 font-bold bg-indigo-50 px-1 rounded">AI</span>, and
-                        <span class="text-indigo-600 font-bold bg-indigo-50 px-1 rounded">Precision Ag</span>.
+                        <span data-i18n="hero.ai" class="text-indigo-600 font-bold bg-indigo-50 px-1 rounded">AI</span>,
+                        and
+                        <span data-i18n="hero.precision_ag"
+                            class="text-indigo-600 font-bold bg-indigo-50 px-1 rounded">Precision Ag</span>.
                     </p>
 
                     <div class="flex flex-wrap gap-4 justify-center md:justify-start">
                         <a href="about.html"
                             class="card-hover bg-indigo-600 text-white px-8 py-4 rounded-xl hover:bg-indigo-700 transition-all font-semibold shadow-lg shadow-indigo-200 flex items-center gap-2">
-                            More About Me
+                            <span data-i18n="hero.more_about">More About Me</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -229,7 +249,7 @@
                         </a>
                         <a href="research.html"
                             class="card-hover bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-xl hover:border-indigo-500 hover:text-indigo-600 transition-all font-medium shadow-sm flex items-center gap-2">
-                            View Research
+                            <span data-i18n="hero.view_research">View Research</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
@@ -244,19 +264,23 @@
         <section class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center card-hover">
                 <div class="text-3xl md:text-4xl font-bold text-indigo-600 mb-1">14+</div>
-                <div class="text-xs text-slate-500 uppercase font-bold tracking-wide">Years Experience</div>
+                <div data-i18n="stats.years_experience"
+                    class="text-xs text-slate-500 uppercase font-bold tracking-wide">Years Experience</div>
             </div>
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center card-hover">
                 <div class="text-3xl md:text-4xl font-bold text-indigo-600 mb-1">52+</div>
-                <div class="text-xs text-slate-500 uppercase font-bold tracking-wide">Publications</div>
+                <div data-i18n="stats.publications" class="text-xs text-slate-500 uppercase font-bold tracking-wide">
+                    Publications</div>
             </div>
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center card-hover">
                 <div class="text-3xl md:text-4xl font-bold text-indigo-600 mb-1">1020+</div>
-                <div class="text-xs text-slate-500 uppercase font-bold tracking-wide">Citations</div>
+                <div data-i18n="stats.citations" class="text-xs text-slate-500 uppercase font-bold tracking-wide">
+                    Citations</div>
             </div>
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center card-hover">
                 <div class="text-3xl md:text-4xl font-bold text-indigo-600 mb-1">$2.0M+</div>
-                <div class="text-xs text-slate-500 uppercase font-bold tracking-wide">Project Portfolio Managed</div>
+                <div data-i18n="stats.portfolio" class="text-xs text-slate-500 uppercase font-bold tracking-wide">
+                    Project Portfolio Managed</div>
             </div>
         </section>
 
@@ -271,10 +295,11 @@
                                 d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
                         </svg>
                     </span>
-                    <h2 class="text-2xl font-bold text-slate-900">Latest Updates</h2>
+                    <h2 data-i18n="section_titles.latest_updates" class="text-2xl font-bold text-slate-900">Latest
+                        Updates</h2>
                 </div>
                 <a href="news.html" class="text-sm font-medium text-indigo-600 hover:text-indigo-800 flex items-center">
-                    View Archive
+                    <span data-i18n="section_titles.view_archive">View Archive</span>
                     <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -348,7 +373,8 @@
                             clip-rule="evenodd"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 mb-2 transition-colors">
+                <h3 data-i18n="section_titles.biography"
+                    class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 mb-2 transition-colors">
                     Biography</h3>
                 <p class="text-slate-600 text-sm leading-relaxed">Learn more about my professional journey, biography,
                     and expertise.</p>
@@ -363,7 +389,8 @@
                         </path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 mb-2 transition-colors">Research
+                <h3 data-i18n="section_titles.research"
+                    class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 mb-2 transition-colors">Research
                 </h3>
                 <p class="text-slate-600 text-sm leading-relaxed">Explore my current and past research projects in AI
                     and Agriculture.</p>
@@ -378,7 +405,8 @@
                             clip-rule="evenodd"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 mb-2 transition-colors">
+                <h3 data-i18n="section_titles.publications"
+                    class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 mb-2 transition-colors">
                     Publications</h3>
                 <p class="text-slate-600 text-sm leading-relaxed">View my complete list of peer-reviewed journal
                     articles and papers.</p>
@@ -395,30 +423,26 @@
             </div>
             <p class="mb-4 text-white font-bold text-lg">Dr. Kadeghe Goodluck Fue</p>
             <div class="flex justify-center space-x-6 mb-8 flex-wrap">
-                <a href="https://kadefue.github.io/" class="hover:text-white transition-colors">GitHub</a>
-                <a href="https://linkedin.com/in/kadefue/" class="hover:text-white transition-colors">LinkedIn</a>
-                <a href="https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en"
+                <a href="https://kadefue.github.io/" data-i18n="common.github"
+                    class="hover:text-white transition-colors">GitHub</a>
+                <a href="https://linkedin.com/in/kadefue/" data-i18n="common.linkedin"
+                    class="hover:text-white transition-colors">LinkedIn</a>
+                <a href="https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en" data-i18n="common.google_scholar"
                     class="hover:text-white transition-colors">Google Scholar</a>
-                <a href="https://orcid.org/0000-0001-6362-3174" class="hover:text-white transition-colors">ORCID</a>
-                <a href="mailto:kadefue@gmail.com" class="hover:text-white transition-colors">Email</a>
+                <a href="https://orcid.org/0000-0001-6362-3174" data-i18n="common.orcid"
+                    class="hover:text-white transition-colors">ORCID</a>
+                <a href="mailto:kadefue@gmail.com" data-i18n="common.email"
+                    class="hover:text-white transition-colors">Email</a>
             </div>
-            <p class="text-sm text-slate-500">&copy; <span id="year"></span> Kadeghe Goodluck Fue. All rights reserved.
+            <p class="text-sm text-slate-500">&copy; <span id="year"></span> Kadeghe Goodluck Fue. <span
+                    data-i18n="footer.rights">All rights reserved.</span>
             </p>
         </div>
     </footer>
 
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
     <script>
-        // Set Current Year
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
         // "Webbling Exchanging" Slideshow Script
         const images = document.querySelectorAll('.slide-image');
         let currentImageIndex = 0;

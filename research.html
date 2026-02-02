@@ -55,23 +55,38 @@
                         class="font-bold text-lg md:text-xl text-slate-900 tracking-tight hover:text-indigo-600 transition-colors">Dr.
                         Kadeghe Goodluck Fue</a>
                 </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html"
+                <div class="hidden md:flex space-x-6 lg:space-x-8 items-center">
+                    <a href="index.html" data-i18n="nav.home"
                         class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Home</a>
-                    <a href="about.html"
+                    <a href="about.html" data-i18n="nav.about"
                         class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">About</a>
-                    <a href="news.html"
+                    <a href="news.html" data-i18n="nav.news"
                         class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">News</a>
-                    <a href="research.html"
+                    <a href="research.html" data-i18n="nav.research"
                         class="nav-link active text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Research</a>
-                    <a href="publications.html"
+                    <a href="publications.html" data-i18n="nav.publications"
                         class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Publications</a>
-                    <a href="cv.html"
+                    <a href="cv.html" data-i18n="nav.cv"
                         class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">CV</a>
-                    <a href="contact.html"
+                    <a href="contact.html" data-i18n="nav.contact"
                         class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Contact</a>
+
+                    <!-- Language Switcher Desktop -->
+                    <div class="flex items-center space-x-2 border-l pl-4 border-slate-200">
+                        <button onclick="changeLanguage('en')"
+                            class="lang-btn-en text-sm font-medium hover:text-indigo-600 transition-colors">EN</button>
+                        <span class="text-slate-300">|</span>
+                        <button onclick="changeLanguage('sw')"
+                            class="lang-btn-sw text-sm font-medium text-slate-500 hover:text-indigo-600 transition-colors">SW</button>
+                    </div>
                 </div>
                 <div class="flex items-center md:hidden">
+                    <!-- Language Switcher Mobile -->
+                    <div class="flex items-center space-x-2 mr-4">
+                        <button onclick="changeLanguage('en')" class="lang-btn-en text-xs font-bold">EN</button>
+                        <span class="text-slate-300">|</span>
+                        <button onclick="changeLanguage('sw')" class="lang-btn-sw text-xs text-slate-500">SW</button>
+                    </div>
                     <button id="mobile-menu-btn" class="text-slate-500 hover:text-indigo-600 focus:outline-none">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -83,19 +98,19 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html"
+                <a href="index.html" data-i18n="nav.home"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Home</a>
-                <a href="about.html"
+                <a href="about.html" data-i18n="nav.about"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">About</a>
-                <a href="news.html"
+                <a href="news.html" data-i18n="nav.news"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">News</a>
-                <a href="research.html"
+                <a href="research.html" data-i18n="nav.research"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Research</a>
-                <a href="publications.html"
+                <a href="publications.html" data-i18n="nav.publications"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Publications</a>
-                <a href="cv.html"
+                <a href="cv.html" data-i18n="nav.cv"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">CV</a>
-                <a href="contact.html"
+                <a href="contact.html" data-i18n="nav.contact"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Contact</a>
             </div>
         </div>
@@ -104,9 +119,10 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12 space-y-16">
 
         <section>
-            <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 border-l-8 border-indigo-600 pl-6 py-2">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 border-l-8 border-indigo-600 pl-6 py-2"
+                data-i18n="section_titles.research_projects">
                 Research & Projects</h1>
-            <p class="text-lg text-slate-600 max-w-3xl leading-relaxed">
+            <p class="text-lg text-slate-600 max-w-3xl leading-relaxed" data-i18n="section_titles.research_intro">
                 Exploring the intersection of <span class="text-indigo-600 font-semibold">Artificial
                     Intelligence</span>, <span class="text-indigo-600 font-semibold">Robotics</span>, and <span
                     class="text-indigo-600 font-semibold">Agriculture</span>. My work focuses on creating sustainable,
@@ -123,7 +139,7 @@
                             d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                 </span>
-                Current Research Projects
+                <span data-i18n="section_titles.current_research">Current Research Projects</span>
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -146,7 +162,7 @@
                                 Investigator</span>
                             <span class="text-slate-500 text-xs font-mono">2022 - 2023</span>
                         </div>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                        <p class="text-slate-600 mb-4 text-sm leading-relaxed" data-i18n="projects.tanpredikt_desc">
                             Prediction of Rain-fed Maize Yield in Tanzania using Time-series Machine Learning Models and
                             Satellite Data.
                         </p>
@@ -173,7 +189,7 @@
                                 class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-bold uppercase rounded">PI</span>
                             <span class="text-slate-500 text-xs font-mono">2022 - 2024</span>
                         </div>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                        <p class="text-slate-600 mb-4 text-sm leading-relaxed" data-i18n="projects.naiss_desc">
                             Towards a Nationwide Automatic Irrigation Scheduling System (NAISS-GAI). Collaborators:
                             Prof. B. Mbilinyi, Prof. C. Sanga.
                         </p>
@@ -200,7 +216,7 @@
                                 Founder</span>
                             <span class="text-slate-500 text-xs font-mono">2021 - 2023</span>
                         </div>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                        <p class="text-slate-600 mb-4 text-sm leading-relaxed" data-i18n="projects.yeesi_desc">
                             Youth Empowerment through Establishment of Social Innovation. Skilling for job creation in
                             an innovation ecosystem with University of Georgia.
                         </p>
@@ -224,7 +240,7 @@
                                 class="px-2 py-1 bg-yellow-50 text-yellow-700 text-xs font-bold uppercase rounded">PI</span>
                             <span class="text-slate-500 text-xs font-mono">2022 - 2023</span>
                         </div>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                        <p class="text-slate-600 mb-4 text-sm leading-relaxed" data-i18n="projects.sg_napi_desc">
                             TWAS-BMBF Seed Grant for high-level research projects in various scientific fields carried
                             out in African countries.
                         </p>
@@ -242,7 +258,7 @@
                             d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                 </span>
-                Previous Work Highlights
+                <span data-i18n="section_titles.previous_work">Previous Work Highlights</span>
             </h2>
 
             <div class="space-y-4">
@@ -299,24 +315,26 @@
             </div>
             <p class="mb-4 text-white font-bold text-lg">Dr. Kadeghe Goodluck Fue</p>
             <div class="flex justify-center space-x-6 mb-8 flex-wrap">
-                <a href="https://kadefue.github.io/" class="hover:text-white transition-colors">GitHub</a>
-                <a href="https://linkedin.com/in/kadefue/" class="hover:text-white transition-colors">LinkedIn</a>
+                <a href="https://kadefue.github.io/" class="hover:text-white transition-colors"
+                    data-i18n="common.github">GitHub</a>
+                <a href="https://linkedin.com/in/kadefue/" class="hover:text-white transition-colors"
+                    data-i18n="common.linkedin">LinkedIn</a>
                 <a href="https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en"
-                    class="hover:text-white transition-colors">Google Scholar</a>
-                <a href="https://orcid.org/0000-0001-6362-3174" class="hover:text-white transition-colors">ORCID</a>
-                <a href="mailto:kadefue@gmail.com" class="hover:text-white transition-colors">Email</a>
+                    class="hover:text-white transition-colors" data-i18n="common.google_scholar">Google Scholar</a>
+                <a href="https://orcid.org/0000-0001-6362-3174" class="hover:text-white transition-colors"
+                    data-i18n="common.orcid">ORCID</a>
+                <a href="mailto:kadefue@gmail.com" class="hover:text-white transition-colors"
+                    data-i18n="common.email">Email</a>
             </div>
-            <p class="text-sm text-slate-500">&copy; <span id="year"></span> Kadeghe Goodluck Fue. All rights reserved.
+            <p class="text-sm text-slate-500">&copy; <span id="year"></span> Kadeghe Goodluck Fue. <span
+                    data-i18n="footer.rights">All rights reserved.</span>
             </p>
         </div>
     </footer>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-    </script>
+    <!-- Translation Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
