@@ -78,7 +78,7 @@ const translations = {
             eb1a_awards: "Awards",
             eb1a_awards_desc: "Winner, Zindi \"Outsmarting Outbreaks\" Challenge, ranking <span class=\"font-bold text-white\">1st among 500+</span> global data scientists.",
             eb1a_judging: "Judging Work",
-            eb1a_judging_desc: "Reviewer for <em>IEEE Robotics and Automation Letters (RA-L)</em> and <em>Computers in Agriculture</em>.",
+            eb1a_judging_desc: "Reviewer for <em>IEEE Robotics and Automation Letters (RA-L)</em> and <em>Computers and Electronics in Agriculture</em>.",
             eb1a_role: "Critical Role",
             eb1a_role_desc: "Technical Lead for the <span class=\"font-bold text-white\">$32M World Bank HEET Project</span> at SUA."
         },
@@ -196,16 +196,16 @@ const translations = {
             eb1a_role_desc: "Kiongozi wa Kiufundi wa <span class=\"font-bold text-white\">Mradi wa $32M wa Benki ya Dunia wa HEET</span> katika SUA."
         },
         jobs: {
-            sua_lead_title: "Mhandisi Kiongozi / Meneja Mradi",
+            sua_lead_title: "Mhadhiri Mwandamizi / Mhandisi Kiongozi / Kiongozi wa Miradi",
             sua_lead_desc: "Kuongoza usanifu na usambazaji wa Mradi wa $32M wa HEET, kuanzisha mitaala mipya ya uhandisi na miundombinu.",
-            uga_postdoc_title: "Mshirika wa Utafiti wa Postdoctoral",
-            uga_postdoc_desc: "Niliongoza maendeleo ya roboti zinazoendeshwa na AI kwa kilimo cha kisasa, pamoja na uratibu wa UGV nyingi.",
+            uga_postdoc_title: "Mshirika wa Utafiti wa Akili Mnemba",
+            uga_postdoc_desc: "Niliongoza maendeleo ya roboti zinazoendeshwa na Akili Mnemba kwa kilimo cha kisasa, pamoja na uratibu wa UGV nyingi.",
             uga_gra_title: "Msaidizi wa Utafiti wa Wahitimu",
             uga_gra_desc: "Nilitengeneza roboti za kuvuna pamba na mifumo ya kukadiria mavuno nikitumia deep learning.",
             sua_asst_lecturer_title: "Mhadhiri Msaidizi",
-            sua_asst_lecturer_desc: "Nilifundisha kozi za uhandisi na kufanya utafiti kuhusu ufundi wa kilimo.",
+            sua_asst_lecturer_desc: "Nilifundisha kozi za uhandisi na kufanya utafiti kuhusu ufundi wa kilimo na matumizi ya TEHAMA.",
             sua_tutorial_asst_title: "Msaidizi wa Mafunzo",
-            sua_tutorial_asst_desc: "Nilisaidia katika kufundisha na vipindi vya maabara kwa wanafunzi wa shahada ya kwanza ya uhandisi."
+            sua_tutorial_asst_desc: "Nilisaidia katika kufundisha na vipindi vya maabara kwa wanafunzi wa shahada ya kwanza ya TEHAMA."
         },
         projects: {
             tanpredikt_desc: "Utabiri wa Mavuno ya Mahindi ya Kutegemea Mvua nchini Tanzania kwa kutumia Aina za Kujifunza kwa Mashine na Data za Satelaiti.",
