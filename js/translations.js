@@ -83,16 +83,16 @@ const translations = {
             eb1a_role_desc: "Technical Lead for the <span class=\"font-bold text-white\">$32M World Bank HEET Project</span> at SUA."
         },
         jobs: {
-            sua_lead_title: "Lead Engineer / Project Manager",
-            sua_lead_desc: "Leading the design and deployment of the $32M HEET Project, establishing new engineering curricula and infrastructure.",
-            uga_postdoc_title: "Postdoctoral Research Associate",
+            sua_lead_title: "Senior Lecturer / Lead Engineer / Principal Investigator / HEET Digitalization Leader",
+            sua_lead_desc: "Teaching Precision Agriculture Courses, Leading Electronics and Precision Agriculture Research and Working on the Implementation of the $32M World-Bank Funded HEET Project, leading on HEET Digitalization Efforts for the University",
+            uga_postdoc_title: "Geospatial AI Research Scholar",
             uga_postdoc_desc: "Led development of AI-driven robotics for precision agriculture, including multi-UGV coordination.",
             uga_gra_title: "Graduate Research Assistant",
             uga_gra_desc: "Developed autonomous cotton harvesting robots and yield estimation systems using deep learning.",
             sua_asst_lecturer_title: "Assistant Lecturer",
-            sua_asst_lecturer_desc: "Taught courses in engineering and conducted research on agricultural mechanization.",
+            sua_asst_lecturer_desc: "Taught courses in engineering and conducted research on Information Tech and Software development.",
             sua_tutorial_asst_title: "Tutorial Assistant",
-            sua_tutorial_asst_desc: "Assisted in teaching and lab sessions for undergraduate engineering students."
+            sua_tutorial_asst_desc: "Assisted in teaching and lab sessions for undergraduate Information Tech and Software development students."
         },
         projects: {
             tanpredikt_desc: "Prediction of Rain-fed Maize Yield in Tanzania using Time-series Machine Learning Models and Satellite Data.",
