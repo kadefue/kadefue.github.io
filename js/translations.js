@@ -11,7 +11,7 @@ const translations = {
         },
         hero: {
             welcome: "Welcome to my portfolio",
-            role: "Senior Lecturer & Consulting Engineer.",
+            role: "Senior Lecturer & Registered Professional Engineer (PE11382).",
             description: "Innovating at the intersection of",
             mechatronics: "Mechatronics",
             ai: "AI",
@@ -123,7 +123,7 @@ const translations = {
         },
         hero: {
             welcome: "Karibu kwenye wasifu wangu",
-            role: "Mhadhiri Mwandamizi na Mhandisi Mshauri.",
+            role: "Mhadhiri Mwandamizi na Mhandisi Mtaalamu Aliyesajiliwa (PE11382).",
             description: "Ubunifu katika makutano ya",
             mechatronics: "Mechatronics",
             ai: "Akili Mnemba (AI)",
