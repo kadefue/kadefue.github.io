@@ -206,7 +206,7 @@
                     <div>
                         <h2 class="text-2xl font-bold text-slate-800">Orodha ya Spea (Database)</h2>
                         <p class="text-gray-500 text-sm mt-1">Jumla ya Spea zilizopendekezwa: <span id="totalPartsCount"
-                                class="font-bold text-emerald-600">300+</span></p>
+                                class="font-bold text-emerald-600">1300+</span></p>
                     </div>
                     <div class="mt-4 md:mt-0 w-full md:w-auto flex flex-col sm:flex-row gap-2">
                         <input type="text" id="partSearch" placeholder="Tafuta spea (Mf. Piston, Taa...)"
@@ -222,7 +222,7 @@
                 </div>
 
                 <p class="text-gray-600 mb-4">
-                    Hapa chini ni orodha iliyoandaliwa kwa umakini ya spea zaidi ya 300. Tumegawanya katika makundi
+                    Hapa chini ni orodha iliyoandaliwa kwa umakini ya spea zaidi ya 500. Tumegawanya katika makundi
                     matatu makuu kulingana na kasi ya mauzo.
                     Tumia <strong>70%</strong> ya mtaji wa mzigo kununua "Zinazotoka Sana" na "Wastani".
                 </p>
@@ -232,6 +232,9 @@
                         <table class="min-w-full divide-y divide-gray-200">
                             <thead class="bg-slate-50 sticky top-0">
                                 <tr>
+                                    <th
+                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        ID</th>
                                     <th
                                         class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Jina la Spea</th>
@@ -252,6 +255,33 @@
                         </table>
                     </div>
                 </div>
+
+                <!-- Pagination UI -->
+                <div class="mt-4 flex items-center justify-between border-t border-gray-200 bg-white pt-4">
+                    <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+                        <div>
+                            <p class="text-sm text-gray-700">
+                                Inaonyesha <span class="font-medium" id="pageStart">1</span> hadi <span
+                                    class="font-medium" id="pageEnd">50</span> kati ya <span class="font-medium"
+                                    id="pageTotal">0</span> spea
+                            </p>
+                        </div>
+                        <div>
+                            <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination"
+                                id="paginationControls">
+                                <!-- Pagination buttons will be populated by JS -->
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- Mobile pagination controls -->
+                    <div class="flex flex-1 justify-between sm:hidden">
+                        <button id="mobilePrevBtn"
+                            class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Iliyopita</button>
+                        <button id="mobileNextBtn"
+                            class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Inayofuata</button>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -418,7 +448,8 @@
 
     <footer class="bg-slate-900 text-white py-8 mt-12">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-sm opacity-70 mb-4">© 2026 Mwongozo wa MotoBiashara - Imetengenezwa kwa ajili ya mjasiriamali
+            <p class="text-sm opacity-70 mb-4">© 2026 Mwongozo wa Biashara ya PikiPiki - Imetengenezwa kwa ajili ya
+                mjasiriamali
                 wa
                 Morogoro.</p>
             <a href="pikipiki_muongozo.pdf" download
@@ -429,50 +460,101 @@
     </footer>
 
     <script>
-        // --- DATA GENERATION (The 300+ Parts) ---
+        // --- DATA GENERATION (The 500+ Parts) ---
         const commonParts = [
             { name: "Spark Plug (NGK)", cat: "Engine", pri: "fast", note: "Boxer/TVS/Haojue - Item namba 1 dukani" },
             { name: "Brake Pads (Front)", cat: "Braking", pri: "fast", note: "Zinaisha haraka sana" },
             { name: "Brake Shoes (Rear)", cat: "Braking", pri: "fast", note: "Muhimu kuwa na za aina zote (Boxer/TVS)" },
             { name: "Engine Oil (Total/Puma)", cat: "Engine", pri: "fast", note: "Lita 1 - Stock iwe kubwa" },
+            { name: "Engine Oil (Castrol)", cat: "Engine", pri: "fast", note: "Wateja wengi wanapendelea" },
             { name: "Chain Sprocket Kit", cat: "Transmission", pri: "fast", note: "Seti nzima (Cheni na meno)" },
+            { name: "Chain Lube (Dawa ya Cheni)", cat: "Transmission", pri: "fast", note: "Huuzwa sana kwa bodaboda" },
             { name: "Side Mirror (Jozi)", cat: "Body", pri: "fast", note: "Zinavunjika mara kwa mara" },
             { name: "Headlight Bulb", cat: "Electrical", pri: "fast", note: "Halogen na LED" },
+            { name: "Tail Light Bulb", cat: "Electrical", pri: "fast", note: "Zinaungua haraka" },
             { name: "Indicator Bulb", cat: "Electrical", pri: "fast", note: "Nunua packet nzima" },
             { name: "Clutch Cable", cat: "Controls", pri: "fast", note: "Zinakatika mara kwa mara" },
             { name: "Accelerator Cable", cat: "Controls", pri: "fast", note: "Zinakatika mara kwa mara" },
             { name: "Brake Cable", cat: "Controls", pri: "fast", note: "Muhimu" },
+            { name: "Speedometer Cable", cat: "Controls", pri: "fast", note: "Inaharibika sana mikoani" },
             { name: "Tyre (Nylon) 2.75-17", cat: "Tyres", pri: "fast", note: "Tairi la mbele Boxer/TVS" },
             { name: "Tyre (Nylon) 3.00-17", cat: "Tyres", pri: "fast", note: "Tairi la nyuma Boxer/TVS" },
             { name: "Tyre (Cordial) 3.00-18", cat: "Tyres", pri: "fast", note: "Kwa ajili ya barabara mbovu" },
             { name: "Tube 2.75/3.00-17", cat: "Tyres", pri: "fast", note: "Ralson au Kenda" },
+            { name: "Tube 3.00-18", cat: "Tyres", pri: "fast", note: "Muhimu sana vijijini" },
+            { name: "Patch Rubber (Pachi)", cat: "Tyres", pri: "fast", note: "Za kuziba pancha" },
+            { name: "Gundi ya Tairi (Solution)", cat: "Tyres", pri: "fast", note: "Inaenda na pachi" },
+            { name: "Valve Core (Mdomo)", cat: "Tyres", pri: "fast", note: "Valve za mpira" },
             { name: "Bearing 6301", cat: "Wheel", pri: "fast", note: "Bearing za tairi (Common)" },
             { name: "Bearing 6201", cat: "Wheel", pri: "fast", note: "Bearing za tairi" },
             { name: "Bearing 6300", cat: "Wheel", pri: "fast", note: "Bearing za tairi" },
+            { name: "Grisi (Grease - Kopo dogo)", cat: "Maintenance", pri: "fast", note: "Mafundi hununua sana" },
             { name: "Mpira wa Brake (Rubber)", cat: "Braking", pri: "fast", note: "Vibmpira vya breki" },
-            { name: "Oil Filter", cat: "Engine", pri: "fast", note: "Boxer BM150" }
+            { name: "Oil Filter", cat: "Engine", pri: "fast", note: "Boxer BM150" },
+            { name: "Waya wa Beki (Brake Rod)", cat: "Braking", pri: "fast", note: "Kwa breki za nyuma" }
         ];
 
-        const models = ["Boxer BM100", "Boxer BM150", "TVS HLX 125", "TVS HLX 150", "Haojue 110", "Feikon", "Kinglion"];
+        // Vifaa vya Ziada, Ulinzi na Utunzaji (Accessories & Tools)
+        const accessoriesParts = [
+            { name: "Helmet (Full Face)", cat: "Accessories", pri: "medium", note: "Helmet za kufunika uso mzima" },
+            { name: "Helmet (Half Face)", cat: "Accessories", pri: "fast", note: "Helmet za kawaida" },
+            { name: "Raincoat (Koti la Mvua)", cat: "Accessories", pri: "medium", note: "Huuzwa sana msimu wa mvua" },
+            { name: "Reflector Jacket (Reflekta)", cat: "Accessories", pri: "fast", note: "Kwa usalama na sheria za usalama barabarani" },
+            { name: "Riding Gloves (Glavu)", cat: "Accessories", pri: "medium", note: "Glavu za waendesha pikipiki" },
+            { name: "Security Lock (Kifuli cha Tairi)", cat: "Accessories", pri: "medium", note: "Kuzuia wizi wa pikipiki" },
+            { name: "Motorcycle Alarm System", cat: "Electrical", pri: "slow", note: "Mfumo wa alarm wa pikipiki" },
+            { name: "Phone Holder (Stendi ya Simu)", cat: "Accessories", pri: "fast", note: "Kwa madereva wa bolt/uber/bodaboda" },
+            { name: "USB Charger (Chaja ya Pikipiki)", cat: "Electrical", pri: "medium", note: "Inafungwa kwenye betri" },
+            { name: "Brake Fluid (Maji ya Breki DOT 3/4)", cat: "Maintenance", pri: "fast", note: "Kwa pikipiki zenye disc brakes" },
+            { name: "Carburetor Cleaner Spray", cat: "Maintenance", pri: "medium", note: "Kusafishia kabureta" },
+            { name: "WD-40 / Anti-Rust Spray", cat: "Maintenance", pri: "medium", note: "Kulegeza nati ngumu na kuzuia kutu" },
+            { name: "Super Glue (Gundi ya Maji)", cat: "Maintenance", pri: "fast", note: "Matumizi madogomadogo" },
+            { name: "Epoxy Resin (Gundi ya Kuchanganya)", cat: "Maintenance", pri: "medium", note: "Kuziba matanki / plastiki" },
+            { name: "Insulation Tape (Tepe ya Umeme)", cat: "Electrical", pri: "fast", note: "Kufunga nyaya" },
+            { name: "Cable Ties (Funga Funga)", cat: "Maintenance", pri: "fast", note: "Kufungia bodi na nyaya" },
+            { name: "Tyre Sealant (Dawa ya Pancha)", cat: "Tyres", pri: "medium", note: "Inazuia pancha kabla haijatokea" },
+            { name: "Spark Plug Spanner", cat: "Tools", pri: "medium", note: "Kufungulia plug" },
+            { name: "Hand Guards (Vilinda Mikono)", cat: "Accessories", pri: "slow", note: "Urembo na ulinzi" },
+            { name: "Crash Guard (Bampa la Mbele)", cat: "Accessories", pri: "medium", note: "Kuzuia madhara wakati wa ajali" },
+            { name: "Top Box (Boksi la Nyuma)", cat: "Accessories", pri: "slow", note: "Kwa kubebea mizigo" },
+            { name: "Car Wash Shampoo", cat: "Maintenance", pri: "medium", note: "Sabuni ya kuoshea pikipiki" },
+            { name: "Cleaning Sponge/Brush", cat: "Maintenance", pri: "medium", note: "Sponji za kuoshea" },
+            { name: "LED Fog Lights (Taa za Urembo/Ukungu)", cat: "Electrical", pri: "medium", note: "Taa za kuongeza mwanga" },
+            { name: "Exhaust Wrap", cat: "Accessories", pri: "slow", note: "Tepe ya kufunga kwenye bomba la moshi" }
+        ];
+
+        const models = ["Boxer BM100", "Boxer BM150", "TVS HLX 125", "TVS HLX 150", "Haojue 110", "Feikon", "Kinglion", "SanLG 125", "Yamaha DT 125", "Honda XL 125", "Yamaha YBR 125", "Suzuki GN 125"];
+
         const mediumPartsTemplate = [
             "Piston Kit", "Piston Rings", "Connecting Rod", "Cylinder Head Gasket", "Full Gasket Kit",
             "Valve Set (In/Ex)", "Cam Chain", "Timing Chain Tensioner", "Clutch Plate Set", "Clutch Hub",
             "Clutch Center", "Pressure Plate", "Carburetor Repair Kit", "Air Filter Element", "Fuel Filter",
             "Fuel Tap (Koki ya Mafuta)", "Tank Cap", "Ignition Coil", "CDI Unit", "Rectifier (Regulator)",
             "Stator Coil (Magneto)", "Starter Motor", "Starter Relay", "Horn (Bibi/Honda type)", "Battery 12V 5Ah/7Ah",
-            "Headlight Assembly (Taa kamili)", "Tail Light Assembly", "Indicator Assy (Full)", "Speedometer Cable",
+            "Headlight Assembly (Taa kamili)", "Tail Light Assembly", "Indicator Assy (Full)", "Speedometer Assy",
             "RPM Cable", "Brake Lever (Right)", "Clutch Lever (Left)", "Handlebar Grip (Mpira wa mkono)",
-            "Handlebar Switch (L/R)", "Ignition Switch (Funguo)", "Fuel Tank (Tanki)", "Side Cover (Bodi)",
-            "Mudguard (Front)", "Mudguard (Rear)", "Shock Absorber (Rear)", "Fork Oil Seal", "Fork Pipe (Inner)",
-            "Footrest Rubber (Main)", "Footrest Rubber (Pillion)", "Kick Starter Lever", "Gear Lever", "Brake Pedal",
-            "Side Stand", "Main Stand", "Chain Cover"
+            "Handlebar Switch (L/R)", "Ignition Switch (Funguo)", "Ignition Lock Set (Full)", "Fuel Tank (Tanki)",
+            "Fuel Tank Rubber", "Side Cover (Bodi)", "Mudguard (Front)", "Mudguard (Rear)", "Shock Absorber (Rear)",
+            "Fork Oil Seal", "Fork Pipe (Inner)", "Footrest Rubber (Main)", "Footrest Rubber (Pillion)",
+            "Kick Starter Lever", "Kick Starter Rubber", "Gear Lever", "Gear Rubber", "Brake Pedal",
+            "Side Stand", "Main Stand", "Chain Cover", "Seat Cover (Kava la Siti)", "Spokes (Njia/Waya za Rimu)",
+            "Rim Tape (Mpira wa Rimu)", "Battery Acid (Maji ya Betri)", "Flasher Relay (Bikani)",
+            "Steering Cone Set (Koni)", "Swing Arm Bush", "Crankshaft Bearings (Set)",
+            "Cylinder Studs (Nati za Block)", "Carburetor Float (Moya)", "Choke Cable",
+            "Gear Indicator Switch", "Brake Light Switch (Front)", "Brake Light Switch (Rear)",
+            "Flasher Buzzer (Spika ya Bikani)", "Tank Rubber Mounts", "Seat Lock (Kufuli ya Siti)",
+            "Chain Adjuster (Vuta Cheni)", "Speedometer Gear (Gia ya Mshale)", "Starter Carbon Brushes"
         ];
 
         const slowPartsTemplate = [
             "Cylinder Block (Block la Engine)", "Crankshaft Assembly", "Gearbox Main Shaft", "Gearbox Counter Shaft",
             "Gear Pinion (1st, 2nd, 3rd, 4th)", "Shift Drum", "Shift Fork", "Crankcase (Left)", "Crankcase (Right)",
-            "Chassis Frame", "Swing Arm", "Fork Assy (Complete)", "Rim (Wheel) Front", "Rim (Wheel) Rear",
-            "Wheel Hub (Front)", "Wheel Hub (Rear)", "Exhaust Pipe (Silencer)", "Carburetor Assembly (Full)", "Wiring Harness (Main Wire)"
+            "Engine Cover (Magneto)", "Engine Cover (Clutch)", "Camshaft", "Rocker Arms", "Valve Springs", "Oil Pump",
+            "Balancer Shaft", "Chassis Frame", "Swing Arm", "Fork Assy (Complete)", "Rim (Wheel) Front", "Rim (Wheel) Rear",
+            "Wheel Hub (Front)", "Wheel Hub (Rear)", "Exhaust Pipe (Silencer)", "Carburetor Assembly (Full)", "Wiring Harness (Main Wire)",
+            "Handlebar (Ulingo)", "Oil Pump Gear", "Camshaft Sprocket", "Muffler Cover (Kava la Moshi)",
+            "Passenger Grab Rail (Chuma cha Nyuma)", "Engine Mounting Bolts", "Kick Starter Shaft",
+            "Gear Shifter Shaft", "Front Brake Caliper", "Rear Brake Drum Panel"
         ];
 
         // Generate the full database
@@ -504,6 +586,19 @@
         generateParts(mediumPartsTemplate, "medium");
         generateParts(slowPartsTemplate, "slow");
 
+        // Unganisha vifaa vya ziada (Accessories) kwenye database kuu
+        partsDB = partsDB.concat(accessoriesParts);
+
+        // Tengeneza ID za kuanzia 0001
+        partsDB.forEach((part, index) => {
+            part.id = String(index + 1).padStart(4, '0');
+        });
+
+        // --- GLOBAL VARIABLES FOR PAGINATION ---
+        let currentPage = 1;
+        const itemsPerPage = 50;
+        let currentFilteredData = [];
+
         // --- CHART JS SETUP ---
         document.addEventListener('DOMContentLoaded', function () {
             const ctx = document.getElementById('capitalChart').getContext('2d');
@@ -533,7 +628,8 @@
             });
 
             // Populate Table Initially
-            renderTable(partsDB);
+            currentFilteredData = partsDB;
+            renderTable();
             document.getElementById('totalPartsCount').innerText = partsDB.length;
 
             // Setup Mobile Menu
@@ -577,24 +673,36 @@
             const term = searchInput.value.toLowerCase();
             const type = catFilter.value;
 
-            const filtered = partsDB.filter(part => {
-                const matchesTerm = part.name.toLowerCase().includes(term) || (part.model && part.model.toLowerCase().includes(term));
+            currentFilteredData = partsDB.filter(part => {
+                const matchesTerm = part.name.toLowerCase().includes(term) ||
+                    (part.model && part.model.toLowerCase().includes(term)) ||
+                    part.id.includes(term);
                 const matchesType = type === 'all' || part.pri === type;
                 return matchesTerm && matchesType;
             });
 
-            renderTable(filtered);
+            currentPage = 1; // Reset kurasa pindi unapofanya filter
+            renderTable();
         }
 
         searchInput.addEventListener('input', filterParts);
         catFilter.addEventListener('change', filterParts);
 
-        function renderTable(data) {
+        function renderTable() {
             const tbody = document.getElementById('partsTableBody');
             tbody.innerHTML = '';
 
-            // Optimization: Limit rendering to first 100 if list is huge to prevent lag during typing
-            const displayData = data.slice(0, 100);
+            const totalItems = currentFilteredData.length;
+            const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+            // Hakikisha namba ya ukurasa inabaki sahihi
+            if (currentPage < 1) currentPage = 1;
+            if (currentPage > totalPages && totalPages > 0) currentPage = totalPages;
+
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = Math.min(startIndex + itemsPerPage, totalItems);
+
+            const displayData = currentFilteredData.slice(startIndex, endIndex);
 
             displayData.forEach(part => {
                 const row = document.createElement('tr');
@@ -605,6 +713,7 @@
                 if (part.pri === 'slow') { badgeColor = 'bg-red-100 text-red-800'; priLabel = 'Ngumu'; }
 
                 row.innerHTML = `
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 font-mono">#${part.id}</td>
                     <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">${part.name}</td>
                     <td class="px-6 py-4 whitespace-nowrap text-gray-500">${part.model || 'Universal'}</td>
                     <td class="px-6 py-4 whitespace-nowrap"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${badgeColor}">${priLabel}</span></td>
@@ -613,11 +722,61 @@
                 tbody.appendChild(row);
             });
 
-            if (data.length > 100) {
-                const row = document.createElement('tr');
-                row.innerHTML = `<td colspan="4" class="px-6 py-2 text-center text-gray-400 text-xs">Na vingine ${data.length - 100} ... tumia search kupata haraka.</td>`;
-                tbody.appendChild(row);
+            updatePaginationUI(totalItems, totalItems > 0 ? startIndex + 1 : 0, endIndex, totalPages);
+        }
+
+        function updatePaginationUI(totalItems, start, end, totalPages) {
+            document.getElementById('pageStart').innerText = start;
+            document.getElementById('pageEnd').innerText = end;
+            document.getElementById('pageTotal').innerText = totalItems;
+
+            const paginationContainer = document.getElementById('paginationControls');
+            paginationContainer.innerHTML = '';
+
+            // Kitufe cha 'Previous' (Nyuma)
+            const prevBtn = document.createElement('button');
+            prevBtn.className = `relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : ''}`;
+            prevBtn.innerHTML = '<span class="sr-only">Previous</span><svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd" /></svg>';
+            prevBtn.onclick = () => { if (currentPage > 1) { currentPage--; renderTable(); } };
+            paginationContainer.appendChild(prevBtn);
+
+            // Namba za kurasa
+            let startPage = Math.max(1, currentPage - 2);
+            let endPage = Math.min(totalPages, startPage + 4);
+            if (endPage - startPage < 4) {
+                startPage = Math.max(1, endPage - 4);
             }
+
+            for (let i = startPage; i <= endPage; i++) {
+                const pageBtn = document.createElement('button');
+                if (i === currentPage) {
+                    pageBtn.className = 'relative z-10 inline-flex items-center bg-emerald-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600';
+                } else {
+                    pageBtn.className = 'relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0';
+                }
+                pageBtn.innerText = i;
+                pageBtn.onclick = () => { currentPage = i; renderTable(); };
+                paginationContainer.appendChild(pageBtn);
+            }
+
+            // Kitufe cha 'Next' (Mbele)
+            const nextBtn = document.createElement('button');
+            nextBtn.className = `relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 ${currentPage === totalPages || totalPages === 0 ? 'opacity-50 cursor-not-allowed' : ''}`;
+            nextBtn.innerHTML = '<span class="sr-only">Next</span><svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" /></svg>';
+            nextBtn.onclick = () => { if (currentPage < totalPages) { currentPage++; renderTable(); } };
+            paginationContainer.appendChild(nextBtn);
+
+            // Vitufe vya simu (Mobile buttons)
+            const mobilePrev = document.getElementById('mobilePrevBtn');
+            const mobileNext = document.getElementById('mobileNextBtn');
+
+            mobilePrev.onclick = () => { if (currentPage > 1) { currentPage--; renderTable(); } };
+            mobilePrev.disabled = currentPage === 1;
+            mobilePrev.className = `relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : ''}`;
+
+            mobileNext.onclick = () => { if (currentPage < totalPages) { currentPage++; renderTable(); } };
+            mobileNext.disabled = currentPage === totalPages || totalPages === 0;
+            mobileNext.className = `relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 ${currentPage === totalPages || totalPages === 0 ? 'opacity-50 cursor-not-allowed' : ''}`;
         }
 
         // Staff Calculator Logic
