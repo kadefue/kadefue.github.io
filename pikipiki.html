@@ -83,8 +83,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
-                    <span class="text-xl font-bold tracking-wider">Ndorome<span
-                            class="text-emerald-400">_Auto_Parts</span></span>
+                    <span class="text-xl font-bold tracking-wider">NDOROME<span class="text-emerald-400"> s
+                            Parts</span></span>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
@@ -247,6 +247,9 @@
                                     <th
                                         class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Angalizo</th>
+                                    <th
+                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Nunua (Alibaba)</th>
                                 </tr>
                             </thead>
                             <tbody id="partsTableBody" class="bg-white divide-y divide-gray-200 text-sm">
@@ -257,31 +260,41 @@
                 </div>
 
                 <!-- Pagination UI -->
-                <div class="mt-4 flex items-center justify-between border-t border-gray-200 bg-white pt-4">
-                    <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
-                        <div>
-                            <p class="text-sm text-gray-700">
-                                Inaonyesha <span class="font-medium" id="pageStart">1</span> hadi <span
-                                    class="font-medium" id="pageEnd">50</span> kati ya <span class="font-medium"
-                                    id="pageTotal">0</span> spea
-                            </p>
+                <div
+                    class="mt-4 flex flex-col sm:flex-row items-center justify-between border-t border-gray-200 bg-white pt-4 gap-4">
+                    <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+                        <div class="flex items-center gap-2">
+                            <label for="perPageSelect"
+                                class="text-xs text-gray-500 font-medium uppercase tracking-wider">Onyesha:</label>
+                            <select id="perPageSelect"
+                                class="border border-gray-300 rounded px-2 py-1 text-sm focus:ring-emerald-500 focus:outline-none bg-slate-50">
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="50" selected>50</option>
+                                <option value="100">100</option>
+                                <option value="200">200</option>
+                            </select>
                         </div>
-                        <div>
-                            <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination"
-                                id="paginationControls">
-                                <!-- Pagination buttons will be populated by JS -->
-                            </nav>
-                        </div>
+                        <p class="text-sm text-gray-700">
+                            <span class="font-medium" id="pageStart">1</span> - <span class="font-medium"
+                                id="pageEnd">50</span> kati ya <span class="font-medium" id="pageTotal">0</span>
+                        </p>
+                    </div>
+
+                    <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-end">
+                        <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination"
+                            id="paginationControls">
+                            <!-- Pagination buttons will be populated by JS -->
+                        </nav>
                     </div>
                     <!-- Mobile pagination controls -->
-                    <div class="flex flex-1 justify-between sm:hidden">
+                    <div class="flex w-full justify-between sm:hidden">
                         <button id="mobilePrevBtn"
                             class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Iliyopita</button>
                         <button id="mobileNextBtn"
                             class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Inayofuata</button>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -596,7 +609,7 @@
 
         // --- GLOBAL VARIABLES FOR PAGINATION ---
         let currentPage = 1;
-        const itemsPerPage = 50;
+        let itemsPerPage = 50;
         let currentFilteredData = [];
 
         // --- CHART JS SETUP ---
@@ -632,14 +645,18 @@
             renderTable();
             document.getElementById('totalPartsCount').innerText = partsDB.length;
 
+            // Setup Items Per Page Selection
+            document.getElementById('perPageSelect').addEventListener('change', function (e) {
+                itemsPerPage = parseInt(e.target.value);
+                currentPage = 1;
+                renderTable();
+            });
+
             // Setup Mobile Menu
             document.getElementById('mobile-menu-btn').addEventListener('click', function () {
                 const menu = document.getElementById('mobile-menu');
                 menu.classList.toggle('hidden');
             });
-
-            // Calculate Salary Initial
-            calculateSalary();
         });
 
         // --- INTERACTION LOGIC ---
@@ -712,15 +729,30 @@
                 if (part.pri === 'fast') { badgeColor = 'bg-green-100 text-green-800'; priLabel = 'Haraka'; }
                 if (part.pri === 'slow') { badgeColor = 'bg-red-100 text-red-800'; priLabel = 'Ngumu'; }
 
+                // Tengeneza link ya Alibaba kulingana na jina na aina ya pikipiki
+                const searchQuery = encodeURIComponent(`${part.name} ${part.model || 'motorcycle parts'}`);
+                const alibabaLink = `https://www.alibaba.com/trade/search?SearchText=${searchQuery}`;
+
                 row.innerHTML = `
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 font-mono">#${part.id}</td>
                     <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">${part.name}</td>
                     <td class="px-6 py-4 whitespace-nowrap text-gray-500">${part.model || 'Universal'}</td>
                     <td class="px-6 py-4 whitespace-nowrap"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${badgeColor}">${priLabel}</span></td>
                     <td class="px-6 py-4 whitespace-nowrap text-gray-500 text-xs">${part.note}</td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <a href="${alibabaLink}" target="_blank" class="inline-flex items-center px-2.5 py-1.5 border border-emerald-600 text-xs font-medium rounded text-emerald-600 bg-white hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition">
+                            Tafuta Alibaba <span aria-hidden="true" class="ml-1">&rarr;</span>
+                        </a>
+                    </td>
                 `;
                 tbody.appendChild(row);
             });
+
+            if (displayData.length === 0) {
+                const row = document.createElement('tr');
+                row.innerHTML = `<td colspan="6" class="px-6 py-8 text-center text-gray-500">Hakuna spea iliyopatikana.</td>`;
+                tbody.appendChild(row);
+            }
 
             updatePaginationUI(totalItems, totalItems > 0 ? startIndex + 1 : 0, endIndex, totalPages);
         }
