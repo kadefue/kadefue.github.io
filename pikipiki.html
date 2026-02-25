@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sw">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,12 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+
         .chart-container {
             position: relative;
             width: 100%;
@@ -17,14 +23,43 @@
             height: 300px;
             max-height: 400px;
         }
-        .tab-content { display: none; }
-        .tab-content.active { display: block; animation: fadeIn 0.5s; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
         /* Custom scrollbar for table */
-        .scroller::-webkit-scrollbar { width: 8px; }
-        .scroller::-webkit-scrollbar-track { background: #f1f1f1; }
-        .scroller::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
-        .scroller::-webkit-scrollbar-thumb:hover { background: #555; }
+        .scroller::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .scroller::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .scroller::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        .scroller::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
     </style>
     <!-- Chosen Palette: Industrial & Trusted (Dark Slate for structure, Emerald Green for money/success, Warm Gray background) -->
     <!-- Application Structure Plan: A dashboard-style SPA divided into 4 main strategic pillars: 
@@ -40,6 +75,7 @@
          - CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 </head>
+
 <body class="text-gray-800">
 
     <!-- Navigation Bar -->
@@ -47,14 +83,27 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
-                    <span class="text-xl font-bold tracking-wider">MOTO<span class="text-emerald-400">BIASHARA</span></span>
+                    <span class="text-xl font-bold tracking-wider">Ndorome<span
+                            class="text-emerald-400">_Auto_Parts</span></span>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <button onclick="switchTab('mtaji')" class="nav-btn bg-slate-900 px-3 py-2 rounded-md text-sm font-medium hover:bg-slate-700 transition">Mtaji & Mchanganuo</button>
-                        <button onclick="switchTab('spea')" class="nav-btn px-3 py-2 rounded-md text-sm font-medium hover:bg-slate-700 transition">Orodha ya Spea (Stock)</button>
-                        <button onclick="switchTab('uendeshaji')" class="nav-btn px-3 py-2 rounded-md text-sm font-medium hover:bg-slate-700 transition">Gharama za Wafanyakazi</button>
-                        <button onclick="switchTab('mkakati')" class="nav-btn px-3 py-2 rounded-md text-sm font-medium hover:bg-slate-700 transition">Mkakati wa Biashara</button>
+                        <button onclick="switchTab('mtaji')"
+                            class="nav-btn bg-slate-900 px-3 py-2 rounded-md text-sm font-medium hover:bg-slate-700 transition">Mtaji
+                            & Mchanganuo</button>
+                        <button onclick="switchTab('spea')"
+                            class="nav-btn px-3 py-2 rounded-md text-sm font-medium hover:bg-slate-700 transition">Orodha
+                            ya Spea (Stock)</button>
+                        <button onclick="switchTab('uendeshaji')"
+                            class="nav-btn px-3 py-2 rounded-md text-sm font-medium hover:bg-slate-700 transition">Gharama
+                            za Wafanyakazi</button>
+                        <button onclick="switchTab('mkakati')"
+                            class="nav-btn px-3 py-2 rounded-md text-sm font-medium hover:bg-slate-700 transition">Mkakati
+                            wa Biashara</button>
+                        <a href="pikipiki_muongozo.pdf" download
+                            class="bg-emerald-500 hover:bg-emerald-600 px-4 py-2 rounded-md text-sm font-bold transition flex items-center">
+                            <span class="mr-2">📥</span> Pakua Mwongozo (PDF)
+                        </a>
                     </div>
                 </div>
                 <!-- Mobile menu button wrapper would go here, simplified for single file logic -->
@@ -67,10 +116,20 @@
         </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-slate-800 pb-4 px-4">
-            <button onclick="switchTab('mtaji')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-700">Mtaji & Mchanganuo</button>
-            <button onclick="switchTab('spea')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-700">Orodha ya Spea</button>
-            <button onclick="switchTab('uendeshaji')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-700">Wafanyakazi</button>
-            <button onclick="switchTab('mkakati')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-700">Mkakati</button>
+            <button onclick="switchTab('mtaji')"
+                class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-700">Mtaji &
+                Mchanganuo</button>
+            <button onclick="switchTab('spea')"
+                class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-700">Orodha ya
+                Spea</button>
+            <button onclick="switchTab('uendeshaji')"
+                class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-700">Wafanyakazi</button>
+            <button onclick="switchTab('mkakati')"
+                class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-slate-700">Mkakati</button>
+            <a href="pikipiki_muongozo.pdf" download
+                class="block w-full text-center mt-4 bg-emerald-500 hover:bg-emerald-600 px-3 py-2 rounded-md text-base font-bold transition text-white">
+                📥 Pakua Mwongozo (PDF)
+            </a>
         </div>
     </nav>
 
@@ -80,9 +139,11 @@
         <!-- SECTION 1: MTAJI NA MCHANGANUO (CAPITAL) -->
         <div id="mtaji" class="tab-content active">
             <div class="bg-white rounded-lg shadow-md p-6 mb-6">
-                <h2 class="text-2xl font-bold text-slate-800 mb-2 border-b pb-2">Mchanganuo wa Mtaji (Tsh Milioni 20)</h2>
+                <h2 class="text-2xl font-bold text-slate-800 mb-2 border-b pb-2">Mchanganuo wa Mtaji (Tsh Milioni 20)
+                </h2>
                 <p class="text-gray-600 mb-6">
-                    Sehemu hii inakupa picha halisi ya jinsi ya kugawanya mtaji wako wa TZS 20,000,000 ili kuanzisha duka la kisasa la spea Morogoro Mjini. 
+                    Sehemu hii inakupa picha halisi ya jinsi ya kugawanya mtaji wako wa TZS 20,000,000 ili kuanzisha
+                    duka la kisasa la spea Morogoro Mjini.
                     Tumezingatia kodi ya miezi 6, ukarabati wa fremu (shelfu za chuma na mbao), na mzigo wa kuanzia.
                 </p>
 
@@ -92,7 +153,8 @@
                         <div class="chart-container">
                             <canvas id="capitalChart"></canvas>
                         </div>
-                        <p class="text-sm text-center text-gray-500 mt-4 italic">Gusa sehemu ya duara kuona kiasi halisi.</p>
+                        <p class="text-sm text-center text-gray-500 mt-4 italic">Gusa sehemu ya duara kuona kiasi
+                            halisi.</p>
                     </div>
 
                     <!-- Details Column -->
@@ -126,9 +188,11 @@
                                 <span class="font-bold text-blue-600">14,000,000 TZS</span>
                             </div>
                         </div>
-                        
+
                         <div class="mt-4 p-4 bg-yellow-50 text-sm text-yellow-800 rounded border border-yellow-200">
-                            <strong>Kidokezo:</strong> Kwa Morogoro Mjini, gharama ya "Fremu ya Chuma na Mbao" inajumuisha welders kutengeneza shelfu imara za matairi na oil, na seremala kwa ajili ya kaunta na shelfu za vioo. Tenga 2.5M kuhakikisha duka linavutia.
+                            <strong>Kidokezo:</strong> Kwa Morogoro Mjini, gharama ya "Fremu ya Chuma na Mbao"
+                            inajumuisha welders kutengeneza shelfu imara za matairi na oil, na seremala kwa ajili ya
+                            kaunta na shelfu za vioo. Tenga 2.5M kuhakikisha duka linavutia.
                         </div>
                     </div>
                 </div>
@@ -141,11 +205,14 @@
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
                     <div>
                         <h2 class="text-2xl font-bold text-slate-800">Orodha ya Spea (Database)</h2>
-                        <p class="text-gray-500 text-sm mt-1">Jumla ya Spea zilizopendekezwa: <span id="totalPartsCount" class="font-bold text-emerald-600">300+</span></p>
+                        <p class="text-gray-500 text-sm mt-1">Jumla ya Spea zilizopendekezwa: <span id="totalPartsCount"
+                                class="font-bold text-emerald-600">300+</span></p>
                     </div>
                     <div class="mt-4 md:mt-0 w-full md:w-auto flex flex-col sm:flex-row gap-2">
-                        <input type="text" id="partSearch" placeholder="Tafuta spea (Mf. Piston, Taa...)" class="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 w-full">
-                        <select id="categoryFilter" class="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white">
+                        <input type="text" id="partSearch" placeholder="Tafuta spea (Mf. Piston, Taa...)"
+                            class="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 w-full">
+                        <select id="categoryFilter"
+                            class="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white">
                             <option value="all">Zote</option>
                             <option value="fast">Zinazotoka Sana (Fast)</option>
                             <option value="medium">Wastani (Medium)</option>
@@ -155,7 +222,8 @@
                 </div>
 
                 <p class="text-gray-600 mb-4">
-                    Hapa chini ni orodha iliyoandaliwa kwa umakini ya spea zaidi ya 300. Tumegawanya katika makundi matatu makuu kulingana na kasi ya mauzo. 
+                    Hapa chini ni orodha iliyoandaliwa kwa umakini ya spea zaidi ya 300. Tumegawanya katika makundi
+                    matatu makuu kulingana na kasi ya mauzo.
                     Tumia <strong>70%</strong> ya mtaji wa mzigo kununua "Zinazotoka Sana" na "Wastani".
                 </p>
 
@@ -164,10 +232,18 @@
                         <table class="min-w-full divide-y divide-gray-200">
                             <thead class="bg-slate-50 sticky top-0">
                                 <tr>
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Jina la Spea</th>
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Aina/Model</th>
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kundi (Movement)</th>
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Angalizo</th>
+                                    <th
+                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Jina la Spea</th>
+                                    <th
+                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Aina/Model</th>
+                                    <th
+                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Kundi (Movement)</th>
+                                    <th
+                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Angalizo</th>
                                 </tr>
                             </thead>
                             <tbody id="partsTableBody" class="bg-white divide-y divide-gray-200 text-sm">
@@ -186,37 +262,44 @@
                 <div class="lg:col-span-1 bg-white rounded-lg shadow-md p-6">
                     <h2 class="text-xl font-bold text-slate-800 mb-4">Kikokotoo cha Mshahara</h2>
                     <p class="text-sm text-gray-600 mb-4">Weka taarifa kukadiria gharama za mfanyakazi kwa mwezi.</p>
-                    
+
                     <div class="space-y-4">
                         <div>
                             <label class="block text-sm font-medium text-gray-700">Mshahara wa Msingi (Fixed)</label>
-                            <input type="number" value="120000" disabled class="mt-1 block w-full bg-gray-100 border border-gray-300 rounded-md py-2 px-3 text-gray-500">
+                            <input type="number" value="120000" disabled
+                                class="mt-1 block w-full bg-gray-100 border border-gray-300 rounded-md py-2 px-3 text-gray-500">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-700">Posho ya Chakula (kwa siku)</label>
-                            <input type="number" id="foodAllowance" value="3000" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:ring-emerald-500 focus:border-emerald-500">
+                            <input type="number" id="foodAllowance" value="3000"
+                                class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:ring-emerald-500 focus:border-emerald-500">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-700">Siku za Kazi (kwa mwezi)</label>
-                            <input type="number" id="workDays" value="26" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:ring-emerald-500 focus:border-emerald-500">
+                            <input type="number" id="workDays" value="26"
+                                class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:ring-emerald-500 focus:border-emerald-500">
                         </div>
-                        
+
                         <div class="pt-4 border-t border-gray-100">
                             <h3 class="font-bold text-gray-800">Mfumo wa 'Awards' (Kamisheni)</h3>
-                            <p class="text-xs text-gray-500 mb-2">Mfanyakazi analipwa 500/= kwa kila 100,000/= ya mauzo akivuka lengo.</p>
-                            <label class="block text-sm font-medium text-gray-700">Wastani wa Mauzo ya Siku (TZS)</label>
-                            <input type="range" id="dailySales" min="0" max="1000000" step="50000" value="300000" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                            <p class="text-xs text-gray-500 mb-2">Mfanyakazi analipwa 500/= kwa kila 100,000/= ya mauzo
+                                akivuka lengo.</p>
+                            <label class="block text-sm font-medium text-gray-700">Wastani wa Mauzo ya Siku
+                                (TZS)</label>
+                            <input type="range" id="dailySales" min="0" max="1000000" step="50000" value="300000"
+                                class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
                             <div class="text-right text-sm font-bold text-emerald-600" id="salesValue">300,000 TZS</div>
                         </div>
 
-                        <button onclick="calculateSalary()" class="w-full bg-slate-800 text-white py-2 rounded-md hover:bg-slate-700 transition">Kokotoa</button>
+                        <button onclick="calculateSalary()"
+                            class="w-full bg-slate-800 text-white py-2 rounded-md hover:bg-slate-700 transition">Kokotoa</button>
                     </div>
                 </div>
 
                 <!-- Results Card -->
                 <div class="lg:col-span-2 bg-white rounded-lg shadow-md p-6 flex flex-col justify-center">
                     <h2 class="text-xl font-bold text-slate-800 mb-6">Matokeo ya Gharama za Mwezi</h2>
-                    
+
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                         <div class="bg-gray-50 p-4 rounded border-l-4 border-slate-500">
                             <p class="text-sm text-gray-500">Mshahara (Msingi)</p>
@@ -238,7 +321,9 @@
 
                     <div class="bg-blue-50 p-4 rounded-lg text-sm text-blue-800">
                         <h4 class="font-bold mb-1">Ushauri wa Usimamizi:</h4>
-                        <p>Mfumo huu wa "Basic ndogo + Posho + Award" unamfanya mfanyakazi awe na njaa ya kuuza zaidi. Akilala, anapata basic tu ambayo haimtoshi. Akiuza sana (Mfano 500k kwa siku), anaweza kuondoka na zaidi ya 300k kwa mwezi, ambayo ni motisha nzuri Morogoro.</p>
+                        <p>Mfumo huu wa "Basic ndogo + Posho + Award" unamfanya mfanyakazi awe na njaa ya kuuza zaidi.
+                            Akilala, anapata basic tu ambayo haimtoshi. Akiuza sana (Mfano 500k kwa siku), anaweza
+                            kuondoka na zaidi ya 300k kwa mwezi, ambayo ni motisha nzuri Morogoro.</p>
                     </div>
                 </div>
             </div>
@@ -250,13 +335,16 @@
                 <!-- Strategy Text -->
                 <div class="bg-white rounded-lg shadow-md p-6">
                     <h2 class="text-2xl font-bold text-slate-800 mb-4">Mkakati wa Ushindi Morogoro</h2>
-                    
+
                     <div class="space-y-6 text-gray-700">
                         <div>
                             <h3 class="text-lg font-bold text-emerald-700 flex items-center">
                                 <span class="bg-emerald-100 p-1 rounded mr-2">1</span> Eneo (Location)
                             </h3>
-                            <p class="text-sm mt-1">Morogoro ina pikipiki nyingi sana (Bodaboda na Binafsi). Tafuta eneo karibu na vijiwe vya bodaboda, karibu na gereji za pikipiki, au barabara kuu zinazoelekea maeneo yenye watu wengi (Mf. Barabara ya Iringa, Maeneo ya Msamvu, au Kihonda). Hakikisha kuna nafasi ya pikipiki kusimama mbele ya duka.</p>
+                            <p class="text-sm mt-1">Morogoro ina pikipiki nyingi sana (Bodaboda na Binafsi). Tafuta eneo
+                                karibu na vijiwe vya bodaboda, karibu na gereji za pikipiki, au barabara kuu
+                                zinazoelekea maeneo yenye watu wengi (Mf. Barabara ya Iringa, Maeneo ya Msamvu, au
+                                Kihonda). Hakikisha kuna nafasi ya pikipiki kusimama mbele ya duka.</p>
                         </div>
 
                         <div>
@@ -276,7 +364,9 @@
                             <h3 class="text-lg font-bold text-emerald-700 flex items-center">
                                 <span class="bg-emerald-100 p-1 rounded mr-2">3</span> Huduma ya Ziada
                             </h3>
-                            <p class="text-sm mt-1">Nunua kompresa ndogo kwa ajili ya upepo bure kwa wateja, au seti ya funguo (tools) kwa ajili ya wale wanaotaka kufunga vioo au kubadilisha oil hapo hapo nje.</p>
+                            <p class="text-sm mt-1">Nunua kompresa ndogo kwa ajili ya upepo bure kwa wateja, au seti ya
+                                funguo (tools) kwa ajili ya wale wanaotaka kufunga vioo au kubadilisha oil hapo hapo
+                                nje.</p>
                         </div>
                     </div>
                 </div>
@@ -287,22 +377,37 @@
                     <div class="space-y-4">
                         <div class="p-3 bg-gray-50 rounded border-l-4 border-indigo-500">
                             <h4 class="font-bold text-indigo-700 text-sm">Mission (Dhumuni)</h4>
-                            <p class="text-xs mt-1">Kuwa duka linaloaminika zaidi Morogoro kwa kutoa spea orijino na imara kwa bei shindani, huku tukijenga uchumi wa vijana wa bodaboda.</p>
+                            <p class="text-xs mt-1">Kuwa duka linaloaminika zaidi Morogoro kwa kutoa spea orijino na
+                                imara kwa bei shindani, huku tukijenga uchumi wa vijana wa bodaboda.</p>
                         </div>
                         <div class="p-3 bg-gray-50 rounded border-l-4 border-indigo-500">
                             <h4 class="font-bold text-indigo-700 text-sm">Target Market (Soko Lengwa)</h4>
-                            <p class="text-xs mt-1">Madereva Bodaboda (Boxer, TVS, Haojue), na Watumiaji binafsi (Honda, Yamaha - Offroad/Town).</p>
+                            <p class="text-xs mt-1">Madereva Bodaboda (Boxer, TVS, Haojue), na Watumiaji binafsi (Honda,
+                                Yamaha - Offroad/Town).</p>
                         </div>
                         <div class="p-3 bg-gray-50 rounded border-l-4 border-indigo-500">
                             <h4 class="font-bold text-indigo-700 text-sm">Uchambuzi wa Washindani (SWOT)</h4>
-                            <p class="text-xs mt-1"><strong>Nguvu:</strong> Mtaji wa kutosha (20M), muundo wa kisasa, huduma kwa wateja.<br>
-                            <strong>Udhaifu:</strong> Ugeni kwenye soko.<br>
-                            <strong>Fursa:</strong> Kuongezeka kwa bodaboda Morogoro.<br>
-                            <strong>Tishio:</strong> Maduka makongwe yenye wateja wa kudumu.</p>
+                            <p class="text-xs mt-1"><strong>Nguvu:</strong> Mtaji wa kutosha (20M), muundo wa kisasa,
+                                huduma kwa wateja.<br>
+                                <strong>Udhaifu:</strong> Ugeni kwenye soko.<br>
+                                <strong>Fursa:</strong> Kuongezeka kwa bodaboda Morogoro.<br>
+                                <strong>Tishio:</strong> Maduka makongwe yenye wateja wa kudumu.
+                            </p>
                         </div>
                         <div class="p-3 bg-gray-50 rounded border-l-4 border-indigo-500">
                             <h4 class="font-bold text-indigo-700 text-sm">Makadirio ya Faida (Mwaka 1)</h4>
-                            <p class="text-xs mt-1">Lengo ni kufikia mauzo ya TZS 400,000 kwa siku ifikapo mwezi wa 6. Hii itatoa faida ghafi ya wastani wa TZS 80,000 - 100,000 kwa siku kabla ya gharama.</p>
+                            <p class="text-xs mt-1">Lengo ni kufikia mauzo ya TZS 400,000 kwa siku ifikapo mwezi wa 6.
+                                Hii itatoa faida ghafi ya wastani wa TZS 80,000 - 100,000 kwa siku kabla ya gharama.</p>
+                        </div>
+
+                        <div class="mt-6 p-6 bg-emerald-50 rounded-lg border-2 border-emerald-200 text-center">
+                            <h3 class="text-lg font-bold text-emerald-800 mb-2">Unahitaji Nakala ya Mwongozo Huu?</h3>
+                            <p class="text-sm text-emerald-700 mb-4">Pakua mwongozo mzima kwa kielektroniki (PDF) ili
+                                uweze kusoma ukiwa huna intaneti au kuuchapa.</p>
+                            <a href="pikipiki_muongozo.pdf" download
+                                class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-emerald-600 hover:bg-emerald-700 transition shadow-sm">
+                                <span class="mr-2 text-xl">📄</span> Pakua Mwongozo Kamili (PDF)
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -313,7 +418,13 @@
 
     <footer class="bg-slate-900 text-white py-8 mt-12">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-sm opacity-70">© 2026 Mwongozo wa MotoBiashara - Imetengenezwa kwa ajili ya mjasiriamali wa Morogoro.</p>
+            <p class="text-sm opacity-70 mb-4">© 2026 Mwongozo wa MotoBiashara - Imetengenezwa kwa ajili ya mjasiriamali
+                wa
+                Morogoro.</p>
+            <a href="pikipiki_muongozo.pdf" download
+                class="text-emerald-400 hover:text-emerald-300 text-sm font-medium underline flex items-center justify-center">
+                <span class="mr-2">📥</span> Pakua Mwongozo wa PDF
+            </a>
         </div>
     </footer>
 
@@ -394,7 +505,7 @@
         generateParts(slowPartsTemplate, "slow");
 
         // --- CHART JS SETUP ---
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const ctx = document.getElementById('capitalChart').getContext('2d');
             new Chart(ctx, {
                 type: 'doughnut',
@@ -424,9 +535,9 @@
             // Populate Table Initially
             renderTable(partsDB);
             document.getElementById('totalPartsCount').innerText = partsDB.length;
-            
+
             // Setup Mobile Menu
-            document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu-btn').addEventListener('click', function () {
                 const menu = document.getElementById('mobile-menu');
                 menu.classList.toggle('hidden');
             });
@@ -444,15 +555,15 @@
                 el.classList.remove('bg-slate-900');
                 el.classList.add('hover:bg-slate-700');
             });
-            
+
             document.getElementById(tabId).classList.add('active');
-            
+
             // Highlight active button (rough logic for demo)
             const btns = document.querySelectorAll('.nav-btn');
-            if(tabId === 'mtaji') btns[0].classList.add('bg-slate-900');
-            if(tabId === 'spea') btns[1].classList.add('bg-slate-900');
-            if(tabId === 'uendeshaji') btns[2].classList.add('bg-slate-900');
-            if(tabId === 'mkakati') btns[3].classList.add('bg-slate-900');
+            if (tabId === 'mtaji') btns[0].classList.add('bg-slate-900');
+            if (tabId === 'spea') btns[1].classList.add('bg-slate-900');
+            if (tabId === 'uendeshaji') btns[2].classList.add('bg-slate-900');
+            if (tabId === 'mkakati') btns[3].classList.add('bg-slate-900');
 
             // Close mobile menu if open
             document.getElementById('mobile-menu').classList.add('hidden');
@@ -483,15 +594,15 @@
             tbody.innerHTML = '';
 
             // Optimization: Limit rendering to first 100 if list is huge to prevent lag during typing
-            const displayData = data.slice(0, 100); 
+            const displayData = data.slice(0, 100);
 
             displayData.forEach(part => {
                 const row = document.createElement('tr');
                 let badgeColor = 'bg-gray-100 text-gray-800';
                 let priLabel = 'Wastani';
-                
-                if(part.pri === 'fast') { badgeColor = 'bg-green-100 text-green-800'; priLabel = 'Haraka'; }
-                if(part.pri === 'slow') { badgeColor = 'bg-red-100 text-red-800'; priLabel = 'Ngumu'; }
+
+                if (part.pri === 'fast') { badgeColor = 'bg-green-100 text-green-800'; priLabel = 'Haraka'; }
+                if (part.pri === 'slow') { badgeColor = 'bg-red-100 text-red-800'; priLabel = 'Ngumu'; }
 
                 row.innerHTML = `
                     <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">${part.name}</td>
@@ -502,7 +613,7 @@
                 tbody.appendChild(row);
             });
 
-            if(data.length > 100) {
+            if (data.length > 100) {
                 const row = document.createElement('tr');
                 row.innerHTML = `<td colspan="4" class="px-6 py-2 text-center text-gray-400 text-xs">Na vingine ${data.length - 100} ... tumia search kupata haraka.</td>`;
                 tbody.appendChild(row);
@@ -526,13 +637,13 @@
             const foodPerDay = parseInt(document.getElementById('foodAllowance').value) || 0;
             const days = parseInt(document.getElementById('workDays').value) || 26;
             const dailySales = parseInt(slider.value);
-            
+
             // Logic: Award of 500 TZS per 100,000 TZS sold
             // e.g. 300,000 sold = 3 units of 100k = 1500 TZS bonus that day
             const bonusPerDay = Math.floor(dailySales / 100000) * 500;
             const totalBonus = bonusPerDay * days;
             const totalFood = foodPerDay * days;
-            
+
             const grandTotal = baseSalary + totalFood + totalBonus;
 
             document.getElementById('totalFood').innerText = totalFood.toLocaleString() + " TZS";
@@ -541,4 +652,5 @@
         }
     </script>
 </body>
+
 </html>
