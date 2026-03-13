@@ -15,10 +15,8 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            /* Visual: Tech Grid Background */
-            background-image: radial-gradient(#e0e7ff 1px, transparent 1px);
-            background-size: 24px 24px;
+            background: linear-gradient(135deg, #e0e7ff 0%, #fae8ff 50%, #f0fdf4 100%);
+            background-attachment: fixed;
         }
 
         .font-mono {
@@ -39,8 +37,8 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 30px -5px rgba(79, 70, 229, 0.2);
             border-color: #818cf8;
-            background-color: #ffffff;
-            /* Ensure white background on hover */
+            background-color: rgba(255, 255, 255, 0.7);
+            /* Ensure semi-transparent white background on hover */
         }
     </style>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -49,7 +47,7 @@
 <body class="text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900">
 
     <nav
-        class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 z-50 shadow-sm transition-all">
+        class="fixed top-0 left-0 w-full bg-white/40 backdrop-blur-lg border-b border-white/60 z-50 shadow-sm transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex-shrink-0 flex items-center gap-3">
@@ -101,7 +99,7 @@
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+        <div id="mobile-menu" class="hidden md:hidden bg-white/80 backdrop-blur-xl border-t border-white/50">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="index.html" data-i18n="nav.home"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Home</a>
@@ -135,7 +133,7 @@
             <div class="space-y-6">
                 <!-- News Item 1 -->
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Sep 10,
@@ -153,7 +151,7 @@
 
                 <!-- News Item 2 -->
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Aug 2,
@@ -171,7 +169,7 @@
 
                 <!-- News Item 3 -->
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Jun 26,
@@ -188,7 +186,7 @@
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">May 5,
@@ -205,7 +203,7 @@
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Apr 12,
@@ -222,7 +220,7 @@
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Mar 21,
@@ -239,7 +237,7 @@
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Mar 19,
@@ -256,7 +254,7 @@
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Mar 14,
@@ -273,7 +271,7 @@
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Mar 5,
@@ -290,7 +288,7 @@
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <a href="https://www.mdpi.com/2072-4292/16/5/838" target="_blank" class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Mar 4,
@@ -307,7 +305,7 @@
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Mar 3,
@@ -324,7 +322,7 @@
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Feb 28,
@@ -341,7 +339,7 @@
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <a href="https://www.yeesi.org" target="_blank" class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Feb 19,
@@ -357,7 +355,7 @@
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Nov 15,
@@ -374,7 +372,7 @@
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Oct 3,
@@ -391,7 +389,7 @@
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <a href="https://www.digitalfrontiersdai.com/resources/digital-agriculture-ecosystem-assessment-tanzania/"
                         target="_blank" class="block group">
                         <div class="flex justify-between items-start mb-2">
@@ -410,7 +408,7 @@
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Sep 26,
@@ -427,7 +425,7 @@
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Sep 7,
@@ -444,7 +442,7 @@
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Aug 10,
@@ -461,7 +459,7 @@
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Aug 1,
@@ -482,7 +480,7 @@
 
     </main>
 
-    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    <footer class="bg-slate-900/80 backdrop-blur-lg text-slate-400 py-12 border-t border-slate-700/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="mb-6 flex justify-center">
                 <img src="profile.png" alt="Dr. Fue"
