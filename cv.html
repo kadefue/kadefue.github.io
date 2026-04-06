@@ -1078,6 +1078,13 @@
     </script>
 
     <script>
+        // Check if opened with download parameter and trigger print
+        if (window.location.search.includes('download=true')) {
+            window.print();
+        }
+    </script>
+
+    <script>
         // --- 1. SKILLS CHART CONFIGURATION ---
         const ctx = document.getElementById('skillsChartCanvas').getContext('2d');
         const skillsChart = new Chart(ctx, {
