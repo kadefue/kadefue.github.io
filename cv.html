@@ -929,6 +929,8 @@
                     data-i18n="common.orcid">ORCID</a>
                 <a href="mailto:kadefue@gmail.com" class="hover:text-white transition-colors"
                     data-i18n="common.email">Email</a>
+                <span class="text-slate-500">|</span>
+                <a href="#" class="hover:text-white transition-colors" data-download-cv="true">Download CV (PDF)</a>
             </div>
             <p class="text-sm">&copy; <span id="year"></span> Kadeghe Goodluck Fue. <span data-i18n="footer.rights">All
                     rights reserved.</span></p>
@@ -940,13 +942,13 @@
     <script src="js/main.js"></script>
 
     <script>
-        const downloadCvPdf = document.getElementById('downloadCvPdf');
-        if (downloadCvPdf) {
-            downloadCvPdf.addEventListener('click', function (event) {
+        const downloadCvLinks = document.querySelectorAll('[data-download-cv]');
+        downloadCvLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
                 event.preventDefault();
                 window.print();
             });
-        }
+        });
     </script>
 
     <script>
