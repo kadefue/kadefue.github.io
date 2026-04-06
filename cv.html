@@ -79,6 +79,14 @@
             margin: 1cm;
         }
 
+        .print-page {
+            page-break-after: always;
+        }
+
+        .print-page:last-child {
+            page-break-after: auto;
+        }
+
         @media print {
             body {
                 background: #ffffff !important;
@@ -126,6 +134,13 @@
                 border-top: 1px solid #cbd5e1;
                 margin: 16px 0;
             }
+
+            .print-only .graphic-bar {
+                height: 6px;
+                border-radius: 9999px;
+                background: linear-gradient(90deg, #6366f1, #38bdf8);
+                margin: 10px 0 18px;
+            }
         }
     </style>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -136,74 +151,185 @@
     <div class="print-only">
         <div class="min-h-screen bg-white p-6">
             <div class="mx-auto max-w-5xl rounded-3xl border border-slate-200 bg-slate-50 print-card p-6">
-                <header class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                <div class="grid gap-6 lg:grid-cols-[2.5fr_1fr] items-start">
                     <div>
+                        <div class="inline-flex items-center gap-3 mb-4">
+                            <div class="h-3 w-20 rounded-full bg-gradient-to-r from-indigo-600 via-cyan-500 to-sky-400"></div>
+                            <span class="text-xs uppercase tracking-[0.2em] text-slate-500">Executive CV</span>
+                        </div>
                         <h1 class="text-4xl font-bold tracking-tight text-slate-900">Dr. Kadeghe Goodluck Fue</h1>
-                        <p class="mt-2 text-base text-slate-700">Senior Lecturer | Robotics & AI Engineer | Precision Agriculture Specialist</p>
+                        <p class="mt-2 text-base text-slate-700">Leader • Scientist • Engineer</p>
+                        <div class="mt-4 text-sm text-slate-600 space-y-2">
+                            <div><strong>Sokoine University of Agriculture</strong> — Senior Lecturer, Mechatronics & Precision Agriculture</div>
+                            <div><strong>Email:</strong> kadefue [at] sua.ac.tz | kadefue [at] gmail.com</div>
+                            <div><strong>Links:</strong> linkedin.com/in/kadefue | orcid.org/0000-0001-6362-3174</div>
+                        </div>
                     </div>
-                    <div class="text-sm text-slate-700 space-y-1">
-                        <div>Sokoine University of Agriculture</div>
-                        <div>kadefue [at] sua.ac.tz | kadefue [at] gmail.com</div>
-                        <div>linkedin.com/in/kadefue | orcid.org/0000-0001-6362-3174</div>
+                    <div class="flex justify-center lg:justify-end">
+                        <div class="w-36 h-36 rounded-3xl overflow-hidden border-4 border-indigo-200 shadow-xl">
+                            <img src="profile.png" alt="Dr. Fue" class="w-full h-full object-cover">
+                        </div>
                     </div>
-                </header>
+                </div>
 
-                <div class="section-divider"></div>
+                <div class="graphic-bar"></div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6">
+                <div class="grid gap-6 lg:grid-cols-[2fr_1fr]">
                     <section>
-                        <h2 class="section-title text-xl font-bold mb-3">Summary</h2>
-                        <p class="text-sm leading-relaxed text-slate-700">Experienced academic and technical leader with expertise in robotics, machine vision, precision agriculture, intelligent systems, and digital infrastructure. Proven record designing applied research, leading grant-funded projects, and delivering practical solutions for crop monitoring, farm automation, and smart agricultural decision support.</p>
-
-                        <div class="mt-5">
-                            <h3 class="text-lg font-semibold text-slate-900 mb-2">Selected Highlights</h3>
-                            <ul class="list-disc pl-5 text-sm text-slate-700 space-y-2">
-                                <li>Technical Lead for the $32M World Bank HEET project at SUA.</li>
-                                <li>Invented a Modified Pure Pursuit control algorithm adopted by peer-reviewed robotics research.</li>
-                                <li>Winner of Zindi's Outsmarting Outbreaks challenge among 500+ global data scientists.</li>
-                                <li>Reviewer for IEEE RA-L and Computers in Agriculture.</li>
-                            </ul>
+                        <h2 class="section-title text-xl font-bold mb-3">Professional Summary</h2>
+                        <p class="text-sm leading-relaxed text-slate-700">Accomplished robotics and AI leader with a proven track record of driving innovation in precision agriculture, machine vision, and intelligent automation. Combines academic rigor with applied engineering to deliver systems that improve farm productivity, optimize resource use, and support national-level digital transformation programs.</p>
+                        <div class="mt-6 grid gap-4 sm:grid-cols-2">
+                            <div class="rounded-3xl bg-indigo-50 p-4">
+                                <h3 class="text-sm font-semibold text-indigo-700">Leadership</h3>
+                                <p class="text-xs text-slate-600 mt-2">Led the World Bank HEET project at SUA, coordinating cross-disciplinary teams and delivering technology solutions for higher education and agriculture.</p>
+                            </div>
+                            <div class="rounded-3xl bg-slate-100 p-4">
+                                <h3 class="text-sm font-semibold text-slate-900">Research & Science</h3>
+                                <p class="text-xs text-slate-600 mt-2">Published peer-reviewed work in robotics and agricultural AI, with a focus on sensor-driven decision systems and environmental intelligence.</p>
+                            </div>
+                            <div class="rounded-3xl bg-cyan-50 p-4">
+                                <h3 class="text-sm font-semibold text-cyan-700">Engineering Impact</h3>
+                                <p class="text-xs text-slate-600 mt-2">Designed embedded control systems and autonomous vehicle prototypes for crop monitoring, irrigation management, and field robotics.</p>
+                            </div>
+                            <div class="rounded-3xl bg-emerald-50 p-4">
+                                <h3 class="text-sm font-semibold text-emerald-700">Innovation</h3>
+                                <p class="text-xs text-slate-600 mt-2">Built applied solutions integrating IoT, GIS, and AI for precision agriculture and public-sector digital services.</p>
+                            </div>
                         </div>
                     </section>
 
-                    <aside class="rounded-3xl bg-white p-4 shadow-sm border border-slate-200">
-                        <h2 class="section-title text-xl font-bold mb-3">Core Skills</h2>
-                        <div class="text-sm text-slate-700 space-y-2">
-                            <div class="skill-pill">ROS / Gazebo</div>
-                            <div class="skill-pill">OpenCV / TensorFlow / PyTorch</div>
-                            <div class="skill-pill">Python / C/C++ / JavaScript / R</div>
-                            <div class="skill-pill">GIS / QGIS / ArcGIS / WebGIS</div>
-                            <div class="skill-pill">IoT / Arduino / Raspberry Pi / MQTT</div>
-                        </div>
+                    <aside class="rounded-3xl bg-white p-5 shadow-sm border border-slate-200">
+                        <h2 class="section-title text-xl font-bold mb-3">Quick Facts</h2>
+                        <ul class="space-y-3 text-sm text-slate-700">
+                            <li><strong>15+ years</strong> of academic, research, and engineering experience</li>
+                            <li><strong>100+</strong> trained students and young innovators</li>
+                            <li><strong>$32M</strong> project leadership for HEET program</li>
+                            <li><strong>8+</strong> international grants and awards</li>
+                            <li><strong>Peer reviewer</strong> for IEEE RA-L and Computers in Agriculture</li>
+                        </ul>
                     </aside>
                 </div>
 
                 <div class="section-divider"></div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    <section>
-                        <h2 class="section-title text-xl font-bold mb-3">Education</h2>
-                        <div class="text-sm text-slate-700 space-y-3">
-                            <div><strong>PhD in Engineering</strong> — University of Georgia, USA</div>
-                            <div><strong>MSc in Agricultural and Biological Engineering</strong> — University of Florida, USA</div>
-                            <div><strong>BSc in Computer Engineering & IT</strong> — University of Dar es Salaam, Tanzania</div>
-                        </div>
+                <div class="grid gap-6 lg:grid-cols-2">
+                    <section class="rounded-3xl bg-white p-5 shadow-sm border border-slate-200">
+                        <h2 class="section-title text-xl font-bold mb-3">Leadership & Management</h2>
+                        <ul class="list-disc pl-5 text-sm text-slate-700 space-y-2">
+                            <li>Senior Lecturer and leader for Mechatronics, Cybernetics, and Precision Agriculture.</li>
+                            <li>Acting Coordinator of the Academic Information Management and Support Unit.</li>
+                            <li>Director of EPALAB and mentor for the YEESI innovation lab.</li>
+                            <li>Managed multidisciplinary research teams across academia and government.</li>
+                        </ul>
                     </section>
 
-                    <section>
-                        <h2 class="section-title text-xl font-bold mb-3">Key Consulting Projects</h2>
+                    <section class="rounded-3xl bg-white p-5 shadow-sm border border-slate-200">
+                        <h2 class="section-title text-xl font-bold mb-3">Research Excellence</h2>
                         <ul class="list-disc pl-5 text-sm text-slate-700 space-y-2">
-                            <li>Web service APIs for CBE connecting payment, TCU, NACTE, and banks.</li>
-                            <li>Tomato Business Access Information System with SMS integration.</li>
-                            <li>m-IMAS mobile market access solution built with KANNEL SMS.</li>
-                            <li>SUASIS mobile payment gateway integration for SUA.</li>
+                            <li>Geospatial AI and machine vision for precision crop monitoring.</li>
+                            <li>Novel robotics control methods for autonomous agricultural vehicles.</li>
+                            <li>Data-driven irrigation scheduling and smart farm decision support.</li>
+                            <li>Published work and funded research in international journals.</li>
                         </ul>
                     </section>
                 </div>
 
                 <div class="section-divider"></div>
 
-                <footer class="text-sm text-slate-600">This page is optimized for browser print / Save as PDF. Use browser print to generate a one-page PDF version.</footer>
+                <div class="grid gap-6 lg:grid-cols-[1.3fr_0.7fr]">
+                    <section>
+                        <h2 class="section-title text-xl font-bold mb-3">Education</h2>
+                        <div class="space-y-4 text-sm text-slate-700">
+                            <div class="rounded-3xl bg-slate-50 p-4 border border-slate-200">
+                                <strong>PhD in Engineering</strong><br>University of Georgia, USA<br><span class="text-xs text-slate-500">Machine Vision & Agricultural Robotics</span>
+                            </div>
+                            <div class="rounded-3xl bg-slate-50 p-4 border border-slate-200">
+                                <strong>MSc in Agricultural and Biological Engineering</strong><br>University of Florida, USA<br><span class="text-xs text-slate-500">Information Systems, Automation, Precision Agriculture</span>
+                            </div>
+                            <div class="rounded-3xl bg-slate-50 p-4 border border-slate-200">
+                                <strong>BSc in Computer Engineering & Information Technology</strong><br>University of Dar es Salaam, Tanzania<br><span class="text-xs text-slate-500">Electronics, Software, Telecommunications</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <aside class="rounded-3xl bg-slate-50 p-5 border border-slate-200">
+                        <h2 class="section-title text-xl font-bold mb-3">Technical Stack</h2>
+                        <div class="space-y-3 text-sm text-slate-700">
+                            <div><strong>Languages:</strong> Python, C/C++, JavaScript, R, PHP</div>
+                            <div><strong>AI / Vision:</strong> TensorFlow, Keras, OpenCV, PyTorch</div>
+                            <div><strong>Robotics:</strong> ROS, Gazebo, Arduino, Raspberry Pi</div>
+                            <div><strong>GIS / Data:</strong> QGIS, ArcGIS, MapServer, OpenLayers</div>
+                            <div><strong>Systems:</strong> Laravel, Django, MySQL, MSSQL</div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+            <div class="print-page mt-8 mx-auto max-w-5xl rounded-3xl border border-slate-200 bg-slate-50 print-card p-6">
+                <div class="grid gap-5 lg:grid-cols-[1.2fr_0.8fr] items-start">
+                    <div>
+                        <h2 class="section-title text-xl font-bold mb-3">Professional Experience</h2>
+                        <div class="space-y-4 text-sm text-slate-700">
+                            <div>
+                                <strong>Senior Lecturer</strong> — Sokoine University of Agriculture<br>
+                                Led teaching, research, and laboratory development in mechatronics, cybernetics, and precision agriculture.
+                            </div>
+                            <div>
+                                <strong>Educational Technology & Digital Infrastructure Specialist</strong><br>
+                                Led digital transformation projects for HEET and institutional learning systems.
+                            </div>
+                            <div>
+                                <strong>Research Scholar</strong> — North Carolina State University<br>
+                                Conducted geospatial AI research and machine vision experiments for agriculture and natural resource planning.
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="rounded-3xl bg-white p-5 shadow-sm border border-slate-200">
+                        <h2 class="section-title text-xl font-bold mb-3">Recognition</h2>
+                        <ul class="list-disc pl-5 text-sm text-slate-700 space-y-2">
+                            <li>Zindi Challenge winner in global outbreak forecasting.</li>
+                            <li>TWAS-BMBF Seed Grant awardee.</li>
+                            <li>Lead technical role in World Bank HEET Project.</li>
+                            <li>Published author and peer reviewer.</li>
+                        </ul>
+                    </aside>
+                </div>
+
+                <div class="section-divider"></div>
+
+                <h2 class="section-title text-xl font-bold mb-3">Selected Leadership & Engineering Projects</h2>
+                <div class="space-y-4 text-sm text-slate-700">
+                    <div class="rounded-3xl bg-white p-4 border border-slate-200">
+                        <strong>Autonomous Field Robotics</strong> — Designed and deployed autonomous vehicles for precision spraying and harvesting trials, integrating ROS, path planning, and sensor fusion.</div>
+                    <div class="rounded-3xl bg-white p-4 border border-slate-200">
+                        <strong>Smart Irrigation Systems</strong> — Built IoT-driven irrigation scheduling using sensor networks, MQTT, and machine learning to reduce water use and increase yield predictability.</div>
+                    <div class="rounded-3xl bg-white p-4 border border-slate-200">
+                        <strong>Digital Agriculture Platforms</strong> — Delivered decision support tools and mobile SMS systems for market access, logistics, and farm management in Tanzania.</div>
+                    <div class="rounded-3xl bg-white p-4 border border-slate-200">
+                        <strong>Research Labs & Capacity Building</strong> — Established EPALAB and YEESI Lab for student innovation, skilling, and community-focused AgTech research.</div>
+                </div>
+
+                <div class="section-divider"></div>
+
+                <div class="grid gap-6 lg:grid-cols-2">
+                    <section>
+                        <h2 class="section-title text-xl font-bold mb-3">Scientific Contributions</h2>
+                        <p class="text-sm leading-relaxed text-slate-700">Published research on agricultural machine vision, control systems, and geospatial analytics that informs adaptive farming interventions and sustainable food systems.</p>
+                    </section>
+                    <section>
+                        <h2 class="section-title text-xl font-bold mb-3">Contact & Availability</h2>
+                        <div class="text-sm text-slate-700 space-y-3">
+                            <div><strong>Email:</strong> kadefue [at] sua.ac.tz | kadefue [at] gmail.com</div>
+                            <div><strong>LinkedIn:</strong> linkedin.com/in/kadefue</div>
+                            <div><strong>ORCID:</strong> orcid.org/0000-0001-6362-3174</div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="section-divider"></div>
+
+                <footer class="text-sm text-slate-600">Print this page to generate a two-page, polished PDF CV with executive summary, leadership profile, and career highlights.</footer>
             </div>
         </div>
     </div>
