@@ -13,11 +13,18 @@
         rel="stylesheet">
 
     <style>
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            background-image: radial-gradient(#e0e7ff 1px, transparent 1px);
-            background-size: 24px 24px;
+            background: linear-gradient(-45deg, #e0e7ff, #fae8ff, #f0fdf4, #e0f2fe, #e0e7ff);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            background-attachment: fixed;
         }
 
         .font-mono {
@@ -45,7 +52,7 @@
 <body class="text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900">
 
     <nav
-        class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md border-b border-slate-200 z-50 shadow-sm transition-all duration-300">
+        class="fixed top-0 left-0 w-full bg-white/40 backdrop-blur-lg border-b border-white/60 z-50 shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex-shrink-0 flex items-center gap-3">
@@ -96,7 +103,7 @@
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+        <div id="mobile-menu" class="hidden md:hidden bg-white/80 backdrop-blur-xl border-t border-white/50">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="index.html" data-i18n="nav.home"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Home</a>
@@ -145,7 +152,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
                 <div
-                    class="card-hover bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col h-full">
+                    class="card-hover bg-white/50 backdrop-blur-lg rounded-2xl shadow-xl border border-white/50 overflow-hidden flex flex-col h-full">
                     <div class="bg-indigo-600 h-2 w-full"></div>
                     <div class="p-8 flex-1">
                         <div class="flex justify-between items-start mb-4">
@@ -173,7 +180,7 @@
                 </div>
 
                 <div
-                    class="card-hover bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col h-full">
+                    class="card-hover bg-white/50 backdrop-blur-lg rounded-2xl shadow-xl border border-white/50 overflow-hidden flex flex-col h-full">
                     <div class="bg-blue-500 h-2 w-full"></div>
                     <div class="p-8 flex-1">
                         <div class="flex justify-between items-start mb-4">
@@ -200,7 +207,7 @@
                 </div>
 
                 <div
-                    class="card-hover bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col h-full">
+                    class="card-hover bg-white/50 backdrop-blur-lg rounded-2xl shadow-xl border border-white/50 overflow-hidden flex flex-col h-full">
                     <div class="bg-green-500 h-2 w-full"></div>
                     <div class="p-8 flex-1">
                         <div class="flex justify-between items-start mb-4">
@@ -224,7 +231,7 @@
                 </div>
 
                 <div
-                    class="card-hover bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col h-full">
+                    class="card-hover bg-white/50 backdrop-blur-lg rounded-2xl shadow-xl border border-white/50 overflow-hidden flex flex-col h-full">
                     <div class="bg-yellow-500 h-2 w-full"></div>
                     <div class="p-8 flex-1">
                         <div class="flex justify-between items-start mb-4">
@@ -263,7 +270,7 @@
 
             <div class="space-y-4">
                 <div
-                    class="card-hover bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex flex-col md:flex-row justify-between md:items-center">
+                    class="card-hover bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 flex flex-col md:flex-row justify-between md:items-center">
                     <div>
                         <h3 class="text-lg font-bold text-slate-900">Web Service API for Central Payment System</h3>
                         <p class="text-slate-500 text-sm mt-1">College of Business Education (CBE) - Government
@@ -274,7 +281,7 @@
                 </div>
 
                 <div
-                    class="card-hover bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex flex-col md:flex-row justify-between md:items-center">
+                    class="card-hover bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 flex flex-col md:flex-row justify-between md:items-center">
                     <div>
                         <h3 class="text-lg font-bold text-slate-900">Mobile Integrated Market Access (m-IMAS)</h3>
                         <p class="text-slate-500 text-sm mt-1">Trans-Sec, SUA. Built using KANNEL SMS systems.</p>
@@ -284,7 +291,7 @@
                 </div>
 
                 <div
-                    class="card-hover bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex flex-col md:flex-row justify-between md:items-center">
+                    class="card-hover bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 flex flex-col md:flex-row justify-between md:items-center">
                     <div>
                         <h3 class="text-lg font-bold text-slate-900">UshauriKilimo (Agro-advisory)</h3>
                         <p class="text-slate-500 text-sm mt-1">EPINAV. Integrating m-FAIS to SMS based systems.</p>
@@ -294,7 +301,7 @@
                 </div>
 
                 <div
-                    class="card-hover bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex flex-col md:flex-row justify-between md:items-center">
+                    class="card-hover bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 flex flex-col md:flex-row justify-between md:items-center">
                     <div>
                         <h3 class="text-lg font-bold text-slate-900">TRANS-SEC WebGIS System</h3>
                         <p class="text-slate-500 text-sm mt-1">Development using MapServer and OpenLayers.</p>
@@ -307,7 +314,7 @@
 
     </main>
 
-    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    <footer class="bg-slate-900/80 backdrop-blur-lg text-slate-400 py-12 border-t border-slate-700/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="mb-6 flex justify-center">
                 <img src="profile.png" alt="Dr. Fue"

@@ -16,12 +16,18 @@
         rel="stylesheet">
 
     <style>
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            /* Visual: Tech Grid Background */
-            background-image: radial-gradient(#e0e7ff 1px, transparent 1px);
-            background-size: 24px 24px;
+            background: linear-gradient(-45deg, #e0e7ff, #fae8ff, #f0fdf4, #e0f2fe, #e0e7ff);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            background-attachment: fixed;
         }
 
         .font-mono {
@@ -70,7 +76,7 @@
 <body class="text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900">
 
     <nav
-        class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 z-50 shadow-sm transition-all">
+        class="fixed top-0 left-0 w-full bg-white/40 backdrop-blur-lg border-b border-white/60 z-50 shadow-sm transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex-shrink-0 flex items-center gap-3">
@@ -136,7 +142,7 @@
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+        <div id="mobile-menu" class="hidden md:hidden bg-white/80 backdrop-blur-xl border-t border-white/50">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="index.html" data-i18n="nav.home"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Home</a>
@@ -206,22 +212,26 @@
 
         <!-- 2. KEY STATS GRID -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 text-center card-hover">
+            <div
+                class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 text-center card-hover">
                 <span class="block text-4xl font-bold text-indigo-600 mb-1">14+</span>
                 <span class="text-sm font-semibold text-slate-500 uppercase tracking-wide"
                     data-i18n="cv.years_experience">Years Experience</span>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 text-center card-hover">
+            <div
+                class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 text-center card-hover">
                 <span class="block text-4xl font-bold text-indigo-600 mb-1">$2M+</span>
                 <span class="text-sm font-semibold text-slate-500 uppercase tracking-wide"
                     data-i18n="cv.portfolio_managed">Portfolio Managed</span>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 text-center card-hover">
+            <div
+                class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 text-center card-hover">
                 <span class="block text-4xl font-bold text-indigo-600 mb-1">52+</span>
                 <span class="text-sm font-semibold text-slate-500 uppercase tracking-wide"
                     data-i18n="cv.publications_count">Publications</span>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 text-center card-hover">
+            <div
+                class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 text-center card-hover">
                 <span class="block text-4xl font-bold text-indigo-600 mb-1">1st</span>
                 <span class="text-sm font-semibold text-slate-500 uppercase tracking-wide"
                     data-i18n="cv.global_challenge">Global Data Challenge</span>
@@ -235,7 +245,7 @@
             <div class="lg:col-span-1 space-y-12">
 
                 <!-- SKILLS CHART SECTION -->
-                <section class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <section class="bg-white/50 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/50">
                     <h3 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2"
                         data-i18n="section_titles.technical_stack">
                         <svg class="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -476,54 +486,76 @@
                 <!-- 6. TEACHING RESPONSIBILITIES -->
                 <section>
                     <div class="mb-6">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-1">6 TEACHING RESPONSIBILITIES <span class="text-sm text-slate-500">[since 2021]</span></h3>
-                        <p class="text-slate-500 text-sm">Courses taught across graduate and undergraduate levels; topics emphasize practical, hands-on skills in programming, embedded systems, networking, instrumentation and agricultural applications of AI and IoT.</p>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-1">TEACHING RESPONSIBILITIES <span
+                                class="text-sm text-slate-500">[since 2021]</span></h3>
+                        <p class="text-slate-500 text-sm">Courses taught across graduate and undergraduate levels;
+                            topics emphasize practical, hands-on skills in programming, embedded systems, networking,
+                            instrumentation and agricultural applications of AI and IoT.</p>
                     </div>
 
                     <div class="space-y-6">
                         <div>
-                            <h4 class="font-bold text-slate-800">6.1 AEC 813 — Artificial Intelligence, IoT and GIS Application in Agriculture (PhD Students)</h4>
-                            <p class="text-slate-600 text-sm">Advanced topics in machine learning for agriculture, spatial data analysis (GIS), sensor integration, edge AI deployment, and research methodologies for PhD-level projects.</p>
+                            <h4 class="font-bold text-slate-800">AEC 813 — Artificial Intelligence, IoT and GIS
+                                Application in Agriculture (PhD Students)</h4>
+                            <p class="text-slate-600 text-sm">Advanced topics in machine learning for agriculture,
+                                spatial data analysis (GIS), sensor integration, edge AI deployment, and research
+                                methodologies for PhD-level projects.</p>
                         </div>
 
                         <div>
-                            <h4 class="font-bold text-slate-800">6.2 ABE 715 — Computer Programming (Masters Students)</h4>
-                            <p class="text-slate-600 text-sm">Structured programming, data structures, algorithmic thinking, and application development in Python and C for engineering problem solving.</p>
+                            <h4 class="font-bold text-slate-800">ABE 715 — Computer Programming (Masters Students)</h4>
+                            <p class="text-slate-600 text-sm">Structured programming, data structures, algorithmic
+                                thinking, and application development in Python and C for engineering problem solving.
+                            </p>
                         </div>
 
                         <div>
-                            <h4 class="font-bold text-slate-800">6.3 AGE 418 — Sensors and Controls for Precision Agriculture (Senior Students)</h4>
-                            <p class="text-slate-600 text-sm">Sensor technologies, control systems, data acquisition, and system design for automated precision agriculture platforms.</p>
+                            <h4 class="font-bold text-slate-800">AGE 418 — Sensors and Controls for Precision
+                                Agriculture (Senior Students)</h4>
+                            <p class="text-slate-600 text-sm">Sensor technologies, control systems, data acquisition,
+                                and system design for automated precision agriculture platforms.</p>
                         </div>
 
                         <div>
-                            <h4 class="font-bold text-slate-800">6.4 BPE 419 — Mechatronics (Senior Students)</h4>
-                            <p class="text-slate-600 text-sm">Integration of mechanical, electronic and software subsystems; actuators, embedded controllers and practical robotics labs.</p>
+                            <h4 class="font-bold text-slate-800">BPE 419 — Mechatronics (Senior Students)</h4>
+                            <p class="text-slate-600 text-sm">Integration of mechanical, electronic and software
+                                subsystems; actuators, embedded controllers and practical robotics labs.</p>
                         </div>
 
                         <div>
-                            <h4 class="font-bold text-slate-800">6.5 AGE 328 — Communications and Computer Networking (Junior Students)</h4>
-                            <p class="text-slate-600 text-sm">Fundamentals of networking, wireless communications, protocols, and networked systems for IoT applications.</p>
+                            <h4 class="font-bold text-slate-800">AGE 328 — Communications and Computer Networking
+                                (Junior Students)</h4>
+                            <p class="text-slate-600 text-sm">Fundamentals of networking, wireless communications,
+                                protocols, and networked systems for IoT applications.</p>
                         </div>
 
                         <div>
-                            <h4 class="font-bold text-slate-800">6.6 AGE 316 — Microcomputer Systems (Junior Students)</h4>
-                            <p class="text-slate-600 text-sm">Microcontroller programming, embedded system architectures, interfacing, and low-level system design using platforms such as Arduino and ESP32.</p>
+                            <h4 class="font-bold text-slate-800">AGE 316 — Microcomputer Systems (Junior Students)</h4>
+                            <p class="text-slate-600 text-sm">Microcontroller programming, embedded system
+                                architectures, interfacing, and low-level system design using platforms such as Arduino
+                                and ESP32.</p>
                         </div>
 
                         <div>
-                            <h4 class="font-bold text-slate-800">6.7 AGE 310 — Instrumentation and Measurements (Junior Students)</h4>
-                            <p class="text-slate-600 text-sm">Principles of measurement, instrumentation design, sensor calibration, data logging and signal conditioning for field and lab use.</p>
+                            <h4 class="font-bold text-slate-800">AGE 310 — Instrumentation and Measurements (Junior
+                                Students)</h4>
+                            <p class="text-slate-600 text-sm">Principles of measurement, instrumentation design, sensor
+                                calibration, data logging and signal conditioning for field and lab use.</p>
                         </div>
 
                         <div>
-                            <h4 class="font-bold text-slate-800">6.8 AGE 219 — Introduction to Computer Programming (Sophomore Students)</h4>
-                            <p class="text-slate-600 text-sm">Introductory programming concepts, problem-solving with code, basic algorithms and practical labs using Python.</p>
+                            <h4 class="font-bold text-slate-800">AGE 219 — Introduction to Computer Programming
+                                (Sophomore Students)</h4>
+                            <p class="text-slate-600 text-sm">Introductory programming concepts, problem-solving with
+                                code, basic algorithms and practical labs using Python.</p>
                         </div>
 
                         <div>
-                            <h4 class="font-bold text-slate-800">6.9 AGE 214 — Introduction to Electronics (Sophomore Students)</h4>
-                            <p class="text-slate-600 text-sm">Foundations of electronics, circuit analysis, analog/digital components and hands-on lab exercises to build simple electronic systems.</p>
+                            <h4 class="font-bold text-slate-800">AGE 214 — Introduction to Electronics (Sophomore
+                                Students)</h4>
+                            <p class="text-slate-600 text-sm">Foundations of electronics, circuit analysis,
+                                analog/digital components and hands-on lab exercises to build simple electronic systems.
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -556,7 +588,7 @@
 
                         <!-- Project 1: Autonomous Spraying Robot -->
                         <div
-                            class="project-card robotics p-5 rounded-xl border border-slate-200 bg-white hover:border-indigo-300 transition-all cursor-default group">
+                            class="project-card robotics p-5 rounded-xl border border-white/50 shadow-xl bg-white/50 backdrop-blur-lg hover:border-indigo-300 transition-all cursor-default group">
                             <div class="flex justify-between items-start mb-3">
                                 <h4 class="font-bold text-slate-800 group-hover:text-indigo-700 transition-colors">
                                     Autonomous Spraying Robot</h4>
@@ -572,7 +604,7 @@
 
                         <!-- Project 2: Yield Estimation (YOLO) -->
                         <div
-                            class="project-card ai p-5 rounded-xl border border-slate-200 bg-white hover:border-indigo-300 transition-all cursor-default group">
+                            class="project-card ai p-5 rounded-xl border border-white/50 shadow-xl bg-white/50 backdrop-blur-lg hover:border-indigo-300 transition-all cursor-default group">
                             <div class="flex justify-between items-start mb-3">
                                 <h4 class="font-bold text-slate-800 group-hover:text-indigo-700 transition-colors">
                                     Real-Time Yield Estimation</h4>
@@ -588,7 +620,7 @@
 
                         <!-- Project 3: Cotton Harvesting Robot -->
                         <div
-                            class="project-card robotics p-5 rounded-xl border border-slate-200 bg-white hover:border-indigo-300 transition-all cursor-default group">
+                            class="project-card robotics p-5 rounded-xl border border-white/50 shadow-xl bg-white/50 backdrop-blur-lg hover:border-indigo-300 transition-all cursor-default group">
                             <div class="flex justify-between items-start mb-3">
                                 <h4 class="font-bold text-slate-800 group-hover:text-indigo-700 transition-colors">
                                     Cotton Harvesting Robot</h4>
@@ -604,7 +636,7 @@
 
                         <!-- Project 4: Variable Rate Sprayer -->
                         <div
-                            class="project-card robotics p-5 rounded-xl border border-slate-200 bg-white hover:border-indigo-300 transition-all cursor-default group">
+                            class="project-card robotics p-5 rounded-xl border border-white/50 shadow-xl bg-white/50 backdrop-blur-lg hover:border-indigo-300 transition-all cursor-default group">
                             <div class="flex justify-between items-start mb-3">
                                 <h4 class="font-bold text-slate-800 group-hover:text-indigo-700 transition-colors">
                                     Variable Rate Sprayer</h4>
@@ -621,7 +653,7 @@
 
                         <!-- Project 5: TanPredikt -->
                         <div
-                            class="project-card ai p-5 rounded-xl border border-slate-200 bg-white hover:border-indigo-300 transition-all cursor-default group">
+                            class="project-card ai p-5 rounded-xl border border-white/50 shadow-xl bg-white/50 backdrop-blur-lg hover:border-indigo-300 transition-all cursor-default group">
                             <div class="flex justify-between items-start mb-3">
                                 <h4 class="font-bold text-slate-800 group-hover:text-indigo-700 transition-colors">
                                     TanPredikt</h4>
@@ -637,7 +669,7 @@
 
                         <!-- Project 6: NAISS-GAI -->
                         <div
-                            class="project-card ai p-5 rounded-xl border border-slate-200 bg-white hover:border-indigo-300 transition-all cursor-default group">
+                            class="project-card ai p-5 rounded-xl border border-white/50 shadow-xl bg-white/50 backdrop-blur-lg hover:border-indigo-300 transition-all cursor-default group">
                             <div class="flex justify-between items-start mb-3">
                                 <h4 class="font-bold text-slate-800 group-hover:text-indigo-700 transition-colors">
                                     NAISS-GAI</h4>
@@ -651,7 +683,7 @@
 
                         <!-- Project 7: YEESI Lab -->
                         <div
-                            class="project-card ai p-5 rounded-xl border border-slate-200 bg-white hover:border-indigo-300 transition-all cursor-default group">
+                            class="project-card ai p-5 rounded-xl border border-white/50 shadow-xl bg-white/50 backdrop-blur-lg hover:border-indigo-300 transition-all cursor-default group">
                             <div class="flex justify-between items-start mb-3">
                                 <h4 class="font-bold text-slate-800 group-hover:text-indigo-700 transition-colors">YEESI
                                     Lab Ecosystem</h4>
@@ -665,7 +697,7 @@
 
                         <!-- Project 8: SG-NAPI -->
                         <div
-                            class="project-card ai p-5 rounded-xl border border-slate-200 bg-white hover:border-indigo-300 transition-all cursor-default group">
+                            class="project-card ai p-5 rounded-xl border border-white/50 shadow-xl bg-white/50 backdrop-blur-lg hover:border-indigo-300 transition-all cursor-default group">
                             <div class="flex justify-between items-start mb-3">
                                 <h4 class="font-bold text-slate-800 group-hover:text-indigo-700 transition-colors">
                                     SG-NAPI Seed Grant</h4>
@@ -745,7 +777,7 @@
 
     </main>
 
-    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    <footer class="bg-slate-900/80 backdrop-blur-lg text-slate-400 py-12 border-t border-slate-700/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="mb-6 flex justify-center">
                 <img src="profile.png" alt="Dr. Fue"

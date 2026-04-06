@@ -16,11 +16,18 @@
 
     <style>
         /* Custom Styles & Utilities */
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            background-image: radial-gradient(#e0e7ff 1px, transparent 1px);
-            background-size: 24px 24px;
+            background: linear-gradient(-45deg, #e0e7ff, #fae8ff, #f0fdf4, #e0f2fe, #e0e7ff);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            background-attachment: fixed;
         }
 
         .font-mono {
@@ -64,18 +71,22 @@
         @keyframes blob {
             0% {
                 transform: translate(0px, 0px) scale(1);
+                border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
             }
 
             33% {
                 transform: translate(30px, -50px) scale(1.1);
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
             }
 
             66% {
                 transform: translate(-20px, 20px) scale(0.9);
+                border-radius: 30% 70% 50% 50% / 30% 70% 40% 60%;
             }
 
             100% {
                 transform: translate(0px, 0px) scale(1);
+                border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
             }
         }
 
@@ -111,7 +122,7 @@
 <body class="text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900">
 
     <nav
-        class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md border-b border-slate-200 z-50 shadow-sm transition-all duration-300">
+        class="fixed top-0 left-0 w-full bg-white/40 backdrop-blur-lg border-b border-white/60 z-50 shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex-shrink-0 flex items-center gap-3">
@@ -167,7 +178,8 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-lg absolute w-full">
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white/80 backdrop-blur-xl border-t border-white/50 shadow-lg absolute w-full">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="index.html" data-i18n="nav.home"
                     class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 bg-indigo-50">Home</a>
@@ -268,22 +280,26 @@
         </section>
 
         <section class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center card-hover">
+            <div
+                class="bg-white/50 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/50 text-center card-hover">
                 <div class="text-3xl md:text-4xl font-bold text-indigo-600 mb-1">14+</div>
                 <div data-i18n="stats.years_experience"
                     class="text-xs text-slate-500 uppercase font-bold tracking-wide">Years Experience</div>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center card-hover">
+            <div
+                class="bg-white/50 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/50 text-center card-hover">
                 <div class="text-3xl md:text-4xl font-bold text-indigo-600 mb-1">52+</div>
                 <div data-i18n="stats.publications" class="text-xs text-slate-500 uppercase font-bold tracking-wide">
                     Publications</div>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center card-hover">
+            <div
+                class="bg-white/50 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/50 text-center card-hover">
                 <div class="text-3xl md:text-4xl font-bold text-indigo-600 mb-1">1020+</div>
                 <div data-i18n="stats.citations" class="text-xs text-slate-500 uppercase font-bold tracking-wide">
                     Citations</div>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center card-hover">
+            <div
+                class="bg-white/50 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/50 text-center card-hover">
                 <div class="text-3xl md:text-4xl font-bold text-indigo-600 mb-1">$2.0M+</div>
                 <div data-i18n="stats.portfolio" class="text-xs text-slate-500 uppercase font-bold tracking-wide">
                     Project Portfolio Managed</div>
@@ -374,7 +390,7 @@
         </section>
 
         <section id="news"
-            class="bg-white rounded-3xl p-8 md:p-12 shadow-xl shadow-indigo-100/50 border border-slate-100">
+            class="bg-white/50 backdrop-blur-lg rounded-3xl p-8 md:p-12 shadow-xl border border-white/50">
             <div class="flex items-center justify-between mb-8">
                 <div class="flex items-center gap-3">
                     <span class="bg-indigo-100 text-indigo-700 p-3 rounded-xl">
@@ -455,7 +471,7 @@
 
         <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <a href="about.html"
-                class="card-hover group block p-8 bg-white rounded-2xl shadow-sm border border-slate-200 relative overflow-hidden">
+                class="card-hover group block p-8 bg-white/50 backdrop-blur-lg rounded-2xl shadow-xl border border-white/50 relative overflow-hidden">
                 <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                     <svg class="w-24 h-24 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
@@ -470,7 +486,7 @@
             </a>
 
             <a href="research.html"
-                class="card-hover group block p-8 bg-white rounded-2xl shadow-sm border border-slate-200 relative overflow-hidden">
+                class="card-hover group block p-8 bg-white/50 backdrop-blur-lg rounded-2xl shadow-xl border border-white/50 relative overflow-hidden">
                 <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                     <svg class="w-24 h-24 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
                         <path
@@ -486,7 +502,7 @@
             </a>
 
             <a href="publications.html"
-                class="card-hover group block p-8 bg-white rounded-2xl shadow-sm border border-slate-200 relative overflow-hidden">
+                class="card-hover group block p-8 bg-white/50 backdrop-blur-lg rounded-2xl shadow-xl border border-white/50 relative overflow-hidden">
                 <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                     <svg class="w-24 h-24 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd"
@@ -504,7 +520,7 @@
 
     </main>
 
-    <footer class="bg-slate-900 text-slate-400 py-12 mt-12 border-t border-slate-800">
+    <footer class="bg-slate-900/80 backdrop-blur-lg text-slate-400 py-12 mt-12 border-t border-slate-700/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="mb-6 flex justify-center">
                 <img src="profile.png" alt="Dr. Fue"

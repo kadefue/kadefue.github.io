@@ -13,12 +13,18 @@
         rel="stylesheet">
 
     <style>
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            /* Visual: Tech Grid Background */
-            background-image: radial-gradient(#e0e7ff 1px, transparent 1px);
-            background-size: 24px 24px;
+            background: linear-gradient(-45deg, #e0e7ff, #fae8ff, #f0fdf4, #e0f2fe, #e0e7ff);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            background-attachment: fixed;
         }
 
         .font-mono {
@@ -39,8 +45,8 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 30px -5px rgba(79, 70, 229, 0.2);
             border-color: #818cf8;
-            background-color: #ffffff;
-            /* Ensure white background on hover */
+            background-color: rgba(255, 255, 255, 0.7);
+            /* Ensure semi-transparent white background on hover */
         }
     </style>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -49,7 +55,7 @@
 <body class="text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900">
 
     <nav
-        class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 z-50 shadow-sm transition-all">
+        class="fixed top-0 left-0 w-full bg-white/40 backdrop-blur-lg border-b border-white/60 z-50 shadow-sm transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex-shrink-0 flex items-center gap-3">
@@ -101,7 +107,7 @@
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+        <div id="mobile-menu" class="hidden md:hidden bg-white/80 backdrop-blur-xl border-t border-white/50">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="index.html" data-i18n="nav.home"
                     class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Home</a>
@@ -135,7 +141,7 @@
             <div class="space-y-6">
                 <!-- News Item 1 -->
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Sep 10,
@@ -145,7 +151,7 @@
                             AgriMfumo at the 24th International Student Summit in Indonesia</h3>
                         <p class="text-slate-600 text-sm mt-2">
                             Ibrahim Meshack Ibrahimu, CEO of AgriMfumo Ltd (EPAL spin-off), represented SUA at the
-                            [cite_start]summit in Bogor, Indonesia[cite: 2166].
+                            summit in Bogor, Indonesia.
                         </p>
                         <p class="text-slate-500 text-xs mt-2">EPALab News</p>
                     </div>
@@ -153,7 +159,7 @@
 
                 <!-- News Item 2 -->
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Aug 2,
@@ -163,7 +169,7 @@
                             Celebrating BIRD'S DETERRENT Innovation</h3>
                         <p class="text-slate-600 text-sm mt-2">
                             Congratulating Mr. George Robert Komba for developing a "Variable-Frequency Ultrasonic
-                            [cite_start]Deterrent" to protect rice farms[cite: 2763].
+                            Deterrent" to protect rice farms.
                         </p>
                         <p class="text-slate-500 text-xs mt-2">EPALab News</p>
                     </div>
@@ -171,7 +177,7 @@
 
                 <!-- News Item 3 -->
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Jun 26,
@@ -181,14 +187,14 @@
                             AgriMfumo Secures Spot in Vodacom Digital Accelerator Season 4</h3>
                         <p class="text-slate-600 text-sm mt-2">
                             AgriMfumo selected as one of 10 high-potential startups to scale their Mfumo Sense soil
-                            [cite_start]analysis innovation[cite: 2930].
+                            analysis innovation.
                         </p>
                         <p class="text-slate-500 text-xs mt-2">Vodacom Digital Accelerator</p>
                     </div>
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">May 5,
@@ -198,14 +204,14 @@
                             AgriMfumo Advances in KilimoTech Accelerator</h3>
                         <p class="text-slate-600 text-sm mt-2">
                             AgriMfumo selected to advance to the Business & Technical Diagnosis phase of the KilimoTech
-                            [cite_start]Accelerator[cite: 2363].
+                            Accelerator.
                         </p>
                         <p class="text-slate-500 text-xs mt-2">EPALab News</p>
                     </div>
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Apr 12,
@@ -215,14 +221,14 @@
                             EPAL Startups at Innovation Week Tanzania 2025</h3>
                         <p class="text-slate-600 text-sm mt-2">
                             AGRIMFUMO and AGROSCAN represented EPAL at the Future Ready Summit at SUA. Dr. Fue
-                            [cite_start]participated in a high-level panel discussion[cite: 2261, 2263].
+                            participated in a high-level panel discussion.
                         </p>
                         <p class="text-slate-500 text-xs mt-2">Innovation Week Tanzania</p>
                     </div>
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Mar 21,
@@ -231,15 +237,15 @@
                         <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
                             Participation in 'Bank of the Future' Wazo Challenge 2025</h3>
                         <p class="text-slate-600 text-sm mt-2">
-                            [cite_start]Mr. Dickson Massawe represented EPAL/AgroScan at the Wazo Challenge
-                            Tanzania[cite: 2274].
+                            Mr. Dickson Massawe represented EPAL/AgroScan at the Wazo Challenge
+                            Tanzania.
                         </p>
                         <p class="text-slate-500 text-xs mt-2">Absa Bank Tanzania</p>
                     </div>
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Mar 19,
@@ -249,14 +255,14 @@
                             AgriMfumo's Impact at KilimoTech Boot Camp</h3>
                         <p class="text-slate-600 text-sm mt-2">
                             AgriMfumo showcased Mfumo Sense and Mfumo Care solutions at the Kilimo Tech Accelerator
-                            [cite_start]Business and Technical Boot Camp[cite: 2294].
+                            Business and Technical Boot Camp.
                         </p>
                         <p class="text-slate-500 text-xs mt-2">EPALab News</p>
                     </div>
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Mar 14,
@@ -266,14 +272,14 @@
                             Launch of Akilimatik: AI Chatbot for SUA</h3>
                         <p class="text-slate-600 text-sm mt-2">
                             EPAL developed "Akilimatik," an LLM-based digital representative for Sokoine University
-                            [cite_start][cite: 2332].
+                            .
                         </p>
                         <p class="text-slate-500 text-xs mt-2">EPALab News</p>
                     </div>
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Mar 5,
@@ -283,14 +289,14 @@
                             DataSafari Visits EPAL</h3>
                         <p class="text-slate-600 text-sm mt-2">
                             EPAL hosted a delegation from DataSafari to explore collaboration in data science and
-                            [cite_start]technology training for students[cite: 2345].
+                            technology training for students.
                         </p>
                         <p class="text-slate-500 text-xs mt-2">EPALab News</p>
                     </div>
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <a href="https://www.mdpi.com/2072-4292/16/5/838" target="_blank" class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Mar 4,
@@ -299,15 +305,15 @@
                         <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
                             Publication: Drone Remote Sensing for Nitrogen Use Efficiency</h3>
                         <p class="text-slate-600 text-sm mt-2">
-                            [cite_start]Collaborative paper with scientists from Technical University of Munich
-                            (TUM)[cite: 2459].
+                            Collaborative paper with scientists from Technical University of Munich
+                            (TUM).
                         </p>
                         <p class="text-slate-500 text-xs mt-2">MDPI Remote Sensing</p>
                     </a>
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Mar 3,
@@ -317,14 +323,14 @@
                             EPAL Launches Open-Source IoT Server Engine</h3>
                         <p class="text-slate-600 text-sm mt-2">
                             Launch of an IoT server engine based on ThingsBoard to collect and analyze data from
-                            [cite_start]agricultural IoT devices[cite: 2479].
+                            agricultural IoT devices.
                         </p>
                         <p class="text-slate-500 text-xs mt-2">EPALab News</p>
                     </div>
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Feb 28,
@@ -334,14 +340,14 @@
                             Drone Surveillance for Crop Disease at Dakawa</h3>
                         <p class="text-slate-600 text-sm mt-2">
                             EPAL supported the "Artificial Empowered Crop Disease Surveillance" project with drone
-                            [cite_start]mapping and disease identification[cite: 2510].
+                            mapping and disease identification.
                         </p>
                         <p class="text-slate-500 text-xs mt-2">EPALab News</p>
                     </div>
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <a href="https://www.yeesi.org" target="_blank" class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Feb 19,
@@ -357,7 +363,7 @@
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Nov 15,
@@ -367,14 +373,14 @@
                             AI in African Context (AAIAC) Conference</h3>
                         <p class="text-slate-600 text-sm mt-2">
                             Dr. Kadeghe Fue moderated a plenary session on AI in Agriculture and Environmental
-                            [cite_start]Conservation at the AAIAC in Arusha[cite: 2558].
+                            Conservation at the AAIAC in Arusha.
                         </p>
                         <p class="text-slate-500 text-xs mt-2">AAIAC</p>
                     </div>
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Oct 3,
@@ -384,14 +390,14 @@
                             Presentation at Tanzania Health Summit</h3>
                         <p class="text-slate-600 text-sm mt-2">
                             Dr. Fue presented on "Predicting Climate-Sensitive Water-borne Disease Outbreaks" using
-                            [cite_start]data-driven machine learning frameworks[cite: 2595].
+                            data-driven machine learning frameworks.
                         </p>
                         <p class="text-slate-500 text-xs mt-2">Tanzania Health Summit</p>
                     </div>
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <a href="https://www.digitalfrontiersdai.com/resources/digital-agriculture-ecosystem-assessment-tanzania/"
                         target="_blank" class="block group">
                         <div class="flex justify-between items-start mb-2">
@@ -401,16 +407,15 @@
                         <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
                             Featured in USAID Feed the Future Report</h3>
                         <p class="text-slate-600 text-sm mt-2">
-                            [cite_start]EPAL and YEESI Lab featured in "Digital Agriculture Ecosystem Assessment:
-                            Tanzania"[cite:
-                            2569].
+                            EPAL and YEESI Lab featured in "Digital Agriculture Ecosystem Assessment:
+                            Tanzania".
                         </p>
                         <p class="text-slate-500 text-xs mt-2">USAID / Digital Frontiers</p>
                     </a>
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Sep 26,
@@ -420,14 +425,14 @@
                             Farmer Demonstrates 5g Cup Fertilizer Application</h3>
                         <p class="text-slate-600 text-sm mt-2">
                             Demonstration at EPAL farm comparing manual methods with UAV-advised application rates
-                            [cite_start][cite: 2580].
+                            .
                         </p>
                         <p class="text-slate-500 text-xs mt-2">EPALab News</p>
                     </div>
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Sep 7,
@@ -437,14 +442,14 @@
                             President Samia Emphasizes ICT in Agriculture</h3>
                         <p class="text-slate-600 text-sm mt-2">
                             At AGRF 2023, President Samia Hassan highlighted the role of ICT and precision irrigation,
-                            [cite_start]aligning with EPAL's "Mwagilia" app initiatives[cite: 2600].
+                            aligning with EPAL's "Mwagilia" app initiatives.
                         </p>
                         <p class="text-slate-500 text-xs mt-2">AGRF 2023</p>
                     </div>
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Aug 10,
@@ -454,14 +459,14 @@
                             Research Visit to Technical University of Munich</h3>
                         <p class="text-slate-600 text-sm mt-2">
                             Dr. Fue visited TUM as a guest researcher to collaborate on precision agriculture and
-                            [cite_start]agricultural robotics[cite: 2618].
+                            agricultural robotics.
                         </p>
                         <p class="text-slate-500 text-xs mt-2">EPALab News</p>
                     </div>
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-200 transition-colors card-hover">
+                    class="bg-white/50 backdrop-blur-lg p-6 rounded-xl shadow-xl border border-white/50 hover:border-indigo-200 transition-colors card-hover">
                     <div class="block group">
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Aug 1,
@@ -471,7 +476,7 @@
                             Mofaro Robot Featured at NaneNane Exhibition</h3>
                         <p class="text-slate-600 text-sm mt-2">
                             EPAL showcased the autonomous "Mofaro" robot for precision herbicide application at the
-                            [cite_start]NaneNane Farmers Exhibition[cite: 2627].
+                            NaneNane Farmers Exhibition.
                         </p>
                         <p class="text-slate-500 text-xs mt-2">NaneNane Exhibition</p>
                     </div>
@@ -482,7 +487,7 @@
 
     </main>
 
-    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    <footer class="bg-slate-900/80 backdrop-blur-lg text-slate-400 py-12 border-t border-slate-700/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="mb-6 flex justify-center">
                 <img src="profile.png" alt="Dr. Fue"
