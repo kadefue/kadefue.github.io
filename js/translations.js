@@ -81,11 +81,11 @@ const translations = {
             eb1a_judging: "Judging Work",
             eb1a_judging_desc: "Reviewer for <em>IEEE Robotics and Automation Letters (RA-L)</em> and <em>Computers and Electronics in Agriculture</em>.",
             eb1a_role: "Critical Role",
-            eb1a_role_desc: "Technical Lead for the <span class=\"font-bold text-white\">$32M World Bank HEET Project</span> at SUA."
+            eb1a_role_desc: "Technical Lead for the World Bank HEET Project component at SUA."
         },
         jobs: {
             sua_lead_title: "Senior Lecturer / Lead Engineer / Principal Investigator / HEET Digitalization Leader",
-            sua_lead_desc: "Teaching Precision Agriculture Courses, Leading Electronics and Precision Agriculture Research and Working on the Implementation of the $32M World-Bank Funded HEET Project, leading on HEET Digitalization Efforts for the University",
+            sua_lead_desc: "Teaching Precision Agriculture Courses, Leading Electronics and Precision Agriculture Research and Working on the Implementation of the World-Bank Funded HEET Project component, leading on HEET Digitalization Efforts for the University",
             uga_postdoc_title: "Geospatial AI Research Scholar",
             uga_postdoc_desc: "Led development of AI-driven robotics for precision agriculture, including multi-UGV coordination.",
             uga_gra_title: "Graduate Research Assistant",
@@ -197,11 +197,11 @@ const translations = {
             eb1a_judging: "Kazi ya Kuhukumu",
             eb1a_judging_desc: "Mhakiki wa <em>IEEE Robotics and Automation Letters (RA-L)</em> na <em>Computers in Agriculture</em>.",
             eb1a_role: "Jukumu Muhimu",
-            eb1a_role_desc: "Kiongozi wa Kiufundi wa <span class=\"font-bold text-white\">Mradi wa $32M wa Benki ya Dunia wa HEET</span> katika SUA."
+            eb1a_role_desc: "Kiongozi wa Kiufundi wa Mradi wa Benki ya Dunia wa HEET katika SUA."
         },
         jobs: {
             sua_lead_title: "Mhadhiri Mwandamizi / Mhandisi Kiongozi / Kiongozi wa Miradi",
-            sua_lead_desc: "Kuongoza usanifu na usambazaji wa Mradi wa $32M wa HEET, kuanzisha mitaala mipya ya uhandisi na miundombinu.",
+            sua_lead_desc: "Kuongoza usanifu na usambazaji wa Mradi wa HEET, kuanzisha mitaala mipya ya uhandisi na miundombinu.",
             uga_postdoc_title: "Mshirika wa Utafiti wa Akili Mnemba",
             uga_postdoc_desc: "Niliongoza maendeleo ya roboti zinazoendeshwa na Akili Mnemba kwa kilimo cha kisasa, pamoja na uratibu wa UGV nyingi.",
             uga_gra_title: "Msaidizi wa Utafiti wa Wahitimu",
