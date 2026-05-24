@@ -54,6 +54,7 @@ const translations = {
             recent_highlights: "Recent Highlights (2024-2025)",
             highly_cited: "Highly Cited",
             research_projects: "Research & Projects",
+            all_publications: "All Publications",
             research_intro: "Exploring the intersection of <span class=\"text-indigo-600 font-semibold\">Artificial Intelligence</span>, <span class=\"text-indigo-600 font-semibold\">Robotics</span>, and <span class=\"text-indigo-600 font-semibold\">Agriculture</span>. My work focuses on creating sustainable, technology-driven solutions for food systems and environmental management."
         },
         cv: {
@@ -81,7 +82,12 @@ const translations = {
             eb1a_judging: "Judging Work",
             eb1a_judging_desc: "Reviewer for <em>IEEE Robotics and Automation Letters (RA-L)</em> and <em>Computers and Electronics in Agriculture</em>.",
             eb1a_role: "Critical Role",
-            eb1a_role_desc: "Technical Lead for the World Bank HEET Project component at SUA."
+            eb1a_role_desc: "Technical Lead for the World Bank HEET Project component at SUA.",
+            tab_overview: "Overview",
+            tab_experience: "Experience",
+            tab_teaching: "Teaching & Courses",
+            tab_innovations: "Innovations",
+            tab_print: "Print CV (PDF)"
         },
         jobs: {
             sua_lead_title: "Senior Lecturer / Lead Engineer / Principal Investigator / HEET Digitalization Leader",
@@ -112,6 +118,10 @@ const translations = {
             scopus: "Scopus",
             youtube: "YouTube",
             email: "Email"
+        },
+        publications: {
+            search_placeholder: "Search titles, authors, or venues...",
+            no_results: "No publications match your search."
         }
     },
     sw: {
@@ -170,6 +180,7 @@ const translations = {
             recent_highlights: "Vivutio vya Hivi Karibuni (2024-2025)",
             highly_cited: "Yaliyonukuliwa Sana",
             research_projects: "Utafiti na Miradi",
+            all_publications: "Machapisho Yote",
             research_intro: "Kuchunguza makutano ya <span class=\"text-indigo-600 font-semibold\">Akili Mnemba (AI)</span>, <span class=\"text-indigo-600 font-semibold\">Roboti</span>, na <span class=\"text-indigo-600 font-semibold\">Kilimo</span>. Kazi yangu inalenga kuunda suluhisho endelevu, zinazoendeshwa na teknolojia kwa mifumo ya chakula na usimamizi wa mazingira."
         },
         cv: {
@@ -197,7 +208,12 @@ const translations = {
             eb1a_judging: "Kazi ya Kuhukumu",
             eb1a_judging_desc: "Mhakiki wa <em>IEEE Robotics and Automation Letters (RA-L)</em> na <em>Computers in Agriculture</em>.",
             eb1a_role: "Jukumu Muhimu",
-            eb1a_role_desc: "Kiongozi wa Kiufundi wa Mradi wa Benki ya Dunia wa HEET katika SUA."
+            eb1a_role_desc: "Kiongozi wa Kiufundi wa Mradi wa Benki ya Dunia wa HEET katika SUA.",
+            tab_overview: "Muhtasari",
+            tab_experience: "Uzoefu",
+            tab_teaching: "Kufundisha & Masomo",
+            tab_innovations: "Ubunifu",
+            tab_print: "Chapa CV (PDF)"
         },
         jobs: {
             sua_lead_title: "Mhadhiri Mwandamizi / Mhandisi Kiongozi / Kiongozi wa Miradi",
@@ -228,6 +244,10 @@ const translations = {
             scopus: "Scopus",
             youtube: "YouTube",
             email: "Barua Pepe"
+        },
+        publications: {
+            search_placeholder: "Tafuta vichwa vya habari, waandishi, au majarida...",
+            no_results: "Hakuna machapisho yanayolingana na utafutaji wako."
         }
     }
 };
