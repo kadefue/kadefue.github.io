@@ -7,11 +7,12 @@ const translations = {
             research: "Research",
             publications: "Publications",
             cv: "CV",
-            contact: "Contact"
+            contact: "Contact",
+            workdone: "Work Done"
         },
         hero: {
             welcome: "Welcome to my portfolio",
-            role: "Senior Lecturer & Registered Professional Engineer (PE11382).",
+            role: "Senior Lecturer & Registered Professional Engineer (PE11382). Senior Software Development Engineer with 15+ years of experience.",
             description: "Innovating at the intersection of",
             mechatronics: "Mechatronics",
             ai: "AI",
@@ -56,9 +57,9 @@ const translations = {
             research_intro: "Exploring the intersection of <span class=\"text-indigo-600 font-semibold\">Artificial Intelligence</span>, <span class=\"text-indigo-600 font-semibold\">Robotics</span>, and <span class=\"text-indigo-600 font-semibold\">Agriculture</span>. My work focuses on creating sustainable, technology-driven solutions for food systems and environmental management."
         },
         cv: {
-            role_subtitle: "Senior Robotics & Machine Learning Engineer",
-            tagline: "Full-Stack Autonomous Systems | Technical Lead | EB-1A Eligible",
-            intro_text: "Visionary Full-Stack Physical AI Leader with <span class=\"ats-keyword\">14+ years</span> of architecting and deploying pioneering autonomous systems. I bridge the critical \"bit-to-atom\" gap, leading the design of custom mechatronic hardware (<span class=\"ats-keyword\">SolidWorks</span>, <span class=\"ats-keyword\">Arduino</span>) and optimizing real-time perception stacks (<span class=\"ats-keyword\">YOLO</span>, <span class=\"ats-keyword\">Optical Flow</span>) on edge devices (<span class=\"ats-keyword\">NVIDIA Jetson</span>). Proven leadership managing <span class=\"ats-keyword\">$2M+</span> portfolios and winning international data science challenges.",
+            role_subtitle: "Senior Software Development Engineer & Machine Learning Specialist",
+            tagline: "Full-Stack Software Architecture | Autonomous Systems | Technical Lead | EB-1A Eligible",
+            intro_text: "Visionary Senior Software Development Engineer and Physical AI Leader with <span class=\"ats-keyword\">15+ years</span> of architecting, coding, and deploying pioneering full-stack software and autonomous systems. I bridge the critical \"bit-to-atom\" gap, leading the design of custom software architectures, database systems, and mechatronic hardware integrations. Proven leadership managing <span class=\"ats-keyword\">$2M+</span> portfolios and winning international data science challenges.",
             contact_me: "Contact Me",
             github_portfolio: "GitHub Portfolio",
             years_experience: "Years Experience",
@@ -119,11 +120,12 @@ const translations = {
             research: "Utafiti",
             publications: "Machapisho",
             cv: "Wasifu (CV)",
-            contact: "Mawasiliano"
+            contact: "Mawasiliano",
+            workdone: "Kazi Nilizofanya"
         },
         hero: {
             welcome: "Karibu kwenye wasifu wangu",
-            role: "Mhadhiri Mwandamizi na Mhandisi Mtaalamu Aliyesajiliwa (PE11382).",
+            role: "Mhadhiri Mwandamizi na Mhandisi Mtaalamu Aliyesajiliwa (PE11382). Mhandisi Mwandamizi wa Programu mwenye uzoefu wa miaka 15+.",
             description: "Ubunifu katika makutano ya",
             mechatronics: "Mechatronics",
             ai: "Akili Mnemba (AI)",
@@ -169,9 +171,9 @@ const translations = {
             research_intro: "Kuchunguza makutano ya <span class=\"text-indigo-600 font-semibold\">Akili Mnemba (AI)</span>, <span class=\"text-indigo-600 font-semibold\">Roboti</span>, na <span class=\"text-indigo-600 font-semibold\">Kilimo</span>. Kazi yangu inalenga kuunda suluhisho endelevu, zinazoendeshwa na teknolojia kwa mifumo ya chakula na usimamizi wa mazingira."
         },
         cv: {
-            role_subtitle: "Mhandisi Mwandamizi wa Roboti & Kujifunza kwa Mashine",
-            tagline: "Mifumo Kamili ya Kujiendesha | Kiongozi wa Kiufundi | Anayestahili EB-1A",
-            intro_text: "Kiongozi mwenye maono wa AI ya Kimwili na Uzoefu wa <span class=\"ats-keyword\">zaidi ya miaka 14</span> katika kubuni na kusambaza mifumo ya kujiendesha. Ninaunganisha pengo muhimu la \"bit-to-atom\", nikiongoza uundaji wa vifaa maalum vya mechatronic (<span class=\"ats-keyword\">SolidWorks</span>, <span class=\"ats-keyword\">Arduino</span>) na kuboresha mifumo ya utambuzi wa wakati halisi (<span class=\"ats-keyword\">YOLO</span>, <span class=\"ats-keyword\">Optical Flow</span>) kwenye vifaa vya pembezoni (<span class=\"ats-keyword\">NVIDIA Jetson</span>). Uongozi uliothibitishwa wa kusimamia portfolios za <span class=\"ats-keyword\">$2M+</span> na kushinda mashindano ya kimataifa ya sayansi ya data.",
+            role_subtitle: "Mhandisi Mwandamizi wa Programu & Kujifunza kwa Mashine",
+            tagline: "Usanifu Kamili wa Programu | Mifumo ya Kujiendesha | Kiongozi wa Kiufundi | Anayestahili EB-1A",
+            intro_text: "Mhandisi Mwandamizi wa Programu na Kiongozi mwenye maono wa AI ya Kimwili mwenye uzoefu wa <span class=\"ats-keyword\">zaidi ya miaka 15</span> katika kubuni na kuunda mifumo ya programu na kujiendesha. Ninaunganisha pengo muhimu la \"bit-to-atom\", nikiongoza usanifu wa programu, mifumo ya hifadhidata, na uhandisi wa mechatronics. Uongozi uliothibitishwa wa kusimamia portfolios za <span class=\"ats-keyword\">$2M+</span> na kushinda mashindano ya kimataifa ya sayansi ya data.",
             contact_me: "Wasiliana Nami",
             github_portfolio: "Wasifu wa GitHub",
             years_experience: "Miaka ya Uzoefu",

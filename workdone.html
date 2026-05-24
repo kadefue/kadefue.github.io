@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Kadeghe Goodluck Fue - Consultancy & Projects</title>
+    <meta name="description"
+        content="Professional portfolio of Dr. Kadeghe Goodluck Fue, Senior Software Development Engineer and Mechatronics Specialist, showcasing 15+ years of software architecture, full-stack programming, and databases.">
+    <meta name="keywords"
+        content="Dr. Kadeghe Goodluck Fue, software engineer, full-stack, software architecture, databases, project portfolio, mechatronics, AI, agricultural robotics, Tanzania">
+    <meta name="author" content="Dr. Kadeghe Goodluck Fue">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kadefue.github.io/workdone.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kadefue.github.io/workdone.html">
+    <meta property="og:title" content="Projects & Consultancy - Dr. Kadeghe Goodluck Fue">
+    <meta property="og:description"
+        content="Explore the professional portfolio of Dr. Kadeghe Goodluck Fue, featuring 15+ years of technical leadership, enterprise integrations, and software engineering.">
+    <meta property="og:image" content="https://kadefue.github.io/images/profile.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kadefue.github.io/workdone.html">
+    <meta property="twitter:title" content="Projects & Consultancy - Dr. Kadeghe Goodluck Fue">
+    <meta property="twitter:description"
+        content="Explore the professional portfolio of Dr. Kadeghe Goodluck Fue, featuring 15+ years of technical leadership, enterprise integrations, and software engineering.">
+    <meta property="twitter:image" content="https://kadefue.github.io/images/profile.jpg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script data-goatcounter="https://kadefue.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(-45deg, #e0e7ff, #b8c5b8, #f0fdf4, #e0f2fe, #e0e7ff);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            background-attachment: fixed;
+        }
+
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .nav-link.active {
+            color: #4f46e5;
+            border-bottom: 2px solid #4f46e5;
+        }
+
+        /* Hover & Animation Effects */
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -5px rgba(79, 70, 229, 0.2);
+            border-color: #818cf8;
+        }
+
+        /* Work Card Styling */
+        .work-card {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .work-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #4f46e5, #818cf8, #4f46e5);
+            background-size: 200% 100%;
+        }
+
+        .work-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -10px rgba(79, 70, 229, 0.15);
+        }
+
+        .work-year {
+            display: inline-block;
+            padding: 4px 12px;
+            background: linear-gradient(135deg, #4f46e5 0%, #818cf8 100%);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .work-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .work-role {
+            display: inline-block;
+            padding: 2px 8px;
+            background-color: #e0e7ff;
+            color: #4f46e5;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            margin-right: 8px;
+        }
+
+        .work-description {
+            color: #475569;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        /* Filter buttons active state */
+        .filter-btn.active {
+            background-color: #4f46e5;
+            color: #ffffff;
+            border-color: #4f46e5;
+        }
+    </style>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body class="text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900">
+
+    <nav
+        class="fixed top-0 left-0 w-full bg-white/40 backdrop-blur-lg border-b border-white/60 z-50 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="profile.png" alt="Dr. Fue"
+                        class="w-10 h-10 rounded-full border border-indigo-100 shadow-sm object-cover">
+                    <a href="index.html"
+                        class="font-bold text-lg md:text-xl text-slate-900 tracking-tight hover:text-indigo-600 transition-colors">Dr.
+                        Kadeghe Goodluck Fue</a>
+                </div>
+
+                <div class="hidden md:flex space-x-6 lg:space-x-8 items-center">
+                    <a href="index.html" data-i18n="nav.home"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Home</a>
+                    <a href="about.html" data-i18n="nav.about"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">About</a>
+                    <a href="workdone.html" data-i18n="nav.workdone"
+                        class="nav-link active text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Work Done</a>
+                    <a href="news.html" data-i18n="nav.news"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">News</a>
+                    <a href="research.html" data-i18n="nav.research"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Research</a>
+                    <a href="publications.html" data-i18n="nav.publications"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Publications</a>
+                    <a href="cv.html" data-i18n="nav.cv"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">CV</a>
+                    <a href="contact.html" data-i18n="nav.contact"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Contact</a>
+
+                    <!-- Language Switcher Desktop -->
+                    <div class="flex items-center space-x-2 border-l pl-4 border-slate-200">
+                        <button onclick="changeLanguage('en')"
+                            class="lang-btn-en text-sm font-medium hover:text-indigo-600 transition-colors">EN</button>
+                        <span class="text-slate-300">|</span>
+                        <button onclick="changeLanguage('sw')"
+                            class="lang-btn-sw text-sm font-medium text-slate-500 hover:text-indigo-600 transition-colors">SW</button>
+                    </div>
+                </div>
+
+                <div class="flex items-center md:hidden gap-4">
+                    <!-- Language Switcher Mobile -->
+                    <div class="flex items-center space-x-2">
+                        <button onclick="changeLanguage('en')"
+                            class="lang-btn-en text-xs font-medium hover:text-indigo-600 transition-colors">EN</button>
+                        <span class="text-slate-300">|</span>
+                        <button onclick="changeLanguage('sw')"
+                            class="lang-btn-sw text-xs font-medium text-slate-500 hover:text-indigo-600 transition-colors">SW</button>
+                    </div>
+                    <button id="mobile-menu-btn" class="text-slate-500 hover:text-indigo-600 focus:outline-none">
+                        <span class="text-2xl">&#9776;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white/80 backdrop-blur-xl border-t border-white/50 shadow-lg absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" data-i18n="nav.home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Home</a>
+                <a href="about.html" data-i18n="nav.about"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">About</a>
+                <a href="workdone.html" data-i18n="nav.workdone"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 bg-indigo-50">Work Done</a>
+                <a href="news.html" data-i18n="nav.news"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">News</a>
+                <a href="research.html" data-i18n="nav.research"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Research</a>
+                <a href="publications.html" data-i18n="nav.publications"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Publications</a>
+                <a href="cv.html" data-i18n="nav.cv"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">CV</a>
+                <a href="contact.html" data-i18n="nav.contact"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12 space-y-12">
+
+        <!-- Page Header -->
+        <section class="text-center space-y-4 max-w-4xl mx-auto">
+            <div
+                class="inline-block px-4 py-2 text-xs font-semibold tracking-wider text-indigo-700 uppercase bg-indigo-100 rounded-full">
+                Consultancy & Project Work
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+                Software Engineering <span class="text-indigo-600">Portfolio</span>
+            </h1>
+            <p class="text-lg text-slate-600 leading-relaxed">
+                Over 15 years of leading full-stack software development, database architecture, and technical consulting projects for government ministries, academic institutions, and international development organizations (World Bank, FAO, AGRA).
+            </p>
+        </section>
+
+        <!-- Summary Stats -->
+        <section
+            class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white/60 backdrop-blur-lg p-8 rounded-3xl border border-white shadow-xl">
+            <div class="text-center border-r border-slate-200 last:border-0 pr-4 last:pr-0">
+                <div class="text-3xl md:text-4xl font-extrabold text-indigo-600 mb-2">20+</div>
+                <div class="text-xs uppercase font-bold text-slate-500 tracking-wider">Major Systems Deployed</div>
+            </div>
+            <div class="text-center border-r border-slate-200 last:border-0 px-4 last:pr-0">
+                <div class="text-3xl md:text-4xl font-extrabold text-indigo-600 mb-2">15+</div>
+                <div class="text-xs uppercase font-bold text-slate-500 tracking-wider">Years Tech Leadership</div>
+            </div>
+            <div class="text-center border-r border-slate-200 last:border-0 px-4 last:pr-0">
+                <div class="text-3xl md:text-4xl font-extrabold text-indigo-600 mb-2">10+</div>
+                <div class="text-xs uppercase font-bold text-slate-500 tracking-wider">Government Partnerships</div>
+            </div>
+            <div class="text-center last:border-0 pl-4 last:pr-0">
+                <div class="text-3xl md:text-4xl font-extrabold text-indigo-600 mb-2">$2M+</div>
+                <div class="text-xs uppercase font-bold text-slate-500 tracking-wider">Project Portfolios Managed</div>
+            </div>
+        </section>
+
+        <!-- Interactive Search & Filtering -->
+        <section class="space-y-6">
+            <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+                <!-- Search Input -->
+                <div class="relative w-full md:max-w-md">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="h-5 w-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </span>
+                    <input type="text" id="projectSearch"
+                        placeholder="Search projects by keyword, technology, client..."
+                        class="w-full pl-10 pr-4 py-3 bg-white/70 backdrop-blur-sm border border-slate-200 rounded-2xl shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all text-sm text-slate-800">
+                </div>
+
+                <!-- Category Selector -->
+                <div class="flex flex-wrap gap-2 justify-center w-full md:w-auto">
+                    <button onclick="filterCategory('all')" id="cat-all"
+                        class="filter-btn active text-xs font-semibold px-4 py-2.5 rounded-xl border border-slate-300 bg-white/50 text-slate-600 hover:border-indigo-500 hover:text-indigo-600 transition-all">
+                        All Projects
+                    </button>
+                    <button onclick="filterCategory('architecture')" id="cat-architecture"
+                        class="filter-btn text-xs font-semibold px-4 py-2.5 rounded-xl border border-slate-300 bg-white/50 text-slate-600 hover:border-indigo-500 hover:text-indigo-600 transition-all">
+                        Architecture & Integration
+                    </button>
+                    <button onclick="filterCategory('fullstack')" id="cat-fullstack"
+                        class="filter-btn text-xs font-semibold px-4 py-2.5 rounded-xl border border-slate-300 bg-white/50 text-slate-600 hover:border-indigo-500 hover:text-indigo-600 transition-all">
+                        Full-Stack & Databases
+                    </button>
+                    <button onclick="filterCategory('iot')" id="cat-iot"
+                        class="filter-btn text-xs font-semibold px-4 py-2.5 rounded-xl border border-slate-300 bg-white/50 text-slate-600 hover:border-indigo-500 hover:text-indigo-600 transition-all">
+                        IoT, Hardware & AI
+                    </button>
+                    <button onclick="filterCategory('consulting')" id="cat-consulting"
+                        class="filter-btn text-xs font-semibold px-4 py-2.5 rounded-xl border border-slate-300 bg-white/50 text-slate-600 hover:border-indigo-500 hover:text-indigo-600 transition-all">
+                        Expert Consulting
+                    </button>
+                </div>
+            </div>
+
+            <!-- Grid Container for Projects -->
+            <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Projects will be dynamically injected here by JS -->
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="hidden text-center py-12 space-y-4">
+                <svg class="h-12 w-12 text-slate-300 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <h3 class="text-lg font-semibold text-slate-700">No projects found</h3>
+                <p class="text-slate-500 text-sm max-w-md mx-auto">
+                    Try adjusting your keywords or category filters to find the project you are looking for.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900/80 backdrop-blur-lg text-slate-400 py-12 mt-12 border-t border-slate-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-6 flex justify-center">
+                <img src="profile.png" alt="Dr. Fue"
+                    class="w-16 h-16 rounded-full border-2 border-slate-700 grayscale hover:grayscale-0 transition-all duration-500">
+            </div>
+            <p class="mb-4 text-white font-bold text-lg">Dr. Kadeghe Goodluck Fue <span
+                    class="text-slate-400 text-sm font-normal">(PE11382)</span></p>
+            <div class="flex justify-center space-x-6 mb-8 flex-wrap">
+                <a href="https://kadefue.github.io/" data-i18n="common.github"
+                    class="hover:text-white transition-colors">GitHub</a>
+                <a href="https://linkedin.com/in/kadefue/" data-i18n="common.linkedin"
+                    class="hover:text-white transition-colors">LinkedIn</a>
+                <a href="https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en" data-i18n="common.google_scholar"
+                    class="hover:text-white transition-colors">Google Scholar</a>
+                <a href="https://orcid.org/0000-0001-6362-3174" data-i18n="common.orcid"
+                    class="hover:text-white transition-colors">ORCID</a>
+                <a href="mailto:kadefue@gmail.com" data-i18n="common.email"
+                    class="hover:text-white transition-colors">Email</a>
+                <a href="cv.html?download=true" data-download-cv="true"
+                    class="hover:text-white transition-colors">Download CV (PDF)</a>
+            </div>
+            <p class="text-sm text-slate-500">&copy; <span id="year"></span> Kadeghe Goodluck Fue. <span
+                    data-i18n="footer.rights">All rights reserved.</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // Project Data Array with bilingual support
+        const projectsData = [
+            {
+                year: "2026",
+                title: "M&E System Lead Consultant",
+                titleSw: "Mshauri Kiongozi wa Mfumo wa M&E",
+                role: "Consultancy",
+                roleSw: "Ushauri wa Kiufundi",
+                category: "consulting",
+                technologies: ["Software Architecture", "M&E Frameworks", "Dashboard Design"],
+                description: "Development of the Monitoring & Evaluation (M&E) System for the Ministry of Education, Science, and Technology (MoEST). Established comprehensive database schemas and analytical dashboard monitoring frameworks for educational service delivery and technical education sector transformation.",
+                descriptionSw: "Uundaji wa Mfumo wa Ufuatiliaji na Tathmini (M&E) kwa Wizara ya Elimu, Sayansi na Teknolojia (MoEST). Tulisanifu muundo wa hifadhidata na dashibodi za uchambuzi ili kufuatilia utoaji wa huduma za elimu na mageuzi ya sekta ya ufundi."
+            },
+            {
+                year: "2026",
+                title: "Student & Textbook Forecasting AI System",
+                titleSw: "Mfumo wa AI wa Kutabiri Wanafunzi na Vitabu",
+                role: "Lead Developer",
+                roleSw: "Msanidi Programu Kiongozi",
+                category: "iot",
+                technologies: ["Machine Learning", "Python", "Predictive Analytics", "FastAPI"],
+                description: "Development of the Student and Textbook Forecasting System for MoEST. Collaborated with Sokoine University of Agriculture and other higher learning institutions to design and implement machine learning models predicting future educational resource requirements.",
+                descriptionSw: "Uundaji wa Mfumo wa Utabiri wa Wanafunzi na Vitabu kwa MoEST. Tulishirikiana na Chuo Kikuu cha Sokoine cha Kilimo (SUA) na taasisi zingine za elimu ya juu kuunda mifano ya kujifunza kwa mashine inayotabiri mahitaji ya rasilimali za elimu za baadaye."
+            },
+            {
+                year: "2023-2026",
+                title: "SUA Enterprise Service Bus (ESB) System",
+                titleSw: "Mfumo wa SUA Enterprise Service Bus (ESB)",
+                role: "Lead Software Architect",
+                roleSw: "Mbunifu Kiongozi wa Programu",
+                category: "architecture",
+                technologies: ["Enterprise Architecture", "API Integration", "Node.js", "RabbitMQ"],
+                description: "Architected and built the Sokoine University of Agriculture Enterprise Service Bus (SUA ESB). Integrated administrative software components across various government systems for secure, real-time data exchange, enabling seamless interoperability.",
+                descriptionSw: "Tulisanifu na kujenga Mfumo wa Mawasiliano ya Pamoja (ESB) wa Chuo Kikuu cha SUA. Tuliunganisha mifumo mbalimbali ya programu za serikali ili kubadilishana data kwa salama na kwa wakati halisi, na kuwezesha utendaji kazi wa pamoja."
+            },
+            {
+                year: "2022-2023",
+                title: "Smart IoT Trap for Fruit Flies in Avocado Farms",
+                titleSw: "Mtego wa Kiotomatiki (IoT) wa Inzi wa Matunda",
+                role: "Software & Database Consultant",
+                roleSw: "Mshauri wa Programu na Hifadhidata",
+                category: "iot",
+                technologies: ["IoT Integration", "Arduino", "Embedded Systems", "MySQL"],
+                description: "Implementation of Smart Traps for Fruit Flies in Avocado Farms. Collaborated with the University of Georgia (UGA) on a project funded by the Food and Agriculture Organization (FAO). Engineered an IoT pest-monitoring platform combining local sensor hardware with cloud databases.",
+                descriptionSw: "Utekelezaji wa Mitego ya Kiotomatiki (Smart Traps) kwa ajili ya inzi wa matunda kwenye mashamba ya parachichi nchini Tanzania. Ushirikiano na Chuo Kikuu cha Georgia (UGA) kwa ufadhili wa FAO. Tuliunda mfumo wa ufuatiliaji wa wadudu kwa kutumia IoT unaounganisha vitambuzi vya ndani na hifadhidata ya wingu."
+            },
+            {
+                year: "2022-2023",
+                title: "Flood Early Warning Systems (Songwe Basin)",
+                titleSw: "Mfumo wa Tahadhari ya Mafuriko (Bonde la Songwe)",
+                role: "Software & Database Expert",
+                roleSw: "Mtaalamu wa Programu na Hifadhidata",
+                category: "architecture",
+                technologies: ["GIS mapping", "PostgreSQL", "Real-Time Telemetry", "Python"],
+                description: "Consultancy services for Flood Early Warning Systems for the Songwe River Basin, funded by the Joint Songwe River Basin Commission and the EU. Designed real-time telemetric databases and warning systems to support climate resilience.",
+                descriptionSw: "Huduma za ushauri kwa Mfumo wa Tahadhari ya Hali ya Hewa ya Mafuriko kwa Bonde la Mto Songwe, iliyofadhiliwa na Tume ya Pamoja ya Bonde la Mto Songwe na Umoja wa Ulaya. Tulisanifu hifadhidata za telemetry za wakati halisi na mifumo ya tahadhari."
+            },
+            {
+                year: "2021-2022",
+                title: "Ministry of Agriculture M&E System",
+                titleSw: "Mfumo wa M&E wa Wizara ya Kilimo",
+                role: "Lead Developer & Consultant",
+                roleSw: "Msanidi Programu na Mshauri Kiongozi",
+                category: "fullstack",
+                technologies: ["PHP", "Laravel", "PostgreSQL", "Reporting Engine"],
+                description: "Development of the Monitoring and Evaluation Information System for the Ministry of Agriculture in Tanzania, funded by AGRA. Built a robust web application to track country-wide agricultural indicators, budgets, and program milestones.",
+                descriptionSw: "Uundaji wa Mfumo wa Ufuatiliaji na Tathmini (M&E) kwa Wizara ya Kilimo nchini Tanzania, iliyofadhiliwa na AGRA. Tulijenga programu thabiti ya wavuti kufuatilia viashiria vya kilimo, bajeti na hatua za programu nchi nzima."
+            },
+            {
+                year: "2015-2016",
+                title: "STARS Spurring Ag Remote Sensing Database",
+                titleSw: "STARS Mfumo wa Hifadhidata ya Remote Sensing",
+                role: "Lead Developer",
+                roleSw: "Msanidi Programu Kiongozi",
+                category: "fullstack",
+                technologies: ["GeoODK", "Spatial Databases", "Excel Macro Engines", "GIS"],
+                description: "Developed the STARS Aggregate Database System for the AgriSense project at SUA. Focused on integrating geo-spatial data collection platforms (geoODK) with backend storage, enabling automated aggregation and remote sensing visualization.",
+                descriptionSw: "Tulitengeneza Mfumo wa Hifadhidata wa STARS kwa mradi wa AgriSense huko SUA. Tulilenga kuunganisha mifumo ya ukusanyaji data ya kijiografia (geoODK) na hifadhidata ya nyuma, ili kuwezesha ukusanyaji wa kiotomatiki na picha za setilaiti."
+            },
+            {
+                year: "2014-2016",
+                title: "TRANS-SEC WebGIS Food Security Platform",
+                titleSw: "TRANS-SEC Mfumo wa WebGIS wa Usalama wa Chakula",
+                role: "Lead Developer",
+                roleSw: "Msanidi Programu Kiongozi",
+                category: "architecture",
+                technologies: ["WebGIS", "MapServer", "OpenLayers", "JavaScript"],
+                description: "Development of the TRANS-SEC WebGIS System using MapServer and OpenLayers (http://41.73.194.138). Designed an interactive web-based geographic information system for the 'Innovating Strategies to Safeguard Food Security' project.",
+                descriptionSw: "Uundaji wa Mfumo wa TRANS-SEC WebGIS kwa kutumia MapServer na OpenLayers (http://41.73.194.138). Tulisanifu mfumo shirikishi wa taarifa za kijiografia kwenye wavuti kwa ajili ya usalama wa chakula."
+            },
+            {
+                year: "2014-2015",
+                title: "ECAW Climate Adaptation Visualization System",
+                titleSw: "ECAW Mfumo wa Dashibodi ya Hali ya Hewa",
+                role: "Lead Developer & Consultant",
+                roleSw: "Msanidi Programu na Mshauri Kiongozi",
+                category: "fullstack",
+                technologies: ["Data Visualization", "JavaScript Charts", "PHP", "MySQL"],
+                description: "Developed the ECAW Database Visualization System for the project 'Enhancing Climate Change Adaptation in Agriculture and Water Resources in the Greater Horn of Africa'. Created responsive web dashboards to visualize historical weather logs.",
+                descriptionSw: "Tulitengeneza Mfumo wa Dashibodi ya Hifadhidata ya ECAW kwa ajili ya mradi wa kukabiliana na mabadiliko ya tabianchi katika kilimo na rasilimali za maji. Tuliunda dashibodi za wavuti zinazoonyesha kumbukumbu za hali ya hewa."
+            },
+            {
+                year: "2015-2016",
+                title: "w-FAIS Extension Advisor Algorithm",
+                titleSw: "w-FAIS Algorithm ya Upangaji Maafisa Ugani",
+                role: "Lead Algorithm Developer",
+                roleSw: "Msanidi wa Algorithm Kiongozi",
+                category: "architecture",
+                technologies: ["Algorithm Design", "PHP", "Matching Models", "SQL Optimization"],
+                description: "Redeveloped the w-FAIS platform to integrate the CASIS Matching Algorithm. The algorithm automatically matches and assigns specific agricultural extension advisors to remote farmers based on geographic proximity and crop specialization.",
+                descriptionSw: "Tulifanyia maboresho jukwaa la w-FAIS ili kujumuisha Algorithm ya Kulinganisha ya CASIS. Algorithm hii inawapangia wakulima maafisa ugani sahihi kulingana na ukaribu wa kijiografia na aina ya mazao."
+            },
+            {
+                year: "2014-2016",
+                title: "m-FAIS Mobile Agricultural Advice SMS Gateway",
+                titleSw: "m-FAIS Lango la SMS la Ushauri wa Kilimo",
+                role: "Lead Developer",
+                roleSw: "Msanidi Programu Kiongozi",
+                category: "iot",
+                technologies: ["SMS Integration", "Kannel Gateway", "Linux Systems", "Bash"],
+                description: "Integrated the m-FAIS (Farmers Agroadvice Information System) with SMS-based delivery nodes using KANNEL SMS gateway. Enabled automated response capabilities to serve remote farmers without internet access via basic mobile phones.",
+                descriptionSw: "Tuliunganisha mfumo wa m-FAIS (Mfumo wa Ushauri kwa Wakulima) na lango la SMS kwa kutumia Kannel. Hii iliwezesha kutoa majibu ya kiotomatiki kwa wakulima wa vijijini wasio na intaneti kupitia simu za kawaida."
+            },
+            {
+                year: "2015-2016",
+                title: "m-IMAS Mobile SMS Market Information Integration",
+                titleSw: "m-IMAS Mfumo wa Taarifa za Masoko kwa SMS",
+                role: "Lead Developer",
+                roleSw: "Msanidi Programu Kiongozi",
+                category: "iot",
+                technologies: ["Kannel", "SMS API", "MySQL", "PHP"],
+                description: "Integrated the m-IMAS (Market Access System) with SMS-based systems using KANNEL. Designed and optimized database queries that allowed farmers to request and receive crop prices, market locations, and buyer details in real time via text messages.",
+                descriptionSw: "Tuliunganisha mfumo wa m-IMAS (Mfumo wa Kufikia Masoko) na SMS kwa kutumia Kannel. Tulisanifu hifadhidata inayowaruhusu wakulima kuulizia bei za mazao na maeneo ya masoko kwa njia ya ujumbe mfupi wa maandishi."
+            },
+            {
+                year: "2015-2016",
+                title: "Arduino Smart Irrigation Controller",
+                titleSw: "Kidhibiti cha Umwagiliaji cha Arduino",
+                role: "Lead Developer",
+                roleSw: "Msanidi Programu Kiongozi",
+                category: "iot",
+                technologies: ["C++", "Arduino Firmware", "Hardware Prototyping", "MQTT"],
+                description: "Redeveloped an legacy irrigation controller to run on modern Arduino microcontrollers. Wrote low-level firmware in C++ to monitor soil moisture sensors and actuate water pumps automatically based on real-time soil and weather parameters.",
+                descriptionSw: "Tulifanyia maboresho mfumo wa kudhibiti umwagiliaji ili utumie microprocessor ya Arduino. Tuliandika programu (firmware) ya C++ kusoma sensorer za unyevu wa udongo na kuwasha pampu za maji kiotomatiki."
+            },
+            {
+                year: "2015-2016",
+                title: "Bilingual Tomato Value Chain SMS Advisory",
+                titleSw: "Mfumo wa Ushauri wa Nyanya kwa SMS",
+                role: "Lead Developer & Consultant",
+                roleSw: "Msanidi Programu na Mshauri Kiongozi",
+                category: "iot",
+                technologies: ["SMS Response Systems", "Algorithm Design", "PHP", "MySQL"],
+                description: "Integrated the Tomato Business Access Information System with an intelligent SMS response database and the CASIS questioning algorithm. Enabled farmers to diagnose tomato diseases and retrieve local market advice via mobile.",
+                descriptionSw: "Tuliunganisha mfumo wa biashara ya nyanya na jukwaa la SMS na algorithm ya maswali ya CASIS. Ilisaidia wakulima kutambua magonjwa ya nyanya na kupata ushauri wa masoko kupitia simu zao za mkononi."
+            },
+            {
+                year: "2011-2012",
+                title: "EPINAV Project Monitoring & Evaluation System",
+                titleSw: "Mfumo wa M&E wa Miradi ya EPINAV",
+                role: "Lead Developer",
+                roleSw: "Msanidi Programu Kiongozi",
+                category: "fullstack",
+                technologies: ["PHP", "CodeIgniter", "MySQL", "Excel Export Utilities"],
+                description: "Designed and developed the web-based Monitoring and Evaluation (M&E) system for the EPINAV program at SUA. Built features to track progress indicators, generate automated Excel reports, and audit institutional research budgets.",
+                descriptionSw: "Tulisanifu na kutengeneza mfumo wa wavuti wa Ufuatiliaji na Tathmini (M&E) kwa ajili ya programu ya EPINAV huko SUA. Tulijenga zana za kutoa ripoti za Excel na kukagua bajeti za utafiti."
+            },
+            {
+                year: "2011-2012",
+                title: "National Academic Results Release Portal",
+                titleSw: "Mfumo wa Utoaji wa Matokeo ya Mitihani",
+                role: "Lead Developer",
+                roleSw: "Msanidi Programu Kiongozi",
+                category: "fullstack",
+                technologies: ["Web Portals", "Security Auditing", "PHP", "MySQL"],
+                description: "Developed a secure Results Release Information System to disseminate educational examination results to students, parents, and administrative staff. Focused on database security, encryption, and high-concurrency handling.",
+                descriptionSw: "Tulitengeneza Mfumo salama wa Wavuti wa kutoa matokeo ya mitihani kwa wanafunzi na wazazi. Tulilenga usalama wa hifadhidata, usimbaji fiche (encryption), na uwezo wa kuhudumia watumiaji wengi kwa wakati mmoja."
+            },
+            {
+                year: "2012-2016",
+                title: "SUASIS Student Information System Maintenance",
+                titleSw: "Maboresho na Matengenezo ya SUASIS",
+                role: "Lead Systems Programmer",
+                roleSw: "Mhudumu Kiongozi wa Mfumo",
+                category: "fullstack",
+                technologies: ["Database Tuning", "Security Patching", "PHP", "PostgreSQL"],
+                description: "Principal maintenance programmer for the Sokoine University of Agriculture Student Information System (suasis.sua.ac.tz). Successfully maintained system stability through database indexing, query optimization, and feature enhancements.",
+                descriptionSw: "Mhandisi mkuu wa matengenezo ya Mfumo wa Taarifa za Wanafunzi wa SUA (suasis.sua.ac.tz). Tulihakikisha utulivu wa mfumo kupitia uboreshaji wa hifadhidata na kuongeza vipengele vipya kila mwaka."
+            },
+            {
+                year: "2011-2012",
+                title: "TLTC Tobacco Supply Chain Tracker",
+                titleSw: "Mfumo wa Kufuatilia Tumbaku wa TLTC",
+                role: "Lead Developer",
+                roleSw: "Msanidi Programu Kiongozi",
+                category: "fullstack",
+                technologies: ["Supply Chain Software", "Database Architecture", "C#.NET", "MSSQL"],
+                description: "Developed a Tobacco Purchase Tracking and Evaluation Information System for the Tanzania Leaf Tobacco Company (TLTC). Built tools tracking procurement from farm registration to grade evaluation and warehouse storage.",
+                descriptionSw: "Tulitengeneza Mfumo wa kufuatilia ununuzi na tathmini ya tumbaku kwa ajili ya kampuni ya Tanzania Leaf Tobacco Company (TLTC). Tulijenga mifumo ya kufuatilia tumbaku tangu shambani hadi ghalani."
+            },
+            {
+                year: "2015-2016",
+                title: "SUASIS USSD Mobile Banking Gateway",
+                titleSw: "Lango la Malipo la SUASIS USSD",
+                role: "Lead Developer",
+                roleSw: "Msanidi Programu Kiongozi",
+                category: "architecture",
+                technologies: ["USSD Integrations", "Web Services APIs", "Fintech", "Security"],
+                description: "Integrated SUASIS database with mobile money providers (M-Pesa, Tigopesa, Airtel Money) using Web Services APIs. Designed the backend logic for the university's mobile payment system (*150*03#) for student fee verification.",
+                descriptionSw: "Tuliunganisha hifadhidata ya SUASIS na mifumo ya malipo ya mitandao ya simu kupitia Web Services APIs. Tulisanifu mfumo wa malipo wa USSD (*150*03#) ili kuthibitisha ada za wanafunzi."
+            },
+            {
+                year: "2016",
+                title: "CBE Multi-Bank Mobile Payment Engine",
+                titleSw: "Mfumo wa Malipo ya Simu kwa Benki Nyingi (CBE)",
+                role: "Lead Developer & Trainer",
+                roleSw: "Msanidi Programu na Mkufunzi Kiongozi",
+                category: "architecture",
+                technologies: ["Fintech APIs", "Bank Integrations (CRDB, NMB, NBC)", "PHP", "Security"],
+                description: "Developed the College of Business Education (CBE) Mobile Payment System connecting to CRDB, NMB, and NBC. Engineered secure transactional web APIs and trained technical staff on system security and integration protocols.",
+                descriptionSw: "Tulitengeneza Mfumo wa Malipo ya Simu wa Chuo cha CBE unaounganisha benki za CRDB, NMB, na NBC. Tuliunda APIs salama za kifedha na kuwafundisha watumishi wa IT jinsi ya kuendesha mfumo huo."
+            }
+        ];
+
+        // Render projects based on search text and category filters
+        let currentFilter = 'all';
+
+        function getLang() {
+            return localStorage.getItem('site_lang') || 'en';
+        }
+
+        function filterCategory(cat) {
+            currentFilter = cat;
+
+            // Update button styles
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(`cat-${cat}`).classList.add('active');
+
+            renderProjects();
+        }
+
+        function renderProjects() {
+            const query = document.getElementById('projectSearch').value.toLowerCase();
+            const grid = document.getElementById('projectsGrid');
+            const emptyState = document.getElementById('emptyState');
+            const lang = getLang();
+
+            grid.innerHTML = '';
+
+            // Filter data
+            const filtered = projectsData.filter(proj => {
+                // Category match
+                if (currentFilter !== 'all' && proj.category !== currentFilter) {
+                    return false;
+                }
+
+                // Search query match
+                const matchTitle = (lang === 'sw' ? proj.titleSw || proj.title : proj.title).toLowerCase().includes(query);
+                const matchRole = (lang === 'sw' ? proj.roleSw || proj.role : proj.role).toLowerCase().includes(query);
+                const matchDesc = (lang === 'sw' ? proj.descriptionSw || proj.description : proj.description).toLowerCase().includes(query);
+                const matchTech = proj.technologies.some(t => t.toLowerCase().includes(query));
+
+                return matchTitle || matchRole || matchDesc || matchTech;
+            });
+
+            if (filtered.length === 0) {
+                grid.classList.add('hidden');
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            grid.classList.remove('hidden');
+            emptyState.classList.add('hidden');
+
+            filtered.forEach(proj => {
+                const card = document.createElement('div');
+                card.className = 'work-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between';
+
+                const titleText = lang === 'sw' ? proj.titleSw || proj.title : proj.title;
+                const roleText = lang === 'sw' ? proj.roleSw || proj.role : proj.role;
+                const descText = lang === 'sw' ? proj.descriptionSw || proj.description : proj.description;
+
+                // Build technologies badges
+                let techBadges = '';
+                proj.technologies.forEach(tech => {
+                    techBadges += `<span class="bg-slate-100 text-slate-600 text-xs font-semibold px-2.5 py-1 rounded-md border border-slate-200">${tech}</span>`;
+                });
+
+                card.innerHTML = `
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <span class="work-year">${proj.year}</span>
+                            <span class="text-xs font-mono font-bold text-indigo-500 uppercase">${proj.category.toUpperCase()}</span>
+                        </div>
+                        <h3 class="work-title">${titleText}</h3>
+                        <div class="mb-3">
+                            <span class="work-role">${roleText}</span>
+                        </div>
+                        <p class="work-description">${descText}</p>
+                    </div>
+                    <div class="mt-4 flex flex-wrap gap-1.5 border-t border-slate-100 pt-4">
+                        ${techBadges}
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Initialize and listen to search inputs
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProjects();
+
+            document.getElementById('projectSearch').addEventListener('input', () => {
+                renderProjects();
+            });
+
+            // Listen to language switcher triggers (we wrap the original changeLanguage to re-render the projects list)
+            const origChangeLang = window.changeLanguage;
+            window.changeLanguage = function (lang) {
+                if (origChangeLang) origChangeLang(lang);
+                // Translate the custom search placeholder
+                const searchInput = document.getElementById('projectSearch');
+                if (lang === 'sw') {
+                    searchInput.placeholder = "Tafuta miradi kwa neno lolote, teknolojia, mteja...";
+                } else {
+                    searchInput.placeholder = "Search projects by keyword, technology, client...";
+                }
+                renderProjects();
+            };
+
+            // Set initial placeholder based on loaded language
+            const initialLang = localStorage.getItem('site_lang') || 'en';
+            const searchInput = document.getElementById('projectSearch');
+            if (initialLang === 'sw') {
+                searchInput.placeholder = "Tafuta miradi kwa neno lolote, teknolojia, mteja...";
+            }
+        });
+    </script>
+</body>
+
+</html>
