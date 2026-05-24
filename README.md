@@ -1,7 +1,7 @@
 # Dr. Kadeghe Goodluck Fue (KadeFue)
 
-**Researcher | Developer | Consultant**
-*Digital Agriculture, Precision Agriculture, Machine Vision, Automation, and Robotics*
+**Senior Software Development Engineer | Machine Learning Specialist | Senior Lecturer**
+*Mechatronics, Artificial Intelligence, and Precision Agriculture*
 
 > *"I dedicate this page of my work to my Bro Ibra. R.I.P."*
 
@@ -9,132 +9,109 @@
 
 ## 🚀 Repository Overview
 
-This repository hosts the source files for Dr. Kadeghe Goodluck Fue’s personal academic website. The site is built as a clean, responsive static portfolio that highlights his research, teaching, consultancy, and technology leadership.
+This repository hosts the source files for Dr. Kadeghe Goodluck Fue’s personal academic website and engineering portfolio. The site is built as a highly responsive, premium static portfolio featuring dual-language localization (English & Swahili), glassmorphic styling, and interactive data tools to showcase his 15+ years of professional software architecture, research, teaching, and consultancy work.
 
 ### Built with
-
-* **HTML**, **CSS**, and **JavaScript**
-* Lightweight responsive layout
-* Professional visual design for academic and professional audiences
+* **HTML5** & **Tailwind CSS** (for a modern, responsive utility-first layout)
+* **Vanilla JavaScript** (dynamic client-side Swahili/English translation, real-time portfolio search/filtering, and interactive animations)
+* **Custom Glassmorphic Aesthetics** (smooth micro-animations, curated gradient color palettes, and responsive mobile drawers)
 
 ---
 
 ## 📖 About Dr. Fue
 
-Dr. Kadeghe Goodluck Fue is a **Senior Lecturer** and **Researcher** at the **Sokoine University of Agriculture (SUA)** in Morogoro, Tanzania. His work sits at the intersection of agriculture, technology, and innovation, with a strong focus on solving societal problems through **AgRobotics**, **Precision Agriculture**, and **Software Systems**.
+Dr. Kadeghe Goodluck Fue is a **Senior Lecturer of Mechatronics, Artificial Intelligence and Precision Agriculture** at the **Sokoine University of Agriculture (SUA)** in Morogoro, Tanzania. He sits at the forefront of digital transformation in Africa, developing software architecture, mobile apps, database integrations, and intelligent systems that solve real-world problems in agriculture and education.
 
-He specializes in systems engineering, machine vision, robotics, and knowledge-driven agricultural services that support sustainable farming and community development.
+Dr. Fue has over 15 years of software development engineering and systems architecture experience, executing projects with international organizations (e.g., FAO, Trans-SEC) and ministries of education/finance.
 
 ### 🎓 Education
 * **PhD in Engineering (Machine Vision & Agricultural Robotics)** – University of Georgia, USA (2016–2020)
-* **MSc in Agricultural and Biological Engineering** – University of Florida, USA (2012–2014)
+* **MSc in Agricultural and Biological Engineering (Automation & Precision Ag)** – University of Florida, USA (2012–2014)
 * **BSc in Computer Engineering & Information Technology** – University of Dar es Salaam, Tanzania (2007–2011)
 
 ---
 
-## 🔬 Research & Labs
+## 🔬 Research Labs & Leadership
 
-Dr. Fue leads research that uses sensor networks, intelligent systems, and image-based analytics to optimize crop productivity, reduce waste, and improve farm-level decision making.
+Dr. Fue leads research projects combining sensor networks, computer vision, and machine learning to build next-generation agricultural solutions:
 
 ### EPALAB (Electronics and Precision Agriculture Lab)
-A research hub focused on practical agricultural innovations using:
-* Satellite and drone sensing
-* IoT networks for soil, weather, and crop monitoring
-* Large-scale farm monitoring and yield prediction
+A pioneering research hub for practical agricultural innovations:
+* Satellite and drone-based multispectral sensing
+* Edge AI and IoT networks for real-time soil, climate, and crop health monitoring
+* Yield prediction and large-scale agricultural database systems
 
-### YEESI Lab (Morogoro Youth Empowerment through Establishment of Social Innovation)
-A youth innovation incubator that trains students in:
-* Machine vision and image analysis
-* Low-cost agricultural technologies
-* Social innovation for community impact
-
----
-
-## 🛠 Skills & Technology Stack
-
-### Programming & Database Languages
-* Python, PHP, JavaScript, C/C++, R, VB, C#
-* MySQL, MSSQL, PostgreSQL
-
-### Frameworks & Tools
-* **AI/Vision:** TensorFlow, Keras, OpenCV, CUDA
-* **Web/Backend:** Laravel, CodeIgniter, Django
-* **GIS/Mapping:** MapServer, GeoServer, OpenLayers, QGIS, ArcGIS, GeoODK
-* **Robotics/Hardware:** ROS, Arduino, Raspberry Pi, microcontrollers, IoT systems
+### YEESI Lab (Youth Empowerment through Establishment of Social Innovation)
+An innovation incubator providing hands-on training to youth in:
+* Machine vision models and image analysis
+* Low-cost embedded devices and agricultural robotics
+* Creative software engineering to solve community issues
 
 ---
 
-## 💼 Consultancy & Projects
+## 🛠 Technical Expertise & Tech Stack
 
-Dr. Fue provides consultancy and software engineering services in systems development, electronic control systems, and data solutions.
+### Software Architecture & Development
+* **Backend Frameworks:** Laravel, Django, CodeIgniter, Node.js, ASP.NET (VB.NET, C#)
+* **Frontend:** Tailwind CSS, Vanilla JS, HTML5, CSS3, dynamic i18n architectures
+* **Database Management:** PostgreSQL, MySQL, MSSQL (design, tuning, API integrations)
 
-* **Web Service APIs (2016–2019):** Built integrations for the College of Business Education (CBE) with Government Central Payment System, TCU, NACTE, and banks (CRDB, NMB, NBC).
-* **Tomato Business Access Information System (2016):** Developed a value-chain platform with SMS response integration for EPINAV.
-* **m-IMAS:** Created a mobile integrated market access system using **KANNEL** SMS infrastructure for Trans-Sec.
-* **SUASIS Mobile Payment Integration:** Connected SUA student information systems with payment gateways.
-* **WebGIS Systems:** Delivered mapping applications for TRANS-SEC using MapServer and OpenLayers.
+### AI, Machine Vision & Data Science
+* **Machine Learning & DL:** Neural Networks, Deep Learning, TensorFlow, Keras
+* **Computer Vision:** OpenCV, CUDA, camera calibration, multispectral image processing
+* **Data Tools:** Python, R, predictive modeling, statistical data pipelines
 
----
-
-## 🌟 Project Files
-
-* `index.html` – Homepage with professional highlights and expertise
-* `about.html` – Detailed biography, employment record, education, and skills overview
-* `contact.html` – Contact details and outreach links
-* `research.html` – Research priorities and publications summary
-* `publications.html` – Academic publications and citations
-* `news.html` – Announcements and recent updates
-* `gallery/` – Visual portfolio and project imagery
-* `images/` – Media assets used throughout the site
-* `js/` – Client-side scripts for internationalization and interactivity
+### Embedded Systems & Autonomous Navigation
+* **Hardware & IoT:** ROS (Robot Operating System), Arduino, Raspberry Pi, ESP32, microcontrollers
+* **Sensors:** LiDAR, GPS/GNSS, IMU, ultrasonic, sensor fusion algorithms
 
 ---
 
-## 🧭 Site Map
+## 💼 Interactive Portfolio & Projects
 
-* `index.html` – Main homepage
-* `about.html` – Full biography, employment history, education, and skills
-* `research.html` – Research focus areas and lab activities
-* `publications.html` – Publication list and academic work
-* `news.html` – Announcements and recent developments
-* `contact.html` – Contact methods and professional links
-
----
-
-## 🤝 How to Contribute
-
-If you want to improve the website or help keep it up to date:
-
-1. Fork this repository.
-2. Create a new branch for your changes.
-3. Edit content, add images, or improve layout as needed.
-4. Commit your changes with a clear message.
-5. Open a pull request describing what you changed and why.
-
-Contributions that enhance accessibility, improve mobile layout, or refine site content are especially welcome.
+Dr. Fue's portfolio features a standalone interactive portal (`workdone.html`) that lists his 20+ software design and consultancy engagements. Users can search and filter projects in real-time. Key achievements include:
+* **Web Service API Integrations:** Connected the College of Business Education (CBE) with the Tanzanian Government Central Payment System (GePG), TCU, NACTE, and financial institutions (CRDB, NMB, NBC).
+* **Tomato Business Access Information System:** Designed a SMS-integrated agricultural value-chain platform for EPINAV.
+* **m-IMAS:** Developed a Mobile Integrated Market Access System leveraging KANNEL SMS gateways.
+* **SUASIS Mobile Payment Integration:** Bridged SUA student information portals with mobile payment gateways.
 
 ---
 
-## 🔧 Local Preview
+## 🌟 Project Files & Sitemap
 
-To preview the site locally from the repository root:
+* [index.html](file:///Users/kadefue/kadefue.github.io/kadefue.github.io/index.html) – Homepage highlighting professional stats, core expertise cards, and recent news.
+* [workdone.html](file:///Users/kadefue/kadefue.github.io/kadefue.github.io/workdone.html) – Interactive projects directory with search query filters and categories.
+* [about.html](file:///Users/kadefue/kadefue.github.io/kadefue.github.io/about.html) – Biography, employment history, research milestones, and tech stack details.
+* [cv.html](file:///Users/kadefue/kadefue.github.io/kadefue.github.io/cv.html) – Online curriculum vitae styled for screen viewing and print-media output.
+* [contact.html](file:///Users/kadefue/kadefue.github.io/kadefue.github.io/contact.html) – Inquiry forms and direct contact routes.
+* [research.html](file:///Users/kadefue/kadefue.github.io/kadefue.github.io/research.html) – Academic labs, research focus areas, and grant histories.
+* [publications.html](file:///Users/kadefue/kadefue.github.io/kadefue.github.io/publications.html) – Comprehensive list of journals, conference papers, and citations.
+* [news.html](file:///Users/kadefue/kadefue.github.io/kadefue.github.io/news.html) – Announcements, media releases, and upcoming sessions.
+* `js/translations.js` – Localization config map managing Swahili/English bilingual outputs.
+
+---
+
+## 🔧 Local Preview & Development
+
+To spin up a local preview server from the repository root directory:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000` in your browser.
+Then open `http://localhost:8000` in your web browser.
 
 ---
 
-## 📬 Contact
-
-**Dr. Kadeghe Goodluck Fue**
+## 📬 Contact & Profiles
 
 * **Email:** `kadefue [at] sua.ac.tz` | `kadefue [at] gmail.com`
-* **LinkedIn:** https://www.linkedin.com/in/kadefue/
-* **Google Scholar:** https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en
-* **ORCID:** https://orcid.org/0000-0001-6362-3174
+* **GitHub Profile:** [https://github.com/kadefue/](https://github.com/kadefue/)
+* **LinkedIn:** [https://www.linkedin.com/in/kadefue/](https://www.linkedin.com/in/kadefue/)
+* **Google Scholar:** [https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en](https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en)
+* **ORCID:** [https://orcid.org/0000-0001-6362-3174](https://orcid.org/0000-0001-6362-3174)
+* **Scopus Author ID:** [https://www.scopus.com/authid/detail.uri?authorId=57211333796](https://www.scopus.com/authid/detail.uri?authorId=57211333796)
+* **YouTube Channel:** [https://www.youtube.com/@Dr.Fue](https://www.youtube.com/@Dr.Fue)
 
 ---
 
