@@ -109,6 +109,8 @@ const translations = {
             linkedin: "LinkedIn",
             google_scholar: "Google Scholar",
             orcid: "ORCID",
+            scopus: "Scopus",
+            youtube: "YouTube",
             email: "Email"
         }
     },
@@ -223,6 +225,8 @@ const translations = {
             linkedin: "LinkedIn",
             google_scholar: "Google Scholar",
             orcid: "ORCID",
+            scopus: "Scopus",
+            youtube: "YouTube",
             email: "Barua Pepe"
         }
     }
