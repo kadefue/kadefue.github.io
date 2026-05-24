@@ -121,7 +121,8 @@ const translations = {
         },
         publications: {
             search_placeholder: "Search titles, authors, or venues...",
-            no_results: "No publications match your search."
+            no_results: "No publications match your search.",
+            show_elements: "Show:"
         }
     },
     sw: {
@@ -247,7 +248,8 @@ const translations = {
         },
         publications: {
             search_placeholder: "Tafuta vichwa vya habari, waandishi, au majarida...",
-            no_results: "Hakuna machapisho yanayolingana na utafutaji wako."
+            no_results: "Hakuna machapisho yanayolingana na utafutaji wako.",
+            show_elements: "Onyesha:"
         }
     }
 };
