@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Kadeghe Goodluck Fue - Home</title>
     <meta name="description"
+<<<<<<< HEAD
         content="Official website of Dr. Kadeghe Goodluck Fue, Senior Robotics & Machine Learning Engineer and Researcher. Specializing in autonomous systems, Edge AI, and agricultural robotics.">
     <meta name="keywords"
         content="Dr. Kadeghe Goodluck Fue, robotics engineer, machine learning, AI researcher, autonomous systems, Edge AI, agricultural robotics, computer vision, embedded systems, Tanzania">
+=======
+        content="Official website of Dr. Kadeghe Goodluck Fue, Senior Software Development Engineer and Robotics & Machine Learning Specialist. 15+ years of professional development experience.">
+    <meta name="keywords" content="Dr. Kadeghe Goodluck Fue, software engineer, robotics engineer, machine learning, AI researcher, autonomous systems, Edge AI, agricultural robotics, computer vision, embedded systems, full-stack developer, software architecture">
+>>>>>>> 879e89b52e228606eefa630e13f9ed27da4388b7
     <meta name="author" content="Dr. Kadeghe Goodluck Fue">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://kadefue.github.io/">
@@ -16,17 +21,27 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kadefue.github.io/">
+<<<<<<< HEAD
     <meta property="og:title" content="Dr. Kadeghe Goodluck Fue - Robotics & AI Engineer Portfolio">
     <meta property="og:description"
         content="Senior Robotics & Machine Learning Engineer specializing in autonomous systems, Edge AI, and agricultural robotics.">
+=======
+    <meta property="og:title" content="Dr. Kadeghe Goodluck Fue - Software Engineering & AI Portfolio">
+    <meta property="og:description" content="Senior Software Development Engineer & Robotics Specialist with 15+ years of professional experience in autonomous systems, Edge AI, and agricultural robotics.">
+>>>>>>> 879e89b52e228606eefa630e13f9ed27da4388b7
     <meta property="og:image" content="https://kadefue.github.io/images/profile.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://kadefue.github.io/">
+<<<<<<< HEAD
     <meta property="twitter:title" content="Dr. Kadeghe Goodluck Fue - Robotics & AI Engineer Portfolio">
     <meta property="twitter:description"
         content="Senior Robotics & Machine Learning Engineer specializing in autonomous systems, Edge AI, and agricultural robotics.">
+=======
+    <meta property="twitter:title" content="Dr. Kadeghe Goodluck Fue - Software Engineering & AI Portfolio">
+    <meta property="twitter:description" content="Senior Software Development Engineer & Robotics Specialist with 15+ years of professional experience in autonomous systems, Edge AI, and agricultural robotics.">
+>>>>>>> 879e89b52e228606eefa630e13f9ed27da4388b7
     <meta property="twitter:image" content="https://kadefue.github.io/images/profile.jpg">
 
     <!-- Structured Data -->
@@ -35,22 +50,24 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Dr. Kadeghe Goodluck Fue",
-        "jobTitle": "Senior Robotics & Machine Learning Engineer",
-        "description": "Researcher and engineer specializing in autonomous systems, Edge AI, and agricultural robotics",
+        "jobTitle": "Senior Software Development Engineer & Machine Learning Specialist",
+        "description": "Professional Software Engineer and researcher with 15+ years of experience in autonomous systems, Edge AI, robotics, and agricultural technology",
         "url": "https://kadefue.github.io/",
         "sameAs": [
             "https://github.com/kadefue",
             "https://linkedin.com/in/kadeghe-fue"
         ],
         "knowsAbout": [
-            "Robotics",
+            "Software Development",
+            "Full-Stack Development",
+            "Robotics Engineering",
             "Machine Learning",
             "Artificial Intelligence",
             "Computer Vision",
             "Embedded Systems",
             "Autonomous Systems",
             "Edge AI",
-            "Agricultural Robotics"
+            "Agricultural Technology"
         ],
         "alumniOf": {
             "@type": "EducationalOrganization",
@@ -58,7 +75,7 @@
         },
         "hasOccupation": {
             "@type": "Occupation",
-            "name": "Robotics Engineer",
+            "name": "Software Development Engineer",
             "occupationLocation": {
                 "@type": "Country",
                 "name": "Tanzania"
@@ -181,6 +198,67 @@
 
         .slide-image.active {
             opacity: 1;
+        }
+
+        /* Work Card Styling */
+        .work-card {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .work-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #4f46e5, #818cf8, #4f46e5);
+            background-size: 200% 100%;
+        }
+
+        .work-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -10px rgba(79, 70, 229, 0.15);
+        }
+
+        .work-year {
+            display: inline-block;
+            padding: 4px 12px;
+            background: linear-gradient(135deg, #4f46e5 0%, #818cf8 100%);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .work-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .work-role {
+            display: inline-block;
+            padding: 2px 8px;
+            background-color: #e0e7ff;
+            color: #4f46e5;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            margin-right: 8px;
+        }
+
+        .work-description {
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 8px;
         }
     </style>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -313,10 +391,12 @@
                             class="text-slate-600">(PhD, P.Eng PE11382)</span>
                     </h1>
                     <p class="text-lg md:text-xl text-slate-600 font-medium mb-8 leading-relaxed max-w-2xl">
-                        <span data-i18n="hero.role">Senior Lecturer & Registered Professional Engineer (PE11382).</span>
+                        <span data-i18n="hero.role">Senior Lecturer & Registered Professional Engineer (PE11382). Software Development Engineer with 15+ years of professional experience.</span>
                         <br>
-                        <span data-i18n="hero.description">Innovating at the intersection of</span> <span
-                            data-i18n="hero.mechatronics"
+                        <span data-i18n="hero.description">Expert in</span> <span
+                            data-i18n="hero.software_dev"
+                            class="text-indigo-600 font-bold bg-indigo-50 px-1 rounded">Full-Stack Software Development</span>,
+                        <span data-i18n="hero.mechatronics"
                             class="text-indigo-600 font-bold bg-indigo-50 px-1 rounded">Mechatronics</span>,
                         <span data-i18n="hero.ai" class="text-indigo-600 font-bold bg-indigo-50 px-1 rounded">Artificial
                             Intelligence</span>,
@@ -335,12 +415,11 @@
                             </svg>
                         </a>
                         <a href="research.html"
-                            class="card-hover bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-xl hover:border-indigo-500 hover:text-indigo-600 transition-all font-medium shadow-sm flex items-center gap-2">
+                            class="card-hover bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-xl hover:border-indigo-500 hover:text-indigo-600 transition-all font-medium shadow-lg shadow-indigo-100 flex items-center gap-2">
                             <span data-i18n="hero.view_research">View Research</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
-                                </path>
+                                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l2.414 2.414a2 2 0 00.586 1.414l2.414 2.414a2 2 0 00.586 1.414l2.414 2.414"></path>
                             </svg>
                         </a>
                     </div>
@@ -351,9 +430,9 @@
         <section class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             <div
                 class="bg-white/50 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/50 text-center card-hover">
-                <div class="text-3xl md:text-4xl font-bold text-indigo-600 mb-1">14+</div>
+                <div class="text-3xl md:text-4xl font-bold text-indigo-600 mb-1">15+</div>
                 <div data-i18n="stats.years_experience"
-                    class="text-xs text-slate-500 uppercase font-bold tracking-wide">Years Experience</div>
+                    class="text-xs text-slate-500 uppercase font-bold tracking-wide">Years Professional Development</div>
             </div>
             <div
                 class="bg-white/50 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/50 text-center card-hover">
@@ -375,16 +454,217 @@
             </div>
         </section>
 
+<<<<<<< HEAD
         <section id="expertise"
             class="bg-white rounded-3xl p-8 md:p-12 shadow-xl shadow-indigo-100/50 border border-slate-100">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-slate-900 mb-4">Expertise in Robotics & AI</h2>
                 <p class="text-slate-600 max-w-2xl mx-auto">Showcasing advanced capabilities in robotics engineering,
                     artificial intelligence, and autonomous systems</p>
+=======
+        <!-- WORK DONE SECTION -->
+        <section id="work-done" class="bg-white/50 backdrop-blur-lg rounded-3xl p-8 md:p-12 shadow-xl border border-white/50">
+            <div class="text-center mb-12">
+                <div class="inline-block px-4 py-2 mb-4 text-xs font-semibold tracking-wider text-indigo-700 uppercase bg-indigo-100 rounded-full">
+                    Professional Portfolio
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Consultancy & Project Work</h2>
+                <p class="text-slate-600 max-w-3xl mx-auto text-lg">Over 15 years of leading software development and technology consultancy projects across government institutions, international organizations, and research programs. Specialized in agricultural technology, digital infrastructure, and innovative solutions for food security and digital transformation.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                <!-- Project 1 -->
+                <div class="work-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <span class="work-year">2026</span>
+                    <div class="work-title">M&E System Lead Consultant</div>
+                    <div class="work-role">Consultancy</div>
+                    <div class="work-description">Development of the M&E System for the Ministry of EST. Established comprehensive monitoring and evaluation frameworks for educational service delivery and technical education sector transformation.</div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="work-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <span class="work-year">2026</span>
+                    <div class="work-title">Machine Learning Engineer</div>
+                    <div class="work-role">Lead Developer</div>
+                    <div class="work-description">Development of the Student and TextBook Forecasting System for MoEST. Collaborated with Ministry of Education and Science Technology (MoEST) and other higher learning institutions to implement AI-driven forecasting models for educational resource planning.</div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="work-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <span class="work-year">2023-2026</span>
+                    <div class="work-title">Lead Software Architect</div>
+                    <div class="work-role">Architecture & Development</div>
+                    <div class="work-description">Development of SUA ESB System. Architected enterprise service bus system collaborating with multiple government institutions for seamless integration and interoperability of critical government services and data systems.</div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="work-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <span class="work-year">2022-2023</span>
+                    <div class="work-title">Software and Database Consultant</div>
+                    <div class="work-role">Consultancy</div>
+                    <div class="work-description">Implementation of Smart Trap for Fruit Flies in Avocado Farms in Tanzania. Collaborated with University of Georgia. Funded by Food and Agriculture Organization (FAO). Developed IoT-based pest management system combining hardware sensors with intelligent monitoring software.</div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="work-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <span class="work-year">2022-2023</span>
+                    <div class="work-title">Software and Database Expert & Consultant</div>
+                    <div class="work-role">Expert Consultant</div>
+                    <div class="work-description">Provision of Consultancy Services for Flood Early Warning Systems for the Songwe River Basin. Funded by The Joint Songwe River Basin Commission and European Union. Designed real-time data systems for disaster risk reduction and climate resilience.</div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="work-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <span class="work-year">2021-2022</span>
+                    <div class="work-title">Lead Developer & Consultant</div>
+                    <div class="work-role">Lead Development</div>
+                    <div class="work-description">Development of the Monitoring and Evaluation Information System for Ministry of Agriculture. Funded by AGRA. Built comprehensive M&E platform to track agricultural development programs and measure impact across the country.</div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="work-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <span class="work-year">2015-2016</span>
+                    <div class="work-title">Lead Developer</div>
+                    <div class="work-role">Development</div>
+                    <div class="work-description">Development of the STARS Aggregate Database System using geoODK and Excel/Graph technologies. SUA Project: AgriSense - Spurring a Transformation for Agriculture through Remote Sensing. Integrated geospatial data collection with advanced visualization.</div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="work-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <span class="work-year">2014-2016</span>
+                    <div class="work-title">Lead Developer</div>
+                    <div class="work-role">Web GIS Development</div>
+                    <div class="work-description">Development of TRANS-SEC WebGIS System using MapServer and OpenLayers (http://41.73.194.138). SUA Project: Innovating Strategies to Safeguard Food Security using Technology and Knowledge Transfer. Built interactive web mapping platform for food security monitoring.</div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="work-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <span class="work-year">2014-2015</span>
+                    <div class="work-title">Lead Developer & Consultant</div>
+                    <div class="work-role">Database Visualization</div>
+                    <div class="work-description">Development of ECAW Database Visualization System. SUA Project: Enhancing Climate Change Adaptation in Agriculture and Water Resources in the Greater Horn of Africa. Created interactive dashboards for climate and water resource data analysis.</div>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="work-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <span class="work-year">2015-2016</span>
+                    <div class="work-title">Lead Algorithm Developer & Programmer</div>
+                    <div class="work-role">Algorithm Development</div>
+                    <div class="work-description">Redevelopment of w-FAIS to Integrate Automatic Assignment of AgroExperts. CASIS algorithm automatically recognizes and assigns the best agricultural extension advisors to farmers. SUA Project: EPINAV - Improving Agricultural Extension Services Coverage for Maize Value Chain.</div>
+                </div>
+
+                <!-- Project 11 -->
+                <div class="work-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <span class="work-year">2014-2016</span>
+                    <div class="work-title">Lead Developer</div>
+                    <div class="work-role">Mobile Integration</div>
+                    <div class="work-description">Integrating m-FAIS (Farmers Agroadvice Information System) to SMS-based Systems using KANNEL. SUA Project: EPINAV - Improving coverage of agricultural extension services via mobile phones. Enabled reach to underserved rural farming communities.</div>
+                </div>
+
+                <!-- Project 12 -->
+                <div class="work-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <span class="work-year">2015-2016</span>
+                    <div class="work-title">Lead Developer</div>
+                    <div class="work-role">Market Systems Development</div>
+                    <div class="work-description">Integrating m-IMAS (Market Access System) to SMS-based Systems using KANNEL. SUA Project: Trans-Sec - Innovating Strategies to Safeguard Food Security. Connected farmers directly to market information and pricing data via SMS.</div>
+                </div>
+
+                <!-- Project 13 -->
+                <div class="work-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <span class="work-year">2015-2016</span>
+                    <div class="work-title">Lead Developer</div>
+                    <div class="work-role">Hardware Integration</div>
+                    <div class="work-description">Redevelopment of Irrigation Controller to Use Arduino Systems. Upgraded legacy irrigation control systems with modern Arduino microcontroller architecture. Enabled smart irrigation management and real-time sensor monitoring.</div>
+                </div>
+
+                <!-- Project 14 -->
+                <div class="work-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <span class="work-year">2015-2016</span>
+                    <div class="work-title">Lead Developer</div>
+                    <div class="work-role">AI Integration</div>
+                    <div class="work-description">Integrating Tomato Business Access Information System with SMS Response Software and CASIS Questioning Algorithm. SUA Project: EPINAV - Improving Market Information in Tanzania for Tomato Value Chains. Developed intelligent SMS-based advisory system for farmers.</div>
+                </div>
+
+                <!-- Project 15 -->
+                <div class="work-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <span class="work-year">2011-2012</span>
+                    <div class="work-title">Lead Developer</div>
+                    <div class="work-role">Information Systems</div>
+                    <div class="work-description">Development of M&E for EPINAV Projects. Built comprehensive monitoring and evaluation systems to track agricultural extension project outcomes and impacts across Tanzania.</div>
+                </div>
+
+                <!-- Project 16 -->
+                <div class="work-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <span class="work-year">2011-2012</span>
+                    <div class="work-title">Lead Developer</div>
+                    <div class="work-role">System Development</div>
+                    <div class="work-description">Development of Results Release Information System. Engineered system for secure dissemination of educational examination results to students and institutions nationwide.</div>
+                </div>
+
+                <!-- Project 17 -->
+                <div class="work-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <span class="work-year">2012-2016</span>
+                    <div class="work-title">Lead Maintenance & Testing Programmer</div>
+                    <div class="work-role">System Administration</div>
+                    <div class="work-description">SUA Students Information System (suasis.sua.ac.tz) Maintenance and Enhancement. Served as principal maintenance programmer, adding critical functionalities and maintaining system stability through daily preventive maintenance. Managed continuous system evolution.</div>
+                </div>
+
+                <!-- Project 18 -->
+                <div class="work-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <span class="work-year">2011-2012</span>
+                    <div class="work-title">Lead Developer</div>
+                    <div class="work-role">Tracking System</div>
+                    <div class="work-description">Development of Tobacco Purchase Tracking and Evaluation Information System for TLTC. Built end-to-end system for tobacco supply chain management, from farmer procurement to quality evaluation and market processing.</div>
+                </div>
+
+                <!-- Project 19 -->
+                <div class="work-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <span class="work-year">2015-2016</span>
+                    <div class="work-title">Lead Developer</div>
+                    <div class="work-role">Mobile Payment System</div>
+                    <div class="work-description">Integrating SUASIS to Mobile Banking Systems using Webservices APIs. Developed SUA Mobile Payment System (*150*03#). Enabled students and staff to conduct financial transactions via mobile phones, revolutionizing campus payment infrastructure.</div>
+                </div>
+
+                <!-- Project 20 -->
+                <div class="work-card bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <span class="work-year">2016</span>
+                    <div class="work-title">Lead Developer & Trainer</div>
+                    <div class="work-role">Financial Systems</div>
+                    <div class="work-description">Development of CBE Mobile Payment System Connecting to 3 Different Banks (CRDB, NMB &amp; NBC). Engineered secure multi-bank payment platform for mobile transactions. June - August 2016. Provided training for operational staff and system administrators.</div>
+                </div>
+            </div>
+
+            <!-- Summary Stats -->
+            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 bg-gradient-to-r from-indigo-50 to-purple-50 p-8 rounded-2xl border border-indigo-100">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-indigo-600 mb-2">20+</div>
+                    <div class="text-sm font-semibold text-slate-600">Major Projects Led</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-indigo-600 mb-2">15+</div>
+                    <div class="text-sm font-semibold text-slate-600">Years Experience</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-indigo-600 mb-2">10+</div>
+                    <div class="text-sm font-semibold text-slate-600">Government Partnerships</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-indigo-600 mb-2">5+</div>
+                    <div class="text-sm font-semibold text-slate-600">International Funding</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="expertise" class="bg-white rounded-3xl p-8 md:p-12 shadow-xl shadow-indigo-100/50 border border-slate-100">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Software Development & Engineering Expertise</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">Comprehensive technical expertise spanning full-stack development, robotics engineering, artificial intelligence, and autonomous systems architecture with 15+ years of professional experience</p>
+>>>>>>> 879e89b52e228606eefa630e13f9ed27da4388b7
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="text-center group">
+<<<<<<< HEAD
                     <div
                         class="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-2xl mb-4 group-hover:shadow-lg transition-all duration-300">
                         <svg class="w-16 h-16 text-indigo-600 mx-auto mb-4" fill="none" stroke="currentColor"
@@ -392,13 +672,18 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
                             </path>
+=======
+                    <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-2xl mb-4 group-hover:shadow-lg transition-all duration-300">
+                        <svg class="w-16 h-16 text-indigo-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+>>>>>>> 879e89b52e228606eefa630e13f9ed27da4388b7
                         </svg>
-                        <h3 class="text-xl font-bold text-slate-900 mb-4">Robotics Engineering</h3>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4">Software Architecture & Development</h3>
 
                         <!-- Progress indicators -->
                         <div class="space-y-3 mb-4">
                             <div class="flex justify-between items-center">
-                                <span class="text-sm text-slate-600">System Design</span>
+                                <span class="text-sm text-slate-600">Full-Stack Development</span>
                                 <span class="text-sm font-bold text-indigo-600">95%</span>
                             </div>
                             <div class="w-full bg-slate-200 rounded-full h-2">
@@ -408,27 +693,28 @@
 
                         <div class="space-y-3 mb-4">
                             <div class="flex justify-between items-center">
-                                <span class="text-sm text-slate-600">Control Systems</span>
+                                <span class="text-sm text-slate-600">Backend Systems</span>
+                                <span class="text-sm font-bold text-indigo-600">92%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 92%"></div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-slate-600">Database Design</span>
                                 <span class="text-sm font-bold text-indigo-600">90%</span>
                             </div>
                             <div class="w-full bg-slate-200 rounded-full h-2">
                                 <div class="bg-indigo-600 h-2 rounded-full" style="width: 90%"></div>
                             </div>
                         </div>
-
-                        <div class="space-y-3">
-                            <div class="flex justify-between items-center">
-                                <span class="text-sm text-slate-600">Integration</span>
-                                <span class="text-sm font-bold text-indigo-600">88%</span>
-                            </div>
-                            <div class="w-full bg-slate-200 rounded-full h-2">
-                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 88%"></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
                 <div class="text-center group">
+<<<<<<< HEAD
                     <div
                         class="bg-gradient-to-br from-green-50 to-green-50 p-8 rounded-2xl mb-4 group-hover:shadow-lg transition-all duration-300">
                         <svg class="w-16 h-16 text-purple-600 mx-auto mb-4" fill="none" stroke="currentColor"
@@ -436,8 +722,13 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
                             </path>
+=======
+                    <div class="bg-gradient-to-br from-green-50 to-green-50 p-8 rounded-2xl mb-4 group-hover:shadow-lg transition-all duration-300">
+                        <svg class="w-16 h-16 text-purple-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 11-1.414-1.414M9 9h.01"></path>
+>>>>>>> 879e89b52e228606eefa630e13f9ed27da4388b7
                         </svg>
-                        <h3 class="text-xl font-bold text-slate-900 mb-4">Artificial Intelligence</h3>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4">Artificial Intelligence & Machine Learning</h3>
 
                         <!-- Achievement badges -->
                         <div class="flex justify-center gap-2 mb-4">
@@ -470,6 +761,7 @@
                 </div>
 
                 <div class="text-center group">
+<<<<<<< HEAD
                     <div
                         class="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-2xl mb-4 group-hover:shadow-lg transition-all duration-300">
                         <svg class="w-16 h-16 text-green-600 mx-auto mb-4" fill="none" stroke="currentColor"
@@ -506,10 +798,19 @@
                                 </svg>
                             </div>
                         </div>
+=======
+                    <div class="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-2xl mb-4 group-hover:shadow-lg transition-all duration-300">
+                        <svg class="w-16 h-16 text-green-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 10l2 2 4-4"></path>
+                        </svg>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4">Embedded Systems & IoT</h3>
+>>>>>>> 879e89b52e228606eefa630e13f9ed27da4388b7
 
+                        <!-- Progress Indicators -->
                         <div class="space-y-3 mb-4">
                             <div class="flex justify-between items-center">
-                                <span class="text-sm text-slate-600">Image Processing</span>
+                                <span class="text-sm text-slate-600">Microcontroller Programming</span>
                                 <span class="text-sm font-bold text-green-600">94%</span>
                             </div>
                             <div class="w-full bg-slate-200 rounded-full h-2">
@@ -519,15 +820,16 @@
 
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
-                                <span class="text-sm text-slate-600">Object Detection</span>
-                                <span class="text-sm font-bold text-green-600">87%</span>
+                                <span class="text-sm text-slate-600">Hardware Integration</span>
+                                <span class="text-sm font-bold text-green-600">91%</span>
                             </div>
                             <div class="w-full bg-slate-200 rounded-full h-2">
-                                <div class="bg-green-600 h-2 rounded-full" style="width: 87%"></div>
+                                <div class="bg-green-600 h-2 rounded-full" style="width: 91%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
 
                 <div class="text-center group">
                     <div
@@ -1056,6 +1358,8 @@
                             Africa: Adoption, Benefits and Losses" in Frontiers in Sustainable Food Systems.</p>
                     </div>
                 </div>
+=======
+>>>>>>> 879e89b52e228606eefa630e13f9ed27da4388b7
             </div>
         </section>
 
@@ -1080,7 +1384,7 @@
                 <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                     <svg class="w-24 h-24 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
                         <path
-                            d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z">
+                            d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0018.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 0114.5 14c-1.669 0-3.218-.51-4.5-1.385A7.962 7.962 0 015.5 14c-1.255 0-2.443-.29-3.5-.804v-10z">
                         </path>
                     </svg>
                 </div>
@@ -1141,22 +1445,16 @@
     <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
     <script>
-        // "Webbling Exchanging" Slideshow Script
+        // Slideshow Script
         const images = document.querySelectorAll('.slide-image');
         let currentImageIndex = 0;
 
         function rotateImages() {
-            // Remove active class from current image
             images[currentImageIndex].classList.remove('active');
-
-            // Calculate next index
             currentImageIndex = (currentImageIndex + 1) % images.length;
-
-            // Add active class to next image
             images[currentImageIndex].classList.add('active');
         }
 
-        // Change image every 4 seconds
         setInterval(rotateImages, 4000);
     </script>
 </body>
