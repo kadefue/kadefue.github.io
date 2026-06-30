@@ -203,233 +203,1125 @@
                 margin: 10px 0 18px;
             }
         }
+        /* Custom print-specific styles */
+        @media print {
+            .break-inside-avoid {
+                break-inside: avoid !important;
+                page-break-inside: avoid !important;
+            }
+            .print-section {
+                margin-top: 24px !important;
+                margin-bottom: 24px !important;
+            }
+            .print-section-title {
+                font-size: 13pt !important;
+                font-weight: bold !important;
+                color: #0f172a !important;
+                border-bottom: 2px solid #94a3b8 !important;
+                padding-bottom: 4px !important;
+                margin-bottom: 16px !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.05em !important;
+            }
+            .print-only a {
+                color: #2563eb !important;
+                text-decoration: underline !important;
+            }
+        }
     </style>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body class="text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900">
 
-    <div class="print-only">
-        <div class="min-h-screen bg-white p-6">
-            <div class="mx-auto max-w-5xl rounded-3xl border border-slate-200 bg-slate-50 print-card p-6">
-                <div class="grid gap-6 lg:grid-cols-[2.5fr_1fr] items-start">
+                <div class="print-only">
+        <div class="bg-white p-6 max-w-5xl mx-auto">
+            <!-- HEADER -->
+            <div class="border-b-4 border-indigo-600 pb-6 mb-6">
+                <div class="grid grid-cols-1 md:grid-cols-[2.5fr_1.5fr] gap-6 items-start">
                     <div>
-                        <div class="inline-flex items-center gap-3 mb-4">
-                            <div class="h-3 w-20 rounded-full bg-gradient-to-r from-indigo-600 via-cyan-500 to-sky-400">
-                            </div>
-                            <span class="text-xs uppercase tracking-[0.2em] text-slate-500">Executive CV</span>
-                        </div>
-                        <h1 class="text-4xl font-bold tracking-tight text-slate-900">Dr. Kadeghe Goodluck Fue</h1>
-                        <p class="mt-2 text-base text-slate-700">Leader • Scientist • Engineer</p>
-                        <div class="mt-4 text-sm text-slate-600 space-y-2">
-                            <div><strong>Sokoine University of Agriculture</strong> — Senior Lecturer, Mechatronics,
-                                Artificial Intelligence & Precision Agriculture</div>
-                            <div><strong>Email:</strong> kadefue [at] sua.ac.tz | kadefue [at] gmail.com</div>
-                            <div><strong>Links:</strong> linkedin.com/in/kadefue | orcid.org/0000-0001-6362-3174 | Scopus ID: 56711330500 | YouTube: youtube.com/user/kadefue</div>
-                        </div>
+                        <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">Dr. Kadeghe Goodluck Fue</h1>
+                        <p class="text-indigo-600 font-semibold text-sm mt-1">Senior Lecturer • Registered Professional Engineer (PE11382) • AI & Robotics Leader</p>
+                        <p class="text-slate-700 text-xs mt-3 leading-relaxed">
+                            <strong>Sokoine University of Agriculture</strong><br>
+                            Department of Agricultural Engineering and Computer Planning<br>
+                            Morogoro, Tanzania
+                        </p>
                     </div>
-                    <div class="flex justify-center lg:justify-end">
-                        <div class="w-36 h-36 rounded-3xl overflow-hidden border-4 border-indigo-200 shadow-xl">
-                            <img src="profile.png" alt="Dr. Fue" class="w-full h-full object-cover">
-                        </div>
+                    <div class="text-left md:text-right text-xs text-slate-600 space-y-1 md:border-l border-slate-200 pl-0 md:pl-6">
+                        <div><strong>Email:</strong> kadefue@sua.ac.tz | kadefue@gmail.com</div>
+                        <div><strong>LinkedIn:</strong> linkedin.com/in/kadefue</div>
+                        <div><strong>ORCID:</strong> orcid.org/0000-0001-6362-3174</div>
+                        <div><strong>Scopus ID:</strong> 56711330500</div>
+                        <div><strong>YouTube:</strong> youtube.com/user/kadefue</div>
                     </div>
-                </div>
-
-                <div class="graphic-bar"></div>
-
-                <div class="grid gap-6 lg:grid-cols-[2fr_1fr]">
-                    <section>
-                        <h2 class="section-title text-xl font-bold mb-3">Professional Summary</h2>
-                        <p class="text-sm leading-relaxed text-slate-700">Accomplished senior software development engineer and AI leader with over 15 years of professional experience. Proven track record in designing, coding, and maintaining robust full-stack software architectures, database systems, and mechatronic systems. Combines academic rigor with applied engineering to deliver scalable digital services, machine vision networks, and autonomous hardware-software integrations.</p>
-                        <div class="mt-6 grid gap-4 sm:grid-cols-2">
-                            <div class="rounded-3xl bg-indigo-50 p-4">
-                                <h3 class="text-sm font-semibold text-indigo-700">Leadership</h3>
-                                <p class="text-xs text-slate-600 mt-2">Led the World Bank HEET project at SUA,
-                                    coordinating cross-disciplinary teams and delivering technology solutions for higher
-                                    education and agriculture.</p>
-                            </div>
-                            <div class="rounded-3xl bg-slate-100 p-4">
-                                <h3 class="text-sm font-semibold text-slate-900">Research & Science</h3>
-                                <p class="text-xs text-slate-600 mt-2">Published peer-reviewed work in robotics and
-                                    agricultural AI, with a focus on sensor-driven decision systems and environmental
-                                    intelligence.</p>
-                            </div>
-                            <div class="rounded-3xl bg-cyan-50 p-4">
-                                <h3 class="text-sm font-semibold text-cyan-700">Engineering Impact</h3>
-                                <p class="text-xs text-slate-600 mt-2">Designed embedded control systems and autonomous
-                                    vehicle prototypes for crop monitoring, irrigation management, and field robotics.
-                                </p>
-                            </div>
-                            <div class="rounded-3xl bg-emerald-50 p-4">
-                                <h3 class="text-sm font-semibold text-emerald-700">Innovation</h3>
-                                <p class="text-xs text-slate-600 mt-2">Built applied solutions integrating IoT, GIS, and
-                                    AI for precision agriculture and public-sector digital services.</p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <aside class="rounded-3xl bg-white p-5 shadow-sm border border-slate-200">
-                        <h2 class="section-title text-xl font-bold mb-3">Quick Facts</h2>
-                        <ul class="space-y-3 text-sm text-slate-700">
-                            <li><strong>15+ years</strong> of academic, research, and engineering experience</li>
-                            <li><strong>100+</strong> trained students and young innovators</li>
-                            <li><strong>$2.0M</strong> project portfolio leadership for HEET program</li>
-                            <li><strong>8+</strong> international grants and awards</li>
-                            <li><strong>Peer reviewer</strong> for IEEE RA-L and Computers in Agriculture</li>
-                        </ul>
-                    </aside>
-                </div>
-
-                <div class="section-divider"></div>
-
-                <div class="grid gap-6 lg:grid-cols-2">
-                    <section class="rounded-3xl bg-white p-5 shadow-sm border border-slate-200">
-                        <h2 class="section-title text-xl font-bold mb-3">Leadership & Management</h2>
-                        <ul class="list-disc pl-5 text-sm text-slate-700 space-y-2">
-                            <li>Senior Lecturer and leader for Mechatronics, Artificial Intelligence, and Precision Agriculture.
-                            </li>
-                            <li>Acting Coordinator of the Academic Information Management and Support Unit.</li>
-                            <li>Principal Investigator of <a href="https://www.epalab.org/" target="_blank"
-                                    class="text-indigo-600 hover:text-indigo-800 hover:underline transition-colors font-medium">EPALAB</a>
-                                and mentor for the <a href="https://yeesi.epalab.org" target="_blank"
-                                    class="text-indigo-600 hover:text-indigo-800 hover:underline transition-colors font-medium">YEESI
-                                    innovation lab</a>.</li>
-                            <li>Managed multidisciplinary research teams across academia and government.</li>
-                        </ul>
-                    </section>
-
-                    <section class="rounded-3xl bg-white p-5 shadow-sm border border-slate-200">
-                        <h2 class="section-title text-xl font-bold mb-3">Research Excellence</h2>
-                        <ul class="list-disc pl-5 text-sm text-slate-700 space-y-2">
-                            <li>Geospatial AI and machine vision for precision crop monitoring.</li>
-                            <li>Novel robotics control methods for autonomous agricultural vehicles.</li>
-                            <li>Data-driven irrigation scheduling and smart farm decision support.</li>
-                            <li>Published work and funded research in international journals.</li>
-                        </ul>
-                    </section>
-                </div>
-
-                <div class="section-divider"></div>
-
-                <div class="grid gap-6 lg:grid-cols-[1.3fr_0.7fr]">
-                    <section>
-                        <h2 class="section-title text-xl font-bold mb-3">Education</h2>
-                        <div class="space-y-4 text-sm text-slate-700">
-                            <div class="rounded-3xl bg-slate-50 p-4 border border-slate-200">
-                                <strong>PhD in Engineering</strong><br>University of Georgia, USA<br><span
-                                    class="text-xs text-slate-500">Machine Vision & Agricultural Robotics</span>
-                            </div>
-                            <div class="rounded-3xl bg-slate-50 p-4 border border-slate-200">
-                                <strong>MSc in Agricultural and Biological Engineering</strong><br>University of
-                                Florida, USA<br><span class="text-xs text-slate-500">Information Systems, Automation,
-                                    Precision Agriculture</span>
-                            </div>
-                            <div class="rounded-3xl bg-slate-50 p-4 border border-slate-200">
-                                <strong>BSc in Computer Engineering & Information Technology</strong><br>University of
-                                Dar es Salaam, Tanzania<br><span class="text-xs text-slate-500">Electronics, Software,
-                                    Telecommunications</span>
-                            </div>
-                        </div>
-                    </section>
-
-                    <aside class="rounded-3xl bg-slate-50 p-5 border border-slate-200">
-                        <h2 class="section-title text-xl font-bold mb-3">Technical Stack</h2>
-                        <div class="space-y-3 text-sm text-slate-700">
-                            <div><strong>Languages:</strong> Python, C/C++, JavaScript, R, PHP</div>
-                            <div><strong>AI / Vision:</strong> TensorFlow, Keras, OpenCV, PyTorch</div>
-                            <div><strong>Robotics:</strong> ROS, Gazebo, Arduino, Raspberry Pi</div>
-                            <div><strong>GIS / Data:</strong> QGIS, ArcGIS, MapServer, OpenLayers</div>
-                            <div><strong>Systems:</strong> Laravel, Django, MySQL, MSSQL</div>
-                        </div>
-                    </aside>
                 </div>
             </div>
 
-            <div
-                class="print-page mt-8 mx-auto max-w-5xl rounded-3xl border border-slate-200 bg-slate-50 print-card p-6">
-                <div class="grid gap-5 lg:grid-cols-[1.2fr_0.8fr] items-start">
-                    <div>
-                        <h2 class="section-title text-xl font-bold mb-3">Professional Experience</h2>
-                        <div class="space-y-4 text-sm text-slate-700">
-                            <div>
-                                <strong>Senior Lecturer</strong> — Sokoine University of Agriculture<br>
-                                Led teaching, research, and laboratory development in mechatronics, artificial intelligence, and
-                                precision agriculture.
-                            </div>
-                            <div>
-                                <strong>Educational Technology & Digital Infrastructure Specialist</strong><br>
-                                Led digital transformation projects for HEET and institutional learning systems.
-                            </div>
-                            <div>
-                                <strong>Research Scholar</strong> — North Carolina State University<br>
-                                Conducted geospatial AI research and machine vision experiments for agriculture and
-                                natural resource planning.
-                            </div>
-                        </div>
-                    </div>
+            <!-- PROFESSIONAL SUMMARY -->
+            <div class="print-section">
+                <h2 class="print-section-title text-base font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-3">Professional Summary</h2>
+                <p class="text-xs text-slate-700 leading-relaxed">
+                    Accomplished senior software development engineer and AI leader with over 15 years of professional experience. Proven track record in designing, coding, and maintaining robust full-stack software architectures, database systems, and mechatronic systems. Combines academic rigor with applied engineering to deliver scalable digital services, machine vision networks, and autonomous hardware-software integrations.
+                </p>
+            </div>
 
-                    <aside class="rounded-3xl bg-white p-5 shadow-sm border border-slate-200">
-                        <h2 class="section-title text-xl font-bold mb-3">Recognition</h2>
-                        <ul class="list-disc pl-5 text-sm text-slate-700 space-y-2">
-                            <li>AI for Equity Challenge winner (advancing climate action, gender equality, and health).</li>
-                            <li>TWAS-BMBF Seed Grant awardee.</li>
-                            <li>Lead technical role in World Bank HEET Project.</li>
-                            <li>Published author and peer reviewer.</li>
+            <!-- TECHNICAL STACK -->
+            <div class="print-section break-inside-avoid">
+                <h2 class="print-section-title text-base font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-3">Technical Stack & Competencies</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-700">
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                        <h3 class="font-bold text-indigo-700 mb-1.5">Robotics, IoT & GIS</h3>
+                        <ul class="space-y-1 list-disc pl-4">
+                            <li><strong>Robotics frameworks:</strong> ROS/ROS2, Gazebo, MoveIt!, Robot Kinematics</li>
+                            <li><strong>Hardware integration:</strong> Arduino, Raspberry Pi, ESP32, PX4/ArduPilot</li>
+                            <li><strong>Geospatial systems:</strong> QGIS, ArcGIS, MapServer, OpenLayers, Spatial Data</li>
                         </ul>
-                    </aside>
-                </div>
-
-                <div class="section-divider"></div>
-
-                <h2 class="section-title text-xl font-bold mb-3">Selected Leadership & Engineering Projects</h2>
-                <div class="space-y-4 text-sm text-slate-700">
-                    <div class="rounded-3xl bg-white p-4 border border-slate-200">
-                        <strong>Autonomous Field Robotics</strong> — Designed and deployed autonomous vehicles for
-                        precision spraying and harvesting trials, integrating ROS, path planning, and sensor fusion.
                     </div>
-                    <div class="rounded-3xl bg-white p-4 border border-slate-200">
-                        <strong>Smart Irrigation Systems</strong> — Built IoT-driven irrigation scheduling using sensor
-                        networks, MQTT, and machine learning to reduce water use and increase yield predictability.
-                    </div>
-                    <div class="rounded-3xl bg-white p-4 border border-slate-200">
-                        <strong>Digital Agriculture Platforms</strong> — Delivered decision support tools and mobile SMS
-                        systems for market access, logistics, and farm management in Tanzania.
-                    </div>
-                    <div class="rounded-3xl bg-white p-4 border border-slate-200">
-                        <strong>Research Labs & Capacity Building</strong> — Established <a
-                            href="https://www.epalab.org/" target="_blank"
-                            class="text-indigo-600 hover:text-indigo-800 hover:underline transition-colors font-medium">EPALAB</a>
-                        and <a href="https://yeesi.epalab.org" target="_blank"
-                            class="text-indigo-600 hover:text-indigo-800 hover:underline transition-colors font-medium">YEESI
-                            Lab</a> for student innovation, skilling, and community-focused AgTech research.
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                        <h3 class="font-bold text-indigo-700 mb-1.5">AI, Programming & Architecture</h3>
+                        <ul class="space-y-1 list-disc pl-4">
+                            <li><strong>Languages:</strong> Python, C/C++, JavaScript, R, PHP, SQL</li>
+                            <li><strong>Machine learning:</strong> TensorFlow, PyTorch, Keras, OpenCV, YOLOv8</li>
+                            <li><strong>Software & Databases:</strong> Django, Laravel, MySQL, MSSQL, PostgreSQL, Docker, Linux</li>
+                        </ul>
                     </div>
                 </div>
+            </div>
 
-                <div class="section-divider"></div>
+            <!-- QUICK FACTS & EB-1A FOCUS -->
+            <div class="print-section break-inside-avoid">
+                <h2 class="print-section-title text-base font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-3" data-i18n="section_titles.eb1a_evidence">Extraordinary Achievements (EB-1A Focus)</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-700">
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                        <h3 class="font-bold text-indigo-700 mb-1" data-i18n="cv.eb1a_contribution">Original Contribution</h3>
+                        <p class="leading-relaxed" data-i18n="cv.eb1a_contribution_desc">Invented a novel "Modified Pure Pursuit" control algorithm, cited by peer-reviewed papers and adopted as a benchmark.</p>
+                    </div>
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                        <h3 class="font-bold text-indigo-700 mb-1" data-i18n="cv.eb1a_awards">Awards</h3>
+                        <p class="leading-relaxed" data-i18n="cv.eb1a_awards_desc">Winner, AI for Equity Challenge: Advancing Climate Action, Gender Equality, and Health, leading the team with $25,000 AWS credits.</p>
+                    </div>
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                        <h3 class="font-bold text-indigo-700 mb-1" data-i18n="cv.eb1a_judging">Judging Work</h3>
+                        <p class="leading-relaxed" data-i18n="cv.eb1a_judging_desc">Reviewer for IEEE Robotics and Automation Letters (RA-L) and Computers and Electronics in Agriculture.</p>
+                    </div>
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                        <h3 class="font-bold text-indigo-700 mb-1" data-i18n="cv.eb1a_role">Critical Role</h3>
+                        <p class="leading-relaxed" data-i18n="cv.eb1a_role_desc">Technical Lead for the World Bank HEET Project component at SUA ($2.0M portfolio).</p>
+                    </div>
+                </div>
+            </div>
 
-                <div class="grid gap-6 lg:grid-cols-2">
-                    <section>
-                        <h2 class="section-title text-xl font-bold mb-3">Scientific Contributions</h2>
-                        <p class="text-sm leading-relaxed text-slate-700">Published research on agricultural machine
-                            vision, control systems, and geospatial analytics that informs adaptive farming
-                            interventions and sustainable food systems.</p>
-                    </section>
-                    <section>
-                        <h2 class="section-title text-xl font-bold mb-3">Contact & Availability</h2>
-                        <div class="text-sm text-slate-700 space-y-3">
-                            <div><strong>Email:</strong> kadefue [at] sua.ac.tz | kadefue [at] gmail.com</div>
-                            <div><strong>LinkedIn:</strong> linkedin.com/in/kadefue</div>
-                            <div><strong>ORCID:</strong> orcid.org/0000-0001-6362-3174</div>
-                            <div><strong>Scopus ID:</strong> 56711330500</div>
-                            <div><strong>YouTube:</strong> youtube.com/user/kadefue</div>
+            <!-- EDUCATION -->
+            <div class="print-section break-inside-avoid">
+                <h2 class="print-section-title text-base font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-3" data-i18n="section_titles.education">Education</h2>
+                <div class="space-y-3 text-xs text-slate-700">
+                    <div class="flex justify-between items-baseline border-b border-slate-100 pb-1.5">
+                        <div>
+                            <strong>PhD in Engineering (AI and Robotics)</strong><br>
+                            <span class="text-slate-600">University of Georgia, USA • GPA: Magna Cum Laude</span>
                         </div>
-                    </section>
+                        <span class="font-mono font-bold text-slate-500">2016 – 2020</span>
+                    </div>
+                    <div class="flex justify-between items-baseline border-b border-slate-100 pb-1.5">
+                        <div>
+                            <strong>MSc in Agricultural and Biological Engineering (Precision Agriculture)</strong><br>
+                            <span class="text-slate-600">University of Florida, USA • GPA: Summa Cum Laude</span>
+                        </div>
+                        <span class="font-mono font-bold text-slate-500">2012 – 2014</span>
+                    </div>
+                    <div class="flex justify-between items-baseline">
+                        <div>
+                            <strong>BSc in Computer Engineering & Information Technology</strong><br>
+                            <span class="text-slate-600">University of Dar es Salaam, Tanzania • GPA: Magna Cum Laude</span>
+                        </div>
+                        <span class="font-mono font-bold text-slate-500">2007 – 2011</span>
+                    </div>
                 </div>
+            </div>
 
-                <div class="section-divider"></div>
+            <!-- PROFESSIONAL EXPERIENCE -->
+            <div class="print-section">
+                <h2 class="print-section-title text-base font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-4" data-i18n="section_titles.professional_experience">Professional Experience</h2>
+                <div class="space-y-5">
+    <div class="break-inside-avoid border-l-2 border-indigo-600 pl-4 py-1 mb-5">
+        <div class="flex justify-between items-baseline mb-1">
+            <h3 class="font-bold text-slate-900 text-sm md:text-base" data-i18n="jobs.sua_lead_title">Senior Lecturer / Lead Engineer / Principal Investigator / HEET Digitalization Leader</h3>
+            <span class="text-xs font-mono font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full whitespace-nowrap"></span>
+        </div>
+        <h4 class="text-xs md:text-sm font-semibold text-slate-700 mb-2" data-i18n="jobs.sua_lead_desc">Sokoine University of Agriculture (SUA) - Academic Information Management and Support Unit</h4>
+        <p class="text-xs text-slate-700 leading-relaxed mb-2">
+<strong>Managerial Leadership:</strong> Working as HEET Digitalization Leader managing a <span class="ats-keyword">$2.0M World Bank HEET Project portfolio</span>. Leading the team on improvement of Online Learning Tools, Upgrading of ICT Infrastructure (Core LAN system), Development of the cutting-edge Information System for Academic issues and Improving power backup.
+                            </p>
+        <ul class="list-disc list-outside ml-4 space-y-1 text-xs text-slate-600"><li class="mt-1"><strong>Strategic Leadership:</strong> Architected the technical roadmap for the new Electronics and Precision Agriculture Lab. As PI of the Lab, I am spearheading the development of novel technologies for Agriculture and Environmental Health Systems</li><li class="mt-1"><strong>Impact:</strong> Managed a cross-functional team of 3+ engineers and researchers. Hosting students from SUA and other 3 universities across Tanzania</li></ul>
+    </div>
+    <div class="break-inside-avoid border-l-2 border-indigo-600 pl-4 py-1 mb-5">
+        <div class="flex justify-between items-baseline mb-1">
+            <h3 class="font-bold text-slate-900 text-sm md:text-base" data-i18n="jobs.uga_postdoc_title">Geospatial Research Scholar</h3>
+            <span class="text-xs font-mono font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full whitespace-nowrap"></span>
+        </div>
+        <h4 class="text-xs md:text-sm font-semibold text-slate-700 mb-2" data-i18n="jobs.uga_postdoc_desc">US Department of Agriculture (USDA) and North Carolina State University (NCSU)</h4>
+        <p class="text-xs text-slate-700 leading-relaxed mb-2">
+                                Spearheaded the development of AI-driven robotics for precision agriculture, focusing on <span class="ats-keyword">multi-UGV coordination</span> and real-time winter crops detection.
+                            </p>
+        <ul class="list-disc list-outside ml-4 space-y-1 text-xs text-slate-600"><li class="mt-1"><strong>Innovation:</strong> Developed a <span class="ats-keyword">Modified Pure Pursuit</span> algorithm improving path tracking by 30%.</li><li class="mt-1"><strong>Tech Stack:</strong> ROS, Python, OpenCV, NVIDIA Jetson, SolidWorks.</li></ul>
+    </div>
+    <div class="break-inside-avoid border-l-2 border-indigo-600 pl-4 py-1 mb-5">
+        <div class="flex justify-between items-baseline mb-1">
+            <h3 class="font-bold text-slate-900 text-sm md:text-base" data-i18n="jobs.uga_gra_title">Graduate Research Assistant</h3>
+            <span class="text-xs font-mono font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full whitespace-nowrap"></span>
+        </div>
+        <h4 class="text-xs md:text-sm font-semibold text-slate-700 mb-2" data-i18n="jobs.uga_gra_desc">University of Georgia (UGA)</h4>
+        <p class="text-xs text-slate-700 leading-relaxed mb-2">
+                                Developed autonomous cotton harvesting robots and yield estimation systems using deep learning (<span class="ats-keyword">YOLO</span>).
+                            </p>
+        
+    </div>
+    <div class="break-inside-avoid border-l-2 border-indigo-600 pl-4 py-1 mb-5">
+        <div class="flex justify-between items-baseline mb-1">
+            <h3 class="font-bold text-slate-900 text-sm md:text-base" data-i18n="jobs.sua_asst_lecturer_title">Assistant Lecturer</h3>
+            <span class="text-xs font-mono font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full whitespace-nowrap"></span>
+        </div>
+        <h4 class="text-xs md:text-sm font-semibold text-slate-700 mb-2" data-i18n="jobs.sua_asst_lecturer_desc">Sokoine University of Agriculture (SUA)</h4>
+        
+        
+    </div>
+    <div class="break-inside-avoid border-l-2 border-indigo-600 pl-4 py-1 mb-5">
+        <div class="flex justify-between items-baseline mb-1">
+            <h3 class="font-bold text-slate-900 text-sm md:text-base" data-i18n="jobs.sua_tutorial_asst_title">Tutorial Assistant</h3>
+            <span class="text-xs font-mono font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full whitespace-nowrap"></span>
+        </div>
+        <h4 class="text-xs md:text-sm font-semibold text-slate-700 mb-2" data-i18n="jobs.sua_tutorial_asst_desc">Sokoine University of Agriculture (SUA)</h4>
+        
+        
+    </div>
+</div>
+            </div>
 
-                <footer class="text-sm text-slate-600">Print this page to generate a two-page, polished PDF CV with
-                    executive summary, leadership profile, and career highlights.</footer>
+            <!-- INNOVATIONS LAB PROJECTS -->
+            <div class="print-section">
+                <h2 class="print-section-title text-base font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-4" data-i18n="section_titles.innovation_lab">Electronics and Precision Agriculture Lab Innovations</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 break-inside-avoid">
+        <div class="flex justify-between items-start gap-2 mb-2">
+            <h4 class="font-bold text-slate-800 text-xs">Autonomous Spraying Robot</h4>
+            <span class="text-[9px] bg-indigo-50 text-indigo-700 px-1.5 py-0.5 rounded border border-indigo-100 font-bold shrink-0">Robotics</span>
+        </div>
+        <p class="text-slate-600 text-xs leading-relaxed">Implemented autonomous mission planning and execution for a multi-UGV fleet used in agricultural mapping and spraying operations (PX4/ArduPilot, ROS).</p>
+    </div>
+    <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 break-inside-avoid">
+        <div class="flex justify-between items-start gap-2 mb-2">
+            <h4 class="font-bold text-slate-800 text-xs">Real-Time Yield Estimation</h4>
+            <span class="text-[9px] bg-indigo-50 text-indigo-700 px-1.5 py-0.5 rounded border border-indigo-100 font-bold shrink-0">AI / Vision</span>
+        </div>
+        <p class="text-slate-600 text-xs leading-relaxed">Developed a deep learning pipeline using YOLO and SORT tracking to count cotton bolls in real-time video feeds with 95% accuracy.</p>
+    </div>
+    <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 break-inside-avoid">
+        <div class="flex justify-between items-start gap-2 mb-2">
+            <h4 class="font-bold text-slate-800 text-xs">Cotton Harvesting Robot</h4>
+            <span class="text-[9px] bg-indigo-50 text-indigo-700 px-1.5 py-0.5 rounded border border-indigo-100 font-bold shrink-0">Robotics</span>
+        </div>
+        <p class="text-slate-600 text-xs leading-relaxed">Designed the end-effector and manipulator control system for a redbot ground vehicle to autonomously harvest cotton bolls (MoveIt!, Kinematics).</p>
+    </div>
+    <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 break-inside-avoid">
+        <div class="flex justify-between items-start gap-2 mb-2">
+            <h4 class="font-bold text-slate-800 text-xs">Variable Rate Sprayer</h4>
+            <span class="text-[9px] bg-indigo-50 text-indigo-700 px-1.5 py-0.5 rounded border border-indigo-100 font-bold shrink-0">IoT / Embedded</span>
+        </div>
+        <p class="text-slate-600 text-xs leading-relaxed">Created an IoT-enabled smart sprayer that adjusts chemical application based on real-time sensor data, reducing waste by 40% (ESP32, MQTT).</p>
+    </div>
+    <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 break-inside-avoid">
+        <div class="flex justify-between items-start gap-2 mb-2">
+            <h4 class="font-bold text-slate-800 text-xs">TanPredikt</h4>
+            <span class="text-[9px] bg-indigo-50 text-indigo-700 px-1.5 py-0.5 rounded border border-indigo-100 font-bold shrink-0">AI / Forecasting</span>
+        </div>
+        <p class="text-slate-600 text-xs leading-relaxed" data-i18n="projects.tanpredikt_desc">Prediction of Rain-fed Maize Yield in Tanzania using Time-series Machine Learning Models and Satellite Data.</p>
+    </div>
+    <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 break-inside-avoid">
+        <div class="flex justify-between items-start gap-2 mb-2">
+            <h4 class="font-bold text-slate-800 text-xs">NAISS-GAI</h4>
+            <span class="text-[9px] bg-indigo-50 text-indigo-700 px-1.5 py-0.5 rounded border border-indigo-100 font-bold shrink-0">Auto-Irrigation</span>
+        </div>
+        <p class="text-slate-600 text-xs leading-relaxed" data-i18n="projects.naiss_desc">Towards a Nationwide Automatic Irrigation Scheduling System.</p>
+    </div>
+    <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 break-inside-avoid">
+        <div class="flex justify-between items-start gap-2 mb-2">
+            <h4 class="font-bold text-slate-800 text-xs">YEESI Lab Ecosystem</h4>
+            <span class="text-[9px] bg-indigo-50 text-indigo-700 px-1.5 py-0.5 rounded border border-indigo-100 font-bold shrink-0">Innovation</span>
+        </div>
+        <p class="text-slate-600 text-xs leading-relaxed" data-i18n="projects.yeesi_desc">Youth Empowerment through Establishment of Social Innovation. Skilling for job creation.</p>
+    </div>
+    <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 break-inside-avoid">
+        <div class="flex justify-between items-start gap-2 mb-2">
+            <h4 class="font-bold text-slate-800 text-xs">SG-NAPI Seed Grant</h4>
+            <span class="text-[9px] bg-indigo-50 text-indigo-700 px-1.5 py-0.5 rounded border border-indigo-100 font-bold shrink-0">Grant / Research</span>
+        </div>
+        <p class="text-slate-600 text-xs leading-relaxed" data-i18n="projects.sg_napi_desc">TWAS-BMBF Seed Grant for high-level research projects in African countries.</p>
+    </div>
+</div>
+            </div>
+
+            <!-- COURSES & TEACHING -->
+            <div class="print-section">
+                <h2 class="print-section-title text-base font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-4">Teaching & Courses</h2>
+                <div class="space-y-6">
+<div class="break-inside-avoid"><h3 class="text-xs font-bold text-indigo-600 uppercase tracking-widest border-b border-indigo-100 pb-1 mb-3">Graduate Program (PhD & Masters)</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 break-inside-avoid">
+                <h4 class="font-bold text-slate-800 text-xs">AEC 813 — Artificial Intelligence, IoT and GIS Application in Agriculture</h4>
+                <span class="inline-block text-[9px] font-semibold text-slate-600 bg-slate-200/60 px-1.5 py-0.5 rounded mt-1">PhD Students</span>
+                <p class="text-slate-600 text-xs mt-2 leading-relaxed">Advanced topics in machine learning for agriculture, spatial data analysis (GIS), sensor integration, edge AI deployment, and research methodologies for PhD projects.</p>
+            </div>
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 break-inside-avoid">
+                <h4 class="font-bold text-slate-800 text-xs">ABE 715 — Computer Programming</h4>
+                <span class="inline-block text-[9px] font-semibold text-slate-600 bg-slate-200/60 px-1.5 py-0.5 rounded mt-1">Masters Students</span>
+                <p class="text-slate-600 text-xs mt-2 leading-relaxed">Structured programming, data structures, algorithmic thinking, and application development in Python and C for engineering problem solving.</p>
+            </div>
+</div></div>
+<div class="break-inside-avoid"><h3 class="text-xs font-bold text-indigo-600 uppercase tracking-widest border-b border-indigo-100 pb-1 mb-3">Undergraduate Program</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 break-inside-avoid">
+                <h4 class="font-bold text-slate-800 text-xs">AGE 418 — Sensors and Controls for Precision Agriculture</h4>
+                <span class="inline-block text-[9px] font-semibold text-slate-600 bg-slate-200/60 px-1.5 py-0.5 rounded mt-1">Seniors</span>
+                <p class="text-slate-600 text-xs mt-2 leading-relaxed">Sensor technologies, control systems, data acquisition, and system design for automated precision agriculture platforms.</p>
+            </div>
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 break-inside-avoid">
+                <h4 class="font-bold text-slate-800 text-xs">BPE 419 — Mechatronics</h4>
+                <span class="inline-block text-[9px] font-semibold text-slate-600 bg-slate-200/60 px-1.5 py-0.5 rounded mt-1">Seniors</span>
+                <p class="text-slate-600 text-xs mt-2 leading-relaxed">Integration of mechanical, electronic, and software subsystems; actuators, embedded controllers, and practical robotics labs.</p>
+            </div>
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 break-inside-avoid">
+                <h4 class="font-bold text-slate-800 text-xs">AGE 328 — Communications and Computer Networking</h4>
+                <span class="inline-block text-[9px] font-semibold text-slate-600 bg-slate-200/60 px-1.5 py-0.5 rounded mt-1">Juniors</span>
+                <p class="text-slate-600 text-xs mt-2 leading-relaxed">Fundamentals of networking, wireless communications, protocols, and networked systems for IoT applications.</p>
+            </div>
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 break-inside-avoid">
+                <h4 class="font-bold text-slate-800 text-xs">AGE 316 — Microcomputer Systems</h4>
+                <span class="inline-block text-[9px] font-semibold text-slate-600 bg-slate-200/60 px-1.5 py-0.5 rounded mt-1">Juniors</span>
+                <p class="text-slate-600 text-xs mt-2 leading-relaxed">Microcontroller programming, embedded system architectures, interfacing, and low-level system design using Arduino and ESP32.</p>
+            </div>
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 break-inside-avoid">
+                <h4 class="font-bold text-slate-800 text-xs">AGE 310 — Instrumentation and Measurements</h4>
+                <span class="inline-block text-[9px] font-semibold text-slate-600 bg-slate-200/60 px-1.5 py-0.5 rounded mt-1">Juniors</span>
+                <p class="text-slate-600 text-xs mt-2 leading-relaxed">Principles of measurement, instrumentation design, sensor calibration, data logging, and signal conditioning for field and lab use.</p>
+            </div>
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 break-inside-avoid">
+                <h4 class="font-bold text-slate-800 text-xs">AGE 219 — Introduction to Computer Programming</h4>
+                <span class="inline-block text-[9px] font-semibold text-slate-600 bg-slate-200/60 px-1.5 py-0.5 rounded mt-1">Sophomores</span>
+                <p class="text-slate-600 text-xs mt-2 leading-relaxed">Introductory programming concepts, problem-solving with code, basic algorithms, and practical labs using Python.</p>
+            </div>
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 break-inside-avoid">
+                <h4 class="font-bold text-slate-800 text-xs">AGE 214 — Introduction to Electronics</h4>
+                <span class="inline-block text-[9px] font-semibold text-slate-600 bg-slate-200/60 px-1.5 py-0.5 rounded mt-1">Sophomores</span>
+                <p class="text-slate-600 text-xs mt-2 leading-relaxed">Foundations of electronics, circuit analysis, analog/digital components, and hands-on lab exercises to build simple systems.</p>
+            </div>
+</div></div>
+</div>
+            </div>
+
+            <!-- PUBLICATIONS -->
+            <div class="print-section">
+                <h2 class="print-section-title text-base font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-4">Scientific Publications (57 Unique Items)</h2>
+                <div class="space-y-3">
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                1. A Methodological Critique of Machine Learning in Tanzanian Agriculture: Rigor, Reproducibility, and a Roadmap for Real-World Impact
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2026</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> K Fue</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Zenodo, 1-7, 2026</span>
+            
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                2. Advanced Kinematic Control and Reinforcement Learning Optimization for Center-Articulated Agricultural Rovers: A Comparative Study of Tracking Accuracy and Energy Efficiency
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2026</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Kadeghe G. Fue</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">SSRN Electronic Journal</span>
+            
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.2139/ssrn.6359738" target="_blank" class="text-indigo-600 hover:underline">10.2139/ssrn.6359738</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                3. Spatial-temporal assessment of water quality parameters in Mindu Reservoir, Morogoro, for conservation support
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2026</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> N. L. Mwampamba, Kadeghe G. Fue, Proches Msigula Hieronimo, Henry Fatael Mahoo</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">International Journal of Environmental Studies, 1-18</span>
+            
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.1080/00207233.2026.2626209" target="_blank" class="text-indigo-600 hover:underline">10.1080/00207233.2026.2626209</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                4. Digitalization of precision fertilization in East Africa: adoption, benefits and losses
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2025</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Kadeghe G. Fue, Geofrey Prudence Baitu, Osden Jokonya, Steven A. Banwart, Lisé Korsten</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Frontiers in Sustainable Food Systems, 9</span>
+            <span class="font-medium text-indigo-600">7 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.3389/fsufs.2025.1497577" target="_blank" class="text-indigo-600 hover:underline">10.3389/fsufs.2025.1497577</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                5. Assessing the potential for application of machine learning in predicting weather-sensitive waterborne diseases in selected districts of Tanzania
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2025</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Neema Nicodemus Lyimo, Kadeghe G. Fue, Silvia Francis Materu, Ndimile Charles Kilatu, Joseph P. Telemala</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Frontiers in Artificial Intelligence, 8, 1597727-1597727</span>
+            <span class="font-medium text-indigo-600">3 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.3389/frai.2025.1597727" target="_blank" class="text-indigo-600 hover:underline">10.3389/frai.2025.1597727</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                6. Development of a web-based application for monitoring water quality parameters using remote sensing: case of Mindu Reservoir
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2025</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> N. L. Mwampamba, Kadeghe G. Fue, Proches Hieronimo, H. F. Mahoo</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">International Journal of Energy and Water Resources, 10(1)</span>
+            <span class="font-medium text-indigo-600">1 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.1007/s42108-025-00431-2" target="_blank" class="text-indigo-600 hover:underline">10.1007/s42108-025-00431-2</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                7. Assessment of the Economic Impact of Pressure Variation in Drip Irrigation Systems for Maize Production
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2025</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Jane S.V Wurda, Andrew K.P.R. Tarimo, Kadeghe G. Fue</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Asian Journal of Advances in Agricultural Research, 25(9), 34-51</span>
+            
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.9734/ajaar/2025/v25i9669" target="_blank" class="text-indigo-600 hover:underline">10.9734/ajaar/2025/v25i9669</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                8. Estimation of Spatial-Temporal Variations of Water Quality Parameters Using Remote Sensing: A Case of Mindu Reservoir, Morogoro, Tanzania
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2025</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> NL Mwampamba, K Fue, P Hieronimo, H Mahoo</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Journal of Drought and Climate change Research 3 (3), 2025</span>
+            
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                9. Modelling and performance evaluation of a drip irrigation system under different pressure heads
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2025</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> JSV Wurda, AKPR Tarimo, KG Fue</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Water and Environmental Sustainability 5 (4), 1-14, 2025</span>
+            
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                10. Meta-Analysis Assessing Potential of Drone Remote Sensing in Estimating Plant Traits Related to Nitrogen Use Efficiency
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2024</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Jingcheng Zhang, Yuncai Hu, Fei Li, Kadeghe G. Fue, Kang Yu</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">SSRN Electronic Journal</span>
+            <span class="font-medium text-indigo-600">23 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.3390/rs16050838" target="_blank" class="text-indigo-600 hover:underline">10.3390/rs16050838</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                11. Assessment of salt-affected soil in selected rice irrigation schemes in Tanzania: understanding salt types for optimizing management approaches
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2024</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Moh’d M. Omar, Boniface H. J. Massawe, Mawazo J. Shitindi, Ole Pedersen, Joel Meliyo, Kadeghe G. Fue</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Frontiers in Soil Science, 4</span>
+            <span class="font-medium text-indigo-600">22 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.3389/fsoil.2024.1372838" target="_blank" class="text-indigo-600 hover:underline">10.3389/fsoil.2024.1372838</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                12. Modeling the electrical conductivity relationship between saturated paste extract and 1:2.5 dilution in different soil textural classes
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2024</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Moh’d M. Omar, Mawazo J. Shitindi, Boniface H. J. Massawe, Ole Pedersen, Joel Meliyo, Kadeghe G. Fue</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Frontiers in Soil Science, 4</span>
+            <span class="font-medium text-indigo-600">18 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.3389/fsoil.2024.1421661" target="_blank" class="text-indigo-600 hover:underline">10.3389/fsoil.2024.1421661</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                13. Fostering Problem-Based and Challenge-Based Learning Through Students' Engagement in Hackathons
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2024</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Joseph P. Telemala, Kadeghe G. Fue, Alcardo Alex Barakabitze, Camilius Sanga, Glen C. Rains</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Advances in higher education and professional development book series, 182-206</span>
+            
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.4018/979-8-3693-1467-8.ch009" target="_blank" class="text-indigo-600 hover:underline">10.4018/979-8-3693-1467-8.ch009</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                14. A Review of Successes and Impeding Challenges of IoT-Based Insect Pest Detection Systems for Estimating Agroecosystem Health and Productivity of Cotton
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2023</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Denis Olgen Kiobia, Canicius Mwitta, Kadeghe G. Fue, Jason M. Schmidt, David G. Riley, Glen C. Rains</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Sensors, 23(8), 4127-4127</span>
+            <span class="font-medium text-indigo-600">61 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.3390/s23084127" target="_blank" class="text-indigo-600 hover:underline">10.3390/s23084127</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                15. Salt-affected soils in Tanzanian agricultural lands: Type of soils and extent of the problem
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2023</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> M. M Omar, Mawazo J. Shitindi, Boniface H. J. Massawe, Kadeghe G. Fue, Joel Meliyo, Ole Pedersen</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Sustainable Environment, 9(1)</span>
+            <span class="font-medium text-indigo-600">30 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.1080/27658511.2023.2205731" target="_blank" class="text-indigo-600 hover:underline">10.1080/27658511.2023.2205731</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                16. Comparison of Single-Shot and Two-Shot Deep Neural Network Models for Whitefly Detection in IoT Web Application
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2022</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Chinmay U. Parab, Canicius Mwitta, Miller Hayes, Jason M. Schmidt, David G. Riley, Kadeghe G. Fue, Suchendra M. Bhandarkar, Glen C. Rains</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">AgriEngineering, 4(2), 507-522</span>
+            <span class="font-medium text-indigo-600">23 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.3390/agriengineering4020034" target="_blank" class="text-indigo-600 hover:underline">10.3390/agriengineering4020034</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                17. Exploring farmers’ perception, knowledge, and management techniques of salt-affected soils to enhance rice production on small land holdings in Tanzania
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2022</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> M. M Omar, Mawazo J. Shitindi, Boniface H. J. Massawe, Kadeghe G. Fue, Ole Pedersen, Joel Meliyo</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Cogent Food & Agriculture, 8(1)</span>
+            <span class="font-medium text-indigo-600">22 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.1080/23311932.2022.2140470" target="_blank" class="text-indigo-600 hover:underline">10.1080/23311932.2022.2140470</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                18. Opportunities for Robotic Systems and Automation in Cotton Production
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2021</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Edward M. Barnes, Gaylon D. Morgan, Kater Hake, Jon Devine, Ryan Kurtz, Gregory A. Ibendahl, Ajay Sharda, Glen C. Rains, John L. Snider, Joe Mari Maja, J. Alex Thomasson, Yuzhen Lu, Hussein Gharakhani, James M. Griffin, Emi Kimura, Robert G. Hardin, Tyson B. Raper, Sierra Young, Kadeghe G. Fue, Mathew G. Pelletier, John D. Wanjura, Gregory Holt</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">AgriEngineering, 3(2), 339-362</span>
+            <span class="font-medium text-indigo-600">50 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.3390/agriengineering3020023" target="_blank" class="text-indigo-600 hover:underline">10.3390/agriengineering3020023</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                19. Ensemble Method of Deep Learning, Color Segmentation, and Image Transformation to Track, Localize, and Count Cotton Bolls Using a Moving Camera in Real-Time
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2021</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Kadeghe G. Fue, Wesley M. Porter, Edward M. Barnes, Glen C. Rains</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Transactions of the ASABE, 64(1), 341-352</span>
+            <span class="font-medium text-indigo-600">17 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.13031/trans.13112" target="_blank" class="text-indigo-600 hover:underline">10.13031/trans.13112</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                20. A simple convolutional neural network architecture for monitoring Tuta absoluta (Gelechiidae) infestation in tomato plants.
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2021</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> SK Mourice, FJ Mlebus, KG Fue</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">2nd SUA Scientific Conference 1 (1), 2021</span>
+            
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                21. An Extensive Review of Mobile Agricultural Robotics for Field Operations: Focus on Cotton Harvesting
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2020</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Kadeghe G. Fue, Wesley M. Porter, Edward M. Barnes, Glen C. Rains</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">AgriEngineering, 2(1), 150-174</span>
+            <span class="font-medium text-indigo-600">154 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.3390/agriengineering2010010" target="_blank" class="text-indigo-600 hover:underline">10.3390/agriengineering2010010</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                22. Agricultural internet of things and decision support for precision smart farming
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2020</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> G Fastelini, C Schillaci, T Crestey, B Tisseyre, S Fountas, E Anastasiou, ...</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Academic Press, 2020</span>
+            <span class="font-medium text-indigo-600">124 Citations</span>
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                23. Precision farming and IoT case studies across the world
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2020</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> G Fastelini, C Schillaci, T Crestey, B Tisseyre, S Fountas, E Anastasiou, ...</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Agricultural Internet of Things and Decision Support for Precision Smart …, 2020</span>
+            <span class="font-medium text-indigo-600">68 Citations</span>
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                24. Autonomous Navigation of a Center-Articulated and Hydrostatic Transmission Rover using a Modified Pure Pursuit Algorithm in a Cotton Field
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2020</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Kadeghe G. Fue, Wesley M. Porter, Edward M. Barnes, Changying Li, Glen C. Rains</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Sensors, 20(16), 4412-4412</span>
+            <span class="font-medium text-indigo-600">42 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.3390/s20164412" target="_blank" class="text-indigo-600 hover:underline">10.3390/s20164412</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                25. Center-Articulated Hydrostatic Cotton Harvesting Rover Using Visual-Servoing Control and a Finite State Machine
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2020</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Kadeghe G. Fue, Wesley M. Porter, Edward M. Barnes, Changying Li, Glen C. Rains</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Electronics, 9(8), 1226-1226</span>
+            <span class="font-medium text-indigo-600">40 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.3390/electronics9081226" target="_blank" class="text-indigo-600 hover:underline">10.3390/electronics9081226</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                26. Evaluation of a Stereo Vision System for Cotton Row Detection and Boll Location Estimation in Direct Sunlight
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2020</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Kadeghe G. Fue, Wesley M. Porter, Edward M. Barnes, Changying Li, Glen C. Rains</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Agronomy, 10(8), 1137-1137</span>
+            <span class="font-medium text-indigo-600">31 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.3390/agronomy10081137" target="_blank" class="text-indigo-600 hover:underline">10.3390/agronomy10081137</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                27. Development of the Autonomous Cotton Harvesting Robot
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2020</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> KG Fue</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">University of Georgia, 2020</span>
+            <span class="font-medium text-indigo-600">3 Citations</span>
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                28. Current and Potential Robotic Applications to Improve Cotton Production
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2020</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> E Barnes, G Morgan, K Hake, J Devine, R Kurtz, T Griffin, G Ibendahl, ...</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">https://cottonleads.org/wp-content/uploads/2020/10/2020BW-RoboticsUpdate …, 2020</span>
+            
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                29. Field testing of the autonomous cotton harvesting Roverin undefoliated cotton field
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2020</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> KG Fue, WM Porter, EM Barnes, GC Rains</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            
+            
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                30. &amp;lt;i&amp;gt;Visual Control of Cotton-picking Rover and Manipulator using a ROS-independent Finite State Machine&amp;lt;/i&amp;gt;
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2019</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Kadeghe G. Fue, Edward M. Barnes, Wesley M. Porter, Glen C. Rains</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">2019 Boston, Massachusetts July 7- July 10, 2019</span>
+            <span class="font-medium text-indigo-600">8 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.13031/aim.201900779" target="_blank" class="text-indigo-600 hover:underline">10.13031/aim.201900779</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                31. Initial Possibilities for Robotic Cotton Harvest
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2019</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> EM Barnes, K Hake, TW Griffin, GC Rains, JMJ Maja, JA Thomasson, ...</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">2019 Beltwide Cotton Conferences, 2019</span>
+            <span class="font-medium text-indigo-600">6 Citations</span>
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                32. Visual Inverse Kinematics for Cotton Picking Robot
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2019</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> K Fue, W Porter, E Barnes, G Rains</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Beltwide Cotton Conferences, 2019</span>
+            <span class="font-medium text-indigo-600">6 Citations</span>
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                33. Visual Row Detection Using Pixel-Based Algorithm and Stereo Camera for Cotton Picking Robot
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2019</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> K Fue, W Porter, E Barnes, G Rains</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Beltwide Cotton Conferences, 2019</span>
+            <span class="font-medium text-indigo-600">6 Citations</span>
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                34. Piloting Crowdsourcing Platform for Monitoring and Evaluation of Projects
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2019</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Camilius Sanga, Neema Nicodemus Lyimo, Kadeghe G. Fue, Joseph P. Telemala, Fredy Kilima, Maulilio J. Kipanyula</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Advances in logistics, operations, and management science book series, 199-217</span>
+            
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.4018/978-1-5225-4200-1.ch010" target="_blank" class="text-indigo-600 hover:underline">10.4018/978-1-5225-4200-1.ch010</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                35. Exploring Information Seeking Behavior of Farmers’ in Information Related to Climate Change Adaptation Through ICT (CHAI)
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2018</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> S. D. Tumbo, Nicholaus Mwalukasa, Kadeghe G. Fue, M. R. S. Mlozi, Ruth Haug, Camilius Sanga</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">The International Review of Research in Open and Distributed Learning, 19(3)</span>
+            <span class="font-medium text-indigo-600">58 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.19173/irrodl.v19i3.3229" target="_blank" class="text-indigo-600 hover:underline">10.19173/irrodl.v19i3.3229</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                36. Real-time 3-D measurement of cotton boll positions using machine vision under field conditions
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2018</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> KG Fue, GC Rains, WM Porter</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">2018 Beltwide Cotton Conferences, San Antonio, 2018</span>
+            <span class="font-medium text-indigo-600">24 Citations</span>
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                37. Deep Learning based Real-time GPU-accelerated Tracking and Counting of Cotton Bolls under Field Conditions using a Moving Camera
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2018</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Kadeghe G. Fue, Wesley M. Porter, Glen C. Rains</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">2018 Detroit, Michigan July 29 - August 1, 2018</span>
+            <span class="font-medium text-indigo-600">21 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.13031/aim.201800831" target="_blank" class="text-indigo-600 hover:underline">10.13031/aim.201800831</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                38. e-Agriculture Promising Practice: UshauriKilimo. org: web and mobile phones for extension services in Tanzania
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2018</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> CA Sanga</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">FAO;, 2018</span>
+            <span class="font-medium text-indigo-600">6 Citations</span>
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                39. EVALUATING THE EFFECT OF PLANTER DOWNFORCE AND SEED VIGOR ON CROP EMERGENCE AND YIELD IN HILL-DROP VS SINGULATED COTTON
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2018</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> SS Virk, WM Porter, K Fue, JL Snider, J Whitaker</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">BWCC, 2018</span>
+            <span class="font-medium text-indigo-600">2 Citations</span>
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                40. Understanding Strategies for Implementing Integrated Information Systems for Rabies Surveillance
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2018</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Anna M. Geofrey, Maulilio J. Kipanyula, Kadeghe G. Fue, Camilius Sanga</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">International Journal of User-Driven Healthcare, 7(1), 13-26</span>
+            
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.4018/978-1-5225-5640-4.ch008" target="_blank" class="text-indigo-600 hover:underline">10.4018/978-1-5225-5640-4.ch008</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                41. The Use of Participatory Approaches in Developing ICT‐Based Systems for Disseminating Agricultural Knowledge and Information for Farmers in Developing Countries: The Case of Tanzania
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2017</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Alcardo Alex Barakabitze, Kadeghe G. Fue, Camilius Sanga</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">The Electronic Journal of Information Systems in Developing Countries, 78(1), 1-23</span>
+            <span class="font-medium text-indigo-600">106 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.1002/j.1681-4835.2017.tb00576.x" target="_blank" class="text-indigo-600 hover:underline">10.1002/j.1681-4835.2017.tb00576.x</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                42. Developing a Framework for Next Generation Integrated Agro Food-Advisory Systems in Developing Countries
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2017</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Alcardo Alex Barakabitze, Kadeghe G. Fue, Edvin J. Kitindi, Camilius Sanga</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">International Journal of Information Communication Technologies and Human Development, 8(4), 13-31</span>
+            <span class="font-medium text-indigo-600">13 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.4018/978-1-5225-1629-3.ch004" target="_blank" class="text-indigo-600 hover:underline">10.4018/978-1-5225-1629-3.ch004</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                43. Understanding Crowdsourcing of Agricultural Market Information in a Pilot Study
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2017</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Musa Fadhili Juma, Kadeghe G. Fue, Alcardo Alex Barakabitze, Neema Nicodemus, Mawazo Mwita Magesa, Fredy Kilima, Camilius Sanga</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">International Journal of Technology Diffusion, 8(4), 1-16</span>
+            <span class="font-medium text-indigo-600">11 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.4018/978-1-5225-8182-6.ch045" target="_blank" class="text-indigo-600 hover:underline">10.4018/978-1-5225-8182-6.ch045</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                44. ECAWsoft: A Web based Climate and Weather Data Visualization for Big Data Analysis
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2017</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Kadeghe G. Fue, Camilius Sanga, S. D. Tumbo</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Global Journal of Computer Science and Technology 17 (1), 33-43, 2017, 17(1)</span>
+            <span class="font-medium text-indigo-600">1 Citations</span>
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                45. Analyzing usage of crowdsourcing platform Ushaurikilimo' by pastoral and agro-pastoral communities in Tanzania
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2016</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Kadeghe G. Fue, Anna Geoffrey, M. R. S. Mlozi, S. D. Tumbo, Ruth Haug, Camilius Sanga</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">International Journal of Instructional Technology and Distance Learning 13 …, 2016</span>
+            <span class="font-medium text-indigo-600">15 Citations</span>
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                46. Web and Mobile Phone Based Rabies Surveillance System for Humans and Animals in Kilosa District, Tanzania
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2016</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Maulilio J. Kipanyula, Anna M. Geofrey, Kadeghe G. Fue, M. R. S. Mlozi, S. D. Tumbo, Ruth Haug, Camilius Sanga</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">International Journal of Information Communication Technologies and Human Development, 8(2), 47-59</span>
+            <span class="font-medium text-indigo-600">10 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.4018/978-1-5225-0983-7.ch023" target="_blank" class="text-indigo-600 hover:underline">10.4018/978-1-5225-0983-7.ch023</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                47. On Piloting Web-Based Rabies Surveillance System for Humans and Animals
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2016</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Maulilio J. Kipanyula, Camilius Sanga, Anna M. Geofrey, Kadeghe G. Fue</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Advances in healthcare information systems and administration book series, 305-323</span>
+            <span class="font-medium text-indigo-600">4 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.4018/978-1-5225-1674-3.ch020" target="_blank" class="text-indigo-600 hover:underline">10.4018/978-1-5225-1674-3.ch020</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                48. Delivery of agricultural extension service can be improved through mobile phones
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2016</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> MRS Mlozi, C Sanga, S Tumbo, M Mussa, KG Fue, R Haug</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Sokoine University of Agriculture, 2016</span>
+            <span class="font-medium text-indigo-600">3 Citations</span>
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                49. Experimenting open agricultural extension service in Tanzania: A case of Kilosa Open Data Initiative (KODI)
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2016</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Camilius Sanga, Masamaki, Joseph Phillipo, Kadeghe G. Fue, Mlozi, Malongo R., S. D. Tumbo</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Journal of Scientific and Engineering Research 3 (6), 116-124, 2016</span>
+            <span class="font-medium text-indigo-600">2 Citations</span>
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                50. Remote Scheduling System for Drip Irrigation System Using Geographic Information System
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2015</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Kadeghe G. Fue, Camilius Sanga</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Journal of Geographic Information System, 07(05), 551-563</span>
+            <span class="font-medium text-indigo-600">10 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.4236/jgis.2015.75044" target="_blank" class="text-indigo-600 hover:underline">10.4236/jgis.2015.75044</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                51. Experts’ assignment algorithm for Cloud-based Agro-advisory Service Information System (CASIS) using weighted sum model: piloting CASIS
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2015</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Kadeghe G. Fue, S. D. Tumbo, Camilius Sanga</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">UbuntuNet Alliance annual conference 8 (1), 69-75, 2015</span>
+            <span class="font-medium text-indigo-600">9 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.20374/210" target="_blank" class="text-indigo-600 hover:underline">10.20374/210</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                52. A solar-powered, Wi-Fi re-programmable precision irrigation controller
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2014</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Kadeghe G. Fue, John K. Schueller, Arnold W. Schumann, S. D. Tumbo</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Science, Computing and Telecommunications (PACT), 2014 Pan African …, 2014, 171-176</span>
+            <span class="font-medium text-indigo-600">11 Citations</span>
+            <span><strong>DOI:</strong> <a href="https://doi.org/10.1109/scat.2014.7055141" target="_blank" class="text-indigo-600 hover:underline">10.1109/scat.2014.7055141</a></span>
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                53. Web-Based Examination Results Release Information System For Cost Effective Strategies In Academic Institutions
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2014</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Kadeghe G. Fue, Michael P. J. Mahenge, Lazaro S. P. Busagala</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">, 2(5), 21-32</span>
+            <span class="font-medium text-indigo-600">1 Citations</span>
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                54. Development Of  a Precision Irrigation Control System For Horticultural Food Crops in Tanzania
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2014</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> K Fue</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">University of Florida, 2014</span>
+            
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                55. Web-based System for Monitoring and Evaluation of Agricultural Projects
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2013</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> C Sanga, K Fue, N Nicodemus, FTM Kilima</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Interdisciplinary Studies on Information Technology and Business (ISITB …, 2013</span>
+            <span class="font-medium text-indigo-600">5 Citations</span>
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                56. Projects Monitoring and Evaluation Information System: Case study of EPINAV programme, Sokoine University of Agriculture-Tanzania
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2012</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> C Sanga, K Fue, FTM Kilima</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">LAP Lambert Academic Publishing, 2012</span>
+            <span class="font-medium text-indigo-600">3 Citations</span>
+            
+        </div>
+    </div>
+    <div class="py-2.5 border-b border-slate-200 last:border-b-0 break-inside-avoid">
+        <div class="flex justify-between items-start gap-4">
+            <h4 class="font-bold text-slate-900 text-xs md:text-sm leading-snug">
+                57. DESIGN AND IMPLEMENTATION OF THE REMOTE CONTROL SYSTEM USING SMS VIA GSM FOR HOME ELECTRICAL SYSTEM
+            </h4>
+            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded shrink-0">2012</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1"><strong>Authors:</strong> Kadeghe G. Fue, Charles N. Tarimo</p>
+        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-[11px] text-slate-500">
+            <span class="italic">Lulu.com 1, 56, 2012</span>
+            <span class="font-medium text-indigo-600">1 Citations</span>
+            
+        </div>
+    </div>
+</div>
             </div>
         </div>
     </div>
@@ -806,27 +1698,27 @@
 
                         <!-- Quick Facts -->
                         <section class="bg-white/50 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/50 card-hover">
-                            <h3 class="text-lg font-bold text-slate-900 mb-4">Quick Facts</h3>
+                            <h3 class="text-lg font-bold text-slate-900 mb-4" data-i18n="cv.quick_facts">Quick Facts</h3>
                             <ul class="space-y-3.5 text-sm text-slate-700">
                                 <li class="flex items-start gap-2.5">
                                     <span class="w-1.5 h-1.5 rounded-full bg-indigo-600 mt-2 flex-shrink-0"></span>
-                                    <span><strong>15+ years</strong> of academic, research, and engineering experience</span>
+                                    <span data-i18n="cv.fact_experience"><strong>15+ years</strong> of academic, research, and engineering experience</span>
                                 </li>
                                 <li class="flex items-start gap-2.5">
                                     <span class="w-1.5 h-1.5 rounded-full bg-indigo-600 mt-2 flex-shrink-0"></span>
-                                    <span><strong>100+</strong> trained students and young innovators</span>
+                                    <span data-i18n="cv.fact_students"><strong>100+</strong> trained students and young innovators</span>
                                 </li>
                                 <li class="flex items-start gap-2.5">
                                     <span class="w-1.5 h-1.5 rounded-full bg-indigo-600 mt-2 flex-shrink-0"></span>
-                                    <span><strong>$2.0M</strong> project portfolio leadership for HEET program</span>
+                                    <span data-i18n="cv.fact_heet"><strong>$2.0M</strong> project portfolio leadership for HEET program</span>
                                 </li>
                                 <li class="flex items-start gap-2.5">
                                     <span class="w-1.5 h-1.5 rounded-full bg-indigo-600 mt-2 flex-shrink-0"></span>
-                                    <span><strong>8+</strong> international grants and awards</span>
+                                    <span data-i18n="cv.fact_grants"><strong>8+</strong> international grants and awards</span>
                                 </li>
                                 <li class="flex items-start gap-2.5">
                                     <span class="w-1.5 h-1.5 rounded-full bg-indigo-600 mt-2 flex-shrink-0"></span>
-                                    <span><strong>Peer reviewer</strong> for IEEE RA-L and Computers in Agriculture</span>
+                                    <span data-i18n="cv.fact_editorial"><strong>Editorial Board Member</strong> for Scientific Reports, IJAEIS, and TAJAS</span>
                                 </li>
                             </ul>
                         </section>

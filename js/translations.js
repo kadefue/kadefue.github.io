@@ -55,7 +55,8 @@ const translations = {
             highly_cited: "Highly Cited",
             research_projects: "Research & Projects",
             all_publications: "All Publications",
-            research_intro: "Exploring the intersection of <span class=\"text-indigo-600 font-semibold\">Artificial Intelligence</span>, <span class=\"text-indigo-600 font-semibold\">Robotics</span>, and <span class=\"text-indigo-600 font-semibold\">Agriculture</span>. My work focuses on creating sustainable, technology-driven solutions for food systems and environmental management."
+            research_intro: "Exploring the intersection of <span class=\"text-indigo-600 font-semibold\">Artificial Intelligence</span>, <span class=\"text-indigo-600 font-semibold\">Robotics</span>, and <span class=\"text-indigo-600 font-semibold\">Agriculture</span>. My work focuses on creating sustainable, technology-driven solutions for food systems and environmental management.",
+            editorial_boards: "Editorial Board Memberships"
         },
         cv: {
             role_subtitle: "Senior Software Development Engineer & Machine Learning Specialist",
@@ -80,14 +81,20 @@ const translations = {
             eb1a_awards: "Awards",
             eb1a_awards_desc: "Winner, AI for Equity Challenge: Advancing Climate Action, Gender Equality, and Health, leading the team with <span class=\"font-bold text-white\">$25,000</span> AWS credits.",
             eb1a_judging: "Judging Work",
-            eb1a_judging_desc: "Reviewer for <em>IEEE Robotics and Automation Letters (RA-L)</em> and <em>Computers and Electronics in Agriculture</em>.",
+            eb1a_judging_desc: "Editorial Board Member for <em>Scientific Reports</em> (Springer Nature, Impact Factor 4.9, Q1), <em>IJAEIS</em> (IGI Global), and <em>TAJAS</em> (SUA). Active reviewer for <em>IEEE Robotics and Automation Letters (RA-L)</em> and <em>Computers and Electronics in Agriculture</em>.",
             eb1a_role: "Critical Role",
             eb1a_role_desc: "Technical Lead for the World Bank HEET Project component at SUA.",
             tab_overview: "Overview",
             tab_experience: "Experience",
             tab_teaching: "Teaching & Courses",
             tab_innovations: "Innovations",
-            tab_print: "Print CV (PDF)"
+            tab_print: "Print CV (PDF)",
+            quick_facts: "Quick Facts",
+            fact_experience: "<strong>15+ years</strong> of academic, research, and engineering experience",
+            fact_students: "<strong>100+</strong> trained students and young innovators",
+            fact_heet: "<strong>$2.0M</strong> project portfolio leadership for HEET program",
+            fact_grants: "<strong>8+</strong> international grants and awards",
+            fact_editorial: "<strong>Editorial Board Member</strong> for Scientific Reports, IJAEIS, and TAJAS"
         },
         jobs: {
             sua_lead_title: "Senior Lecturer / Lead Engineer / Principal Investigator / HEET Digitalization Leader",
@@ -123,6 +130,15 @@ const translations = {
             search_placeholder: "Search titles, authors, or venues...",
             no_results: "No publications match your search.",
             show_elements: "Show:"
+        },
+        editorial: {
+            scirep_pub: "Published by Springer Nature",
+            scirep_metrics: "Q1 Megajournal • Impact Factor: 4.9",
+            ijaeis_pub: "Published by IGI Global",
+            ijaeis_metrics: "Scopus & ESCI Indexed",
+            tajas_pub: "Published by Sokoine University of Agriculture (SUA)",
+            tajas_metrics: "AJOL Indexed • Leading Journal in Tanzania",
+            role: "Editorial Board Member"
         }
     },
     sw: {
@@ -182,7 +198,8 @@ const translations = {
             highly_cited: "Yaliyonukuliwa Sana",
             research_projects: "Utafiti na Miradi",
             all_publications: "Machapisho Yote",
-            research_intro: "Kuchunguza makutano ya <span class=\"text-indigo-600 font-semibold\">Akili Mnemba (AI)</span>, <span class=\"text-indigo-600 font-semibold\">Roboti</span>, na <span class=\"text-indigo-600 font-semibold\">Kilimo</span>. Kazi yangu inalenga kuunda suluhisho endelevu, zinazoendeshwa na teknolojia kwa mifumo ya chakula na usimamizi wa mazingira."
+            research_intro: "Kuchunguza makutano ya <span class=\"text-indigo-600 font-semibold\">Akili Mnemba (AI)</span>, <span class=\"text-indigo-600 font-semibold\">Roboti</span>, na <span class=\"text-indigo-600 font-semibold\">Kilimo</span>. Kazi yangu inalenga kuunda suluhisho endelevu, zinazoendeshwa na teknolojia kwa mifumo ya chakula na usimamizi wa mazingira.",
+            editorial_boards: "Uanachama wa Bodi za Uhariri"
         },
         cv: {
             role_subtitle: "Mhandisi Mwandamizi wa Programu & Kujifunza kwa Mashine",
@@ -207,14 +224,20 @@ const translations = {
             eb1a_awards: "Tuzo",
             eb1a_awards_desc: "Mshindi, Shindano la AI for Equity: Kukuza Hatua za Tabianchi, Usawa vya Jinsia na Afya, nikiongoza timu iliyopewa mikopo ya AWS ya <span class=\"font-bold text-white\">$25,000</span>.",
             eb1a_judging: "Kazi ya Kuhukumu",
-            eb1a_judging_desc: "Mhakiki wa <em>IEEE Robotics and Automation Letters (RA-L)</em> na <em>Computers in Agriculture</em>.",
+            eb1a_judging_desc: "Mwanachama wa Bodi ya Uhariri ya majarida ya <em>Scientific Reports</em> (Springer Nature, Impact Factor 4.9, Q1), <em>IJAEIS</em> (IGI Global), na <em>TAJAS</em> (SUA). Mhakiki hai wa <em>IEEE Robotics and Automation Letters (RA-L)</em> na <em>Computers in Agriculture</em>.",
             eb1a_role: "Jukumu Muhimu",
             eb1a_role_desc: "Kiongozi wa Kiufundi wa Mradi wa Benki ya Dunia wa HEET katika SUA.",
             tab_overview: "Muhtasari",
             tab_experience: "Uzoefu",
             tab_teaching: "Kufundisha & Masomo",
             tab_innovations: "Ubunifu",
-            tab_print: "Chapa CV (PDF)"
+            tab_print: "Chapa CV (PDF)",
+            quick_facts: "Ukweli wa Haraka",
+            fact_experience: "Uzoefu wa <strong>zaidi ya miaka 15</strong> wa kitaaluma, utafiti na uhandisi",
+            fact_students: "Wanafunzi na wabunifu wachanga <strong>100+</strong> waliopata mafunzo",
+            fact_heet: "Uongozi wa kwingineko ya mradi wa HEET wa <strong>$2.0M</strong>",
+            fact_grants: "Ruzuku na tuzo za kimataifa <strong>8+</strong>",
+            fact_editorial: "<strong>Mwanachama wa Bodi ya Uhariri</strong> wa Scientific Reports, IJAEIS, na TAJAS"
         },
         jobs: {
             sua_lead_title: "Mhadhiri Mwandamizi / Mhandisi Kiongozi / Kiongozi wa Miradi",
@@ -250,6 +273,15 @@ const translations = {
             search_placeholder: "Tafuta vichwa vya habari, waandishi, au majarida...",
             no_results: "Hakuna machapisho yanayolingana na utafutaji wako.",
             show_elements: "Onyesha:"
+        },
+        editorial: {
+            scirep_pub: "Imechapishwa na Springer Nature",
+            scirep_metrics: "Jarida la Q1 • Impact Factor: 4.9",
+            ijaeis_pub: "Imechapishwa na IGI Global",
+            ijaeis_metrics: "Kwenye Faharasa ya Scopus na ESCI",
+            tajas_pub: "Imechapishwa na Chuo Kikuu cha Kilimo cha Sokoine (SUA)",
+            tajas_metrics: "Kwenye Faharasa ya AJOL • Jarida Kuu la Kilimo TZ",
+            role: "Mwanachama wa Bodi ya Uhariri"
         }
     }
 };

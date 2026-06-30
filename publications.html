@@ -218,23 +218,66 @@
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-<div class="col-span-1 md:col-span-3 bg-white/50 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/50 card-hover">
-<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
-<div>
-<h2 class="text-lg font-bold text-slate-900" data-i18n="section_titles.peer_review">Peer
-                                Review Activity</h2>
-<p class="text-slate-500 text-sm">Service to the academic community</p>
-</div>
-<div class="mt-4 md:mt-0 bg-indigo-50 px-4 py-2 rounded-lg border border-indigo-100 flex items-center shadow-sm">
-<span class="text-3xl font-bold text-indigo-600 mr-2">30</span>
-<div class="leading-tight text-xs text-indigo-900 font-medium">Verified<br/>Reviews</div>
-</div>
-</div>
-<div class="h-64">
-<canvas id="reviewerChart"></canvas>
-</div>
-</div>
-</div>
+            <div class="col-span-1 md:col-span-2 bg-white/50 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/50 card-hover">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+                    <div>
+                        <h2 class="text-lg font-bold text-slate-900" data-i18n="section_titles.peer_review">Peer
+                            Review Activity</h2>
+                        <p class="text-slate-500 text-sm">Service to the academic community</p>
+                    </div>
+                    <div class="mt-4 md:mt-0 bg-indigo-50 px-4 py-2 rounded-lg border border-indigo-100 flex items-center shadow-sm">
+                        <span class="text-3xl font-bold text-indigo-600 mr-2">30</span>
+                        <div class="leading-tight text-xs text-indigo-900 font-medium">Verified<br/>Reviews</div>
+                    </div>
+                </div>
+                <div class="h-64">
+                    <canvas id="reviewerChart"></canvas>
+                </div>
+            </div>
+            
+            <!-- Editorial Board Memberships Card -->
+            <div class="col-span-1 md:col-span-1 bg-white/50 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/50 card-hover flex flex-col justify-between">
+                <div>
+                    <h2 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        <span data-i18n="section_titles.editorial_boards">Editorial Board Memberships</span>
+                    </h2>
+                    <div class="space-y-5">
+                        <!-- Scientific Reports -->
+                        <div class="border-b border-slate-100 pb-4 last:border-0 last:pb-0">
+                            <h3 class="font-bold text-slate-900 text-sm">Scientific Reports</h3>
+                            <p class="text-xs text-slate-500 mb-2" data-i18n="editorial.scirep_pub">Published by Springer Nature</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="text-[10px] bg-indigo-50 text-indigo-600 px-2 py-0.5 rounded font-semibold border border-indigo-100/50" data-i18n="editorial.role">Editorial Board Member</span>
+                                <span class="text-[10px] bg-emerald-50 text-emerald-600 px-2 py-0.5 rounded font-semibold border border-emerald-100/50" data-i18n="editorial.scirep_metrics">Q1 Megajournal • Impact Factor: 4.9</span>
+                            </div>
+                        </div>
+                        
+                        <!-- IJAEIS -->
+                        <div class="border-b border-slate-100 pb-4 last:border-0 last:pb-0">
+                            <h3 class="font-bold text-slate-900 text-sm">IJAEIS</h3>
+                            <p class="text-xs text-slate-500 mb-2" data-i18n="editorial.ijaeis_pub">Published by IGI Global</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="text-[10px] bg-indigo-50 text-indigo-600 px-2 py-0.5 rounded font-semibold border border-indigo-100/50" data-i18n="editorial.role">Editorial Board Member</span>
+                                <span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-semibold border border-slate-200/50" data-i18n="editorial.ijaeis_metrics">Scopus & ESCI Indexed</span>
+                            </div>
+                        </div>
+
+                        <!-- TAJAS -->
+                        <div class="border-b border-slate-100 pb-4 last:border-0 last:pb-0">
+                            <h3 class="font-bold text-slate-900 text-sm">TAJAS</h3>
+                            <p class="text-xs text-slate-500 mb-2" data-i18n="editorial.tajas_pub">Published by Sokoine University of Agriculture (SUA)</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="text-[10px] bg-indigo-50 text-indigo-600 px-2 py-0.5 rounded font-semibold border border-indigo-100/50" data-i18n="editorial.role">Editorial Board Member</span>
+                                <span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-semibold border border-slate-200/50" data-i18n="editorial.tajas_metrics">AJOL Indexed • Leading Journal in Tanzania</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 <div class="bg-indigo-50 border border-indigo-100 p-6 rounded-xl mb-12 card-hover">
 <h2 class="text-lg font-bold text-indigo-900 mb-4" data-i18n="section_titles.academic_profiles">Academic
                     Profiles</h2>
