@@ -312,6 +312,44 @@
                 </div>
             </div>
 
+            <!-- 1.4 PROFESSIONAL MEMBERSHIPS & AFFILIATIONS -->
+            <div class="print-section break-inside-avoid">
+                <h2 class="print-section-title text-base font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-3" data-i18n="section_titles.memberships">1.4 Professional Memberships & Affiliations</h2>
+                <p class="text-xs text-slate-700 leading-relaxed mb-3">
+                    Membership in leading national and international scientific and engineering organizations represents high peer recognition, legal practice licensure, and adherence to rigorous professional and ethical standards.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-700">
+                    <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+                        <div class="font-bold text-slate-900">1.4.1 Member -- Sokoine University Academic Staff Association (M-SUASA)</div>
+                        <p class="text-[11px] text-slate-600 mt-1">Prestige & Significance: Representative academic body for faculty at Tanzania's flagship agricultural university, signifying academic leadership and institutional governance.</p>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+                        <div class="font-bold text-slate-900">1.4.2 Member -- Institution of Engineers Tanzania (M-IET)</div>
+                        <p class="text-[11px] text-slate-600 mt-1">Prestige & Significance: Primary professional body for engineers in Tanzania, confirming high ethical standards and commitment to national infrastructure engineering.</p>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200 md:col-span-2">
+                        <div class="font-bold text-slate-900">1.4.3 Registered Professional Engineer -- Engineers Registration Board of Tanzania (P.Eng 11382)</div>
+                        <p class="text-[11px] text-slate-600 mt-1">Prestige & Significance: Highest statutory title granted under the Engineers Registration Act after rigorous peer evaluation. Grants full legal authority to practice, certify, and lead major engineering works in Tanzania.</p>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+                        <div class="font-bold text-slate-900">1.4.4 Member -- Institute of Electrical and Electronics Engineers (M-IEEE) [#95107203]</div>
+                        <p class="text-[11px] text-slate-600 mt-1">Prestige & Significance: World's largest technical professional organization (400,000+ members worldwide), indicating global recognition in electrical engineering, computer science, and robotics.</p>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+                        <div class="font-bold text-slate-900">1.4.5 Member -- American Society of Agricultural and Biological Engineers (M-ASABE) [#1047427]</div>
+                        <p class="text-[11px] text-slate-600 mt-1">Prestige & Significance: Premier global educational and scientific organization for agricultural engineering, underscoring leadership in precision agriculture standards and smart farming.</p>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+                        <div class="font-bold text-slate-900">1.4.6 Member -- The American Association for the Advancement of Science (M-AAAS) [#20348035]</div>
+                        <p class="text-[11px] text-slate-600 mt-1">Prestige & Significance: World's largest general scientific society and publisher of <em>Science</em>, reflecting international interdisciplinary scientific standing and advocacy for research integrity.</p>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+                        <div class="font-bold text-slate-900">1.4.7 Member -- The Association for Unmanned Vehicle Systems International (M-AUVSI) [#90572]</div>
+                        <p class="text-[11px] text-slate-600 mt-1">Prestige & Significance: World's leading organization dedicated to uncrewed systems and autonomous vehicle technology, highlighting specialized expertise in physical AI and mobile robotics.</p>
+                    </div>
+                </div>
+            </div>
+
             <!-- EDUCATION -->
             <div class="print-section break-inside-avoid">
                 <h2 class="print-section-title text-base font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-3" data-i18n="section_titles.education">Education</h2>
@@ -1571,6 +1609,12 @@
                     </svg>
                     <span data-i18n="cv.tab_innovations">Innovations</span>
                 </button>
+                <button id="tab-memberships" role="tab" aria-selected="false" aria-controls="panel-memberships" tabindex="-1" class="cv-tab-btn flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium text-slate-600 hover:text-indigo-600 hover:bg-slate-50 transition-all duration-300">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                    </svg>
+                    <span data-i18n="cv.tab_memberships">Memberships</span>
+                </button>
             </div>
             <button onclick="window.print()" class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 transition shadow-sm">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1691,6 +1735,45 @@
                                         </p>
                                     </div>
                                 </div>
+                            </div>
+                        </section>
+
+                        <!-- Professional Memberships Summary Section -->
+                        <section class="bg-white/50 backdrop-blur-lg p-6 md:p-8 rounded-2xl shadow-xl border border-white/50 card-hover">
+                            <div class="flex justify-between items-center mb-6 border-b border-slate-200/60 pb-3">
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-900" data-i18n="section_titles.memberships">Professional Memberships & Affiliations</h3>
+                                    <p class="text-xs text-slate-500 mt-0.5">National & International Peer Recognition and Statutory Licensure</p>
+                                </div>
+                                <button onclick="document.getElementById('tab-memberships').click()" class="text-xs font-semibold text-indigo-600 hover:text-indigo-800 bg-indigo-50 px-3 py-1.5 rounded-lg border border-indigo-100 transition">View All Details &rarr;</button>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="bg-indigo-50/70 p-4 rounded-xl border border-indigo-100">
+                                    <span class="text-xs font-mono font-bold text-indigo-700 bg-white px-2 py-0.5 rounded border border-indigo-200">PE11382</span>
+                                    <h4 class="font-bold text-slate-900 text-sm mt-2">Registered Professional Engineer</h4>
+                                    <p class="text-xs text-slate-600 mt-1">Engineers Registration Board of Tanzania (ERB). Highest statutory legal title for engineering practice in Tanzania.</p>
+                                </div>
+                                <div class="bg-slate-50/70 p-4 rounded-xl border border-slate-200">
+                                    <span class="text-xs font-mono font-bold text-slate-700 bg-white px-2 py-0.5 rounded border border-slate-200">Reg #95107203</span>
+                                    <h4 class="font-bold text-slate-900 text-sm mt-2">IEEE Member</h4>
+                                    <p class="text-xs text-slate-600 mt-1">Institute of Electrical and Electronics Engineers. World's premier technical organization for electrical engineering and AI.</p>
+                                </div>
+                                <div class="bg-slate-50/70 p-4 rounded-xl border border-slate-200">
+                                    <span class="text-xs font-mono font-bold text-slate-700 bg-white px-2 py-0.5 rounded border border-slate-200">Reg #1047427</span>
+                                    <h4 class="font-bold text-slate-900 text-sm mt-2">ASABE Member</h4>
+                                    <p class="text-xs text-slate-600 mt-1">American Society of Agricultural and Biological Engineers. Global authority in smart farming and precision agriculture.</p>
+                                </div>
+                                <div class="bg-slate-50/70 p-4 rounded-xl border border-slate-200">
+                                    <span class="text-xs font-mono font-bold text-slate-700 bg-white px-2 py-0.5 rounded border border-slate-200">Reg #20348035</span>
+                                    <h4 class="font-bold text-slate-900 text-sm mt-2">AAAS Member</h4>
+                                    <p class="text-xs text-slate-600 mt-1">American Association for the Advancement of Science (Publisher of <em>Science</em>). World's largest general scientific society.</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-100 flex flex-wrap gap-2 text-xs text-slate-600">
+                                <span class="font-semibold text-slate-800">Additional Affiliations:</span>
+                                <span class="bg-slate-100 text-slate-700 px-2.5 py-0.5 rounded-full font-medium">M-SUASA (Sokoine Univ. Academic Staff Assoc.)</span>
+                                <span class="bg-slate-100 text-slate-700 px-2.5 py-0.5 rounded-full font-medium">M-IET (Institution of Engineers Tanzania)</span>
+                                <span class="bg-slate-100 text-slate-700 px-2.5 py-0.5 rounded-full font-medium">M-AUVSI [#90572] (Unmanned Vehicle Systems Intl.)</span>
                             </div>
                         </section>
 
@@ -2082,6 +2165,181 @@
 
                     </div>
                 </section>
+            </div>
+
+            <!-- PANEL 5: MEMBERSHIPS & AFFILIATIONS -->
+            <div id="panel-memberships" role="tabpanel" aria-labelledby="tab-memberships" class="cv-panel hidden space-y-10 fade-in">
+                <!-- Section Header Banner -->
+                <section class="bg-gradient-to-r from-indigo-900 via-indigo-800 to-slate-900 text-white p-8 md:p-10 rounded-3xl shadow-xl relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="relative z-10 max-w-3xl">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-indigo-200 text-xs font-semibold uppercase tracking-wider mb-4">
+                            <svg class="w-4 h-4 text-indigo-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                            Peer Recognition & Statutory Licensure
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-3 text-white" data-i18n="section_titles.memberships">Professional Memberships & Affiliations</h2>
+                        <p class="text-indigo-100 text-sm md:text-base leading-relaxed">
+                            Active affiliation with premier national and international engineering and scientific societies. Admission to these organizations reflects rigorous peer qualification, adherence to global scientific ethics, statutory licensure, and leadership across AI, robotics, and agricultural engineering.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Memberships List Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <!-- 1.4.1 M-SUASA -->
+                    <div class="bg-white/60 backdrop-blur-lg p-6 rounded-2xl border border-white/60 shadow-lg card-hover flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start gap-3 mb-3">
+                                <span class="text-xs font-mono font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-lg border border-indigo-100">1.4.1</span>
+                                <span class="text-[10px] bg-slate-100 text-slate-700 px-2.5 py-1 rounded-full border border-slate-200 font-bold uppercase tracking-wider">Academic Staff</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-1">Member — Sokoine University Academic Staff Association</h3>
+                            <div class="text-xs font-mono text-indigo-600 font-semibold mb-3">Abbreviation: M-SUASA</div>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                Representative academic organization for senior faculty and researchers at Tanzania's flagship agricultural and biological engineering university.
+                            </p>
+                        </div>
+                        <div class="bg-indigo-50/60 p-3.5 rounded-xl border border-indigo-100/80">
+                            <span class="text-[11px] font-bold text-indigo-900 block mb-1 uppercase tracking-wider">Prestige & Vetting Standards</span>
+                            <p class="text-xs text-slate-700 leading-relaxed">
+                                Signifies academic leadership, institutional policy contribution, and active participation in university governance and research advocacy at SUA.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 1.4.2 M-IET -->
+                    <div class="bg-white/60 backdrop-blur-lg p-6 rounded-2xl border border-white/60 shadow-lg card-hover flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start gap-3 mb-3">
+                                <span class="text-xs font-mono font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-lg border border-indigo-100">1.4.2</span>
+                                <span class="text-[10px] bg-blue-50 text-blue-700 px-2.5 py-1 rounded-full border border-blue-200 font-bold uppercase tracking-wider">Professional Institution</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-1">Member — Institution of Engineers Tanzania</h3>
+                            <div class="text-xs font-mono text-indigo-600 font-semibold mb-3">Abbreviation: M-IET</div>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                The primary learned society and professional body representing engineers across all engineering disciplines in Tanzania.
+                            </p>
+                        </div>
+                        <div class="bg-indigo-50/60 p-3.5 rounded-xl border border-indigo-100/80">
+                            <span class="text-[11px] font-bold text-indigo-900 block mb-1 uppercase tracking-wider">Prestige & Vetting Standards</span>
+                            <p class="text-xs text-slate-700 leading-relaxed">
+                                Denotes verified engineering competence, mandatory ethical compliance, and long-term commitment to advancing national engineering standards.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 1.4.3 P.Eng ERB (Featured Full-width Card) -->
+                    <div class="md:col-span-2 bg-gradient-to-br from-indigo-50/90 via-white to-blue-50/80 backdrop-blur-lg p-6 md:p-8 rounded-3xl border-2 border-indigo-200 shadow-xl card-hover">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-4">
+                            <div>
+                                <div class="flex items-center gap-3 mb-1">
+                                    <span class="text-xs font-mono font-bold text-white bg-indigo-600 px-2.5 py-1 rounded-lg">1.4.3</span>
+                                    <span class="text-xs bg-amber-100 text-amber-900 font-bold px-3 py-1 rounded-full border border-amber-200">Statutory Professional License</span>
+                                </div>
+                                <h3 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">Registered Professional Engineer — Engineers Registration Board of Tanzania</h3>
+                            </div>
+                            <div class="bg-indigo-600 text-white px-4 py-2 rounded-xl text-center shadow-md">
+                                <div class="text-[10px] text-indigo-200 uppercase font-semibold">License Number</div>
+                                <div class="text-lg font-mono font-extrabold tracking-wider">P.Eng 11382</div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-slate-700 leading-relaxed mb-4">
+                            The Engineers Registration Board (ERB) is the statutory body established by law to regulate engineering practice and license engineers in Tanzania. Full Professional Engineer (P.Eng) status is awarded only after rigorous post-graduate practice evaluation, oral examinations, and peer review.
+                        </p>
+                        <div class="bg-white/90 p-4 rounded-2xl border border-indigo-100 shadow-sm">
+                            <span class="text-xs font-bold text-indigo-800 uppercase tracking-wider block mb-1">Legal Authority & Highest Prestige</span>
+                            <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+                                Holds full legal authorization under the Engineers Registration Act to practice, certify, and sign off on complex engineering designs, public infrastructure, and technical projects in Tanzania.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 1.4.4 M-IEEE -->
+                    <div class="bg-white/60 backdrop-blur-lg p-6 rounded-2xl border border-white/60 shadow-lg card-hover flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start gap-3 mb-3">
+                                <span class="text-xs font-mono font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-lg border border-indigo-100">1.4.4</span>
+                                <span class="text-xs font-mono font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">Reg #95107203</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-1">Member — Institute of Electrical and Electronics Engineers</h3>
+                            <div class="text-xs font-mono text-indigo-600 font-semibold mb-3">Abbreviation: M-IEEE</div>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                The world's largest technical professional organization for electrical engineering, computer science, robotics, and physical AI, spanning over 160 countries.
+                            </p>
+                        </div>
+                        <div class="bg-indigo-50/60 p-3.5 rounded-xl border border-indigo-100/80">
+                            <span class="text-[11px] font-bold text-indigo-900 block mb-1 uppercase tracking-wider">Global Standards & Prestige</span>
+                            <p class="text-xs text-slate-700 leading-relaxed">
+                                Connects to top international peer-reviewed journals (RA-L), standardizations, and global robotics conferences.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 1.4.5 M-ASABE -->
+                    <div class="bg-white/60 backdrop-blur-lg p-6 rounded-2xl border border-white/60 shadow-lg card-hover flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start gap-3 mb-3">
+                                <span class="text-xs font-mono font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-lg border border-indigo-100">1.4.5</span>
+                                <span class="text-xs font-mono font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">Reg #1047427</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-1">Member — American Society of Agricultural and Biological Engineers</h3>
+                            <div class="text-xs font-mono text-indigo-600 font-semibold mb-3">Abbreviation: M-ASABE</div>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                The premier international scientific society focused on engineering solutions for agricultural, biological, and food systems.
+                            </p>
+                        </div>
+                        <div class="bg-indigo-50/60 p-3.5 rounded-xl border border-indigo-100/80">
+                            <span class="text-[11px] font-bold text-indigo-900 block mb-1 uppercase tracking-wider">Precision Agriculture Authority</span>
+                            <p class="text-xs text-slate-700 leading-relaxed">
+                                Demonstrates specialized technical excellence in autonomous agricultural equipment, sensors, and smart farming systems.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 1.4.6 M-AAAS -->
+                    <div class="bg-white/60 backdrop-blur-lg p-6 rounded-2xl border border-white/60 shadow-lg card-hover flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start gap-3 mb-3">
+                                <span class="text-xs font-mono font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-lg border border-indigo-100">1.4.6</span>
+                                <span class="text-xs font-mono font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">Reg #20348035</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-1">Member — The American Association for the Advancement of Science</h3>
+                            <div class="text-xs font-mono text-indigo-600 font-semibold mb-3">Abbreviation: M-AAAS</div>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                Publisher of the journal <em>Science</em> and the world's largest general scientific society, advancing science, engineering, and innovation worldwide.
+                            </p>
+                        </div>
+                        <div class="bg-indigo-50/60 p-3.5 rounded-xl border border-indigo-100/80">
+                            <span class="text-[11px] font-bold text-indigo-900 block mb-1 uppercase tracking-wider">Scientific Leadership</span>
+                            <p class="text-xs text-slate-700 leading-relaxed">
+                                Affiliation with international scientific leaders championing scientific integrity, peer review rigor, and evidence-based policy.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 1.4.7 M-AUVSI -->
+                    <div class="bg-white/60 backdrop-blur-lg p-6 rounded-2xl border border-white/60 shadow-lg card-hover flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start gap-3 mb-3">
+                                <span class="text-xs font-mono font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-lg border border-indigo-100">1.4.7</span>
+                                <span class="text-xs font-mono font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">Reg #90572</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-1">Member — The Association for Unmanned Vehicle Systems International</h3>
+                            <div class="text-xs font-mono text-indigo-600 font-semibold mb-3">Abbreviation: M-AUVSI</div>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                The world's largest non-profit organization devoted exclusively to advancing uncrewed systems, robotics, and autonomous technologies.
+                            </p>
+                        </div>
+                        <div class="bg-indigo-50/60 p-3.5 rounded-xl border border-indigo-100/80">
+                            <span class="text-[11px] font-bold text-indigo-900 block mb-1 uppercase tracking-wider">Autonomous Systems Expertise</span>
+                            <p class="text-xs text-slate-700 leading-relaxed">
+                                Reflects specialized research and deployment experience in autonomous UGVs, UAV flight controllers, and mobile robotics.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
             <!-- Page-wide Print & Download Section for Mobile -->

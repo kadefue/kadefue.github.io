@@ -56,7 +56,8 @@ const translations = {
             research_projects: "Research & Projects",
             all_publications: "All Publications",
             research_intro: "Exploring the intersection of <span class=\"text-indigo-600 font-semibold\">Artificial Intelligence</span>, <span class=\"text-indigo-600 font-semibold\">Robotics</span>, and <span class=\"text-indigo-600 font-semibold\">Agriculture</span>. My work focuses on creating sustainable, technology-driven solutions for food systems and environmental management.",
-            editorial_boards: "Editorial Board Memberships"
+            editorial_boards: "Editorial Board Memberships",
+            memberships: "Professional Memberships & Affiliations"
         },
         cv: {
             role_subtitle: "Senior Software Development Engineer & Machine Learning Specialist",
@@ -88,6 +89,7 @@ const translations = {
             tab_experience: "Experience",
             tab_teaching: "Teaching & Courses",
             tab_innovations: "Innovations",
+            tab_memberships: "Memberships",
             tab_print: "Print CV (PDF)",
             quick_facts: "Quick Facts",
             fact_experience: "<strong>15+ years</strong> of academic, research, and engineering experience",
@@ -199,7 +201,8 @@ const translations = {
             research_projects: "Utafiti na Miradi",
             all_publications: "Machapisho Yote",
             research_intro: "Kuchunguza makutano ya <span class=\"text-indigo-600 font-semibold\">Akili Mnemba (AI)</span>, <span class=\"text-indigo-600 font-semibold\">Roboti</span>, na <span class=\"text-indigo-600 font-semibold\">Kilimo</span>. Kazi yangu inalenga kuunda suluhisho endelevu, zinazoendeshwa na teknolojia kwa mifumo ya chakula na usimamizi wa mazingira.",
-            editorial_boards: "Uanachama wa Bodi za Uhariri"
+            editorial_boards: "Uanachama wa Bodi za Uhariri",
+            memberships: "Uanachama wa Kitaaluma na Vyama"
         },
         cv: {
             role_subtitle: "Mhandisi Mwandamizi wa Programu & Kujifunza kwa Mashine",
@@ -231,6 +234,7 @@ const translations = {
             tab_experience: "Uzoefu",
             tab_teaching: "Kufundisha & Masomo",
             tab_innovations: "Ubunifu",
+            tab_memberships: "Uanachama",
             tab_print: "Chapa CV (PDF)",
             quick_facts: "Ukweli wa Haraka",
             fact_experience: "Uzoefu wa <strong>zaidi ya miaka 15</strong> wa kitaaluma, utafiti na uhandisi",
