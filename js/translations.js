@@ -125,6 +125,7 @@ const translations = {
             google_scholar: "Google Scholar",
             orcid: "ORCID",
             scopus: "Scopus",
+            sua_profile: "SUA Profile",
             youtube: "YouTube",
             email: "Email"
         },
@@ -270,6 +271,7 @@ const translations = {
             google_scholar: "Google Scholar",
             orcid: "ORCID",
             scopus: "Scopus",
+            sua_profile: "Wasifu wa SUA",
             youtube: "YouTube",
             email: "Barua Pepe"
         },
