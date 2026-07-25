@@ -96,7 +96,14 @@ const translations = {
             fact_students: "<strong>100+</strong> trained students and young innovators",
             fact_heet: "<strong>$2.0M</strong> project portfolio leadership for HEET program",
             fact_grants: "<strong>8+</strong> international grants and awards",
-            fact_editorial: "<strong>Editorial Board Member</strong> for Scientific Reports, IJAEIS, and TAJAS"
+            fact_editorial: "<strong>Editorial Board Member</strong> for Scientific Reports, IJAEIS, and TAJAS",
+            academic_service: "Academic Service & Supervision",
+            external_examiner: "External Examiner",
+            external_examiner_desc: "Serving as an External Examiner evaluating academic programs and theses for:",
+            student_supervision: "Student Supervision",
+            student_supervision_desc: "Supervising and mentoring PhD and MSc research students from:",
+            academic_service_tag: "Academic Service",
+            research_mentorship_tag: "Research Mentorship"
         },
         jobs: {
             sua_lead_title: "Senior Lecturer / Lead Engineer / Principal Investigator / HEET Digitalization Leader",
@@ -242,7 +249,14 @@ const translations = {
             fact_students: "Wanafunzi na wabunifu wachanga <strong>100+</strong> waliopata mafunzo",
             fact_heet: "Uongozi wa kwingineko ya mradi wa HEET wa <strong>$2.0M</strong>",
             fact_grants: "Ruzuku na tuzo za kimataifa <strong>8+</strong>",
-            fact_editorial: "<strong>Mwanachama wa Bodi ya Uhariri</strong> wa Scientific Reports, IJAEIS, na TAJAS"
+            fact_editorial: "<strong>Mwanachama wa Bodi ya Uhariri</strong> wa Scientific Reports, IJAEIS, na TAJAS",
+            academic_service: "Huduma za Kitaaluma & Usimamizi",
+            external_examiner: "Mtahini wa Nje",
+            external_examiner_desc: "Kuhudumu kama Mtahini wa Nje wa tathmini ya programu za masomo na tasnifu za wanafunzi wa:",
+            student_supervision: "Usimamizi wa Wanafunzi",
+            student_supervision_desc: "Kusimamia na kuelekeza utafiti wa wanafunzi wa PhD na MSc kutoka:",
+            academic_service_tag: "Huduma za Kitaaluma",
+            research_mentorship_tag: "Usimamizi wa Utafiti"
         },
         jobs: {
             sua_lead_title: "Mhadhiri Mwandamizi / Mhandisi Kiongozi / Kiongozi wa Miradi",
