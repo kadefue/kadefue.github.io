@@ -58,49 +58,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 2. Dynamic Layout Loading (Header/Footer) ---
+    // --- 2. Layout Initialization (Inlined Header/Footer) ---
     async function loadLayout() {
-        const headerPlaceholder = document.getElementById('header-placeholder');
-        const footerPlaceholder = document.getElementById('footer-placeholder');
+        // Highlighting active nav links
+        highlightActiveNav();
 
-        const loadPromises = [];
+        // Initialize mobile menu events
+        initMobileMenu();
 
-        if (headerPlaceholder) {
-            loadPromises.push(
-                fetch('header.html')
-                    .then(response => {
-                        if (!response.ok) throw new Error('Header not found');
-                        return response.text();
-                    })
-                    .then(html => {
-                        headerPlaceholder.innerHTML = html;
-                        highlightActiveNav();
-                        initMobileMenu();
-                    })
-                    .catch(err => console.error('Failed to load header:', err))
-            );
+        // Update year in footer
+        const yearSpan = document.getElementById('year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
         }
-
-        if (footerPlaceholder) {
-            loadPromises.push(
-                fetch('footer.html')
-                    .then(response => {
-                        if (!response.ok) throw new Error('Footer not found');
-                        return response.text();
-                    })
-                    .then(html => {
-                        footerPlaceholder.innerHTML = html;
-                        const yearSpan = document.getElementById('year');
-                        if (yearSpan) {
-                            yearSpan.textContent = new Date().getFullYear();
-                        }
-                    })
-                    .catch(err => console.error('Failed to load footer:', err))
-            );
-        }
-
-        // Wait for all layouts to be loaded and injected
-        await Promise.all(loadPromises);
 
         // Run translations on the entire page, including dynamically loaded content
         setLanguage(currentLang);
