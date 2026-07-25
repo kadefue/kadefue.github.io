@@ -80,4 +80,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
+
+    // --- 4. Email Obfuscation ---
+    const emailLinks = document.querySelectorAll('.email-lnk');
+    emailLinks.forEach(link => {
+        const updateEmail = () => {
+            const user = link.getAttribute('data-user');
+            const domain = link.getAttribute('data-domain');
+            if (user && domain) {
+                link.setAttribute('href', `mailto:${user}@${domain}`);
+            }
+        };
+        link.addEventListener('mouseover', updateEmail);
+        link.addEventListener('focus', updateEmail);
+        link.addEventListener('click', updateEmail);
+    });
 });
