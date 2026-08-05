@@ -226,7 +226,7 @@
                         <p class="text-slate-500 text-sm">Service to the academic community</p>
                     </div>
                     <div class="mt-4 md:mt-0 bg-indigo-50 px-4 py-2 rounded-lg border border-indigo-100 flex items-center shadow-sm">
-                        <span class="text-3xl font-bold text-indigo-600 mr-2">30</span>
+                        <span class="text-3xl font-bold text-indigo-600 mr-2">42</span>
                         <div class="leading-tight text-xs text-indigo-900 font-medium">Verified<br/>Reviews</div>
                     </div>
                 </div>
@@ -1578,26 +1578,122 @@
             }
         });
 
+        // Dynamic ORCID Peer Review Fetching
+        const journalMapping = {
+            'issn:2772-3755': 'Smart Agricultural Technology',
+            'issn:1424-8220': 'Sensors',
+            'issn:2077-0472': 'Agriculture',
+            'issn:1744-9006': 'Journal of Maps',
+            'issn:2073-4395': 'Agronomy',
+            'issn:1365-3040': 'Plant, Cell & Environment',
+            'issn:2331-1932': 'Cogent Engineering',
+            'issn:0168-1699': 'Computers & Ag',
+            'issn:2218-6581': 'Robotics (MDPI)',
+            'issn:2079-9292': 'Electronics',
+            'issn:2076-3417': 'Applied Sciences',
+            'issn:2306-5354': 'Bioengineering',
+            'issn:1947-3192': 'IJAEIS',
+            'ringgold:213058': 'IGI Global'
+        };
+
         const ctxReviewer = document.getElementById('reviewerChart').getContext('2d');
-        const reviewerChart = new Chart(ctxReviewer, {
-            type: 'bar',
-            indexAxis: 'y',
-            data: {
-                labels: ['Electronics', 'Applied Sciences', 'Robotics', 'Intl J Ag Info', 'Bioengineering', 'Sensors', 'Computers & Ag'],
-                datasets: [{
-                    label: 'Reviews',
-                    data: [6, 5, 5, 4, 3, 3, 2],
-                    backgroundColor: ['rgba(59, 130, 246, 0.7)', 'rgba(16, 185, 129, 0.7)', 'rgba(245, 158, 11, 0.7)', 'rgba(139, 92, 246, 0.7)', 'rgba(236, 72, 153, 0.7)', 'rgba(14, 165, 233, 0.7)', 'rgba(249, 115, 22, 0.7)'],
-                    borderWidth: 1,
-                    borderRadius: 4
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: { x: { beginAtZero: true, grid: { color: '#e2e8f0', drawBorder: false } }, y: { grid: { display: false } } },
-                plugins: { legend: { display: false } }
+        let reviewerChartInstance;
+
+        // Fallback static data in case the fetch fails (pre-filled with current ORCID metrics)
+        const fallbackData = {
+            labels: ['Electronics', 'Applied Sciences', 'Robotics (MDPI)', 'IJAEIS', 'Sensors', 'Smart Ag Tech', 'Agriculture', 'Computers & Ag'],
+            data: [6, 5, 5, 4, 4, 3, 3, 2]
+        };
+
+        function renderReviewerChart(labels, dataValues) {
+            if (reviewerChartInstance) {
+                reviewerChartInstance.destroy();
             }
+            reviewerChartInstance = new Chart(ctxReviewer, {
+                type: 'bar',
+                indexAxis: 'y',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Reviews',
+                        data: dataValues,
+                        backgroundColor: [
+                            'rgba(99, 102, 241, 0.7)',  // Indigo
+                            'rgba(16, 185, 129, 0.7)',  // Emerald
+                            'rgba(245, 158, 11, 0.7)',  // Amber
+                            'rgba(139, 92, 246, 0.7)',  // Violet
+                            'rgba(236, 72, 153, 0.7)',  // Pink
+                            'rgba(14, 165, 233, 0.7)',  // Sky
+                            'rgba(249, 115, 22, 0.7)',   // Orange
+                            'rgba(107, 114, 128, 0.7)'  // Gray
+                        ],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: { x: { beginAtZero: true, grid: { color: '#e2e8f0', drawBorder: false } }, y: { grid: { display: false } } },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        }
+
+        // Initialize with fallback first
+        renderReviewerChart(fallbackData.labels, fallbackData.data);
+
+        // Fetch dynamic reviews from ORCID
+        fetch('https://pub.orcid.org/v3.0/0000-0001-6362-3174/peer-reviews', {
+            headers: { 'Accept': 'application/json' }
+        })
+        .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.json();
+        })
+        .then(data => {
+            const groups = data.group || [];
+            let totalReviewsCount = 0;
+            const journalCounts = {};
+
+            groups.forEach(g => {
+                const extIds = g['external-ids']?.['external-id'] || [];
+                const key = extIds[0]?.['external-id-value'];
+                
+                let count = 0;
+                const prgItems = g['peer-review-group'] || [];
+                prgItems.forEach(prg => {
+                    const summaries = prg['peer-review-summary'] || [];
+                    count += summaries.length;
+                });
+
+                if (count > 0 && key) {
+                    totalReviewsCount += count;
+                    const journalName = journalMapping[key] || key.replace('issn:', '');
+                    journalCounts[journalName] = (journalCounts[journalName] || 0) + count;
+                }
+            });
+
+            if (totalReviewsCount > 0) {
+                // Update total reviews badge
+                const reviewBadge = document.querySelector('[data-i18n="section_titles.peer_review"]')?.closest('.bg-white\\/50')?.querySelector('.text-3xl');
+                if (reviewBadge) {
+                    reviewBadge.textContent = totalReviewsCount;
+                }
+
+                // Sort journals by count descending
+                const sortedJournals = Object.entries(journalCounts)
+                    .sort((a, b) => b[1] - a[1])
+                    .slice(0, 8); // Top 8 journals for display
+
+                const dynamicLabels = sortedJournals.map(entry => entry[0]);
+                const dynamicData = sortedJournals.map(entry => entry[1]);
+
+                renderReviewerChart(dynamicLabels, dynamicData);
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching ORCID peer reviews:', error);
         });
 
         // --- ALL PUBLICATIONS SEARCH, PAGINATION & TRANSLATION LOGIC ---
