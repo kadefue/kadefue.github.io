@@ -527,7 +527,7 @@ Dr. Fue's scientific contributions have established a strong research footprint 
 - **PhD in Engineering (AI & Robotics)** – University of Georgia (UGA), USA (2016–2020)
   *Dissertation: Computer vision and mechatronics for cotton harvesting robots.*
   *GPA: Magna Cum Laude*
-- **MSc in Agricultural & Biological Engineering (Automation & Precision Ag)** – University of Florida (UF), USA (2012–2014)
+- **MSc in Ag & Biol Engineering (Information Systems and Precision Agriculture)** – University of Florida (UF), USA (2012–2014)
   *Thesis: Design and evaluation of a variable-rate fertilizer application system.*
 - **BSc in Computer Engineering & Information Technology** – University of Dar es Salaam (UDSM), Tanzania (2007–2011)
 
