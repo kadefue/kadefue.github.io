@@ -14,9 +14,9 @@ const translations = {
             welcome: "Welcome to my portfolio",
             role: "Senior Lecturer & Registered Professional Engineer (PE11382). Senior Software Development Engineer with 15+ years of experience.",
             description: "Innovating at the intersection of",
-            mechatronics: "Mechatronics",
-            ai: "AI",
-            precision_ag: "Precision Ag",
+            mechatronics: "Mechatronics Engineering",
+            ai: "Artificial Intelligence & Machine Learning",
+            precision_ag: "Precision Agriculture Engineering",
             more_about: "More About Me",
             view_research: "View Research"
         },
@@ -56,8 +56,7 @@ const translations = {
             research_projects: "Research & Projects",
             all_publications: "All Publications",
             research_intro: "Exploring the intersection of <span class=\"text-indigo-600 font-semibold\">Artificial Intelligence</span>, <span class=\"text-indigo-600 font-semibold\">Robotics</span>, and <span class=\"text-indigo-600 font-semibold\">Agriculture</span>. My work focuses on creating sustainable, technology-driven solutions for food systems and environmental management.",
-            editorial_boards: "Editorial Board Memberships",
-            research_grants: "Research Grants & Funding Portfolio"
+            editorial_boards: "Editorial Board Memberships"
         },
         cv: {
             role_subtitle: "Senior Software Development Engineer & Machine Learning Specialist",
@@ -89,15 +88,14 @@ const translations = {
             tab_experience: "Experience",
             tab_teaching: "Teaching & Courses",
             tab_innovations: "Innovations",
+            tab_memberships: "Memberships",
             tab_print: "Print CV (PDF)",
             quick_facts: "Quick Facts",
             fact_experience: "<strong>15+ years</strong> of academic, research, and engineering experience",
             fact_students: "<strong>100+</strong> trained students and young innovators",
             fact_heet: "<strong>$2.0M</strong> project portfolio leadership for HEET program",
-            fact_payment: "Architected SUA GePG Payment System processing <strong>>10 Billion TZS</strong> transactions annually in real time",
-            fact_grants: "<strong>12</strong> research grants & international awards",
-            fact_editorial: "<strong>Editorial Board Member</strong> for Scientific Reports, IJAEIS, and TAJAS",
-            tab_grants: "Research Grants"
+            fact_grants: "<strong>8+</strong> international grants and awards",
+            fact_editorial: "<strong>Editorial Board Member</strong> for Scientific Reports, IJAEIS, and TAJAS"
         },
         jobs: {
             sua_lead_title: "Senior Lecturer / Lead Engineer / Principal Investigator / HEET Digitalization Leader",
@@ -126,6 +124,7 @@ const translations = {
             google_scholar: "Google Scholar",
             orcid: "ORCID",
             scopus: "Scopus",
+            sua_profile: "SUA Profile",
             youtube: "YouTube",
             email: "Email"
         },
@@ -164,9 +163,9 @@ const translations = {
         },
         hero: {
             welcome: "Karibu kwenye wasifu wangu",
-            role: "Mhadhiri Mwandamizi na Mhandisi Mtaalamu Aliyesajiliwa (PE11382). Mhandisi Mwandamizi wa Programu mwenye uzoefu wa miaka 15+.",
+            role: "Mhadhiri Mwandamizi na Mhandisi Mtaalamu Aliyesajiliwa  (PE11382). Mhandisi Mwandamizi wa Programu mwenye uzoefu wa miaka 15+.",
             description: "Ubunifu katika makutano ya",
-            mechatronics: "Mechatronics",
+            mechatronics: "Mechatronics Engineering",
             ai: "Akili Mnemba (AI)",
             precision_ag: "Kilimo cha Kisasa",
             more_about: "Zaidi Kuhusu Mimi",
@@ -208,9 +207,8 @@ const translations = {
             highly_cited: "Yaliyonukuliwa Sana",
             research_projects: "Utafiti na Miradi",
             all_publications: "Machapisho Yote",
-            research_intro: "Kuchunguza makutano ya <span class=\"text-indigo-600 font-semibold\">Akili Mnemba (AI)</span>, <span class=\"text-indigo-600 font-semibold\">Roboti</span>, na <span class=\"text-indigo-600 font-semibold\">Kilimo</span>. Kazi myingine inalenga kuunda suluhisho endelevu, zinazoendeshwa na teknolojia kwa mifumo ya chakula na usimamizi wa mazingira.",
-            editorial_boards: "Uanachama wa Bodi za Uhariri",
-            research_grants: "Ruzuku za Utafiti & Ufadhili Portfolio"
+            research_intro: "Kuchunguza makutano ya <span class=\"text-indigo-600 font-semibold\">Akili Mnemba (AI)</span>, <span class=\"text-indigo-600 font-semibold\">Roboti</span>, na <span class=\"text-indigo-600 font-semibold\">Kilimo</span>. Kazi yangu inalenga kuunda suluhisho endelevu, zinazoendeshwa na teknolojia kwa mifumo ya chakula na usimamizi wa mazingira.",
+            editorial_boards: "Uanachama wa Bodi za Uhariri"
         },
         cv: {
             role_subtitle: "Mhandisi Mwandamizi wa Programu & Kujifunza kwa Mashine",
@@ -242,15 +240,14 @@ const translations = {
             tab_experience: "Uzoefu",
             tab_teaching: "Kufundisha & Masomo",
             tab_innovations: "Ubunifu",
+            tab_memberships: "Uanachama",
             tab_print: "Chapa CV (PDF)",
             quick_facts: "Ukweli wa Haraka",
             fact_experience: "Uzoefu wa <strong>zaidi ya miaka 15</strong> wa kitaaluma, utafiti na uhandisi",
             fact_students: "Wanafunzi na wabunifu wachanga <strong>100+</strong> waliopata mafunzo",
             fact_heet: "Uongozi wa kwingineko ya mradi wa HEET wa <strong>$2.0M</strong>",
-            fact_payment: "Nilisanifu Mfumo wa Malipo wa SUA (GePG) unaochakata <strong>>Tsh Bilioni 10</strong> kwa mwaka kwa wakati halisi",
-            fact_grants: "Ruzuku na tuzo za kimataifa <strong>12</strong>",
-            fact_editorial: "<strong>Mwanachama wa Bodi ya Uhariri</strong> wa Scientific Reports, IJAEIS, na TAJAS",
-            tab_grants: "Ruzuku za Utafiti"
+            fact_grants: "Ruzuku na tuzo za kimataifa <strong>8+</strong>",
+            fact_editorial: "<strong>Mwanachama wa Bodi ya Uhariri</strong> wa Scientific Reports, IJAEIS, na TAJAS"
         },
         jobs: {
             sua_lead_title: "Mhadhiri Mwandamizi / Mhandisi Kiongozi / Kiongozi wa Miradi",
@@ -279,6 +276,7 @@ const translations = {
             google_scholar: "Google Scholar",
             orcid: "ORCID",
             scopus: "Scopus",
+            sua_profile: "Wasifu wa SUA",
             youtube: "YouTube",
             email: "Barua Pepe"
         },
