@@ -59,9 +59,9 @@ const translations = {
             editorial_boards: "Editorial Board Memberships"
         },
         cv: {
-            role_subtitle: "Senior Software Development Engineer & Machine Learning Specialist",
-            tagline: "Full-Stack Software Architecture | Autonomous Systems | Technical Lead | EB-1A Eligible",
-            intro_text: "Visionary Senior Software Development Engineer and Physical AI Leader with <span class=\"ats-keyword\">15+ years</span> of architecting, coding, and deploying pioneering full-stack software and autonomous systems. I bridge the critical \"bit-to-atom\" gap, leading the design of custom software architectures, database systems, and mechatronic hardware integrations. Proven leadership managing <span class=\"ats-keyword\">$2M+</span> portfolios and winning international data science challenges.",
+            role_subtitle: "Software Development, Machine Learning & Robotics Specialist",
+            tagline: "Software Architecture & Payments | Machine Learning & Edge AI | Robotics & Autonomous Systems",
+            intro_text: "Senior Software Development Engineer, Machine Learning & Robotics Specialist with <span class=\"ats-keyword\">15+ years</span> architecting enterprise software, autonomous robotic systems, and AI models. I bridge full-stack system architecture (notably designing the SUA GePG payment system processing over 10 Billion TZS in student fees annually), machine learning pipelines (YOLO, computer vision, time-series forecasting), and mechatronics (ROS/ROS2, UGVs, custom control algorithms). Proven leadership managing <span class=\"ats-keyword\">$2.0M+ World Bank HEET</span> components and international research grants.",
             contact_me: "Contact Me",
             github_portfolio: "GitHub Portfolio",
             years_experience: "Years Experience",
@@ -211,9 +211,9 @@ const translations = {
             editorial_boards: "Uanachama wa Bodi za Uhariri"
         },
         cv: {
-            role_subtitle: "Mhandisi Mwandamizi wa Programu & Kujifunza kwa Mashine",
-            tagline: "Usanifu Kamili wa Programu | Mifumo ya Kujiendesha | Kiongozi wa Kiufundi | Anayestahili EB-1A",
-            intro_text: "Mhandisi Mwandamizi wa Programu na Kiongozi mwenye maono wa AI ya Kimwili mwenye uzoefu wa <span class=\"ats-keyword\">zaidi ya miaka 15</span> katika kubuni na kuunda mifumo ya programu na kujiendesha. Ninaunganisha pengo muhimu la \"bit-to-atom\", nikiongoza usanifu wa programu, mifumo ya hifadhidata, na uhandisi wa mechatronics. Uongozi uliothibitishwa wa kusimamia portfolios za <span class=\"ats-keyword\">$2M+</span> na kushinda mashindano ya kimataifa ya sayansi ya data.",
+            role_subtitle: "Mtaalamu wa Maendeleo ya Programu, Kujifunza kwa Mashine na Roboti",
+            tagline: "Usanifu wa Programu & Malipo | Kujifunza kwa Mashine & Edge AI | Roboti & Mifumo ya Kujiendesha",
+            intro_text: "Mhandisi Mwandamizi wa Maendeleo ya Programu, Mtaalamu wa Kujifunza kwa Mashine na Roboti mwenye uzoefu wa <span class=\"ats-keyword\">zaidi ya miaka 15</span> katika kubuni mifumo ya programu za biashara, roboti zinazojiendesha, na mbinu za AI. Ninaunganisha usanifu wa programu za kompyuta (ikiwa ni pamoja na mfumo wa GePG wa malipo ya SUA unaochakata zaidi ya TZS Bilioni 10 kila mwaka), mifumo ya AI/Machine Learning, na mechatronics/roboti (ROS/ROS2, UGVs). Uongozi uliothibitishwa katika kusimamia mradi wa Benki ya Dunia HEET wa <span class=\"ats-keyword\">$2.0M+</span>.",
             contact_me: "Wasiliana Nami",
             github_portfolio: "Wasifu wa GitHub",
             years_experience: "Miaka ya Uzoefu",

@@ -1,5 +1,5 @@
 # Curriculum Vitae: Dr. Kadeghe Goodluck Fue (PhD, P.Eng)
-## Senior Software Development Engineer | Machine Learning Specialist | Senior Lecturer
+## Software Development, Machine Learning & Robotics Specialist | Senior Lecturer
 *Specialist in Physical AI, Mechatronics, Autonomous Systems, and Precision Agriculture*
 
 ---
