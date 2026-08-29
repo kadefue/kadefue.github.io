@@ -14,7 +14,7 @@
 Dr. Kadeghe Goodluck Fue is a distinguished researcher, mechatronics engineer, and senior software architect sitting at the forefront of digital transformation and precision agriculture in Africa. He currently serves as a **Senior Lecturer** at the Sokoine University of Agriculture (SUA) in Tanzania, and acts as the **HEET Digitalization Component Leader**, managing a **$2.0M World Bank-funded portfolio** for academic digitalization, systems integrations, and institutional infrastructure.
 
 Under the U.S. EB-1A Extraordinary Ability framework, Dr. Fue meets multiple key criteria:
-1. **Authorship of Scholarly Articles (EB-1A Criterion 6):** Authored **57 unique peer-reviewed publications** in leading international journals and conference proceedings (indexed in Scopus, SCIE, and AJOL), with **1,099+ citations**, an **h-index of 18**, and an **i10-index of 26**.
+1. **Authorship of Scholarly Articles (EB-1A Criterion 6):** Authored **57 unique publications** (including **55 peer-reviewed publications** in leading international journals and conference proceedings indexed in Scopus, SCIE, and AJOL, and **2 preprints / working papers**), with **1,099+ citations**, an **h-index of 18**, and an **i10-index of 26**.
 2. **Participation as a Judge / Reviewer (EB-1A Criterion 4):** Serves as an active **Editorial Board Member** for top high-impact journals, including *Scientific Reports* (Springer Nature, IF: 4.9, Q1), the *International Journal of Agricultural and Environmental Information Systems (IJAEIS)* (IGI Global), and the *Tanzania Journal of Agricultural Sciences (TAJAS)* (SUA). Regularly reviews for *Computers and Electronics in Agriculture* and other leading journals (verified dynamically via ORCID).
 3. **Original Scientific Contributions (EB-1A Criterion 5):** Pioneered a novel **"Modified Pure Pursuit" control algorithm** for agricultural rovers, which has been cited by international researchers and adopted as a benchmark. Engineered mechatronic vision networks, edge AI devices, and database architectures adopted by government ministries and international organizations (FAO, AGRA, etc.).
 4. **Leading or Critical Role (EB-1A Criterion 7):** Technical Lead and component leader of the **World Bank HEET project** at SUA. Co-Founder and director of **EPALAB** (Electronics and Precision Agriculture Lab) and **YEESI Lab** (Youth Empowerment through Establishment of Social Innovation). Formally served as a Geospatial AI Research Scholar at the **University of Georgia (UGA)**.
@@ -212,17 +212,17 @@ Dr. Fue has been awarded multiple competitive national and international researc
 
 ---
 
-## 📖 Scholarly Publications (57 Peer-Reviewed Items)
+## 📖 Scholarly Publications & Preprints (57 Total Works: 55 Peer-Reviewed, 2 Preprints)
 
 Dr. Fue's scientific contributions have established a strong research footprint with **1,099+ citations**, an **h-index of 18**, and an **i10-index of 26** on Google Scholar.
 
 1. **A Methodological Critique of Machine Learning in Tanzanian Agriculture: Rigor, Reproducibility, and a Roadmap for Real-World Impact** (2026)
    *Authors:* K Fue
-   *Journal/Venue:* *Zenodo, 1-7, 2026*
+   *Type:* Preprint (Non-Peer Reviewed) | *Journal/Venue:* *Zenodo, 1-7, 2026*
 
 2. **Advanced Kinematic Control and Reinforcement Learning Optimization for Center-Articulated Agricultural Rovers: A Comparative Study of Tracking Accuracy and Energy Efficiency** (2026)
    *Authors:* Kadeghe G. Fue
-   *Journal/Venue:* *SSRN Electronic Journal*
+   *Type:* Working Paper / Preprint (Non-Peer Reviewed) | *Journal/Venue:* *SSRN Electronic Journal*
    *DOI:* [10.2139/ssrn.6359738](https://doi.org/10.2139/ssrn.6359738)
 
 3. **Spatial-temporal assessment of water quality parameters in Mindu Reservoir, Morogoro, for conservation support** (2026)
