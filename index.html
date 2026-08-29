@@ -439,12 +439,12 @@
                         <div id="image-slider"
                             class="relative w-full h-full rounded-full border-4 border-white shadow-2xl ring-4 ring-indigo-50 overflow-hidden">
                             <img src="profile.png" alt="Dr. Fue" class="slide-image active">
-                            <img src="profile2.jpg" alt="KadeFue 2" class="slide-image">
-                            <img src="profile4.jpg" alt="KadeFue 2" class="slide-image">
-                            <img src="profile.jpeg" alt="KadeFue 5" class="slide-image">
-                            <img src="profile6.jpg" alt="KadeFue 6" class="slide-image">
-                            <img src="profile8.jpeg" alt="KadeFue 8" class="slide-image">
-                            <img src="profile9.jpeg" alt="KadeFue 9" class="slide-image">
+                            <img src="profile2.jpg" alt="Dr. Kadeghe Fue" class="slide-image">
+                            <img src="profile4.png" alt="Dr. Kadeghe Fue Portrait" class="slide-image">
+                            <img src="profile.jpeg" alt="Dr. Kadeghe Fue Speaking" class="slide-image">
+                            <img src="profile6.jpg" alt="Dr. Kadeghe Fue Field Research" class="slide-image">
+                            <img src="profile8.jpeg" alt="Dr. Kadeghe Fue Leadership" class="slide-image">
+                            <img src="profile9.png" alt="Dr. Kadeghe Fue Academic" class="slide-image">
                             <!-- Robotics and AI showcase images -->
                             <img src="robotics1.jpg" alt="Robotics Research" class="slide-image">
                             <img src="ai_demo.jpg" alt="AI Demonstration" class="slide-image">
@@ -1337,50 +1337,45 @@
 
         <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <a href="about.html"
-                class="card-hover group block p-8 bg-white/50 backdrop-blur-lg rounded-2xl shadow-xl border border-white/50 relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                    <svg class="w-24 h-24 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                            clip-rule="evenodd"></path>
-                    </svg>
+                class="card-hover group block bg-white/50 backdrop-blur-lg rounded-2xl shadow-xl border border-white/50 overflow-hidden">
+                <div class="h-32 w-full overflow-hidden bg-slate-100">
+                    <img src="profile6.jpg" alt="Dr. Kadeghe Fue Biography" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                 </div>
-                <h3 data-i18n="section_titles.biography"
-                    class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 mb-2 transition-colors">
-                    Biography</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">Learn more about my professional journey, biography,
-                    and expertise.</p>
+                <div class="p-6">
+                    <h3 data-i18n="section_titles.biography"
+                        class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 mb-2 transition-colors">
+                        Biography</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Learn more about my professional journey, biography,
+                        and engineering expertise.</p>
+                </div>
             </a>
 
             <a href="research.html"
-                class="card-hover group block p-8 bg-white/50 backdrop-blur-lg rounded-2xl shadow-xl border border-white/50 relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                    <svg class="w-24 h-24 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0018.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 0114.5 14c-1.669 0-3.218-.51-4.5-1.385A7.962 7.962 0 015.5 14c-1.255 0-2.443-.29-3.5-.804v-10z">
-                        </path>
-                    </svg>
+                class="card-hover group block bg-white/50 backdrop-blur-lg rounded-2xl shadow-xl border border-white/50 overflow-hidden">
+                <div class="h-32 w-full overflow-hidden bg-slate-100">
+                    <img src="drone_tech.jpg" alt="Research & Robotics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 </div>
-                <h3 data-i18n="section_titles.research"
-                    class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 mb-2 transition-colors">Research
-                </h3>
-                <p class="text-slate-600 text-sm leading-relaxed">Explore my current and past research projects in AI
-                    and Agriculture.</p>
+                <div class="p-6">
+                    <h3 data-i18n="section_titles.research"
+                        class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 mb-2 transition-colors">Research
+                    </h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Explore my current and past research projects in AI,
+                        robotics, and agriculture.</p>
+                </div>
             </a>
 
             <a href="publications.html"
-                class="card-hover group block p-8 bg-white/50 backdrop-blur-lg rounded-2xl shadow-xl border border-white/50 relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                    <svg class="w-24 h-24 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd"
-                            d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
-                            clip-rule="evenodd"></path>
-                    </svg>
+                class="card-hover group block bg-white/50 backdrop-blur-lg rounded-2xl shadow-xl border border-white/50 overflow-hidden">
+                <div class="h-32 w-full overflow-hidden bg-slate-100">
+                    <img src="profile9.png" alt="Publications & Impact" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                 </div>
-                <h3 data-i18n="section_titles.publications"
-                    class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 mb-2 transition-colors">
-                    Publications</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">View my complete list of peer-reviewed journal
-                    articles and papers.</p>
+                <div class="p-6">
+                    <h3 data-i18n="section_titles.publications"
+                        class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 mb-2 transition-colors">
+                        Publications</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">View my complete list of peer-reviewed journal
+                        articles, citation metrics, and papers.</p>
+                </div>
             </a>
         </section>
 
