@@ -17,8 +17,21 @@ const translations = {
             mechatronics: "Mechatronics Engineering",
             ai: "Artificial Intelligence & Machine Learning",
             precision_ag: "Precision Agriculture Engineering",
+            modeling_intro: "His work also spans modeling and simulation in engineering systems, econometrics, and the environment.",
             more_about: "More About Me",
             view_research: "View Research"
+        },
+        modeling: {
+            title: "Modeling & Simulation",
+            intro: "Dr. Fue brings modeling and simulation together with engineering, data, and AI to explore complex systems and inform practical decisions.",
+            engineering_title: "Engineering Systems",
+            engineering_desc: "Modeling and simulating system behavior to support engineering analysis and design.",
+            econometrics_title: "Econometrics",
+            econometrics_desc: "Applying quantitative modeling to understand economic relationships and inform decisions.",
+            environment_title: "Environment",
+            environment_desc: "Exploring environmental systems through modeling to support sustainable solutions.",
+            invitation: "Interested in interdisciplinary research, project partnerships, or technical consulting? Let's explore how we can work together.",
+            contact: "Start a conversation &rarr;"
         },
         stats: {
             years_experience: "Years Experience",
@@ -55,13 +68,13 @@ const translations = {
             highly_cited: "Highly Cited",
             research_projects: "Research & Projects",
             all_publications: "All Publications",
-            research_intro: "Exploring the intersection of <span class=\"text-indigo-600 font-semibold\">Artificial Intelligence</span>, <span class=\"text-indigo-600 font-semibold\">Robotics</span>, and <span class=\"text-indigo-600 font-semibold\">Agriculture</span>. My work focuses on creating sustainable, technology-driven solutions for food systems and environmental management.",
+            research_intro: "Exploring the intersection of <span class=\"text-indigo-600 font-semibold\">Artificial Intelligence</span>, <span class=\"text-indigo-600 font-semibold\">Robotics</span>, and <span class=\"text-indigo-600 font-semibold\">Agriculture</span>. My work includes modeling and simulation in engineering systems, econometrics, and the environment, supporting practical and sustainable solutions.",
             editorial_boards: "Editorial Board Memberships"
         },
         cv: {
             role_subtitle: "Software Development, Machine Learning & Robotics Specialist",
             tagline: "Software Architecture & Payments | Machine Learning & Edge AI | Robotics & Autonomous Systems",
-            intro_text: "Senior Software Development Engineer, Machine Learning & Robotics Specialist with <span class=\"ats-keyword\">15+ years</span> architecting enterprise software, autonomous robotic systems, and AI models. I bridge full-stack system architecture (notably designing the SUA GePG payment system processing over 10 Billion TZS in student fees annually), machine learning pipelines (YOLO, computer vision, time-series forecasting), and mechatronics (ROS/ROS2, UGVs, custom control algorithms). Proven leadership managing <span class=\"ats-keyword\">$2.0M+ World Bank HEET</span> components and international research grants.",
+            intro_text: "Senior Software Development Engineer, Machine Learning & Robotics Specialist with <span class=\"ats-keyword\">15+ years</span> architecting enterprise software, autonomous robotic systems, and AI models. My expertise includes modeling and simulation in engineering systems, econometrics, and the environment. I bridge full-stack system architecture (notably designing the SUA GePG payment system processing over 10 Billion TZS in student fees annually), machine learning pipelines (YOLO, computer vision, time-series forecasting), and mechatronics (ROS/ROS2, UGVs, custom control algorithms). Proven leadership managing <span class=\"ats-keyword\">$2.0M+ World Bank HEET</span> components and international research grants.",
             contact_me: "Contact Me",
             github_portfolio: "GitHub Portfolio",
             years_experience: "Years Experience",
@@ -169,8 +182,21 @@ const translations = {
             mechatronics: "Mechatronics Engineering",
             ai: "Akili Mnemba (AI)",
             precision_ag: "Kilimo cha Kisasa",
+            modeling_intro: "Kazi yake pia inahusisha uundaji wa miundo na uigaji katika mifumo ya kihandisi, ekonometriki, na mazingira.",
             more_about: "Zaidi Kuhusu Mimi",
             view_research: "Angalia Utafiti"
+        },
+        modeling: {
+            title: "Uundaji wa Miundo na Uigaji",
+            intro: "Dr. Fue anaunganisha uundaji wa miundo na uigaji na uhandisi, data, na AI ili kuchunguza mifumo changamano na kusaidia maamuzi ya vitendo.",
+            engineering_title: "Mifumo ya Kihandisi",
+            engineering_desc: "Kuunda na kuiga miundo ya mifumo ili kusaidia uchambuzi na usanifu wa kihandisi.",
+            econometrics_title: "Ekonometriki",
+            econometrics_desc: "Kutumia miundo ya kitakwimu kuelewa mahusiano ya kiuchumi na kusaidia maamuzi.",
+            environment_title: "Mazingira",
+            environment_desc: "Kuchunguza mifumo ya mazingira kwa kutumia miundo ili kusaidia suluhisho endelevu.",
+            invitation: "Una nia ya kushirikiana katika utafiti wa taaluma mbalimbali, miradi, au ushauri wa kiufundi? Tuwasiliane kuhusu jinsi tunavyoweza kufanya kazi pamoja.",
+            contact: "Wasiliana nami &rarr;"
         },
         stats: {
             years_experience: "Miaka ya Uzoefu",
@@ -208,13 +234,13 @@ const translations = {
             highly_cited: "Yaliyonukuliwa Sana",
             research_projects: "Utafiti na Miradi",
             all_publications: "Machapisho Yote",
-            research_intro: "Kuchunguza makutano ya <span class=\"text-indigo-600 font-semibold\">Akili Mnemba (AI)</span>, <span class=\"text-indigo-600 font-semibold\">Roboti</span>, na <span class=\"text-indigo-600 font-semibold\">Kilimo</span>. Kazi yangu inalenga kuunda suluhisho endelevu, zinazoendeshwa na teknolojia kwa mifumo ya chakula na usimamizi wa mazingira.",
+            research_intro: "Kuchunguza makutano ya <span class=\"text-indigo-600 font-semibold\">Akili Mnemba (AI)</span>, <span class=\"text-indigo-600 font-semibold\">Roboti</span>, na <span class=\"text-indigo-600 font-semibold\">Kilimo</span>. Kazi yangu inajumuisha uundaji wa miundo na uigaji katika mifumo ya kihandisi, ekonometriki, na mazingira ili kusaidia suluhisho za vitendo na endelevu.",
             editorial_boards: "Uanachama wa Bodi za Uhariri"
         },
         cv: {
             role_subtitle: "Mtaalamu wa Maendeleo ya Programu, Kujifunza kwa Mashine na Roboti",
             tagline: "Usanifu wa Programu & Malipo | Kujifunza kwa Mashine & Edge AI | Roboti & Mifumo ya Kujiendesha",
-            intro_text: "Mhandisi Mwandamizi wa Maendeleo ya Programu, Mtaalamu wa Kujifunza kwa Mashine na Roboti mwenye uzoefu wa <span class=\"ats-keyword\">zaidi ya miaka 15</span> katika kubuni mifumo ya programu za biashara, roboti zinazojiendesha, na mbinu za AI. Ninaunganisha usanifu wa programu za kompyuta (ikiwa ni pamoja na mfumo wa GePG wa malipo ya SUA unaochakata zaidi ya TZS Bilioni 10 kila mwaka), mifumo ya AI/Machine Learning, na mechatronics/roboti (ROS/ROS2, UGVs). Uongozi uliothibitishwa katika kusimamia mradi wa Benki ya Dunia HEET wa <span class=\"ats-keyword\">$2.0M+</span>.",
+            intro_text: "Mhandisi Mwandamizi wa Maendeleo ya Programu, Mtaalamu wa Kujifunza kwa Mashine na Roboti mwenye uzoefu wa <span class=\"ats-keyword\">zaidi ya miaka 15</span> katika kubuni mifumo ya programu za biashara, roboti zinazojiendesha, na mbinu za AI. Ujuzi wangu pia unajumuisha uundaji wa miundo na uigaji katika mifumo ya kihandisi, ekonometriki, na mazingira. Ninaunganisha usanifu wa programu za kompyuta (ikiwa ni pamoja na mfumo wa GePG wa malipo ya SUA unaochakata zaidi ya TZS Bilioni 10 kila mwaka), mifumo ya AI/Machine Learning, na mechatronics/roboti (ROS/ROS2, UGVs). Uongozi uliothibitishwa katika kusimamia mradi wa Benki ya Dunia HEET wa <span class=\"ats-keyword\">$2.0M+</span>.",
             contact_me: "Wasiliana Nami",
             github_portfolio: "Wasifu wa GitHub",
             years_experience: "Miaka ya Uzoefu",
