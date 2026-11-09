@@ -238,7 +238,7 @@
 <div class="flex flex-col lg:flex-row gap-8 items-center">
 <div class="flex-shrink-0 w-48 md:w-56 group">
 <div class="overflow-hidden rounded-2xl shadow-lg border-4 border-white transform rotate-2 group-hover:rotate-0 transition-transform duration-300">
-<img src="profile9.jpeg" alt="Dr. Kadeghe Goodluck Fue" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500">
+<img src="profile9.png" alt="Dr. Kadeghe Goodluck Fue" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500">
 </div>
 </div>
 <div class="flex-1 space-y-4">
@@ -270,7 +270,8 @@
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-<div class="col-span-1 md:col-span-1 bg-white/50 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/50 card-hover">
+<div class="col-span-1 md:col-span-1 bg-white/50 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/50 card-hover flex flex-col justify-between">
+<div>
 <h2 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
 <svg class="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
@@ -278,7 +279,7 @@
 </svg>
 <span data-i18n="section_titles.citation_statistics">Citation Statistics</span>
 </h2>
-<div class="overflow-x-auto mb-6">
+<div class="overflow-x-auto mb-4">
 <table class="w-full text-sm text-left text-slate-600">
 <thead class="text-xs text-slate-700 uppercase bg-slate-50">
 <tr>
@@ -308,6 +309,16 @@
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div class="pt-3 border-t border-slate-100">
+    <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200/60">
+        <div class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1.5 flex items-center justify-between">
+            <span>Verified Scholar Metric</span>
+            <a href="https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en" target="_blank" class="text-indigo-600 hover:underline text-[10px] font-bold">View Profile &rarr;</a>
+        </div>
+        <img src="images/citation_statistics.png" alt="Google Scholar Citation Statistics Badge" class="w-full h-auto rounded-lg border border-slate-200 shadow-sm">
+    </div>
 </div>
 </div>
 <div class="col-span-1 md:col-span-2 bg-white/50 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/50 card-hover">
@@ -404,6 +415,46 @@
 </a>
 </div>
 </div>
+<!-- Research Areas & Publication Themes Visual Grid -->
+<div class="mb-12">
+    <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+        <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+        </svg>
+        <span>Research Areas & Publication Domains</span>
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white/50 backdrop-blur-lg rounded-2xl p-4 shadow-xl border border-white/60 card-hover flex flex-col">
+            <div class="h-32 w-full rounded-xl overflow-hidden mb-3 border border-indigo-100">
+                <img src="ai_demo.jpg" alt="AI & Deep Learning" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+            </div>
+            <h3 class="font-bold text-slate-900 text-sm mb-1">AI & Yield Forecasting</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">Frontiers in AI, deep learning time-series models & satellite forecasting.</p>
+        </div>
+        <div class="bg-white/50 backdrop-blur-lg rounded-2xl p-4 shadow-xl border border-white/60 card-hover flex flex-col">
+            <div class="h-32 w-full rounded-xl overflow-hidden mb-3 border border-blue-100">
+                <img src="precision_ag.jpg" alt="Precision Irrigation" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+            </div>
+            <h3 class="font-bold text-slate-900 text-sm mb-1">Precision Agriculture</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">GeoAI telemetry, automatic irrigation scheduling & sensor nodes.</p>
+        </div>
+        <div class="bg-white/50 backdrop-blur-lg rounded-2xl p-4 shadow-xl border border-white/60 card-hover flex flex-col">
+            <div class="h-32 w-full rounded-xl overflow-hidden mb-3 border border-green-100">
+                <img src="robotics1.jpg" alt="Robotics & Autonomous Systems" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+            </div>
+            <h3 class="font-bold text-slate-900 text-sm mb-1">Robotics & Mechatronics</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">Autonomous rovers, kinematic control & embedded physical AI.</p>
+        </div>
+        <div class="bg-white/50 backdrop-blur-lg rounded-2xl p-4 shadow-xl border border-white/60 card-hover flex flex-col">
+            <div class="h-32 w-full rounded-xl overflow-hidden mb-3 border border-purple-100">
+                <img src="drone_tech.jpg" alt="Drone Remote Sensing" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+            </div>
+            <h3 class="font-bold text-slate-900 text-sm mb-1">Drone Remote Sensing</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">MDPI Remote Sensing, multi-spectral drone imagery & field analytics.</p>
+        </div>
+    </div>
+</div>
+
 </section>
 <section class="space-y-8" id="publications-list">
 <div class="flex justify-between items-baseline">

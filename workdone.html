@@ -410,6 +410,31 @@
             </div>
         </section>
 
+        <!-- Technical Consultancy & Partnership Banner -->
+        <section class="bg-gradient-to-br from-indigo-900 via-slate-900 to-slate-900 rounded-3xl p-8 md:p-10 shadow-2xl text-white relative overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-indigo-500/20 via-transparent to-transparent"></div>
+            <div class="relative z-10 flex flex-col lg:flex-row items-center gap-8 justify-between">
+                <div class="flex-shrink-0 w-36 h-36 md:w-44 md:h-44 rounded-2xl overflow-hidden border-4 border-white/20 shadow-2xl">
+                    <img src="profile2.jpg" alt="Dr. Kadeghe Fue Advisory & Consulting" class="w-full h-full object-cover">
+                </div>
+                <div class="flex-1 space-y-3 text-center lg:text-left">
+                    <span class="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-indigo-500/30 rounded-full border border-indigo-400/30 text-indigo-300">
+                        Consultancy & Technical Advisory
+                    </span>
+                    <h2 class="text-2xl md:text-3xl font-bold">Need Specialized Engineering or Systems Architecture?</h2>
+                    <p class="text-slate-300 text-sm md:text-base max-w-2xl leading-relaxed">
+                        Dr. Fue provides expert advisory in software engineering, national digital gateways, agricultural robotics, and machine learning infrastructure for public and private institutions.
+                    </p>
+                </div>
+                <div class="flex-shrink-0">
+                    <a href="contact.html" class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5">
+                        <span>Get in Touch</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <div id="footer-placeholder">
@@ -472,6 +497,7 @@
                 role: "Lead Developer",
                 roleSw: "Msanidi Programu Kiongozi",
                 category: "iot",
+                image: "ai_demo.jpg",
                 technologies: ["Machine Learning", "Python", "Predictive Analytics", "FastAPI"],
                 description: "Development of the Student and Textbook Forecasting System for MoEST. Collaborated with Sokoine University of Agriculture and other higher learning institutions to design and implement machine learning models predicting future educational resource requirements.",
                 descriptionSw: "Uundaji wa Mfumo wa Utabiri wa Wanafunzi na Vitabu kwa MoEST. Tulishirikiana na Chuo Kikuu cha Sokoine cha Kilimo (SUA) na taasisi zingine za elimu ya juu kuunda mifano ya kujifunza kwa mashine inayotabiri mahitaji ya rasilimali za elimu za baadaye."
@@ -494,6 +520,7 @@
                 role: "Software & Database Consultant",
                 roleSw: "Mshauri wa Programu na Hifadhidata",
                 category: "iot",
+                image: "robotics1.jpg",
                 technologies: ["IoT Integration", "Arduino", "Embedded Systems", "MySQL"],
                 description: "Implementation of Smart Traps for Fruit Flies in Avocado Farms. Collaborated with the University of Georgia (UGA) on a project funded by the Food and Agriculture Organization (FAO). Engineered an IoT pest-monitoring platform combining local sensor hardware with cloud databases.",
                 descriptionSw: "Utekelezaji wa Mitego ya Kiotomatiki (Smart Traps) kwa ajili ya inzi wa matunda kwenye mashamba ya parachichi nchini Tanzania. Ushirikiano na Chuo Kikuu cha Georgia (UGA) kwa ufadhili wa FAO. Tuliunda mfumo wa ufuatiliaji wa wadudu kwa kutumia IoT unaounganisha vitambuzi vya ndani na hifadhidata ya wingu."
@@ -505,6 +532,7 @@
                 role: "Software & Database Expert",
                 roleSw: "Mtaalamu wa Programu na Hifadhidata",
                 category: "architecture",
+                image: "drone_tech.jpg",
                 technologies: ["GIS mapping", "PostgreSQL", "Real-Time Telemetry", "Python"],
                 description: "Consultancy services for Flood Early Warning Systems for the Songwe River Basin, funded by the Joint Songwe River Basin Commission and the EU. Designed real-time telemetric databases and warning systems to support climate resilience.",
                 descriptionSw: "Huduma za ushauri kwa Mfumo wa Tahadhari ya Hali ya Hewa ya Mafuriko kwa Bonde la Mto Songwe, iliyofadhiliwa na Tume ya Pamoja ya Bonde la Mto Songwe na Umoja wa Ulaya. Tulisanifu hifadhidata za telemetry za wakati halisi na mifumo ya tahadhari."
@@ -593,6 +621,7 @@
                 role: "Lead Developer",
                 roleSw: "Msanidi Programu Kiongozi",
                 category: "iot",
+                image: "precision_ag.jpg",
                 technologies: ["C++", "Arduino Firmware", "Hardware Prototyping", "MQTT"],
                 description: "Redeveloped an legacy irrigation controller to run on modern Arduino microcontrollers. Wrote low-level firmware in C++ to monitor soil moisture sensors and actuate water pumps automatically based on real-time soil and weather parameters.",
                 descriptionSw: "Tulifanyia maboresho mfumo wa kudhibiti umwagiliaji ili utumie microprocessor ya Arduino. Tuliandika programu (firmware) ya C++ kusoma sensorer za unyevu wa udongo na kuwasha pampu za maji kiotomatiki."
@@ -747,6 +776,12 @@
                 const roleText = lang === 'sw' ? proj.roleSw || proj.role : proj.role;
                 const descText = lang === 'sw' ? proj.descriptionSw || proj.description : proj.description;
 
+                const imageHtml = proj.image ? `
+                    <div class="h-36 w-full rounded-xl overflow-hidden mb-4 border border-slate-100 bg-slate-50">
+                        <img src="${proj.image}" alt="${titleText}" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                    </div>
+                ` : '';
+
                 // Build technologies badges
                 let techBadges = '';
                 proj.technologies.forEach(tech => {
@@ -755,6 +790,7 @@
 
                 card.innerHTML = `
                     <div>
+                        ${imageHtml}
                         <div class="flex justify-between items-start">
                             <span class="work-year">${proj.year}</span>
                             <span class="text-xs font-mono font-bold text-indigo-500 uppercase">${proj.category.toUpperCase()}</span>
