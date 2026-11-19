@@ -243,7 +243,7 @@
 </div>
 <div class="flex-1 space-y-4">
 <p class="text-slate-600 leading-relaxed">
-                            Dr. Fue’s scientific contributions are documented in <strong class="text-indigo-600 font-semibold">57 unique publications</strong> (including <strong class="text-indigo-600 font-semibold">55 peer-reviewed journal articles</strong>, book chapters, and international conference proceedings, alongside 2 working papers/preprints), establishing a strong research footprint with <strong class="text-indigo-600 font-semibold">1,099+ citations</strong>, an <strong class="text-indigo-600 font-semibold">h-index of 18</strong>, and an <strong class="text-indigo-600 font-semibold">i10-index of 26</strong> on Google Scholar.
+                            Dr. Fue’s scientific contributions are documented in <strong class="text-indigo-600 font-semibold">57 unique publications</strong> (including <strong class="text-indigo-600 font-semibold">55 peer-reviewed journal articles</strong>, book chapters, and international conference proceedings, alongside 2 working papers/preprints), with <strong class="text-indigo-600 font-semibold">1,225 citations</strong>, an <strong class="text-indigo-600 font-semibold">h-index of 18</strong>, and an <strong class="text-indigo-600 font-semibold">i10-index of 26</strong> on Google Scholar, checked November 19, 2026.
                         </p>
 <p class="text-slate-600 leading-relaxed">
                             His publications span mechatronics, artificial intelligence, remote sensing, and agricultural robotics. His research is further backed by <strong class="text-indigo-600 font-semibold">42 distinct works registered on ORCID</strong>, showcasing a consistent track record of developing physical AI, machine learning systems, and hardware-software architectures for precision agriculture.
@@ -255,7 +255,7 @@
 <div class="text-xs text-slate-500 uppercase font-semibold mt-1">Publications</div>
 </div>
 <div class="bg-white/80 p-4 rounded-xl shadow-sm border border-slate-100 text-center min-w-[120px]">
-<div class="text-2xl font-bold text-indigo-600">1099+</div>
+<div class="text-2xl font-bold text-indigo-600">1,225</div>
 <div class="text-xs text-slate-500 uppercase font-semibold mt-1">Citations</div>
 </div>
 <div class="bg-white/80 p-4 rounded-xl shadow-sm border border-slate-100 text-center min-w-[120px]">
@@ -292,8 +292,8 @@
 <tr class="bg-white border-b hover:bg-slate-50 transition-colors">
 <th class="px-3 py-4 font-medium text-slate-900 whitespace-nowrap" data-i18n="stats.citations" scope="row">
                                         Citations</th>
-<td class="px-3 py-4 text-indigo-600 font-bold">1099</td>
-<td class="px-3 py-4 text-indigo-600 font-bold">959</td>
+<td class="px-3 py-4 text-indigo-600 font-bold">1,225</td>
+<td class="px-3 py-4 text-indigo-600 font-bold">1,074</td>
 </tr>
 <tr class="bg-white border-b hover:bg-slate-50 transition-colors">
 <th class="px-3 py-4 font-medium text-slate-900 whitespace-nowrap" scope="row">
@@ -305,32 +305,32 @@
 <th class="px-3 py-4 font-medium text-slate-900 whitespace-nowrap" scope="row">
                                         i10-index</th>
 <td class="px-3 py-4">26</td>
-<td class="px-3 py-4">20</td>
+<td class="px-3 py-4">21</td>
 </tr>
 </tbody>
 </table>
+<p class="text-xs text-slate-500 mt-2">Google Scholar metrics checked November 19, 2026.</p>
 </div>
 </div>
 <div class="pt-3 border-t border-slate-100">
     <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200/60">
         <div class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1.5 flex items-center justify-between">
-            <span>Verified Scholar Metric</span>
+            <span>Google Scholar snapshot · Nov 19, 2026</span>
             <a href="https://scholar.google.com/citations?user=rqeqefwAAAAJ&hl=en" target="_blank" class="text-indigo-600 hover:underline text-[10px] font-bold">View Profile &rarr;</a>
         </div>
         <img src="images/citation_statistics.png" alt="Google Scholar Citation Statistics Badge" class="w-full h-auto rounded-lg border border-slate-200 shadow-sm">
     </div>
 </div>
 </div>
-<div class="col-span-1 md:col-span-2 bg-white/50 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/50 card-hover">
+<div class="col-span-1 md:col-span-2 bg-white/50 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/50 card-hover flex flex-col justify-center">
 <h2 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
 <svg class="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
-                        Citation Growth
+                        Citation History
                     </h2>
-<div class="h-64">
-<canvas id="citationChart"></canvas>
-</div>
+<p class="text-slate-600 leading-relaxed">Google Scholar updates citation counts and the year-by-year history over time. This page presents a dated snapshot; visit the live profile for the latest citation trend.</p>
+<a href="https://scholar.google.com/citations?user=rqeqefwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-4 text-indigo-600 hover:text-indigo-800 font-semibold">View live citation history &rarr;</a>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -1727,33 +1727,6 @@
 <script src="js/translations.js"></script>
 <script src="js/main.js"></script>
 <script>
-        // Chart.js Configuration
-        const ctxCitation = document.getElementById('citationChart').getContext('2d');
-        const citationChart = new Chart(ctxCitation, {
-            type: 'bar',
-            data: {
-                labels: ['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
-                datasets: [{
-                    label: 'Citations',
-                    data: [4, 13, 14, 29, 65, 90, 148, 177, 217, 235, 88],
-                    backgroundColor: 'rgba(79, 70, 229, 0.7)',
-                    borderColor: 'rgba(79, 70, 229, 1)',
-                    borderWidth: 1,
-                    borderRadius: 4,
-                    hoverBackgroundColor: 'rgba(79, 70, 229, 0.9)'
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    y: { beginAtZero: true, grid: { color: '#e2e8f0', drawBorder: false } },
-                    x: { grid: { display: false } }
-                },
-                plugins: { legend: { display: false } }
-            }
-        });
-
         // Dynamic ORCID Peer Review Fetching
         const journalMapping = {
             'issn:2772-3755': 'Smart Agricultural Technology',
