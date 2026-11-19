@@ -12,18 +12,18 @@ const translations = {
         },
         hero: {
             welcome: "Welcome to my portfolio",
-            role: "Senior Lecturer & Registered Professional Engineer (PE11382). Senior Software Development Engineer with 15+ years of experience.",
-            description: "Innovating at the intersection of",
-            mechatronics: "Mechatronics Engineering",
+            role: "Senior Lecturer and Registered Professional Engineer (PE11382) with 15+ years of engineering and research experience.",
+            description: "Research focus:",
             ai: "Artificial Intelligence & Machine Learning",
-            precision_ag: "Precision Agriculture Engineering",
-            modeling_intro: "His work also spans modeling and simulation in engineering systems, econometrics, and the environment.",
+            precision_ag: "Precision Agriculture",
+            modeling: "Modeling & Simulation",
+            robotics: "Robotics",
             more_about: "More About Me",
             view_research: "View Research"
         },
         modeling: {
             title: "Modeling & Simulation",
-            intro: "Dr. Fue brings modeling and simulation together with engineering, data, and AI to explore complex systems and inform practical decisions.",
+            intro: "Dr. Fue uses modeling and simulation with agricultural data, engineering, and AI to understand complex systems and inform practical decisions.",
             engineering_title: "Engineering Systems",
             engineering_desc: "Modeling and simulating system behavior to support engineering analysis and design.",
             econometrics_title: "Econometrics",
@@ -68,7 +68,7 @@ const translations = {
             highly_cited: "Highly Cited",
             research_projects: "Research & Projects",
             all_publications: "All Publications",
-            research_intro: "Exploring the intersection of <span class=\"text-indigo-600 font-semibold\">Artificial Intelligence</span>, <span class=\"text-indigo-600 font-semibold\">Robotics</span>, and <span class=\"text-indigo-600 font-semibold\">Agriculture</span>. My work includes modeling and simulation in engineering systems, econometrics, and the environment, supporting practical and sustainable solutions.",
+            research_intro: "My research centers on <span class=\"text-indigo-600 font-semibold\">Precision Agriculture</span>, integrating <span class=\"text-indigo-600 font-semibold\">Modeling and Simulation</span>, <span class=\"text-indigo-600 font-semibold\">Robotics</span>, and <span class=\"text-indigo-600 font-semibold\">Artificial Intelligence</span>. I develop data-driven and autonomous approaches to crop monitoring, yield forecasting, irrigation, and sustainable farming.",
             editorial_boards: "Editorial Board Memberships"
         },
         cv: {
@@ -177,18 +177,18 @@ const translations = {
         },
         hero: {
             welcome: "Karibu kwenye wasifu wangu",
-            role: "Mhadhiri Mwandamizi na Mhandisi Mtaalamu Aliyesajiliwa  (PE11382). Mhandisi Mwandamizi wa Programu mwenye uzoefu wa miaka 15+.",
-            description: "Ubunifu katika makutano ya",
-            mechatronics: "Mechatronics Engineering",
+            role: "Mhadhiri Mwandamizi na Mhandisi Mtaalamu Aliyesajiliwa (PE11382) mwenye uzoefu wa zaidi ya miaka 15 katika uhandisi na utafiti.",
+            description: "Maeneo ya utafiti:",
             ai: "Akili Mnemba (AI)",
-            precision_ag: "Kilimo cha Kisasa",
-            modeling_intro: "Kazi yake pia inahusisha uundaji wa miundo na uigaji katika mifumo ya kihandisi, ekonometriki, na mazingira.",
+            precision_ag: "Kilimo cha Usahihi",
+            modeling: "Uundaji wa Miundo na Uigaji",
+            robotics: "Roboti",
             more_about: "Zaidi Kuhusu Mimi",
             view_research: "Angalia Utafiti"
         },
         modeling: {
             title: "Uundaji wa Miundo na Uigaji",
-            intro: "Dr. Fue anaunganisha uundaji wa miundo na uigaji na uhandisi, data, na AI ili kuchunguza mifumo changamano na kusaidia maamuzi ya vitendo.",
+            intro: "Dr. Fue hutumia uundaji wa miundo na uigaji pamoja na data za kilimo, uhandisi, na AI kuelewa mifumo changamano na kusaidia maamuzi ya vitendo.",
             engineering_title: "Mifumo ya Kihandisi",
             engineering_desc: "Kuunda na kuiga miundo ya mifumo ili kusaidia uchambuzi na usanifu wa kihandisi.",
             econometrics_title: "Ekonometriki",
@@ -234,7 +234,7 @@ const translations = {
             highly_cited: "Yaliyonukuliwa Sana",
             research_projects: "Utafiti na Miradi",
             all_publications: "Machapisho Yote",
-            research_intro: "Kuchunguza makutano ya <span class=\"text-indigo-600 font-semibold\">Akili Mnemba (AI)</span>, <span class=\"text-indigo-600 font-semibold\">Roboti</span>, na <span class=\"text-indigo-600 font-semibold\">Kilimo</span>. Kazi yangu inajumuisha uundaji wa miundo na uigaji katika mifumo ya kihandisi, ekonometriki, na mazingira ili kusaidia suluhisho za vitendo na endelevu.",
+            research_intro: "Utafiti wangu unajikita katika <span class=\"text-indigo-600 font-semibold\">Kilimo cha Usahihi</span>, kwa kuunganisha <span class=\"text-indigo-600 font-semibold\">Uundaji wa Miundo na Uigaji</span>, <span class=\"text-indigo-600 font-semibold\">Roboti</span>, na <span class=\"text-indigo-600 font-semibold\">Akili Mnemba</span>. Natengeneza mbinu zinazotumia data na mifumo inayojiendesha kwa ufuatiliaji wa mazao, utabiri wa mavuno, umwagiliaji, na kilimo endelevu.",
             editorial_boards: "Uanachama wa Bodi za Uhariri"
         },
         cv: {
