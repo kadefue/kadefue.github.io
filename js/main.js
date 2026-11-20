@@ -89,6 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
             page = "index.html";
         }
 
+        ensureTeachingLinks();
+
         // Desktop nav links
         const navLinks = document.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
@@ -97,6 +99,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');
+            }
+
+            function ensureTeachingLinks() {
+                const desktopNav = document.querySelector('nav .hidden.md\\:flex');
+                if (desktopNav && !desktopNav.querySelector('a[href="teaching.html"]')) {
+                    const cvLink = desktopNav.querySelector('a[href="cv.html"]');
+                    const teachingLink = document.createElement('a');
+                    teachingLink.href = 'teaching.html';
+                    teachingLink.dataset.i18n = 'nav.teaching';
+                    teachingLink.className = 'teaching-nav nav-link inline-flex items-center rounded-full bg-indigo-600 px-3 py-2 text-xs font-semibold text-white shadow-md hover:bg-indigo-700 transition-colors';
+                    teachingLink.textContent = 'Teaching';
+                    desktopNav.insertBefore(teachingLink, cvLink);
+                }
+
+                const mobileNav = document.querySelector('#mobile-menu > div');
+                if (mobileNav && !mobileNav.querySelector('a[href="teaching.html"]')) {
+                    const cvLink = mobileNav.querySelector('a[href="cv.html"]');
+                    const teachingLink = document.createElement('a');
+                    teachingLink.href = 'teaching.html';
+                    teachingLink.id = 'mobile-nav-teaching';
+                    teachingLink.className = 'col-span-2 flex items-center justify-center gap-2 p-3 rounded-xl border border-indigo-200 bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-md hover:from-indigo-700 hover:to-violet-700 transition-all duration-200 group';
+                    teachingLink.innerHTML = '<span data-i18n="nav.teaching" class="text-xs font-bold">Teaching &amp; Courses</span>';
+                    mobileNav.insertBefore(teachingLink, cvLink);
+                }
             }
         });
 
