@@ -18,6 +18,7 @@ const translations = {
             ai: "Artificial Intelligence & Machine Learning",
             precision_ag: "Precision Agriculture",
             modeling: "Modeling & Simulation",
+            geospatial: "Geospatial Software Engineering",
             robotics: "Robotics",
             more_about: "More About Me",
             view_research: "View Research"
@@ -31,6 +32,10 @@ const translations = {
             econometrics_desc: "Applying quantitative modeling to understand economic relationships and inform decisions.",
             environment_title: "Environment",
             environment_desc: "Exploring environmental systems through modeling to support sustainable solutions.",
+            precision_ag_title: "Precision Agriculture",
+            precision_ag_desc: "Modeling crop, soil, water, machinery, and sensor interactions to support site-specific decisions, variable-rate operations, and resource-efficient production.",
+            geospatial_title: "Geospatial Software Engineering",
+            geospatial_desc: "Engineering geospatial applications and data pipelines that transform satellite imagery, drone data, GNSS observations, and field sensors into interactive maps and decision-support systems.",
             invitation: "Interested in interdisciplinary research, project partnerships, or technical consulting? Let's explore how we can work together.",
             contact: "Start a conversation &rarr;"
         },
@@ -184,6 +189,7 @@ const translations = {
             ai: "Akili Mnemba (AI)",
             precision_ag: "Kilimo cha Usahihi",
             modeling: "Uundaji wa Miundo na Uigaji",
+            geospatial: "Uhandisi wa Programu za Kijiografia",
             robotics: "Roboti",
             more_about: "Zaidi Kuhusu Mimi",
             view_research: "Angalia Utafiti"
@@ -197,6 +203,10 @@ const translations = {
             econometrics_desc: "Kutumia miundo ya kitakwimu kuelewa mahusiano ya kiuchumi na kusaidia maamuzi.",
             environment_title: "Mazingira",
             environment_desc: "Kuchunguza mifumo ya mazingira kwa kutumia miundo ili kusaidia suluhisho endelevu.",
+            precision_ag_title: "Kilimo cha Usahihi",
+            precision_ag_desc: "Kuunda miundo ya maingiliano ya mazao, udongo, maji, mashine, na vihisi ili kusaidia maamuzi ya kimaeneo, matumizi ya viwango tofauti, na uzalishaji unaotumia rasilimali kwa ufanisi.",
+            geospatial_title: "Uhandisi wa Programu za Kijiografia",
+            geospatial_desc: "Kuunda programu na mifumo ya data za kijiografia inayobadili picha za satelaiti, data za droni, vipimo vya GNSS, na vihisi vya shambani kuwa ramani shirikishi na mifumo ya kusaidia maamuzi.",
             invitation: "Una nia ya kushirikiana katika utafiti wa taaluma mbalimbali, miradi, au ushauri wa kiufundi? Tuwasiliane kuhusu jinsi tunavyoweza kufanya kazi pamoja.",
             contact: "Wasiliana nami &rarr;"
         },
