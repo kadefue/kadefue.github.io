@@ -104,10 +104,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const mobileLinks = document.querySelectorAll('#mobile-menu a');
         mobileLinks.forEach(link => {
             const href = link.getAttribute('href');
+            const isTeaching = href === 'teaching.html';
             if (href === page) {
-                link.className = "flex flex-col items-center justify-center p-3 rounded-xl border border-indigo-100 bg-indigo-50/50 text-indigo-600 shadow-sm transition-all duration-200";
+                link.className = isTeaching
+                    ? "col-span-2 flex items-center justify-center gap-2 p-3 rounded-xl border border-indigo-200 bg-gradient-to-r from-indigo-700 to-violet-700 text-white shadow-md ring-2 ring-indigo-300 transition-all duration-200 group"
+                    : "flex flex-col items-center justify-center p-3 rounded-xl border border-indigo-100 bg-indigo-50/50 text-indigo-600 shadow-sm transition-all duration-200";
                 const svg = link.querySelector('svg');
-                if (svg) svg.className = "w-6 h-6 mb-1 text-indigo-600";
+                if (svg) svg.className = isTeaching ? "w-5 h-5 text-white" : "w-6 h-6 mb-1 text-indigo-600";
+            } else if (isTeaching) {
+                link.className = "col-span-2 flex items-center justify-center gap-2 p-3 rounded-xl border border-indigo-200 bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-md hover:from-indigo-700 hover:to-violet-700 transition-all duration-200 group";
+                const svg = link.querySelector('svg');
+                if (svg) svg.className = "w-5 h-5 text-white";
             } else {
                 link.className = "flex flex-col items-center justify-center p-3 rounded-xl border border-slate-100 bg-white text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition-all duration-200 group";
                 const svg = link.querySelector('svg');

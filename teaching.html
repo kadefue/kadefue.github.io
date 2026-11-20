@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching & Courses - Dr. Kadeghe Goodluck Fue</title>
+    <meta name="description"
+        content="Teaching resources and course notes by Dr. Kadeghe Goodluck Fue for agricultural engineering, electronics, programming, precision agriculture, AI, IoT, and GIS.">
+    <meta name="keywords"
+        content="teaching, courses, course notes, agricultural engineering, precision agriculture, electronics, programming, AI, IoT, GIS">
+    <link rel="canonical" href="https://kadefue.github.io/teaching.html">
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(-45deg, #e0e7ff, #b8c5b8, #f0fdf4, #e0f2fe);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            background-attachment: fixed;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .nav-link.active {
+            color: #4f46e5;
+            border-bottom: 2px solid #4f46e5;
+        }
+
+        .teaching-nav.active {
+            color: #fff;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.18);
+        }
+
+        .course-card {
+            transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 35px -18px rgba(79, 70, 229, .35);
+            border-color: #a5b4fc;
+        }
+    </style>
+</head>
+
+<body class="text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900">
+    <nav class="fixed top-0 left-0 w-full bg-white/40 backdrop-blur-lg border-b border-white/60 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="profile.png" alt="Dr. Fue"
+                        class="w-10 h-10 rounded-full border border-indigo-100 shadow-sm object-cover">
+                    <a href="index.html"
+                        class="font-bold text-lg md:text-xl text-slate-900 tracking-tight hover:text-indigo-600 transition-colors">Dr.
+                        Kadeghe Goodluck Fue</a>
+                </div>
+                <div class="hidden md:flex space-x-4 lg:space-x-5 items-center">
+                    <a href="index.html" data-i18n="nav.home"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Home</a>
+                    <a href="about.html" data-i18n="nav.about"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">About</a>
+                    <a href="workdone.html" data-i18n="nav.workdone"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Work Done</a>
+                    <a href="news.html" data-i18n="nav.news"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">News</a>
+                    <a href="research.html" data-i18n="nav.research"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Research</a>
+                    <a href="publications.html" data-i18n="nav.publications"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Publications</a>
+                    <a href="teaching.html" data-i18n="nav.teaching"
+                        class="teaching-nav nav-link inline-flex items-center gap-2 rounded-full bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-md transition-all hover:bg-indigo-700 border-b-0">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422A12.083 12.083 0 0119 16.5c0 1.5-3.134 2.5-7 2.5s-7-1-7-2.5c0-2.163.279-4.13 1-5.922L12 14z">
+                            </path>
+                        </svg>
+                        Teaching
+                    </a>
+                    <a href="cv.html" data-i18n="nav.cv"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">CV</a>
+                    <a href="contact.html" data-i18n="nav.contact"
+                        class="nav-link text-sm font-medium text-slate-600 hover:text-indigo-600 py-5 transition-colors border-b-2 border-transparent">Contact</a>
+                </div>
+                <div class="flex items-center md:hidden gap-4">
+                    <div class="flex items-center space-x-2">
+                        <button onclick="changeLanguage('en')" class="lang-btn-en text-xs font-medium">EN</button>
+                        <span class="text-slate-300">|</span>
+                        <button onclick="changeLanguage('sw')" class="lang-btn-sw text-xs font-medium text-slate-500">SW</button>
+                    </div>
+                    <button id="mobile-menu-btn" aria-label="Open navigation"
+                        class="text-slate-500 hover:text-indigo-600 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white/95 backdrop-blur-xl border-t border-slate-100 shadow-xl absolute w-full">
+            <div class="grid grid-cols-2 gap-3 p-4 max-w-lg mx-auto">
+                <a href="index.html" class="flex flex-col items-center p-3 rounded-xl border border-slate-100 bg-white">
+                    <span data-i18n="nav.home" class="text-xs font-semibold">Home</span>
+                </a>
+                <a href="about.html" class="flex flex-col items-center p-3 rounded-xl border border-slate-100 bg-white">
+                    <span data-i18n="nav.about" class="text-xs font-semibold">About</span>
+                </a>
+                <a href="workdone.html"
+                    class="flex flex-col items-center p-3 rounded-xl border border-slate-100 bg-white">
+                    <span data-i18n="nav.workdone" class="text-xs font-semibold">Work Done</span>
+                </a>
+                <a href="news.html" class="flex flex-col items-center p-3 rounded-xl border border-slate-100 bg-white">
+                    <span data-i18n="nav.news" class="text-xs font-semibold">News</span>
+                </a>
+                <a href="research.html" class="flex flex-col items-center p-3 rounded-xl border border-slate-100 bg-white">
+                    <span data-i18n="nav.research" class="text-xs font-semibold">Research</span>
+                </a>
+                <a href="publications.html"
+                    class="flex flex-col items-center p-3 rounded-xl border border-slate-100 bg-white">
+                    <span data-i18n="nav.publications" class="text-xs font-semibold">Publications</span>
+                </a>
+                <a href="teaching.html"
+                    class="col-span-2 flex items-center justify-center gap-2 p-3 rounded-xl bg-indigo-600 text-white shadow-md">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 14l9-5-9-5-9 5 9 5zm0 0v7"></path>
+                    </svg>
+                    <span data-i18n="nav.teaching" class="text-xs font-bold">Teaching & Courses</span>
+                </a>
+                <a href="cv.html" class="flex flex-col items-center p-3 rounded-xl border border-slate-100 bg-white">
+                    <span data-i18n="nav.cv" class="text-xs font-semibold">CV</span>
+                </a>
+                <a href="contact.html" class="flex flex-col items-center p-3 rounded-xl border border-slate-100 bg-white">
+                    <span data-i18n="nav.contact" class="text-xs font-semibold">Contact</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16">
+        <section class="relative overflow-hidden rounded-3xl bg-slate-900 text-white p-8 md:p-12 shadow-2xl mb-10">
+            <div class="absolute -top-24 -right-24 w-72 h-72 bg-indigo-500/30 rounded-full blur-3xl"></div>
+            <div class="relative max-w-4xl">
+                <span
+                    class="inline-flex items-center rounded-full border border-indigo-300/30 bg-indigo-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-indigo-200">Teaching
+                    Resources</span>
+                <h1 class="mt-5 text-3xl md:text-5xl font-bold tracking-tight">Teaching &amp; Course Notes</h1>
+                <p class="mt-5 text-base md:text-lg text-slate-300 leading-relaxed">
+                    Open course materials, lecture notes, tutorials, practical exercises, and assessments in
+                    agricultural engineering, electronics, programming, embedded systems, precision agriculture,
+                    artificial intelligence, IoT, and GIS.
+                </p>
+                <a href="https://github.com/kadefue/Course_Notes/tree/main/" target="_blank" rel="noopener noreferrer"
+                    class="mt-7 inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-slate-900 hover:bg-indigo-50 transition-colors">
+                    Open Complete Course Repository
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="flex items-end justify-between gap-4 mb-6">
+                <div>
+                    <p class="text-xs font-bold uppercase tracking-widest text-indigo-600">Postgraduate</p>
+                    <h2 class="mt-1 text-2xl font-bold text-slate-900">MSc &amp; PhD Courses</h2>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="https://github.com/kadefue/Course_Notes/tree/main/AEC%20813" target="_blank"
+                    rel="noopener noreferrer"
+                    class="course-card group block rounded-2xl border border-white/70 bg-white/60 backdrop-blur-lg p-6 shadow-lg">
+                    <span class="text-xs font-mono font-bold text-indigo-600">AEC 813</span>
+                    <h3 class="mt-2 text-lg font-bold text-slate-900 group-hover:text-indigo-600">Artificial
+                        Intelligence, IoT and GIS Application in Agriculture</h3>
+                    <p class="mt-3 text-sm text-slate-600">PhD Agroecology · Spatial AI, edge IoT networks, and
+                        geospatial agricultural systems.</p>
+                    <span class="mt-5 inline-flex text-sm font-semibold text-indigo-600">Open course notes →</span>
+                </a>
+                <a href="https://github.com/kadefue/Course_Notes/tree/main/ABE%20715" target="_blank"
+                    rel="noopener noreferrer"
+                    class="course-card group block rounded-2xl border border-white/70 bg-white/60 backdrop-blur-lg p-6 shadow-lg">
+                    <span class="text-xs font-mono font-bold text-indigo-600">ABE 715</span>
+                    <h3 class="mt-2 text-lg font-bold text-slate-900 group-hover:text-indigo-600">Advanced Computer
+                        Programming</h3>
+                    <p class="mt-3 text-sm text-slate-600">MSc · Numerical algorithms, Python, machine learning,
+                        computer vision, and geospatial analysis.</p>
+                    <span class="mt-5 inline-flex text-sm font-semibold text-indigo-600">Open course notes →</span>
+                </a>
+                <a href="https://github.com/kadefue/Course_Notes/tree/main/ABE%20721" target="_blank"
+                    rel="noopener noreferrer"
+                    class="course-card group block rounded-2xl border border-white/70 bg-white/60 backdrop-blur-lg p-6 shadow-lg">
+                    <span class="text-xs font-mono font-bold text-indigo-600">ABE 721</span>
+                    <h3 class="mt-2 text-lg font-bold text-slate-900 group-hover:text-indigo-600">Agricultural Systems
+                        Modelling and Simulation</h3>
+                    <p class="mt-3 text-sm text-slate-600">MSc · Dynamic models, system simulation, CAD/FEA,
+                        plant-water relations, and agricultural engineering analysis.</p>
+                    <span class="mt-5 inline-flex text-sm font-semibold text-indigo-600">Open course notes →</span>
+                </a>
+            </div>
+        </section>
+
+        <section>
+            <div class="mb-6">
+                <p class="text-xs font-bold uppercase tracking-widest text-indigo-600">Undergraduate</p>
+                <h2 class="mt-1 text-2xl font-bold text-slate-900">Engineering &amp; University Service Courses</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="https://github.com/kadefue/Course_Notes/tree/main/BIT%20111" target="_blank"
+                    rel="noopener noreferrer"
+                    class="course-card group rounded-2xl border border-white/70 bg-white/60 backdrop-blur-lg p-6 shadow-lg">
+                    <span class="text-xs font-mono font-bold text-indigo-600">BIT 111</span>
+                    <h3 class="mt-2 text-lg font-bold text-slate-900 group-hover:text-indigo-600">Microcomputers and
+                        Applications</h3>
+                    <p class="mt-3 text-sm text-slate-600">Digital literacy, hardware, operating systems, data
+                        security, and productivity applications.</p>
+                    <span class="mt-5 inline-flex text-sm font-semibold text-indigo-600">Open course notes →</span>
+                </a>
+                <a href="https://github.com/kadefue/Course_Notes/tree/main/AEN%20214" target="_blank"
+                    rel="noopener noreferrer"
+                    class="course-card group rounded-2xl border border-white/70 bg-white/60 backdrop-blur-lg p-6 shadow-lg">
+                    <span class="text-xs font-mono font-bold text-indigo-600">AEN 214</span>
+                    <h3 class="mt-2 text-lg font-bold text-slate-900 group-hover:text-indigo-600">Introduction to
+                        Electronics</h3>
+                    <p class="mt-3 text-sm text-slate-600">New curriculum · Analog and digital electronics, power,
+                        transistor switching, and signal conditioning.</p>
+                    <span class="mt-5 inline-flex text-sm font-semibold text-indigo-600">Open course notes →</span>
+                </a>
+                <a href="https://github.com/kadefue/Course_Notes/tree/main/AGE%20214" target="_blank"
+                    rel="noopener noreferrer"
+                    class="course-card group rounded-2xl border border-white/70 bg-white/60 backdrop-blur-lg p-6 shadow-lg">
+                    <span class="text-xs font-mono font-bold text-indigo-600">AGE 214</span>
+                    <h3 class="mt-2 text-lg font-bold text-slate-900 group-hover:text-indigo-600">Introduction to
+                        Electronics</h3>
+                    <p class="mt-3 text-sm text-slate-600">Legacy curriculum archive for continuing undergraduate
+                        cohorts.</p>
+                    <span class="mt-5 inline-flex text-sm font-semibold text-indigo-600">Open course notes →</span>
+                </a>
+                <a href="https://github.com/kadefue/Course_Notes/tree/main/AGE%20219" target="_blank"
+                    rel="noopener noreferrer"
+                    class="course-card group rounded-2xl border border-white/70 bg-white/60 backdrop-blur-lg p-6 shadow-lg">
+                    <span class="text-xs font-mono font-bold text-indigo-600">AGE 219</span>
+                    <h3 class="mt-2 text-lg font-bold text-slate-900 group-hover:text-indigo-600">Basics of Computer
+                        Programming</h3>
+                    <p class="mt-3 text-sm text-slate-600">Python fundamentals, data structures, algorithms, data
+                        analysis, and agricultural engineering applications.</p>
+                    <span class="mt-5 inline-flex text-sm font-semibold text-indigo-600">Open course notes →</span>
+                </a>
+                <a href="https://github.com/kadefue/Course_Notes/tree/main/AGE%20310" target="_blank"
+                    rel="noopener noreferrer"
+                    class="course-card group rounded-2xl border border-white/70 bg-white/60 backdrop-blur-lg p-6 shadow-lg">
+                    <span class="text-xs font-mono font-bold text-indigo-600">AGE 310</span>
+                    <h3 class="mt-2 text-lg font-bold text-slate-900 group-hover:text-indigo-600">Instrumentation and
+                        Measurements</h3>
+                    <p class="mt-3 text-sm text-slate-600">Sensors, transducers, signal conditioning, drones, machine
+                        vision, and agricultural robotics.</p>
+                    <span class="mt-5 inline-flex text-sm font-semibold text-indigo-600">Open course notes →</span>
+                </a>
+                <a href="https://github.com/kadefue/Course_Notes/tree/main/AGE%20316" target="_blank"
+                    rel="noopener noreferrer"
+                    class="course-card group rounded-2xl border border-white/70 bg-white/60 backdrop-blur-lg p-6 shadow-lg">
+                    <span class="text-xs font-mono font-bold text-indigo-600">AGE 316</span>
+                    <h3 class="mt-2 text-lg font-bold text-slate-900 group-hover:text-indigo-600">Microcomputer
+                        Systems</h3>
+                    <p class="mt-3 text-sm text-slate-600">Microcontrollers, embedded C, Arduino, interfacing,
+                        interrupts, and practical control systems.</p>
+                    <span class="mt-5 inline-flex text-sm font-semibold text-indigo-600">Open course notes →</span>
+                </a>
+                <a href="https://github.com/kadefue/Course_Notes/tree/main/AGE%20418" target="_blank"
+                    rel="noopener noreferrer"
+                    class="course-card group rounded-2xl border border-white/70 bg-white/60 backdrop-blur-lg p-6 shadow-lg">
+                    <span class="text-xs font-mono font-bold text-indigo-600">AGE 418</span>
+                    <h3 class="mt-2 text-lg font-bold text-slate-900 group-hover:text-indigo-600">Sensors and Controls
+                        in Precision Agriculture</h3>
+                    <p class="mt-3 text-sm text-slate-600">GNSS, variable-rate technology, crop and soil sensing, yield
+                        monitoring, and autonomous agricultural systems.</p>
+                    <span class="mt-5 inline-flex text-sm font-semibold text-indigo-600">Open course notes →</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/60 bg-white/30 backdrop-blur-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-sm text-slate-500">
+            &copy; <span id="year"></span> Dr. Kadeghe Goodluck Fue. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
