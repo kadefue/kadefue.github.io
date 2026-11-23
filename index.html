@@ -276,6 +276,585 @@
             margin-bottom: 8px;
         }
     </style>
+    <style>
+        :root {
+            --ink: #17211b;
+            --forest: #173f35;
+            --sage: #cbd9c8;
+            --paper: #f5f3ec;
+            --line: #d9ddd3;
+            --gold: #bd8b42;
+        }
+
+        html {
+            background: var(--paper);
+        }
+
+        body {
+            color: var(--ink);
+            background:
+                radial-gradient(circle at 92% 8%, rgba(203, 217, 200, 0.58), transparent 28rem),
+                linear-gradient(180deg, #faf9f5 0%, var(--paper) 48%, #eef1ea 100%);
+            background-attachment: scroll;
+            animation: none;
+            letter-spacing: -0.01em;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.28;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.08'/%3E%3C/svg%3E");
+            z-index: 100;
+        }
+
+        #header-placeholder nav {
+            background: rgba(250, 249, 245, 0.9);
+            border-bottom: 1px solid rgba(23, 33, 27, 0.1);
+            box-shadow: none;
+            backdrop-filter: blur(18px);
+        }
+
+        #header-placeholder nav .nav-link {
+            color: #58635c;
+        }
+
+        #header-placeholder nav .nav-link:hover,
+        #header-placeholder nav .nav-link.active {
+            color: var(--forest);
+            border-bottom-color: var(--forest);
+        }
+
+        #header-placeholder .teaching-nav {
+            background: var(--forest) !important;
+            color: white !important;
+            box-shadow: none;
+            border-radius: 999px;
+        }
+
+        main {
+            max-width: 84rem !important;
+            padding-top: 7.5rem !important;
+            padding-bottom: 7rem !important;
+            display: flex;
+            flex-direction: column;
+            gap: 7rem;
+        }
+
+        main > * + * {
+            margin-top: 0 !important;
+        }
+
+        #welcome {
+            order: 1;
+            min-height: 660px;
+            display: flex;
+            align-items: center;
+            padding: 3rem 0 4rem;
+            isolation: isolate;
+        }
+
+        #welcome > .absolute {
+            display: none;
+        }
+
+        #welcome::before {
+            content: "ENGINEER / RESEARCHER / EDUCATOR";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #778179;
+            font: 700 0.68rem/1 "JetBrains Mono", monospace;
+            letter-spacing: 0.18em;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+
+        #welcome > .relative.z-10 {
+            width: 100%;
+            display: grid !important;
+            grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.72fr);
+            gap: clamp(3rem, 7vw, 7rem);
+            align-items: center;
+        }
+
+        #welcome > .relative.z-10 > div:last-child {
+            order: 1;
+            text-align: left !important;
+        }
+
+        #welcome > .relative.z-10 > div:first-child {
+            order: 2;
+            width: 100%;
+            animation: none;
+        }
+
+        #welcome > .relative.z-10 > div:first-child > div {
+            width: min(100%, 470px) !important;
+            height: 570px !important;
+            margin-left: auto;
+        }
+
+        #welcome #image-slider {
+            border: 0 !important;
+            border-radius: 1.8rem !important;
+            box-shadow: 0 32px 80px -35px rgba(15, 47, 38, 0.55) !important;
+            transform: rotate(1.25deg);
+        }
+
+        #welcome #image-slider::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 62%, rgba(13, 34, 28, 0.35));
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        #welcome .slide-image {
+            border-radius: 1.8rem;
+            object-position: center top;
+            filter: saturate(0.82) contrast(1.04);
+        }
+
+        #welcome > .relative.z-10 > div:first-child > div::after {
+            content: "Tanzania  ·  Working globally";
+            position: absolute;
+            right: -1.25rem;
+            bottom: -1.1rem;
+            padding: 0.75rem 1rem;
+            background: var(--forest);
+            color: #f8f6ef;
+            border-radius: 0.7rem;
+            font: 600 0.68rem/1 "JetBrains Mono", monospace;
+            letter-spacing: 0.08em;
+            z-index: 20;
+        }
+
+        #welcome h1 {
+            font-size: clamp(3rem, 5.8vw, 5.9rem) !important;
+            line-height: 0.94 !important;
+            letter-spacing: -0.065em !important;
+            color: var(--ink) !important;
+            margin-bottom: 1.75rem !important;
+        }
+
+        #welcome h1 span.text-indigo-600 {
+            color: var(--forest) !important;
+        }
+
+        #welcome h1 span.text-slate-600 {
+            display: block;
+            margin-top: 1.1rem;
+            color: #6a746d !important;
+            font: 500 clamp(0.8rem, 1vw, 1rem)/1.3 "JetBrains Mono", monospace;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        #welcome [data-i18n="hero.welcome"] {
+            color: var(--forest);
+            background: #e6ede3;
+            border: 1px solid #cbd9c8;
+            border-radius: 999px;
+            font-family: "JetBrains Mono", monospace;
+            letter-spacing: 0.1em;
+        }
+
+        #welcome p {
+            max-width: 43rem;
+            color: #59645d;
+            font-size: 1.08rem !important;
+            line-height: 1.85;
+        }
+
+        #welcome p span.text-indigo-600 {
+            color: var(--forest) !important;
+            background: transparent !important;
+            padding: 0 !important;
+            font-weight: 700;
+        }
+
+        #welcome .card-hover {
+            border-radius: 999px;
+            padding: 0.95rem 1.35rem;
+            box-shadow: none;
+        }
+
+        #welcome a[href="about.html"] {
+            background: var(--forest);
+            box-shadow: 0 12px 28px -18px rgba(23, 63, 53, 0.9);
+        }
+
+        #welcome a[href="research.html"] {
+            background: transparent;
+            border-color: #abb5ac;
+        }
+
+        #focus {
+            order: 4;
+        }
+
+        #impact-metrics {
+            order: 2;
+            padding: 2.25rem;
+            border-radius: 1.5rem;
+            background: var(--ink);
+            box-shadow: none;
+            gap: 0 !important;
+        }
+
+        #impact-metrics > div {
+            background: transparent !important;
+            border: 0 !important;
+            border-right: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            padding: 1rem 1.5rem !important;
+            color: white;
+            transition: none;
+            transform: none !important;
+        }
+
+        #impact-metrics > div:last-child {
+            border-right: 0;
+        }
+
+        #impact-metrics > div > div:first-child {
+            color: #dce8d8;
+            font: 500 clamp(2rem, 4vw, 3.5rem)/1 "JetBrains Mono", monospace;
+            letter-spacing: -0.07em;
+        }
+
+        #impact-metrics > div > div:last-child {
+            color: #aeb9b1;
+            margin-top: 0.7rem;
+            font-size: 0.65rem;
+            letter-spacing: 0.12em;
+        }
+
+        #selected-work {
+            order: 3;
+            min-height: 470px;
+            display: flex;
+            align-items: flex-end;
+            padding: clamp(2.25rem, 6vw, 5rem) !important;
+            border-radius: 1.7rem !important;
+            background:
+                linear-gradient(90deg, rgba(12, 31, 25, 0.96), rgba(12, 31, 25, 0.72)),
+                url("drone_tech.jpg") center / cover !important;
+        }
+
+        #selected-work > div.relative {
+            max-width: 46rem !important;
+            margin: 0;
+            text-align: left !important;
+        }
+
+        #selected-work h2 {
+            max-width: 660px;
+            font-size: clamp(2.5rem, 5vw, 4.6rem);
+            line-height: 1;
+            letter-spacing: -0.055em;
+        }
+
+        #selected-work p {
+            color: #d3ddd5;
+            max-width: 680px;
+        }
+
+        #selected-work a {
+            color: var(--ink);
+            background: #e9d39f;
+            border-radius: 999px;
+            box-shadow: none;
+        }
+
+        #focus {
+            background: transparent;
+            border: 0;
+            border-top: 1px solid var(--line);
+            border-radius: 0;
+            box-shadow: none;
+            padding: 4.5rem 0 !important;
+        }
+
+        #focus > div:first-child {
+            max-width: 52rem;
+        }
+
+        #focus h2,
+        #expertise > div:first-child h2,
+        #sdgs h2,
+        #news h2 {
+            color: var(--ink);
+            letter-spacing: -0.045em;
+        }
+
+        #focus > .grid {
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            border-top: 1px solid var(--line);
+            gap: 0;
+        }
+
+        #focus > .grid > div {
+            min-height: 260px;
+            padding: 2rem 1.4rem;
+            border-right: 1px solid var(--line);
+            border-radius: 0;
+            background: transparent;
+        }
+
+        #focus > .grid > div:last-child {
+            border-right: 0;
+        }
+
+        #focus > .grid > div h3::before {
+            content: "↗";
+            display: block;
+            margin-bottom: 3rem;
+            color: var(--gold);
+            font: 400 1.5rem/1 "JetBrains Mono", monospace;
+        }
+
+        #expertise {
+            order: 5;
+            background: #e8ece4;
+            border: 0;
+            box-shadow: none;
+            padding: clamp(2rem, 5vw, 4.5rem) !important;
+            border-radius: 1.7rem;
+        }
+
+        #expertise > .text-center {
+            max-width: 56rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #expertise > .grid {
+            gap: 1px;
+            overflow: hidden;
+            border: 1px solid #cbd3c9;
+            border-radius: 1rem;
+            background: #cbd3c9;
+        }
+
+        #expertise > .grid > .group {
+            min-height: 310px;
+            text-align: left !important;
+            background: #f7f7f1;
+        }
+
+        #expertise > .grid .group > .flex-1 {
+            height: 100%;
+            margin: 0;
+            padding: 2rem !important;
+            border-radius: 0;
+            background: transparent !important;
+            box-shadow: none !important;
+            text-align: left;
+        }
+
+        #expertise svg {
+            width: 2.1rem;
+            height: 2.1rem;
+            margin: 0 0 2.2rem;
+            color: var(--forest);
+        }
+
+        #expertise .h-16 {
+            height: auto;
+            justify-content: flex-start;
+        }
+
+        #expertise h3 {
+            letter-spacing: -0.025em;
+        }
+
+        #expertise .space-y-3.mt-auto,
+        #expertise > .mt-12 {
+            display: none;
+        }
+
+        #expertise .rounded.border {
+            background: transparent;
+            color: #526057;
+            border: 0;
+            padding-left: 0;
+            font-family: "JetBrains Mono", monospace;
+        }
+
+        #sdgs {
+            order: 6;
+            background: transparent;
+            border-top: 1px solid var(--line);
+            border-radius: 0;
+            box-shadow: none;
+            padding: 5rem 0 0;
+        }
+
+        #sdgs > div:last-child > div {
+            align-items: flex-start;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.55);
+            border-color: var(--line);
+            box-shadow: none;
+            transition: border-color 180ms ease, transform 180ms ease;
+        }
+
+        #sdgs > div:last-child > div:hover {
+            transform: translateY(-4px) !important;
+            border-color: #98a69b;
+        }
+
+        #news {
+            order: 7;
+            background: transparent;
+            border: 0;
+            border-top: 1px solid var(--line);
+            border-radius: 0;
+            box-shadow: none;
+            padding: 5rem 0 0;
+        }
+
+        #news .space-y-4 > div {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--line);
+            border-radius: 0;
+        }
+
+        #news .space-y-4 > div:hover {
+            background: transparent;
+            border-color: var(--line);
+        }
+
+        #explore {
+            order: 8;
+        }
+
+        #explore > a {
+            position: relative;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 1.2rem;
+            box-shadow: none;
+        }
+
+        #explore > a > div:first-child {
+            height: 17rem;
+        }
+
+        #explore > a::after {
+            content: "↗";
+            position: absolute;
+            right: 1.5rem;
+            bottom: 1.5rem;
+            color: var(--forest);
+            font: 500 1.5rem/1 "JetBrains Mono", monospace;
+        }
+
+        #footer-placeholder footer {
+            background: var(--ink);
+            border-top: 0;
+        }
+
+        .card-hover:hover {
+            box-shadow: none;
+            border-color: var(--line);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 767px) {
+            main {
+                gap: 4.5rem;
+                padding-top: 6.5rem !important;
+            }
+
+            #welcome {
+                min-height: auto;
+                padding: 1rem 0 0;
+            }
+
+            #welcome::before {
+                display: none;
+            }
+
+            #welcome > .relative.z-10 {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            #welcome > .relative.z-10 > div:first-child {
+                order: 1;
+            }
+
+            #welcome > .relative.z-10 > div:last-child {
+                order: 2;
+            }
+
+            #welcome > .relative.z-10 > div:first-child > div {
+                width: 100% !important;
+                height: 430px !important;
+            }
+
+            #welcome > .relative.z-10 > div:first-child > div::after {
+                right: 0.75rem;
+            }
+
+            #welcome h1 {
+                font-size: 3.45rem !important;
+            }
+
+            #welcome .flex-wrap {
+                align-items: stretch;
+                justify-content: flex-start !important;
+            }
+
+            #impact-metrics > div {
+                border-right: 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+            }
+
+            #impact-metrics > div:nth-last-child(-n + 2) {
+                border-bottom: 0;
+            }
+
+            #focus > .grid {
+                grid-template-columns: 1fr;
+            }
+
+            #focus > .grid > div {
+                min-height: auto;
+                border-right: 0;
+                border-bottom: 1px solid var(--line);
+            }
+
+            #focus > .grid > div h3::before {
+                margin-bottom: 1.5rem;
+            }
+
+            #expertise > .grid {
+                grid-template-columns: 1fr;
+            }
+
+            #selected-work {
+                min-height: 560px;
+                background-position: 62% center !important;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
@@ -542,7 +1121,7 @@
             </div>
         </section>
 
-        <section class="bg-white/70 backdrop-blur-lg p-8 md:p-12 rounded-3xl shadow-xl border border-white/50">
+        <section id="focus" class="bg-white/70 backdrop-blur-lg p-8 md:p-12 rounded-3xl shadow-xl border border-white/50">
             <div class="max-w-3xl">
                 <h2 data-i18n="modeling.title" class="text-3xl font-bold text-slate-900 mb-4">Modeling &amp; Simulation</h2>
                 <p data-i18n="modeling.intro" class="text-slate-600 leading-relaxed">Dr. Fue brings modeling and simulation together with engineering, data, and AI to explore complex systems and inform practical decisions.</p>
@@ -573,7 +1152,7 @@
             <a href="contact.html" data-i18n="modeling.contact" class="inline-flex mt-4 text-indigo-600 font-semibold hover:text-indigo-800 hover:underline">Start a conversation &rarr;</a>
         </section>
 
-        <section class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+        <section id="impact-metrics" class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             <div
                 class="bg-white/50 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/50 text-center card-hover">
                 <div class="text-3xl md:text-4xl font-bold text-indigo-600 mb-1">15+</div>
@@ -602,7 +1181,7 @@
         </section>
 
         <!-- PROJECTS & CONSULTANCY LINK BANNER -->
-        <section
+        <section id="selected-work"
             class="bg-gradient-to-br from-indigo-900 to-slate-900 text-white rounded-3xl p-8 md:p-12 shadow-xl relative overflow-hidden">
             <div
                 class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-indigo-500/20 via-transparent to-transparent">
@@ -1462,7 +2041,7 @@
             </div>
         </section>
 
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <section id="explore" class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <a href="about.html"
                 class="card-hover group block bg-white/50 backdrop-blur-lg rounded-2xl shadow-xl border border-white/50 overflow-hidden">
                 <div class="h-32 w-full overflow-hidden bg-slate-100">
