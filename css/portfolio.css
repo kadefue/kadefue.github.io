@@ -253,6 +253,44 @@ body > footer {
     border-top: 0 !important;
 }
 
+.teaching-page main > .teaching-intro {
+    margin-bottom: 1.25rem;
+}
+
+.teaching-page main > section:not(.teaching-intro) {
+    padding-top: 3.5rem;
+    border-top: 1px solid var(--portfolio-line);
+}
+
+.teaching-page main > section:not(.teaching-intro) > div:first-child {
+    margin-bottom: 1.75rem;
+}
+
+.teaching-page main .course-card {
+    min-height: 245px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid var(--portfolio-line);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: none;
+}
+
+.teaching-page main .course-card > span:last-child {
+    margin-top: auto;
+    padding-top: 1.25rem;
+}
+
+.teaching-page main .course-card:hover {
+    background: #fdfdf9 !important;
+    color: var(--portfolio-ink) !important;
+}
+
+.teaching-page main .course-card:hover h3 {
+    color: var(--portfolio-forest);
+}
+
 footer a {
     color: #b9c4bb !important;
 }

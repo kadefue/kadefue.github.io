@@ -789,6 +789,15 @@
                 const titleText = lang === 'sw' ? proj.titleSw || proj.title : proj.title;
                 const roleText = lang === 'sw' ? proj.roleSw || proj.role : proj.role;
                 const descText = lang === 'sw' ? proj.descriptionSw || proj.description : proj.description;
+                const categoryLabels = {
+                    architecture: 'Usanifu na Uunganishaji',
+                    fullstack: 'Mifumo Kamili',
+                    iot: 'IoT na Mifumo Iliyojengwa',
+                    consulting: 'Ushauri'
+                };
+                const categoryText = lang === 'sw'
+                    ? categoryLabels[proj.category] || proj.category
+                    : proj.category.toUpperCase();
 
                 const imageHtml = proj.image ? `
                     <div class="h-36 w-full rounded-xl overflow-hidden mb-4 border border-slate-100 bg-slate-50">
@@ -807,7 +816,7 @@
                         ${imageHtml}
                         <div class="flex justify-between items-start">
                             <span class="work-year">${proj.year}</span>
-                            <span class="text-xs font-mono font-bold text-indigo-500 uppercase">${proj.category.toUpperCase()}</span>
+                            <span class="text-xs font-mono font-bold text-indigo-500 uppercase">${categoryText}</span>
                         </div>
                         <h3 class="work-title">${titleText}</h3>
                         <div class="mb-3">

@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentLang = lang;
         localStorage.setItem('site_lang', lang);
         document.documentElement.lang = lang;
+        document.documentElement.setAttribute('data-language', lang);
 
         // Update all elements with data-i18n attribute
         const elements = document.querySelectorAll('[data-i18n]');
@@ -23,8 +24,85 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        translatePageContent(lang);
         // Update Toggle Buttons State
         updateLanguageToggles(lang);
+        document.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
+    }
+
+    const excludedTranslationSelector = [
+        'script',
+        'style',
+        '[data-i18n]',
+        '.pub-item',
+        '[data-no-translate]',
+        'canvas'
+    ].join(',');
+
+    function translatePhrase(value, allowFragments = true) {
+        if (typeof value !== 'string' || !value.trim()) return value;
+        const normalized = value.replace(/\s+/g, ' ').trim();
+        if (swahiliPhrases[normalized]) return swahiliPhrases[normalized];
+        if (!allowFragments) return value;
+
+        const phrases = Object.entries(swahiliPhrases)
+            .sort(([a], [b]) => b.length - a.length);
+        let translated = value;
+        phrases.forEach(([english, swahili]) => {
+            if (english.length < 12) return;
+            const escaped = english.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            translated = translated.replace(new RegExp(escaped, 'gi'), swahili);
+        });
+        return translated;
+    }
+
+    function translatePageContent(lang) {
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+        const nodes = [];
+        while (walker.nextNode()) nodes.push(walker.currentNode);
+
+        nodes.forEach(node => {
+            const parent = node.parentElement;
+            if (!parent || parent.closest(excludedTranslationSelector)) return;
+            if (!node.originalEnglishText) node.originalEnglishText = node.nodeValue;
+            const allowFragments = !parent.closest('h1, h2, h3, h4, h5, h6');
+            node.nodeValue = lang === 'sw'
+                ? translatePhrase(node.originalEnglishText, allowFragments)
+                : node.originalEnglishText;
+        });
+
+        document.querySelectorAll('input[placeholder], [aria-label], img[alt], [title]').forEach(element => {
+            ['placeholder', 'aria-label', 'alt', 'title'].forEach(attribute => {
+                if (!element.hasAttribute(attribute)) return;
+                const key = `originalEnglish_${attribute}`;
+                if (!element[key]) element[key] = element.getAttribute(attribute);
+                element.setAttribute(attribute, lang === 'sw'
+                    ? translatePhrase(element[key], false)
+                    : element[key]);
+            });
+        });
+
+        document.querySelectorAll('button, a').forEach(element => {
+            const text = element.textContent.replace(/\s+/g, ' ').trim();
+            if (!element.dataset.originalEnglishControl) {
+                element.dataset.originalEnglishControl = text;
+            }
+            if (swahiliPhrases[element.dataset.originalEnglishControl]) {
+                element.textContent = lang === 'sw'
+                    ? swahiliPhrases[element.dataset.originalEnglishControl]
+                    : element.dataset.originalEnglishControl;
+            }
+        });
+
+        const page = window.location.pathname.split('/').pop() || 'index.html';
+        if (lang === 'sw') {
+            if (!document.documentElement.dataset.originalTitle) {
+                document.documentElement.dataset.originalTitle = document.title;
+            }
+            document.title = swahiliPageTitles[page] || document.documentElement.dataset.originalTitle;
+        } else if (document.documentElement.dataset.originalTitle) {
+            document.title = document.documentElement.dataset.originalTitle;
+        }
     }
 
     function getNestedTranslation(obj, keyPath) {
