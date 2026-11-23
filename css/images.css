@@ -1,0 +1,146 @@
+img {
+    image-rendering: auto;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+img[src$="profile.png"],
+img[src$="profile.jpeg"],
+img[src$="profile2.jpg"],
+img[src$="profile4.png"],
+img[src$="profile6.jpg"],
+img[src$="profile8.jpeg"],
+img[src$="profile9.png"] {
+    filter: saturate(0.94) contrast(1.04) brightness(1.015);
+}
+
+img[src$="profile.png"] {
+    object-position: 50% 20%;
+}
+
+img[src$="profile.jpeg"] {
+    object-position: 51% 31%;
+}
+
+img[src$="profile2.jpg"] {
+    object-position: 57% 27%;
+}
+
+img[src$="profile4.png"] {
+    object-position: 50% 18%;
+}
+
+img[src$="profile6.jpg"] {
+    object-position: 50% 17%;
+}
+
+img[src$="profile8.jpeg"] {
+    object-position: 68% 27%;
+}
+
+img[src$="profile9.png"] {
+    object-position: 50% 18%;
+}
+
+nav img[src$="profile.png"],
+footer img[src$="profile.png"] {
+    object-fit: cover;
+    object-position: 50% 18%;
+    filter: saturate(0.9) contrast(1.06) brightness(1.03);
+}
+
+.slide-image[src$="profile.png"],
+.slide-image[src$="profile.jpeg"],
+.slide-image[src$="profile2.jpg"],
+.slide-image[src$="profile4.png"],
+.slide-image[src$="profile6.jpg"],
+.slide-image[src$="profile8.jpeg"],
+.slide-image[src$="profile9.png"] {
+    object-position: var(--portrait-focus, 50% 22%);
+}
+
+.slide-image[src$="profile.png"] {
+    --portrait-focus: 50% 21%;
+}
+
+.slide-image[src$="profile.jpeg"] {
+    --portrait-focus: 50% 30%;
+}
+
+.slide-image[src$="profile2.jpg"] {
+    --portrait-focus: 57% 28%;
+}
+
+.slide-image[src$="profile4.png"],
+.slide-image[src$="profile9.png"] {
+    --portrait-focus: 50% 17%;
+}
+
+.slide-image[src$="profile6.jpg"] {
+    --portrait-focus: 50% 16%;
+}
+
+.slide-image[src$="profile8.jpeg"] {
+    --portrait-focus: 68% 25%;
+}
+
+img[src$="robotics1.jpg"],
+img[src$="drone_tech.jpg"],
+img[src$="ai_demo.jpg"],
+img[src$="precision_ag.jpg"] {
+    filter: saturate(0.92) contrast(1.07) brightness(0.99);
+}
+
+img[src$="robotics1.jpg"] {
+    object-position: 50% 48%;
+}
+
+img[src$="drone_tech.jpg"] {
+    object-position: 50% 43%;
+}
+
+img[src$="ai_demo.jpg"] {
+    object-position: 50% 44%;
+}
+
+img[src$="precision_ag.jpg"] {
+    object-position: 50% 42%;
+}
+
+main > section:first-child img[src*="profile"] {
+    box-shadow: 0 24px 55px -34px rgba(18, 43, 35, 0.75);
+}
+
+main img[src*="profile"][class*="h-auto"] {
+    display: block;
+    transform-origin: 50% 20%;
+}
+
+@media (max-width: 767px) {
+    .slide-image[src$="profile8.jpeg"] {
+        --portrait-focus: 65% 24%;
+    }
+
+    main > section:first-child img[src*="profile"] {
+        box-shadow: 0 18px 40px -30px rgba(18, 43, 35, 0.68);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    main .group img {
+        transition:
+            transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
+            filter 300ms ease;
+    }
+
+    main .group:hover img[src*="profile"] {
+        filter: saturate(0.98) contrast(1.055) brightness(1.02);
+    }
+}
+
+@media print {
+    img[src] {
+        filter: none !important;
+        box-shadow: none !important;
+    }
+}
