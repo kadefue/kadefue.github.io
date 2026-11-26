@@ -215,6 +215,18 @@
             opacity: 1;
         }
 
+        /* Accessible Lightbox Dialog */
+        dialog:modal {
+            overscroll-behavior: contain;
+        }
+
+        dialog::backdrop {
+            overflow: hidden;
+            overscroll-behavior: contain;
+            background-color: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(4px);
+        }
+
         /* Work Card Styling */
         .work-card {
             position: relative;
@@ -1058,18 +1070,18 @@
 
                         <div id="image-slider"
                             class="relative w-full h-full rounded-full border-4 border-white shadow-2xl ring-4 ring-indigo-50 overflow-hidden">
-                            <img src="profile.png" alt="Dr. Fue" class="slide-image active">
-                            <img src="profile2.jpg" alt="Dr. Kadeghe Fue" class="slide-image">
-                            <img src="profile4.png" alt="Dr. Kadeghe Fue Portrait" class="slide-image">
-                            <img src="profile.jpeg" alt="Dr. Kadeghe Fue Speaking" class="slide-image">
-                            <img src="profile6.jpg" alt="Dr. Kadeghe Fue Field Research" class="slide-image">
-                            <img src="profile8.jpeg" alt="Dr. Kadeghe Fue Leadership" class="slide-image">
-                            <img src="profile9.png" alt="Dr. Kadeghe Fue Academic" class="slide-image">
+                            <img src="profile.png" alt="Dr. Fue" fetchpriority="high" class="slide-image active">
+                            <img src="profile2.jpg" alt="Dr. Kadeghe Fue" fetchpriority="low" loading="lazy" class="slide-image">
+                            <img src="profile4.png" alt="Dr. Kadeghe Fue Portrait" fetchpriority="low" loading="lazy" class="slide-image">
+                            <img src="profile.jpeg" alt="Dr. Kadeghe Fue Speaking" fetchpriority="low" loading="lazy" class="slide-image">
+                            <img src="profile6.jpg" alt="Dr. Kadeghe Fue Field Research" fetchpriority="low" loading="lazy" class="slide-image">
+                            <img src="profile8.jpeg" alt="Dr. Kadeghe Fue Leadership" fetchpriority="low" loading="lazy" class="slide-image">
+                            <img src="profile9.png" alt="Dr. Kadeghe Fue Academic" fetchpriority="low" loading="lazy" class="slide-image">
                             <!-- Robotics and AI showcase images -->
-                            <img src="robotics1.jpg" alt="Robotics Research" class="slide-image">
-                            <img src="ai_demo.jpg" alt="AI Demonstration" class="slide-image">
-                            <img src="precision_ag.jpg" alt="Precision Agriculture" class="slide-image">
-                            <img src="drone_tech.jpg" alt="Drone Technology" class="slide-image">
+                            <img src="robotics1.jpg" alt="Robotics Research" fetchpriority="low" loading="lazy" class="slide-image">
+                            <img src="ai_demo.jpg" alt="AI Demonstration" fetchpriority="low" loading="lazy" class="slide-image">
+                            <img src="precision_ag.jpg" alt="Precision Agriculture" fetchpriority="low" loading="lazy" class="slide-image">
+                            <img src="drone_tech.jpg" alt="Drone Technology" fetchpriority="low" loading="lazy" class="slide-image">
                         </div>
                     </div>
                 </div>
@@ -1178,6 +1190,217 @@
                 <div class="text-3xl md:text-4xl font-bold text-indigo-600 mb-1">$2.0M+</div>
                 <div data-i18n="stats.portfolio" class="text-xs text-slate-500 uppercase font-bold tracking-wide">
                     Project Portfolio Managed</div>
+            </div>
+        </section>
+
+        <!-- FIELD STORY: FROM LAB TO FARMER -->
+        <section id="field-story"
+            class="bg-white/70 backdrop-blur-lg rounded-3xl p-8 md:p-12 shadow-xl border border-white/50">
+            <div class="max-w-3xl mb-10">
+                <div
+                    class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-emerald-700 uppercase bg-emerald-100 rounded-full">
+                    Field Visits &amp; Farmer Engagement
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                    From Lab to Field: Precision Agriculture in Action
+                </h2>
+                <p class="text-slate-600 leading-relaxed text-base md:text-lg">
+                    Technology only transforms agriculture when it works in the soil alongside the people who grow our food. Across Tanzania's farming communities—from smallholder irrigation cooperatives in Morogoro to block farms in Dodoma—Dr. Kadeghe Fue bridges engineering research and everyday farming through four connected stages.
+                </p>
+            </div>
+
+            <!-- 4-Chapter Story Arc -->
+            <div class="space-y-10">
+                <!-- Chapter 1 -->
+                <div class="bg-white/60 rounded-2xl p-6 md:p-8 border border-slate-100 shadow-sm">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Chapter 01</span>
+                            <h3 class="text-xl md:text-2xl font-bold text-slate-900">Listening to Farmers &amp; Understanding Local Realities</h3>
+                        </div>
+                        <span class="text-xs font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full self-start md:self-auto">Morogoro &amp; Dodoma</span>
+                    </div>
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-6">
+                        Every precision agriculture solution begins with conversation. Visiting irrigation cooperatives like Mlali Kipera (CUMK), village farmer groups, and large-scale block farms allows Dr. Fue to understand water constraints, soil variability, and crop priorities firsthand before designing any sensor or algorithm.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <button type="button" data-story-index="0"
+                            class="story-card group text-left rounded-xl overflow-hidden bg-slate-900 relative aspect-[4/3] shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <img src="images/field-visits/farmer-community-visit.jpg" alt="Dr. Fue meeting with a local farmer group outside a community extension center"
+                                loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <p class="text-sm font-semibold">Community Farmer Consultation</p>
+                                <p class="text-xs text-slate-200 mt-0.5">Listening to smallholder challenges &amp; priorities</p>
+                            </div>
+                        </button>
+                        <button type="button" data-story-index="1"
+                            class="story-card group text-left rounded-xl overflow-hidden bg-slate-900 relative aspect-[4/3] shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <img src="images/field-visits/mlali-irrigation-coop.jpg" alt="Dr. Fue at the Mlali Kipera Irrigation Cooperative in Mvomero, Morogoro"
+                                loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <p class="text-sm font-semibold">Mlali Kipera Irrigation Cooperative</p>
+                                <p class="text-xs text-slate-200 mt-0.5">Assessing smallholder water management in Mvomero</p>
+                            </div>
+                        </button>
+                        <button type="button" data-story-index="2"
+                            class="story-card group text-left rounded-xl overflow-hidden bg-slate-900 relative aspect-[4/3] shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <img src="images/field-visits/chinangali-block-farm.jpg" alt="Dr. Fue visiting the Chinangali Block Farm in Dodoma"
+                                loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <p class="text-sm font-semibold">Chinangali Block Farm, Dodoma</p>
+                                <p class="text-xs text-slate-200 mt-0.5">Exploring commercial &amp; youth-led block farming</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Chapter 2 -->
+                <div class="bg-white/60 rounded-2xl p-6 md:p-8 border border-slate-100 shadow-sm">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Chapter 02</span>
+                            <h3 class="text-xl md:text-2xl font-bold text-slate-900">Hands-On Crop Diagnostics &amp; Precision Irrigation</h3>
+                        </div>
+                        <span class="text-xs font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full self-start md:self-auto">Soil, Water &amp; Plant Health</span>
+                    </div>
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-6">
+                        Out in the rows, Dr. Fue and his team inspect leaf health, evaluate drip irrigation uniformity, and compare field measurements against agronomic models. Precision agriculture means delivering the right amount of water and nutrients to each plant rather than treating an entire farm as uniform.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <button type="button" data-story-index="3"
+                            class="story-card group text-left rounded-xl overflow-hidden bg-slate-900 relative aspect-[4/3] shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <img src="images/field-visits/crop-health-inspection.jpg" alt="Dr. Fue inspecting vegetable crop leaves in the field"
+                                loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <p class="text-sm font-semibold">In-Field Crop Inspection</p>
+                                <p class="text-xs text-slate-200 mt-0.5">Checking foliage vigor &amp; early stress indicators</p>
+                            </div>
+                        </button>
+                        <button type="button" data-story-index="4"
+                            class="story-card group text-left rounded-xl overflow-hidden bg-slate-900 relative aspect-[4/3] shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <img src="images/field-visits/vineyard-inspection.jpg" alt="Dr. Fue inspecting grapevines in a Dodoma vineyard"
+                                loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <p class="text-sm font-semibold">Vineyard Canopy Assessment</p>
+                                <p class="text-xs text-slate-200 mt-0.5">Evaluating vine growth &amp; moisture needs</p>
+                            </div>
+                        </button>
+                        <button type="button" data-story-index="5"
+                            class="story-card group text-left rounded-xl overflow-hidden bg-slate-900 relative aspect-[4/3] shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <img src="images/field-visits/drip-irrigation-rows.jpg" alt="Precision drip irrigation lines watering rows of young crops"
+                                loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <p class="text-sm font-semibold">Root-Zone Drip Irrigation</p>
+                                <p class="text-xs text-slate-200 mt-0.5">Conserving water with targeted moisture delivery</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Chapter 3 -->
+                <div class="bg-white/60 rounded-2xl p-6 md:p-8 border border-slate-100 shadow-sm">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-sky-600">Chapter 03</span>
+                            <h3 class="text-xl md:text-2xl font-bold text-slate-900">Deploying Drones, GNSS &amp; Autonomous Robotics</h3>
+                        </div>
+                        <span class="text-xs font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full self-start md:self-auto">UAVs, RTK-GPS &amp; UGVs</span>
+                    </div>
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-6">
+                        From RTK-GNSS base stations guiding orchard spray drones to hexacopter platforms mapping rice paddies and rugged ground robots navigating muddy farm tracks, Dr. Fue brings modern robotics and remote sensing directly onto working farms.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <button type="button" data-story-index="6"
+                            class="story-card group text-left rounded-xl overflow-hidden bg-slate-900 relative aspect-[4/3] shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <img src="images/field-visits/drone-rtk-orchard.jpg" alt="Agricultural spray drone with RTK-GNSS base station in an orchard"
+                                loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <p class="text-sm font-semibold">RTK-GNSS &amp; Orchard Drone</p>
+                                <p class="text-xs text-slate-200 mt-0.5">Centimeter-accurate flight positioning</p>
+                            </div>
+                        </button>
+                        <button type="button" data-story-index="7"
+                            class="story-card group text-left rounded-xl overflow-hidden bg-slate-900 relative aspect-[4/3] shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <img src="images/field-visits/rice-monitoring-drone.jpg" alt="Orange hexacopter drone flying low over green rice paddies"
+                                loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <p class="text-sm font-semibold">Aerial Rice Mapping</p>
+                                <p class="text-xs text-slate-200 mt-0.5">Multispectral scouting across paddy fields</p>
+                            </div>
+                        </button>
+                        <button type="button" data-story-index="8"
+                            class="story-card group text-left rounded-xl overflow-hidden bg-slate-900 relative aspect-[4/3] shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <img src="images/field-visits/autonomous-field-robot.jpg" alt="Autonomous unmanned ground vehicle navigating muddy farm terrain"
+                                loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <p class="text-sm font-semibold">Autonomous Field UGV</p>
+                                <p class="text-xs text-slate-200 mt-0.5">Testing rugged ground robotics in wet terrain</p>
+                            </div>
+                        </button>
+                        <button type="button" data-story-index="9"
+                            class="story-card group text-left rounded-xl overflow-hidden bg-slate-900 relative aspect-[4/3] shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <img src="images/field-visits/center-pivot-irrigation.jpg" alt="Researchers beside a center-pivot irrigation system over row crops"
+                                loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <p class="text-sm font-semibold">Variable-Rate Irrigation</p>
+                                <p class="text-xs text-slate-200 mt-0.5">Center-pivot engineering &amp; water scheduling</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Chapter 4 -->
+                <div class="bg-white/60 rounded-2xl p-6 md:p-8 border border-slate-100 shadow-sm">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-purple-600">Chapter 04</span>
+                            <h3 class="text-xl md:text-2xl font-bold text-slate-900">Discussing Data &amp; Co-Designing Digital Tools</h3>
+                        </div>
+                        <span class="text-xs font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full self-start md:self-auto">EPAL Innovation &amp; Extension</span>
+                    </div>
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-6">
+                        Whether reviewing yield and treatment charts right in the furrow or demonstrating EPAL's AI-powered pest detection, autonomous spraying, and mobile fertilization apps at agricultural showcases, the goal remains the same: turning complex engineering into practical decisions farmers can trust.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <button type="button" data-story-index="10"
+                            class="story-card group text-left rounded-xl overflow-hidden bg-slate-900 relative aspect-[16/10] shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <img src="images/field-visits/field-data-discussion.jpg" alt="Dr. Fue holding data charts while discussing crop trial results in the field"
+                                loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <p class="text-sm font-semibold">Translating Data in the Field</p>
+                                <p class="text-xs text-slate-200 mt-0.5">Comparing trial analytics directly beside growing rows</p>
+                            </div>
+                        </button>
+                        <button type="button" data-story-index="11"
+                            class="story-card group text-left rounded-xl overflow-hidden bg-slate-900 relative aspect-[16/10] shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <img src="images/field-visits/epal-tech-demo.jpg" alt="Dr. Fue and the EPAL team demonstrating precision agriculture software and AI tools"
+                                loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <p class="text-sm font-semibold">EPAL Digital Agriculture Showcase</p>
+                                <p class="text-xs text-slate-200 mt-0.5">Demonstrating AIoT, machine vision &amp; mobile advisory apps</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-slate-200/70">
+                <p class="text-sm text-slate-500">Click any photograph to open the full field story and navigate through the gallery.</p>
+                <a href="research.html" class="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 hover:text-indigo-800 hover:underline">
+                    Explore Precision Agriculture &amp; Robotics Research &rarr;
+                </a>
             </div>
         </section>
 
@@ -2125,8 +2348,184 @@
         </footer>
     </div>
 
+    <!-- Accessible Field Story Lightbox Dialog -->
+    <dialog id="field-story-dialog" closedby="any" aria-labelledby="field-story-dialog-title"
+        class="m-auto max-w-4xl w-[94vw] rounded-2xl bg-slate-900 text-white p-0 shadow-2xl border border-slate-700/70 overflow-hidden">
+        <div class="relative bg-black flex items-center justify-center max-h-[68vh] overflow-hidden">
+            <img id="field-story-dialog-img" src="" alt="" class="max-h-[68vh] w-full object-contain">
+            <form method="dialog" class="absolute top-3 right-3">
+                <button type="submit" aria-label="Close field story dialog"
+                    class="w-10 h-10 rounded-full bg-slate-900/80 hover:bg-slate-800 text-white flex items-center justify-center border border-white/20 transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </form>
+        </div>
+        <div class="p-6 space-y-3">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+                <span id="field-story-dialog-chapter" class="text-xs font-bold uppercase tracking-wider text-emerald-400"></span>
+                <span id="field-story-dialog-counter" class="text-xs text-slate-400 font-mono"></span>
+            </div>
+            <h1 id="field-story-dialog-title" class="text-xl md:text-2xl font-bold text-white"></h1>
+            <p id="field-story-dialog-caption" class="text-sm md:text-base text-slate-300 leading-relaxed"></p>
+            <div class="pt-3 flex items-center justify-between border-t border-slate-800">
+                <button type="button" id="field-story-prev"
+                    class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-sm font-medium text-white transition-colors">
+                    &larr; Previous
+                </button>
+                <button type="button" id="field-story-next"
+                    class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-sm font-medium text-white transition-colors">
+                    Next &rarr;
+                </button>
+            </div>
+        </div>
+    </dialog>
+
     <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        // Field Story Lightbox Controller
+        (function () {
+            const storyItems = [
+                {
+                    src: 'images/field-visits/farmer-community-visit.jpg',
+                    alt: 'Dr. Fue meeting with a local farmer group outside a community extension center',
+                    chapter: 'Chapter 01 · Listening to Farmers',
+                    title: 'Community Farmer Consultation',
+                    caption: 'Meeting with smallholder farmers at a local extension center to understand seasonal challenges, irrigation bottlenecks, and how digital tools can fit into everyday farm workflows.'
+                },
+                {
+                    src: 'images/field-visits/mlali-irrigation-coop.jpg',
+                    alt: 'Dr. Fue at the Mlali Kipera Irrigation Cooperative in Mvomero, Morogoro',
+                    chapter: 'Chapter 01 · Listening to Farmers',
+                    title: 'Mlali Kipera Irrigation Cooperative (CUMK)',
+                    caption: 'Visiting the Mlali Kipera Irrigation Cooperative in Mvomero, Morogoro, where farmers coordinate water distribution and high-value horticultural production.'
+                },
+                {
+                    src: 'images/field-visits/chinangali-block-farm.jpg',
+                    alt: 'Dr. Fue visiting the Chinangali Block Farm in Dodoma',
+                    chapter: 'Chapter 01 · Listening to Farmers',
+                    title: 'Chinangali Block Farm, Dodoma',
+                    caption: 'Field visit to the Ministry of Agriculture Chinangali Block Farm in Dodoma, exploring how precision agriculture and mechanization support large-scale cooperative farming.'
+                },
+                {
+                    src: 'images/field-visits/crop-health-inspection.jpg',
+                    alt: 'Dr. Fue inspecting vegetable crop leaves in the field',
+                    chapter: 'Chapter 02 · Hands-On Crop Diagnostics',
+                    title: 'In-Field Crop Health Inspection',
+                    caption: 'Examining foliage vigor and soil conditions up close—ground-truthing what remote sensing and machine vision models later learn to detect automatically.'
+                },
+                {
+                    src: 'images/field-visits/vineyard-inspection.jpg',
+                    alt: 'Dr. Fue inspecting grapevines in a Dodoma vineyard',
+                    chapter: 'Chapter 02 · Hands-On Crop Diagnostics',
+                    title: 'Vineyard Canopy & Moisture Assessment',
+                    caption: 'Walking vineyard rows to assess canopy development and water stress, informing site-specific irrigation scheduling for semi-arid regions.'
+                },
+                {
+                    src: 'images/field-visits/drip-irrigation-rows.jpg',
+                    alt: 'Precision drip irrigation lines watering rows of young crops',
+                    chapter: 'Chapter 02 · Hands-On Crop Diagnostics',
+                    title: 'Root-Zone Drip Irrigation',
+                    caption: 'Precision drip lines delivering water directly to the root zone, reducing evaporation losses and enabling paired fertigation management.'
+                },
+                {
+                    src: 'images/field-visits/drone-rtk-orchard.jpg',
+                    alt: 'Agricultural spray drone with RTK-GNSS base station in an orchard',
+                    chapter: 'Chapter 03 · Drones, GNSS & Robotics',
+                    title: 'RTK-GNSS & Agricultural Drone Deployment',
+                    caption: 'Setting up an agricultural drone alongside a high-precision RTK-GNSS base station in an orchard for centimeter-accurate mapping and targeted spraying.'
+                },
+                {
+                    src: 'images/field-visits/rice-monitoring-drone.jpg',
+                    alt: 'Orange hexacopter drone flying low over green rice paddies',
+                    chapter: 'Chapter 03 · Drones, GNSS & Robotics',
+                    title: 'Aerial Scouting Over Rice Paddies',
+                    caption: 'An autonomous hexacopter flying low-altitude transects over rice fields to capture high-resolution imagery for crop vigor and yield estimation.'
+                },
+                {
+                    src: 'images/field-visits/autonomous-field-robot.jpg',
+                    alt: 'Autonomous unmanned ground vehicle navigating muddy farm terrain',
+                    chapter: 'Chapter 03 · Drones, GNSS & Robotics',
+                    title: 'Autonomous Field Robot (UGV)',
+                    caption: 'Field-testing an unmanned ground vehicle across wet, muddy farm tracks—engineering robotics tough enough for real-world tropical agricultural conditions.'
+                },
+                {
+                    src: 'images/field-visits/center-pivot-irrigation.jpg',
+                    alt: 'Researchers beside a center-pivot irrigation system over row crops',
+                    chapter: 'Chapter 03 · Drones, GNSS & Robotics',
+                    title: 'Center-Pivot & Variable-Rate Irrigation',
+                    caption: 'Inspecting center-pivot irrigation infrastructure in the field to align variable-rate water application with spatial soil moisture variability.'
+                },
+                {
+                    src: 'images/field-visits/field-data-discussion.jpg',
+                    alt: 'Dr. Fue holding data charts while discussing crop trial results in the field',
+                    chapter: 'Chapter 04 · Data & Co-Design',
+                    title: 'Discussing Field Trial Data on Site',
+                    caption: 'Reviewing quantitative trial charts right beside the planted rows, bridging statistical analysis with practical agronomic decisions.'
+                },
+                {
+                    src: 'images/field-visits/epal-tech-demo.jpg',
+                    alt: 'Dr. Fue and the EPAL team demonstrating precision agriculture software and AI tools',
+                    chapter: 'Chapter 04 · Data & Co-Design',
+                    title: 'EPAL Digital Agriculture Showcase',
+                    caption: 'Dr. Fue and the Electronics & Precision Agriculture Lab (EPAL) team demonstrating AIoT sensors, machine vision disease detection, and mobile advisory tools.'
+                }
+            ];
+
+            const dialog = document.getElementById('field-story-dialog');
+            const imgEl = document.getElementById('field-story-dialog-img');
+            const chapterEl = document.getElementById('field-story-dialog-chapter');
+            const counterEl = document.getElementById('field-story-dialog-counter');
+            const titleEl = document.getElementById('field-story-dialog-title');
+            const captionEl = document.getElementById('field-story-dialog-caption');
+            const prevBtn = document.getElementById('field-story-prev');
+            const nextBtn = document.getElementById('field-story-next');
+            let activeIndex = 0;
+
+            function renderStory(index) {
+                activeIndex = (index + storyItems.length) % storyItems.length;
+                const item = storyItems[activeIndex];
+                imgEl.src = item.src;
+                imgEl.alt = item.alt;
+                chapterEl.textContent = item.chapter;
+                counterEl.textContent = `${activeIndex + 1} / ${storyItems.length}`;
+                titleEl.textContent = item.title;
+                captionEl.textContent = item.caption;
+            }
+
+            document.querySelectorAll('.story-card[data-story-index]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    renderStory(Number(btn.dataset.storyIndex));
+                    dialog.showModal();
+                });
+            });
+
+            prevBtn.addEventListener('click', () => renderStory(activeIndex - 1));
+            nextBtn.addEventListener('click', () => renderStory(activeIndex + 1));
+
+            dialog.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') renderStory(activeIndex - 1);
+                if (e.key === 'ArrowRight') renderStory(activeIndex + 1);
+            });
+
+            dialog.addEventListener('close', () => {
+                dialog.returnValue = '';
+            });
+
+            // Fallback for browsers without closedby="any" support (e.g., Safari)
+            if (!('closedBy' in HTMLDialogElement.prototype)) {
+                const outside = (e) => {
+                    const r = dialog.getBoundingClientRect();
+                    return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+                };
+                let pressedOutside = false;
+                dialog.addEventListener('pointerdown', (e) => { pressedOutside = outside(e); });
+                dialog.addEventListener('pointerup', (e) => { if (pressedOutside && outside(e)) dialog.close(); });
+            }
+        })();
+    </script>
     <script>
         // Slideshow Script
         const images = document.querySelectorAll('.slide-image');
